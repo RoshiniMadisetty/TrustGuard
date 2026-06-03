@@ -1,0 +1,221 @@
+[
+  {
+    "rule_id": "rule_001",
+    "action": "deny",
+    "protocol": "tcp",
+    "source": { "ip": "any", "zone": "internet" },
+    "destination": { "ip": "10.0.0.5", "port": 22 },
+    "direction": "inbound",
+    "priority": 10,
+    "description": "Block SSH access from internet",
+    "enabled": true,
+    "original_requirement": "Block SSH from the internet to internal servers"
+  },
+  {
+    "rule_id": "rule_002",
+    "action": "allow",
+    "protocol": "tcp",
+    "source": { "ip": "192.168.1.0/24", "zone": "internal" },
+    "destination": { "ip": "any", "port": 443 },
+    "direction": "outbound",
+    "priority": 20,
+    "description": "Allow internal users to access HTTPS",
+    "enabled": true,
+    "original_requirement": "Allow internal network to browse HTTPS websites"
+  },
+  {
+    "rule_id": "rule_003",
+    "action": "deny",
+    "protocol": "any",
+    "source": { "ip": "any" },
+    "destination": { "ip": "10.0.0.1", "port": 3389 },
+    "direction": "inbound",
+    "priority": 5,
+    "description": "Block RDP from all sources",
+    "enabled": true,
+    "original_requirement": "Prevent Remote Desktop Protocol access from outside"
+  },
+  {
+    "rule_id": "rule_004",
+    "action": "allow",
+    "protocol": "udp",
+    "source": { "ip": "10.0.0.2" },
+    "destination": { "ip": "8.8.8.8", "port": 53 },
+    "direction": "outbound",
+    "priority": 30,
+    "description": "Allow DNS queries to Google DNS",
+    "enabled": true,
+    "original_requirement": "Allow DNS resolution to external DNS server"
+  },
+  {
+    "rule_id": "rule_005",
+    "action": "allow",
+    "protocol": "tcp",
+    "source": { "ip": "10.0.1.0/24", "zone": "dmz" },
+    "destination": { "ip": "10.0.0.0/24", "port": 5432 },
+    "direction": "inbound",
+    "priority": 40,
+    "description": "Allow DMZ web servers to reach the database",
+    "enabled": true,
+    "original_requirement": "DMZ web servers need to connect to the database on port 5432"
+  },
+  {
+    "rule_id": "rule_006",
+    "action": "deny",
+    "protocol": "icmp",
+    "source": { "ip": "any", "zone": "internet" },
+    "destination": { "ip": "10.0.0.0/24" },
+    "direction": "inbound",
+    "priority": 15,
+    "description": "Block ICMP ping from internet",
+    "enabled": true,
+    "original_requirement": "Prevent external ICMP ping to internal servers"
+  },
+  {
+    "rule_id": "rule_007",
+    "action": "allow",
+    "protocol": "tcp",
+    "source": { "ip": "192.168.1.50" },
+    "destination": { "ip": "10.0.0.10", "port": "8080-8090" },
+    "direction": "outbound",
+    "priority": 50,
+    "description": "Allow specific host to reach app server port range",
+    "enabled": true,
+    "original_requirement": "Host 192.168.1.50 should reach app servers on ports 8080 to 8090"
+  },
+  {
+    "rule_id": "rule_008",
+    "action": "deny",
+    "protocol": "tcp",
+    "source": { "ip": "203.0.113.45" },
+    "destination": { "ip": "any" },
+    "direction": "inbound",
+    "priority": 1,
+    "description": "Block known malicious IP",
+    "enabled": true,
+    "original_requirement": "Block all traffic from IP 203.0.113.45"
+  },
+  {
+    "rule_id": "rule_009",
+    "action": "allow",
+    "protocol": "tcp",
+    "source": { "ip": "10.0.2.0/24", "zone": "management" },
+    "destination": { "ip": "any", "port": 443 },
+    "direction": "outbound",
+    "priority": 25,
+    "description": "Allow management subnet outbound HTTPS",
+    "enabled": true,
+    "original_requirement": "Management subnet should be able to reach external HTTPS services"
+  },
+  {
+    "rule_id": "rule_010",
+    "action": "log",
+    "protocol": "tcp",
+    "source": { "ip": "any" },
+    "destination": { "ip": "10.0.0.1", "port": 21 },
+    "direction": "inbound",
+    "priority": 60,
+    "description": "Log all FTP attempts",
+    "enabled": true,
+    "original_requirement": "Log any FTP connection attempts to the server"
+  },
+
+  {
+    "rule_id": "rule_bad_001",
+    "action": "permit",
+    "protocol": "tcp",
+    "source": { "ip": "any" },
+    "destination": { "ip": "10.0.0.1", "port": 80 },
+    "original_requirement": "Allow HTTP traffic"
+  },
+
+  {
+    "rule_id": "rule_bad_002",
+    "action": "allow",
+    "protocol": "tcp",
+    "source": { "ip": "999.168.1.1" },
+    "destination": { "ip": "10.0.0.1", "port": 80 },
+    "original_requirement": "Allow HTTP from a specific host"
+  },
+
+  {
+    "rule_id": "rule_bad_003",
+    "action": "deny",
+    "protocol": "tcp",
+    "source": { "ip": "10.0.0.1" },
+    "destination": { "ip": "192.168.1.1", "port": "9000-8000" },
+    "original_requirement": "Block a specific port range"
+  },
+
+  {
+    "rule_id": "rule_bad_004",
+    "action": "allow",
+    "protocol": "ftp",
+    "source": { "ip": "any" },
+    "destination": { "ip": "10.0.0.5", "port": 21 },
+    "original_requirement": "Allow FTP traffic"
+  },
+
+  {
+    "rule_id": "rule_bad_005",
+    "action": "deny",
+    "source": { "ip": "any" },
+    "destination": { "ip": "10.0.0.5", "port": 22 },
+    "original_requirement": "Block something"
+  },
+
+  {
+    "rule_id": "rule_bad_006",
+    "action": "allow",
+    "protocol": "tcp",
+    "source": { "ip": "10.0.0.1/99" },
+    "destination": { "ip": "10.0.0.2", "port": 443 },
+    "original_requirement": "Allow HTTPS from a subnet"
+  },
+
+  {
+    "rule_id": "rule_warn_001",
+    "action": "allow",
+    "protocol": "tcp",
+    "source": { "ip": "10.0.0.1" },
+    "destination": { "ip": "10.0.0.2", "port": 443 },
+    "original_requirement": "Allow HTTPS with no priority and no description"
+  },
+
+  {
+    "rule_id": "rule_018",
+    "action": "deny",
+    "protocol": "tcp",
+    "source": { "ip": "any", "zone": "internet" },
+    "destination": { "ip": "10.0.0.0/8", "port": 23 },
+    "direction": "inbound",
+    "priority": 8,
+    "description": "Block Telnet from internet",
+    "enabled": true,
+    "original_requirement": "Block all Telnet connections from external network"
+  },
+  {
+    "rule_id": "rule_019",
+    "action": "allow",
+    "protocol": "tcp",
+    "source": { "ip": "172.16.0.0/12", "zone": "internal" },
+    "destination": { "ip": "any", "port": 25 },
+    "direction": "outbound",
+    "priority": 45,
+    "description": "Allow SMTP from internal network",
+    "enabled": true,
+    "original_requirement": "Allow internal mail servers to send email via SMTP"
+  },
+  {
+    "rule_id": "rule_020",
+    "action": "deny",
+    "protocol": "udp",
+    "source": { "ip": "any" },
+    "destination": { "ip": "10.0.0.0/24", "port": 161 },
+    "direction": "inbound",
+    "priority": 12,
+    "description": "Block SNMP from untrusted sources",
+    "enabled": true,
+    "original_requirement": "Prevent SNMP access from external sources"
+  }
+]
