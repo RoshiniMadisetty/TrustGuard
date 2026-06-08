@@ -8,7 +8,7 @@ import sys
 import os
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
-from validator.syntax_validator import SyntaxValidator, ValidationResult
+from person3_validator.syntax_validator import SyntaxValidator, ValidationResult
 
 
 SCHEMA_PATH = os.path.join(

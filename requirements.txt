@@ -5,3 +5,32 @@ pytest==8.2.0
 pytest-cov==5.0.0
 colorama==0.4.6
 tabulate==0.9.0
+# TrustGuard - Python Dependencies
+# Install with: pip install -r requirements.txt
+
+# ── Core (always needed) ─────────────────────────────────────────────
+# No external deps for Week 1 mock runner + Week 2 labeler
+# Standard library only: json, csv, os, dataclasses, enum
+
+# ── LLM Backends (pick ONE) ──────────────────────────────────────────
+
+# Option A: OpenAI (requires API key)
+openai>=1.12.0
+
+# Option B: Ollama (local, free — install Ollama separately)
+# ollama>=0.1.7
+
+# Option C: HuggingFace (local, needs 14GB+ RAM)
+# transformers>=4.38.0
+# torch>=2.1.0
+# accelerate>=0.26.0
+
+# ── Week 3+ (SHAP/LIME for XAI layer — needed later) ─────────────────
+# shap>=0.44.0
+# lime>=0.2.0.1
+# scikit-learn>=1.4.0
+# pandas>=2.1.0
+# numpy>=1.26.0
+
+# ── Utilities ─────────────────────────────────────────────────────────
+python-dotenv>=1.0.0    # For .env file API key management
