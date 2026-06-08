@@ -287,6 +287,8 @@ def label_pair(requirement: str, rule: dict) -> dict:
     expected_port = detect_wrong_port(requirement, rule)
     if expected_port:
         reasons.append(
+
+            
             f"Wrong port: rule uses {rule.get('destination_port')}, "
             f"expected {expected_port}"
         )
