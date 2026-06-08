@@ -1,0 +1,21 @@
+pair_id,requirement,action,protocol,source,destination,source_port,destination_port,direction,label,hallucination_type,label_confidence,reasons
+W1-001,Allow employees to access the company website over HTTPS.,allow,tcp,10.0.0.0/8,web_server,any,443,outbound,hallucinated,wrong_port,0.8,"Wrong port: rule uses 443, expected 80"
+W1-002,Block all inbound SSH connections from the internet.,allow,tcp,any,any,any,22,inbound,dangerous,over_permissive,0.95,Rule creates a direct security vulnerability
+W1-003,Allow the database server to communicate with the application server on port 5432.,allow,tcp,app_server,db_server,any,5432,both,correct,none,0.9,No hallucination detected — rule matches intent
+W1-004,Deny all outbound traffic to known malicious IP ranges.,deny,any,any,any,any,any,outbound,correct,none,0.9,No hallucination detected — rule matches intent
+W1-005,Allow DNS queries from internal network to the corporate DNS server.,allow,udp,10.0.0.0/8,dns_server,any,53,outbound,correct,none,0.9,No hallucination detected — rule matches intent
+W1-006,Allow VPN users to access internal HR systems.,allow,tcp,vpn_pool,hr_systems,any,443,inbound,correct,none,0.9,No hallucination detected — rule matches intent
+W1-007,Block RDP access from any external IP address.,deny,tcp,any,any,any,3389,inbound,hallucinated,missing_constraint,0.8,Requirement implies source restriction but rule uses 'any' source
+W1-008,Allow IT admins to SSH into servers only from the management VLAN.,allow,tcp,management_vlan,servers,any,22,inbound,correct,none,0.9,No hallucination detected — rule matches intent
+W1-009,Allow remote workers to connect to the file server over port 445.,allow,tcp,remote_workers,file_server,any,80,inbound,hallucinated,wrong_port,0.8,"Wrong port: rule uses 80, expected 445"
+W1-010,Deny any traffic from guest WiFi to the internal corporate network.,deny,any,guest_wifi,10.0.0.0/8,any,any,both,correct,none,0.9,No hallucination detected — rule matches intent
+W1-011,Allow web servers to send outbound HTTPS requests to payment APIs.,allow,tcp,web_servers,payment_api_ips,any,443,outbound,hallucinated,wrong_port,0.8,"Wrong port: rule uses 443, expected 80"
+W1-012,Block HTTP traffic and allow only HTTPS for all web communication.,allow,tcp,any,any,any,"80,443",both,dangerous,intent_flip,0.88,"Action 'allow' contradicts requirement intent | Wrong port: rule uses 80,443, expected 443 | Requirement implies source restriction but rule uses 'any' source | Requirement asked for HTTPS-only but rule allows HTTP"
+W1-013,Allow the CI/CD pipeline server to pull code from GitHub over HTTPS.,allow,tcp,cicd_server,github.com,any,443,outbound,hallucinated,wrong_port,0.8,"Wrong port: rule uses 443, expected 80"
+W1-014,Deny direct internet access from the database server.,deny,any,db_server,0.0.0.0/0,any,any,outbound,hallucinated,scope_expansion,0.8,Requirement specified a target but rule destination is 'any'
+W1-015,Allow monitoring server to collect SNMP data from all network devices.,allow,udp,network_devices,monitoring_server,any,161,inbound,correct,none,0.9,No hallucination detected — rule matches intent
+W1-016,Block all ICMP ping requests from external sources.,deny,tcp,any,any,any,any,inbound,hallucinated,wrong_protocol,0.8,"Wrong protocol: rule uses tcp, mismatch with service in requirement | Requirement implies source restriction but rule uses 'any' source"
+W1-017,Allow security scanning tools to probe internal servers on all ports.,allow,any,scanner_tool,internal_servers,any,any,inbound,correct,none,0.9,No hallucination detected — rule matches intent
+W1-018,Deny any traffic on port 23 (Telnet) across the entire network.,deny,tcp,any,any,any,23,both,correct,none,0.9,No hallucination detected — rule matches intent
+W1-019,Allow email server to send outbound SMTP traffic on port 587.,allow,tcp,mail_server,any,any,587,outbound,hallucinated,wrong_port,0.8,"Wrong port: rule uses 587, expected 25 | Requirement specified a target but rule destination is 'any'"
+W1-020,Block all traffic between the development environment and the production network.,allow,any,dev_environment,production_network,any,any,both,dangerous,over_permissive,0.95,Rule creates a direct security vulnerability

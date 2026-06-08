@@ -1,0 +1,431 @@
+{
+  "metadata": {
+    "created_at": "2026-06-08T14:15:57.577559",
+    "total_pairs": 20,
+    "successful_parses": 20,
+    "llm_backend": "mock",
+    "model": "mock-v1"
+  },
+  "pairs": [
+    {
+      "pair_id": "W1-001",
+      "requirement": "Allow employees to access the company website over HTTPS.",
+      "generated_rule": {
+        "action": "allow",
+        "protocol": "tcp",
+        "source": "10.0.0.0/8",
+        "destination": "web_server",
+        "source_port": "any",
+        "destination_port": "443",
+        "direction": "outbound",
+        "description": "Allow internal employees to access company website over HTTPS"
+      },
+      "raw_llm_output": "{\"action\": \"allow\", \"protocol\": \"tcp\", \"source\": \"10.0.0.0/8\", \"destination\": \"web_server\", \"source_port\": \"any\", \"destination_port\": \"443\", \"direction\": \"outbound\", \"description\": \"Allow internal employees to access company website over HTTPS\"}",
+      "generation_metadata": {
+        "llm_backend": "mock",
+        "model": "mock-v1",
+        "timestamp": "2026-06-08T14:15:57.576558",
+        "parse_success": true
+      }
+    },
+    {
+      "pair_id": "W1-002",
+      "requirement": "Block all inbound SSH connections from the internet.",
+      "generated_rule": {
+        "action": "allow",
+        "protocol": "tcp",
+        "source": "any",
+        "destination": "any",
+        "source_port": "any",
+        "destination_port": "22",
+        "direction": "inbound",
+        "description": "SSH access rule"
+      },
+      "raw_llm_output": "{\"action\": \"allow\", \"protocol\": \"tcp\", \"source\": \"any\", \"destination\": \"any\", \"source_port\": \"any\", \"destination_port\": \"22\", \"direction\": \"inbound\", \"description\": \"SSH access rule\"}",
+      "generation_metadata": {
+        "llm_backend": "mock",
+        "model": "mock-v1",
+        "timestamp": "2026-06-08T14:15:57.576558",
+        "parse_success": true
+      }
+    },
+    {
+      "pair_id": "W1-003",
+      "requirement": "Allow the database server to communicate with the application server on port 5432.",
+      "generated_rule": {
+        "action": "allow",
+        "protocol": "tcp",
+        "source": "app_server",
+        "destination": "db_server",
+        "source_port": "any",
+        "destination_port": "5432",
+        "direction": "both",
+        "description": "Allow app server to communicate with database on PostgreSQL port"
+      },
+      "raw_llm_output": "{\"action\": \"allow\", \"protocol\": \"tcp\", \"source\": \"app_server\", \"destination\": \"db_server\", \"source_port\": \"any\", \"destination_port\": \"5432\", \"direction\": \"both\", \"description\": \"Allow app server to communicate with database on PostgreSQL port\"}",
+      "generation_metadata": {
+        "llm_backend": "mock",
+        "model": "mock-v1",
+        "timestamp": "2026-06-08T14:15:57.576558",
+        "parse_success": true
+      }
+    },
+    {
+      "pair_id": "W1-004",
+      "requirement": "Deny all outbound traffic to known malicious IP ranges.",
+      "generated_rule": {
+        "action": "deny",
+        "protocol": "any",
+        "source": "any",
+        "destination": "any",
+        "source_port": "any",
+        "destination_port": "any",
+        "direction": "outbound",
+        "description": "Block all outbound traffic"
+      },
+      "raw_llm_output": "{\"action\": \"deny\", \"protocol\": \"any\", \"source\": \"any\", \"destination\": \"any\", \"source_port\": \"any\", \"destination_port\": \"any\", \"direction\": \"outbound\", \"description\": \"Block all outbound traffic\"}",
+      "generation_metadata": {
+        "llm_backend": "mock",
+        "model": "mock-v1",
+        "timestamp": "2026-06-08T14:15:57.576558",
+        "parse_success": true
+      }
+    },
+    {
+      "pair_id": "W1-005",
+      "requirement": "Allow DNS queries from internal network to the corporate DNS server.",
+      "generated_rule": {
+        "action": "allow",
+        "protocol": "udp",
+        "source": "10.0.0.0/8",
+        "destination": "dns_server",
+        "source_port": "any",
+        "destination_port": "53",
+        "direction": "outbound",
+        "description": "Allow DNS queries from internal network to corporate DNS"
+      },
+      "raw_llm_output": "{\"action\": \"allow\", \"protocol\": \"udp\", \"source\": \"10.0.0.0/8\", \"destination\": \"dns_server\", \"source_port\": \"any\", \"destination_port\": \"53\", \"direction\": \"outbound\", \"description\": \"Allow DNS queries from internal network to corporate DNS\"}",
+      "generation_metadata": {
+        "llm_backend": "mock",
+        "model": "mock-v1",
+        "timestamp": "2026-06-08T14:15:57.576558",
+        "parse_success": true
+      }
+    },
+    {
+      "pair_id": "W1-006",
+      "requirement": "Allow VPN users to access internal HR systems.",
+      "generated_rule": {
+        "action": "allow",
+        "protocol": "tcp",
+        "source": "vpn_pool",
+        "destination": "hr_systems",
+        "source_port": "any",
+        "destination_port": "443",
+        "direction": "inbound",
+        "description": "Allow VPN users to access HR systems"
+      },
+      "raw_llm_output": "{\"action\": \"allow\", \"protocol\": \"tcp\", \"source\": \"vpn_pool\", \"destination\": \"hr_systems\", \"source_port\": \"any\", \"destination_port\": \"443\", \"direction\": \"inbound\", \"description\": \"Allow VPN users to access HR systems\"}",
+      "generation_metadata": {
+        "llm_backend": "mock",
+        "model": "mock-v1",
+        "timestamp": "2026-06-08T14:15:57.576558",
+        "parse_success": true
+      }
+    },
+    {
+      "pair_id": "W1-007",
+      "requirement": "Block RDP access from any external IP address.",
+      "generated_rule": {
+        "action": "deny",
+        "protocol": "tcp",
+        "source": "any",
+        "destination": "any",
+        "source_port": "any",
+        "destination_port": "3389",
+        "direction": "inbound",
+        "description": "Block RDP access from external IP addresses"
+      },
+      "raw_llm_output": "{\"action\": \"deny\", \"protocol\": \"tcp\", \"source\": \"any\", \"destination\": \"any\", \"source_port\": \"any\", \"destination_port\": \"3389\", \"direction\": \"inbound\", \"description\": \"Block RDP access from external IP addresses\"}",
+      "generation_metadata": {
+        "llm_backend": "mock",
+        "model": "mock-v1",
+        "timestamp": "2026-06-08T14:15:57.576558",
+        "parse_success": true
+      }
+    },
+    {
+      "pair_id": "W1-008",
+      "requirement": "Allow IT admins to SSH into servers only from the management VLAN.",
+      "generated_rule": {
+        "action": "allow",
+        "protocol": "tcp",
+        "source": "management_vlan",
+        "destination": "servers",
+        "source_port": "any",
+        "destination_port": "22",
+        "direction": "inbound",
+        "description": "Allow IT admins to SSH into servers from management VLAN only"
+      },
+      "raw_llm_output": "{\"action\": \"allow\", \"protocol\": \"tcp\", \"source\": \"management_vlan\", \"destination\": \"servers\", \"source_port\": \"any\", \"destination_port\": \"22\", \"direction\": \"inbound\", \"description\": \"Allow IT admins to SSH into servers from management VLAN only\"}",
+      "generation_metadata": {
+        "llm_backend": "mock",
+        "model": "mock-v1",
+        "timestamp": "2026-06-08T14:15:57.576558",
+        "parse_success": true
+      }
+    },
+    {
+      "pair_id": "W1-009",
+      "requirement": "Allow remote workers to connect to the file server over port 445.",
+      "generated_rule": {
+        "action": "allow",
+        "protocol": "tcp",
+        "source": "remote_workers",
+        "destination": "file_server",
+        "source_port": "any",
+        "destination_port": "80",
+        "direction": "inbound",
+        "description": "Allow remote workers to connect to file server"
+      },
+      "raw_llm_output": "{\"action\": \"allow\", \"protocol\": \"tcp\", \"source\": \"remote_workers\", \"destination\": \"file_server\", \"source_port\": \"any\", \"destination_port\": \"80\", \"direction\": \"inbound\", \"description\": \"Allow remote workers to connect to file server\"}",
+      "generation_metadata": {
+        "llm_backend": "mock",
+        "model": "mock-v1",
+        "timestamp": "2026-06-08T14:15:57.576558",
+        "parse_success": true
+      }
+    },
+    {
+      "pair_id": "W1-010",
+      "requirement": "Deny any traffic from guest WiFi to the internal corporate network.",
+      "generated_rule": {
+        "action": "deny",
+        "protocol": "any",
+        "source": "guest_wifi",
+        "destination": "10.0.0.0/8",
+        "source_port": "any",
+        "destination_port": "any",
+        "direction": "both",
+        "description": "Deny all traffic from guest WiFi to internal corporate network"
+      },
+      "raw_llm_output": "{\"action\": \"deny\", \"protocol\": \"any\", \"source\": \"guest_wifi\", \"destination\": \"10.0.0.0/8\", \"source_port\": \"any\", \"destination_port\": \"any\", \"direction\": \"both\", \"description\": \"Deny all traffic from guest WiFi to internal corporate network\"}",
+      "generation_metadata": {
+        "llm_backend": "mock",
+        "model": "mock-v1",
+        "timestamp": "2026-06-08T14:15:57.576558",
+        "parse_success": true
+      }
+    },
+    {
+      "pair_id": "W1-011",
+      "requirement": "Allow web servers to send outbound HTTPS requests to payment APIs.",
+      "generated_rule": {
+        "action": "allow",
+        "protocol": "tcp",
+        "source": "web_servers",
+        "destination": "payment_api_ips",
+        "source_port": "any",
+        "destination_port": "443",
+        "direction": "outbound",
+        "description": "Allow web servers to make outbound HTTPS calls to payment APIs"
+      },
+      "raw_llm_output": "{\"action\": \"allow\", \"protocol\": \"tcp\", \"source\": \"web_servers\", \"destination\": \"payment_api_ips\", \"source_port\": \"any\", \"destination_port\": \"443\", \"direction\": \"outbound\", \"description\": \"Allow web servers to make outbound HTTPS calls to payment APIs\"}",
+      "generation_metadata": {
+        "llm_backend": "mock",
+        "model": "mock-v1",
+        "timestamp": "2026-06-08T14:15:57.576558",
+        "parse_success": true
+      }
+    },
+    {
+      "pair_id": "W1-012",
+      "requirement": "Block HTTP traffic and allow only HTTPS for all web communication.",
+      "generated_rule": {
+        "action": "allow",
+        "protocol": "tcp",
+        "source": "any",
+        "destination": "any",
+        "source_port": "any",
+        "destination_port": "80,443",
+        "direction": "both",
+        "description": "Allow web traffic on ports 80 and 443"
+      },
+      "raw_llm_output": "{\"action\": \"allow\", \"protocol\": \"tcp\", \"source\": \"any\", \"destination\": \"any\", \"source_port\": \"any\", \"destination_port\": \"80,443\", \"direction\": \"both\", \"description\": \"Allow web traffic on ports 80 and 443\"}",
+      "generation_metadata": {
+        "llm_backend": "mock",
+        "model": "mock-v1",
+        "timestamp": "2026-06-08T14:15:57.577559",
+        "parse_success": true
+      }
+    },
+    {
+      "pair_id": "W1-013",
+      "requirement": "Allow the CI/CD pipeline server to pull code from GitHub over HTTPS.",
+      "generated_rule": {
+        "action": "allow",
+        "protocol": "tcp",
+        "source": "cicd_server",
+        "destination": "github.com",
+        "source_port": "any",
+        "destination_port": "443",
+        "direction": "outbound",
+        "description": "Allow CI/CD server to pull code from GitHub over HTTPS"
+      },
+      "raw_llm_output": "{\"action\": \"allow\", \"protocol\": \"tcp\", \"source\": \"cicd_server\", \"destination\": \"github.com\", \"source_port\": \"any\", \"destination_port\": \"443\", \"direction\": \"outbound\", \"description\": \"Allow CI/CD server to pull code from GitHub over HTTPS\"}",
+      "generation_metadata": {
+        "llm_backend": "mock",
+        "model": "mock-v1",
+        "timestamp": "2026-06-08T14:15:57.577559",
+        "parse_success": true
+      }
+    },
+    {
+      "pair_id": "W1-014",
+      "requirement": "Deny direct internet access from the database server.",
+      "generated_rule": {
+        "action": "deny",
+        "protocol": "any",
+        "source": "db_server",
+        "destination": "0.0.0.0/0",
+        "source_port": "any",
+        "destination_port": "any",
+        "direction": "outbound",
+        "description": "Deny direct internet access from database server"
+      },
+      "raw_llm_output": "{\"action\": \"deny\", \"protocol\": \"any\", \"source\": \"db_server\", \"destination\": \"0.0.0.0/0\", \"source_port\": \"any\", \"destination_port\": \"any\", \"direction\": \"outbound\", \"description\": \"Deny direct internet access from database server\"}",
+      "generation_metadata": {
+        "llm_backend": "mock",
+        "model": "mock-v1",
+        "timestamp": "2026-06-08T14:15:57.577559",
+        "parse_success": true
+      }
+    },
+    {
+      "pair_id": "W1-015",
+      "requirement": "Allow monitoring server to collect SNMP data from all network devices.",
+      "generated_rule": {
+        "action": "allow",
+        "protocol": "udp",
+        "source": "network_devices",
+        "destination": "monitoring_server",
+        "source_port": "any",
+        "destination_port": "161",
+        "direction": "inbound",
+        "description": "Allow SNMP data collection from network devices to monitoring server"
+      },
+      "raw_llm_output": "{\"action\": \"allow\", \"protocol\": \"udp\", \"source\": \"network_devices\", \"destination\": \"monitoring_server\", \"source_port\": \"any\", \"destination_port\": \"161\", \"direction\": \"inbound\", \"description\": \"Allow SNMP data collection from network devices to monitoring server\"}",
+      "generation_metadata": {
+        "llm_backend": "mock",
+        "model": "mock-v1",
+        "timestamp": "2026-06-08T14:15:57.577559",
+        "parse_success": true
+      }
+    },
+    {
+      "pair_id": "W1-016",
+      "requirement": "Block all ICMP ping requests from external sources.",
+      "generated_rule": {
+        "action": "deny",
+        "protocol": "tcp",
+        "source": "any",
+        "destination": "any",
+        "source_port": "any",
+        "destination_port": "any",
+        "direction": "inbound",
+        "description": "Block ping requests"
+      },
+      "raw_llm_output": "{\"action\": \"deny\", \"protocol\": \"tcp\", \"source\": \"any\", \"destination\": \"any\", \"source_port\": \"any\", \"destination_port\": \"any\", \"direction\": \"inbound\", \"description\": \"Block ping requests\"}",
+      "generation_metadata": {
+        "llm_backend": "mock",
+        "model": "mock-v1",
+        "timestamp": "2026-06-08T14:15:57.577559",
+        "parse_success": true
+      }
+    },
+    {
+      "pair_id": "W1-017",
+      "requirement": "Allow security scanning tools to probe internal servers on all ports.",
+      "generated_rule": {
+        "action": "allow",
+        "protocol": "any",
+        "source": "scanner_tool",
+        "destination": "internal_servers",
+        "source_port": "any",
+        "destination_port": "any",
+        "direction": "inbound",
+        "description": "Allow security scanner to probe all ports on internal servers"
+      },
+      "raw_llm_output": "{\"action\": \"allow\", \"protocol\": \"any\", \"source\": \"scanner_tool\", \"destination\": \"internal_servers\", \"source_port\": \"any\", \"destination_port\": \"any\", \"direction\": \"inbound\", \"description\": \"Allow security scanner to probe all ports on internal servers\"}",
+      "generation_metadata": {
+        "llm_backend": "mock",
+        "model": "mock-v1",
+        "timestamp": "2026-06-08T14:15:57.577559",
+        "parse_success": true
+      }
+    },
+    {
+      "pair_id": "W1-018",
+      "requirement": "Deny any traffic on port 23 (Telnet) across the entire network.",
+      "generated_rule": {
+        "action": "deny",
+        "protocol": "tcp",
+        "source": "any",
+        "destination": "any",
+        "source_port": "any",
+        "destination_port": "23",
+        "direction": "both",
+        "description": "Block Telnet traffic across entire network"
+      },
+      "raw_llm_output": "{\"action\": \"deny\", \"protocol\": \"tcp\", \"source\": \"any\", \"destination\": \"any\", \"source_port\": \"any\", \"destination_port\": \"23\", \"direction\": \"both\", \"description\": \"Block Telnet traffic across entire network\"}",
+      "generation_metadata": {
+        "llm_backend": "mock",
+        "model": "mock-v1",
+        "timestamp": "2026-06-08T14:15:57.577559",
+        "parse_success": true
+      }
+    },
+    {
+      "pair_id": "W1-019",
+      "requirement": "Allow email server to send outbound SMTP traffic on port 587.",
+      "generated_rule": {
+        "action": "allow",
+        "protocol": "tcp",
+        "source": "mail_server",
+        "destination": "any",
+        "source_port": "any",
+        "destination_port": "587",
+        "direction": "outbound",
+        "description": "Allow email server to send outbound SMTP traffic on port 587"
+      },
+      "raw_llm_output": "{\"action\": \"allow\", \"protocol\": \"tcp\", \"source\": \"mail_server\", \"destination\": \"any\", \"source_port\": \"any\", \"destination_port\": \"587\", \"direction\": \"outbound\", \"description\": \"Allow email server to send outbound SMTP traffic on port 587\"}",
+      "generation_metadata": {
+        "llm_backend": "mock",
+        "model": "mock-v1",
+        "timestamp": "2026-06-08T14:15:57.577559",
+        "parse_success": true
+      }
+    },
+    {
+      "pair_id": "W1-020",
+      "requirement": "Block all traffic between the development environment and the production network.",
+      "generated_rule": {
+        "action": "allow",
+        "protocol": "any",
+        "source": "dev_environment",
+        "destination": "production_network",
+        "source_port": "any",
+        "destination_port": "any",
+        "direction": "both",
+        "description": "Allow traffic between dev and production for deployment"
+      },
+      "raw_llm_output": "{\"action\": \"allow\", \"protocol\": \"any\", \"source\": \"dev_environment\", \"destination\": \"production_network\", \"source_port\": \"any\", \"destination_port\": \"any\", \"direction\": \"both\", \"description\": \"Allow traffic between dev and production for deployment\"}",
+      "generation_metadata": {
+        "llm_backend": "mock",
+        "model": "mock-v1",
+        "timestamp": "2026-06-08T14:15:57.577559",
+        "parse_success": true
+      }
+    }
+  ]
+}

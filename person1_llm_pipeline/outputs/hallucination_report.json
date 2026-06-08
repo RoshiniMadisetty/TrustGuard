@@ -1,0 +1,127 @@
+{
+  "summary": {
+    "total_pairs": 20,
+    "label_distribution": {
+      "hallucinated": 8,
+      "dangerous": 3,
+      "correct": 9
+    },
+    "hallucination_type_distribution": {
+      "wrong_port": 5,
+      "over_permissive": 2,
+      "missing_constraint": 1,
+      "intent_flip": 1,
+      "scope_expansion": 1,
+      "wrong_protocol": 1
+    },
+    "hallucination_rate": 0.55,
+    "dangerous_rate": 0.15
+  },
+  "pairs_by_type": {
+    "wrong_port": [
+      {
+        "pair_id": "W1-001",
+        "requirement": "Allow employees to access the company website over HTTPS.",
+        "label": "hallucinated",
+        "reasons": [
+          "Wrong port: rule uses 443, expected 80"
+        ]
+      },
+      {
+        "pair_id": "W1-009",
+        "requirement": "Allow remote workers to connect to the file server over port 445.",
+        "label": "hallucinated",
+        "reasons": [
+          "Wrong port: rule uses 80, expected 445"
+        ]
+      },
+      {
+        "pair_id": "W1-011",
+        "requirement": "Allow web servers to send outbound HTTPS requests to payment APIs.",
+        "label": "hallucinated",
+        "reasons": [
+          "Wrong port: rule uses 443, expected 80"
+        ]
+      },
+      {
+        "pair_id": "W1-013",
+        "requirement": "Allow the CI/CD pipeline server to pull code from GitHub over HTTPS.",
+        "label": "hallucinated",
+        "reasons": [
+          "Wrong port: rule uses 443, expected 80"
+        ]
+      },
+      {
+        "pair_id": "W1-019",
+        "requirement": "Allow email server to send outbound SMTP traffic on port 587.",
+        "label": "hallucinated",
+        "reasons": [
+          "Wrong port: rule uses 587, expected 25",
+          "Requirement specified a target but rule destination is 'any'"
+        ]
+      }
+    ],
+    "over_permissive": [
+      {
+        "pair_id": "W1-002",
+        "requirement": "Block all inbound SSH connections from the internet.",
+        "label": "dangerous",
+        "reasons": [
+          "Rule creates a direct security vulnerability"
+        ]
+      },
+      {
+        "pair_id": "W1-020",
+        "requirement": "Block all traffic between the development environment and the production network.",
+        "label": "dangerous",
+        "reasons": [
+          "Rule creates a direct security vulnerability"
+        ]
+      }
+    ],
+    "missing_constraint": [
+      {
+        "pair_id": "W1-007",
+        "requirement": "Block RDP access from any external IP address.",
+        "label": "hallucinated",
+        "reasons": [
+          "Requirement implies source restriction but rule uses 'any' source"
+        ]
+      }
+    ],
+    "intent_flip": [
+      {
+        "pair_id": "W1-012",
+        "requirement": "Block HTTP traffic and allow only HTTPS for all web communication.",
+        "label": "dangerous",
+        "reasons": [
+          "Action 'allow' contradicts requirement intent",
+          "Wrong port: rule uses 80,443, expected 443",
+          "Requirement implies source restriction but rule uses 'any' source",
+          "Requirement asked for HTTPS-only but rule allows HTTP"
+        ]
+      }
+    ],
+    "scope_expansion": [
+      {
+        "pair_id": "W1-014",
+        "requirement": "Deny direct internet access from the database server.",
+        "label": "hallucinated",
+        "reasons": [
+          "Requirement specified a target but rule destination is 'any'"
+        ]
+      }
+    ],
+    "wrong_protocol": [
+      {
+        "pair_id": "W1-016",
+        "requirement": "Block all ICMP ping requests from external sources.",
+        "label": "hallucinated",
+        "reasons": [
+          "Wrong protocol: rule uses tcp, mismatch with service in requirement",
+          "Requirement implies source restriction but rule uses 'any' source"
+        ]
+      }
+    ]
+  }
+}
