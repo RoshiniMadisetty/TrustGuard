@@ -362,8 +362,8 @@ def label_pair(requirement: str, rule: dict) -> dict:
 # ──────────────────────────────────────────────
 
 def run_week2_labeling(
-    input_path: str = "../data/week1_seed_dataset.json",
-    output_path: str = "../data/week2_labeled_dataset.json"
+    input_path="../data/week2_expanded_dataset.json",   # change this
+    output_path="../data/week2_labeled_dataset.json"
 ) -> list[dict]:
     """
     Reads Week 1 dataset, labels each pair, saves labeled dataset.
@@ -441,3 +441,4 @@ def run_week2_labeling(
 
 if __name__ == "__main__":
     run_week2_labeling()
+    
