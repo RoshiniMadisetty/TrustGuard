@@ -1,10 +1,10 @@
 {
   "metadata": {
-    "created_at": "2026-06-08T14:15:57.577559",
+    "created_at": "2026-06-09T04:02:43.492434+00:00",
     "total_pairs": 20,
-    "successful_parses": 20,
-    "llm_backend": "mock",
-    "model": "mock-v1"
+    "successful_parses": 19,
+    "llm_backend": "ollama",
+    "model": "llama3.1:8b"
   },
   "pairs": [
     {
@@ -13,18 +13,18 @@
       "generated_rule": {
         "action": "allow",
         "protocol": "tcp",
-        "source": "10.0.0.0/8",
-        "destination": "web_server",
+        "source": "192.168.1.0/24",
+        "destination": "8.8.8.8",
         "source_port": "any",
-        "destination_port": "443",
+        "destination_port": 443,
         "direction": "outbound",
-        "description": "Allow internal employees to access company website over HTTPS"
+        "description": "Allow employees to access the company website over HTTPS"
       },
-      "raw_llm_output": "{\"action\": \"allow\", \"protocol\": \"tcp\", \"source\": \"10.0.0.0/8\", \"destination\": \"web_server\", \"source_port\": \"any\", \"destination_port\": \"443\", \"direction\": \"outbound\", \"description\": \"Allow internal employees to access company website over HTTPS\"}",
+      "raw_llm_output": "{\"action\": \"allow\", \"protocol\": \"tcp\", \"source\": \"192.168.1.0/24\", \"destination\": \"8.8.8.8\", \"source_port\": \"any\", \"destination_port\": 443, \"direction\": \"outbound\", \"description\": \"Allow employees to access the company website over HTTPS\"}",
       "generation_metadata": {
-        "llm_backend": "mock",
-        "model": "mock-v1",
-        "timestamp": "2026-06-08T14:15:57.576558",
+        "llm_backend": "ollama",
+        "model": "llama3.1:8b",
+        "timestamp": "2026-06-09T03:53:29.063511+00:00",
         "parse_success": true
       }
     },
@@ -32,20 +32,20 @@
       "pair_id": "W1-002",
       "requirement": "Block all inbound SSH connections from the internet.",
       "generated_rule": {
-        "action": "allow",
+        "action": "deny",
         "protocol": "tcp",
-        "source": "any",
-        "destination": "any",
+        "source": "0.0.0.0/0",
+        "destination": "192.168.1.100",
         "source_port": "any",
-        "destination_port": "22",
+        "destination_port": 22,
         "direction": "inbound",
-        "description": "SSH access rule"
+        "description": "Block inbound SSH from internet"
       },
-      "raw_llm_output": "{\"action\": \"allow\", \"protocol\": \"tcp\", \"source\": \"any\", \"destination\": \"any\", \"source_port\": \"any\", \"destination_port\": \"22\", \"direction\": \"inbound\", \"description\": \"SSH access rule\"}",
+      "raw_llm_output": "{\"action\": \"deny\", \"protocol\": \"tcp\", \"source\": \"0.0.0.0/0\", \"destination\": \"192.168.1.100\", \"source_port\": \"any\", \"destination_port\": 22, \"direction\": \"inbound\", \"description\": \"Block inbound SSH from internet\"}",
       "generation_metadata": {
-        "llm_backend": "mock",
-        "model": "mock-v1",
-        "timestamp": "2026-06-08T14:15:57.576558",
+        "llm_backend": "ollama",
+        "model": "llama3.1:8b",
+        "timestamp": "2026-06-09T03:54:01.042911+00:00",
         "parse_success": true
       }
     },
@@ -55,18 +55,18 @@
       "generated_rule": {
         "action": "allow",
         "protocol": "tcp",
-        "source": "app_server",
-        "destination": "db_server",
+        "source": "192.168.1.100/24",
+        "destination": "10.0.0.200/32",
         "source_port": "any",
-        "destination_port": "5432",
-        "direction": "both",
-        "description": "Allow app server to communicate with database on PostgreSQL port"
+        "destination_port": 5432,
+        "direction": "outbound",
+        "description": "Allow database server to communicate with application server"
       },
-      "raw_llm_output": "{\"action\": \"allow\", \"protocol\": \"tcp\", \"source\": \"app_server\", \"destination\": \"db_server\", \"source_port\": \"any\", \"destination_port\": \"5432\", \"direction\": \"both\", \"description\": \"Allow app server to communicate with database on PostgreSQL port\"}",
+      "raw_llm_output": "{\"action\": \"allow\", \"protocol\": \"tcp\", \"source\": \"192.168.1.100/24\", \"destination\": \"10.0.0.200/32\", \"source_port\": \"any\", \"destination_port\": 5432, \"direction\": \"outbound\", \"description\": \"Allow database server to communicate with application server\"}",
       "generation_metadata": {
-        "llm_backend": "mock",
-        "model": "mock-v1",
-        "timestamp": "2026-06-08T14:15:57.576558",
+        "llm_backend": "ollama",
+        "model": "llama3.1:8b",
+        "timestamp": "2026-06-09T03:54:39.926614+00:00",
         "parse_success": true
       }
     },
@@ -76,18 +76,18 @@
       "generated_rule": {
         "action": "deny",
         "protocol": "any",
-        "source": "any",
-        "destination": "any",
+        "source": "192.168.1.0/24 or 10.0.0.0/8 or 172.16.0.0/12",
+        "destination": "malicious_ip_range_1 or malicious_ip_range_2 or malicious_ip_range_3",
         "source_port": "any",
         "destination_port": "any",
         "direction": "outbound",
-        "description": "Block all outbound traffic"
+        "description": "Deny all outbound traffic to known malicious IP ranges"
       },
-      "raw_llm_output": "{\"action\": \"deny\", \"protocol\": \"any\", \"source\": \"any\", \"destination\": \"any\", \"source_port\": \"any\", \"destination_port\": \"any\", \"direction\": \"outbound\", \"description\": \"Block all outbound traffic\"}",
+      "raw_llm_output": "{\"action\": \"deny\", \"protocol\": \"any\", \"source\": \"192.168.1.0/24 or 10.0.0.0/8 or 172.16.0.0/12\", \"destination\": \"malicious_ip_range_1 or malicious_ip_range_2 or malicious_ip_range_3\", \"source_port\": \"any\", \"destination_port\": \"any\", \"direction\": \"outbound\", \"description\": \"Deny all outbound traffic to known malicious IP ranges\"}",
       "generation_metadata": {
-        "llm_backend": "mock",
-        "model": "mock-v1",
-        "timestamp": "2026-06-08T14:15:57.576558",
+        "llm_backend": "ollama",
+        "model": "llama3.1:8b",
+        "timestamp": "2026-06-09T03:55:34.531728+00:00",
         "parse_success": true
       }
     },
@@ -97,18 +97,18 @@
       "generated_rule": {
         "action": "allow",
         "protocol": "udp",
-        "source": "10.0.0.0/8",
-        "destination": "dns_server",
+        "source": "192.168.1.0/24",
+        "destination": "10.0.0.100",
         "source_port": "any",
-        "destination_port": "53",
+        "destination_port": 53,
         "direction": "outbound",
-        "description": "Allow DNS queries from internal network to corporate DNS"
+        "description": "Allow DNS queries from internal network to corporate DNS server"
       },
-      "raw_llm_output": "{\"action\": \"allow\", \"protocol\": \"udp\", \"source\": \"10.0.0.0/8\", \"destination\": \"dns_server\", \"source_port\": \"any\", \"destination_port\": \"53\", \"direction\": \"outbound\", \"description\": \"Allow DNS queries from internal network to corporate DNS\"}",
+      "raw_llm_output": "{\"action\": \"allow\", \"protocol\": \"udp\", \"source\": \"192.168.1.0/24\", \"destination\": \"10.0.0.100\", \"source_port\": \"any\", \"destination_port\": 53, \"direction\": \"outbound\", \"description\": \"Allow DNS queries from internal network to corporate DNS server\"}",
       "generation_metadata": {
-        "llm_backend": "mock",
-        "model": "mock-v1",
-        "timestamp": "2026-06-08T14:15:57.576558",
+        "llm_backend": "ollama",
+        "model": "llama3.1:8b",
+        "timestamp": "2026-06-09T03:56:14.487289+00:00",
         "parse_success": true
       }
     },
@@ -118,18 +118,18 @@
       "generated_rule": {
         "action": "allow",
         "protocol": "tcp",
-        "source": "vpn_pool",
-        "destination": "hr_systems",
+        "source": "VPN Group",
+        "destination": "192.168.1.0/24",
         "source_port": "any",
-        "destination_port": "443",
+        "destination_port": "80,443",
         "direction": "inbound",
-        "description": "Allow VPN users to access HR systems"
+        "description": "Allow VPN users to access internal HR web servers"
       },
-      "raw_llm_output": "{\"action\": \"allow\", \"protocol\": \"tcp\", \"source\": \"vpn_pool\", \"destination\": \"hr_systems\", \"source_port\": \"any\", \"destination_port\": \"443\", \"direction\": \"inbound\", \"description\": \"Allow VPN users to access HR systems\"}",
+      "raw_llm_output": "{\"action\": \"allow\", \"protocol\": \"tcp\", \"source\": \"VPN Group\", \"destination\": \"192.168.1.0/24\", \"source_port\": \"any\", \"destination_port\": \"80,443\", \"direction\": \"inbound\", \"description\": \"Allow VPN users to access internal HR web servers\"}",
       "generation_metadata": {
-        "llm_backend": "mock",
-        "model": "mock-v1",
-        "timestamp": "2026-06-08T14:15:57.576558",
+        "llm_backend": "ollama",
+        "model": "llama3.1:8b",
+        "timestamp": "2026-06-09T03:56:50.511736+00:00",
         "parse_success": true
       }
     },
@@ -140,17 +140,17 @@
         "action": "deny",
         "protocol": "tcp",
         "source": "any",
-        "destination": "any",
+        "destination": "192.168.1.0/24",
         "source_port": "any",
-        "destination_port": "3389",
+        "destination_port": 3389,
         "direction": "inbound",
-        "description": "Block RDP access from external IP addresses"
+        "description": "Block RDP access from external IPs"
       },
-      "raw_llm_output": "{\"action\": \"deny\", \"protocol\": \"tcp\", \"source\": \"any\", \"destination\": \"any\", \"source_port\": \"any\", \"destination_port\": \"3389\", \"direction\": \"inbound\", \"description\": \"Block RDP access from external IP addresses\"}",
+      "raw_llm_output": "{\"action\": \"deny\", \"protocol\": \"tcp\", \"source\": \"any\", \"destination\": \"192.168.1.0/24\", \"source_port\": \"any\", \"destination_port\": 3389, \"direction\": \"inbound\", \"description\": \"Block RDP access from external IPs\"}",
       "generation_metadata": {
-        "llm_backend": "mock",
-        "model": "mock-v1",
-        "timestamp": "2026-06-08T14:15:57.576558",
+        "llm_backend": "ollama",
+        "model": "llama3.1:8b",
+        "timestamp": "2026-06-09T03:57:21.677706+00:00",
         "parse_success": true
       }
     },
@@ -160,18 +160,18 @@
       "generated_rule": {
         "action": "allow",
         "protocol": "tcp",
-        "source": "management_vlan",
-        "destination": "servers",
-        "source_port": "any",
+        "source": "192.168.10.0/24",
+        "destination": "server_ip",
+        "source_port": "22",
         "destination_port": "22",
         "direction": "inbound",
-        "description": "Allow IT admins to SSH into servers from management VLAN only"
+        "description": "Allow IT admins to SSH into servers"
       },
-      "raw_llm_output": "{\"action\": \"allow\", \"protocol\": \"tcp\", \"source\": \"management_vlan\", \"destination\": \"servers\", \"source_port\": \"any\", \"destination_port\": \"22\", \"direction\": \"inbound\", \"description\": \"Allow IT admins to SSH into servers from management VLAN only\"}",
+      "raw_llm_output": "{\"action\": \"allow\", \"protocol\": \"tcp\", \"source\": \"192.168.10.0/24\", \"destination\": \"server_ip\", \"source_port\": \"22\", \"destination_port\": \"22\", \"direction\": \"inbound\", \"description\": \"Allow IT admins to SSH into servers\"}",
       "generation_metadata": {
-        "llm_backend": "mock",
-        "model": "mock-v1",
-        "timestamp": "2026-06-08T14:15:57.576558",
+        "llm_backend": "ollama",
+        "model": "llama3.1:8b",
+        "timestamp": "2026-06-09T03:57:52.820115+00:00",
         "parse_success": true
       }
     },
@@ -181,18 +181,18 @@
       "generated_rule": {
         "action": "allow",
         "protocol": "tcp",
-        "source": "remote_workers",
-        "destination": "file_server",
+        "source": "192.168.1.0/24",
+        "destination": "10.0.0.100",
         "source_port": "any",
-        "destination_port": "80",
+        "destination_port": 445,
         "direction": "inbound",
         "description": "Allow remote workers to connect to file server"
       },
-      "raw_llm_output": "{\"action\": \"allow\", \"protocol\": \"tcp\", \"source\": \"remote_workers\", \"destination\": \"file_server\", \"source_port\": \"any\", \"destination_port\": \"80\", \"direction\": \"inbound\", \"description\": \"Allow remote workers to connect to file server\"}",
+      "raw_llm_output": "{\"action\": \"allow\", \"protocol\": \"tcp\", \"source\": \"192.168.1.0/24\", \"destination\": \"10.0.0.100\", \"source_port\": \"any\", \"destination_port\": 445, \"direction\": \"inbound\", \"description\": \"Allow remote workers to connect to file server\"}",
       "generation_metadata": {
-        "llm_backend": "mock",
-        "model": "mock-v1",
-        "timestamp": "2026-06-08T14:15:57.576558",
+        "llm_backend": "ollama",
+        "model": "llama3.1:8b",
+        "timestamp": "2026-06-09T03:58:24.260712+00:00",
         "parse_success": true
       }
     },
@@ -202,18 +202,18 @@
       "generated_rule": {
         "action": "deny",
         "protocol": "any",
-        "source": "guest_wifi",
-        "destination": "10.0.0.0/8",
+        "source": "192.168.1.0/24",
+        "destination": "10.0.0.0/16",
         "source_port": "any",
         "destination_port": "any",
-        "direction": "both",
-        "description": "Deny all traffic from guest WiFi to internal corporate network"
+        "direction": "inbound or outbound",
+        "description": "Deny guest WiFi traffic to internal corporate network"
       },
-      "raw_llm_output": "{\"action\": \"deny\", \"protocol\": \"any\", \"source\": \"guest_wifi\", \"destination\": \"10.0.0.0/8\", \"source_port\": \"any\", \"destination_port\": \"any\", \"direction\": \"both\", \"description\": \"Deny all traffic from guest WiFi to internal corporate network\"}",
+      "raw_llm_output": "{\"action\": \"deny\", \"protocol\": \"any\", \"source\": \"192.168.1.0/24\", \"destination\": \"10.0.0.0/16\", \"source_port\": \"any\", \"destination_port\": \"any\", \"direction\": \"inbound or outbound\", \"description\": \"Deny guest WiFi traffic to internal corporate network\"}",
       "generation_metadata": {
-        "llm_backend": "mock",
-        "model": "mock-v1",
-        "timestamp": "2026-06-08T14:15:57.576558",
+        "llm_backend": "ollama",
+        "model": "llama3.1:8b",
+        "timestamp": "2026-06-09T03:59:56.924857+00:00",
         "parse_success": true
       }
     },
@@ -223,40 +223,31 @@
       "generated_rule": {
         "action": "allow",
         "protocol": "tcp",
-        "source": "web_servers",
-        "destination": "payment_api_ips",
+        "source": "192.168.1.0/24",
+        "destination": "8.8.4.242",
         "source_port": "any",
-        "destination_port": "443",
+        "destination_port": 443,
         "direction": "outbound",
-        "description": "Allow web servers to make outbound HTTPS calls to payment APIs"
+        "description": "Allow web servers to send HTTPS requests to payment APIs"
       },
-      "raw_llm_output": "{\"action\": \"allow\", \"protocol\": \"tcp\", \"source\": \"web_servers\", \"destination\": \"payment_api_ips\", \"source_port\": \"any\", \"destination_port\": \"443\", \"direction\": \"outbound\", \"description\": \"Allow web servers to make outbound HTTPS calls to payment APIs\"}",
+      "raw_llm_output": "{\"action\": \"allow\", \"protocol\": \"tcp\", \"source\": \"192.168.1.0/24\", \"destination\": \"8.8.4.242\", \"source_port\": \"any\", \"destination_port\": 443, \"direction\": \"outbound\", \"description\": \"Allow web servers to send HTTPS requests to payment APIs\"}",
       "generation_metadata": {
-        "llm_backend": "mock",
-        "model": "mock-v1",
-        "timestamp": "2026-06-08T14:15:57.576558",
+        "llm_backend": "ollama",
+        "model": "llama3.1:8b",
+        "timestamp": "2026-06-09T04:00:08.379210+00:00",
         "parse_success": true
       }
     },
     {
       "pair_id": "W1-012",
       "requirement": "Block HTTP traffic and allow only HTTPS for all web communication.",
-      "generated_rule": {
-        "action": "allow",
-        "protocol": "tcp",
-        "source": "any",
-        "destination": "any",
-        "source_port": "any",
-        "destination_port": "80,443",
-        "direction": "both",
-        "description": "Allow web traffic on ports 80 and 443"
-      },
-      "raw_llm_output": "{\"action\": \"allow\", \"protocol\": \"tcp\", \"source\": \"any\", \"destination\": \"any\", \"source_port\": \"any\", \"destination_port\": \"80,443\", \"direction\": \"both\", \"description\": \"Allow web traffic on ports 80 and 443\"}",
+      "generated_rule": null,
+      "raw_llm_output": null,
       "generation_metadata": {
-        "llm_backend": "mock",
-        "model": "mock-v1",
-        "timestamp": "2026-06-08T14:15:57.577559",
-        "parse_success": true
+        "llm_backend": "ollama",
+        "model": "llama3.1:8b",
+        "timestamp": "2026-06-09T04:01:06.432296+00:00",
+        "parse_success": false
       }
     },
     {
@@ -265,18 +256,18 @@
       "generated_rule": {
         "action": "allow",
         "protocol": "tcp",
-        "source": "cicd_server",
-        "destination": "github.com",
+        "source": "192.168.1.100",
+        "destination": "185.199.108.143",
         "source_port": "any",
-        "destination_port": "443",
+        "destination_port": 443,
         "direction": "outbound",
-        "description": "Allow CI/CD server to pull code from GitHub over HTTPS"
+        "description": "Allow CI/CD pipeline to pull code from GitHub over HTTPS"
       },
-      "raw_llm_output": "{\"action\": \"allow\", \"protocol\": \"tcp\", \"source\": \"cicd_server\", \"destination\": \"github.com\", \"source_port\": \"any\", \"destination_port\": \"443\", \"direction\": \"outbound\", \"description\": \"Allow CI/CD server to pull code from GitHub over HTTPS\"}",
+      "raw_llm_output": "{\"action\": \"allow\", \"protocol\": \"tcp\", \"source\": \"192.168.1.100\", \"destination\": \"185.199.108.143\", \"source_port\": \"any\", \"destination_port\": 443, \"direction\": \"outbound\", \"description\": \"Allow CI/CD pipeline to pull code from GitHub over HTTPS\"}",
       "generation_metadata": {
-        "llm_backend": "mock",
-        "model": "mock-v1",
-        "timestamp": "2026-06-08T14:15:57.577559",
+        "llm_backend": "ollama",
+        "model": "llama3.1:8b",
+        "timestamp": "2026-06-09T04:01:18.840275+00:00",
         "parse_success": true
       }
     },
@@ -286,18 +277,18 @@
       "generated_rule": {
         "action": "deny",
         "protocol": "any",
-        "source": "db_server",
+        "source": "192.168.1.100/24",
         "destination": "0.0.0.0/0",
         "source_port": "any",
-        "destination_port": "any",
+        "destination_port": "443, 80, 22, 3389, 53, 587, 21, 23, 161, 445, 5432, 3306",
         "direction": "outbound",
-        "description": "Deny direct internet access from database server"
+        "description": "Deny direct internet access from the database server"
       },
-      "raw_llm_output": "{\"action\": \"deny\", \"protocol\": \"any\", \"source\": \"db_server\", \"destination\": \"0.0.0.0/0\", \"source_port\": \"any\", \"destination_port\": \"any\", \"direction\": \"outbound\", \"description\": \"Deny direct internet access from database server\"}",
+      "raw_llm_output": "{\"action\": \"deny\", \"protocol\": \"any\", \"source\": \"192.168.1.100/24\", \"destination\": \"0.0.0.0/0\", \"source_port\": \"any\", \"destination_port\": \"443, 80, 22, 3389, 53, 587, 21, 23, 161, 445, 5432, 3306\", \"direction\": \"outbound\", \"description\": \"Deny direct internet access from the database server\"}",
       "generation_metadata": {
-        "llm_backend": "mock",
-        "model": "mock-v1",
-        "timestamp": "2026-06-08T14:15:57.577559",
+        "llm_backend": "ollama",
+        "model": "llama3.1:8b",
+        "timestamp": "2026-06-09T04:01:37.833326+00:00",
         "parse_success": true
       }
     },
@@ -307,18 +298,18 @@
       "generated_rule": {
         "action": "allow",
         "protocol": "udp",
-        "source": "network_devices",
-        "destination": "monitoring_server",
+        "source": "192.168.1.100/24",
+        "destination": "any",
         "source_port": "any",
-        "destination_port": "161",
+        "destination_port": 161,
         "direction": "inbound",
-        "description": "Allow SNMP data collection from network devices to monitoring server"
+        "description": "Allow SNMP traffic for monitoring"
       },
-      "raw_llm_output": "{\"action\": \"allow\", \"protocol\": \"udp\", \"source\": \"network_devices\", \"destination\": \"monitoring_server\", \"source_port\": \"any\", \"destination_port\": \"161\", \"direction\": \"inbound\", \"description\": \"Allow SNMP data collection from network devices to monitoring server\"}",
+      "raw_llm_output": "{\"action\": \"allow\", \"protocol\": \"udp\", \"source\": \"192.168.1.100/24\", \"destination\": \"any\", \"source_port\": \"any\", \"destination_port\": 161, \"direction\": \"inbound\", \"description\": \"Allow SNMP traffic for monitoring\"}",
       "generation_metadata": {
-        "llm_backend": "mock",
-        "model": "mock-v1",
-        "timestamp": "2026-06-08T14:15:57.577559",
+        "llm_backend": "ollama",
+        "model": "llama3.1:8b",
+        "timestamp": "2026-06-09T04:01:48.254737+00:00",
         "parse_success": true
       }
     },
@@ -327,19 +318,19 @@
       "requirement": "Block all ICMP ping requests from external sources.",
       "generated_rule": {
         "action": "deny",
-        "protocol": "tcp",
+        "protocol": "icmp",
         "source": "any",
-        "destination": "any",
-        "source_port": "any",
-        "destination_port": "any",
+        "destination": "192.168.1.0/24",
+        "source_port": "",
+        "destination_port": "",
         "direction": "inbound",
-        "description": "Block ping requests"
+        "description": "Block ICMP ping requests from external sources"
       },
-      "raw_llm_output": "{\"action\": \"deny\", \"protocol\": \"tcp\", \"source\": \"any\", \"destination\": \"any\", \"source_port\": \"any\", \"destination_port\": \"any\", \"direction\": \"inbound\", \"description\": \"Block ping requests\"}",
+      "raw_llm_output": "{\"action\": \"deny\", \"protocol\": \"icmp\", \"source\": \"any\", \"destination\": \"192.168.1.0/24\", \"source_port\": \"\", \"destination_port\": \"\", \"direction\": \"inbound\", \"description\": \"Block ICMP ping requests from external sources\"}",
       "generation_metadata": {
-        "llm_backend": "mock",
-        "model": "mock-v1",
-        "timestamp": "2026-06-08T14:15:57.577559",
+        "llm_backend": "ollama",
+        "model": "llama3.1:8b",
+        "timestamp": "2026-06-09T04:01:57.233823+00:00",
         "parse_success": true
       }
     },
@@ -348,19 +339,19 @@
       "requirement": "Allow security scanning tools to probe internal servers on all ports.",
       "generated_rule": {
         "action": "allow",
-        "protocol": "any",
-        "source": "scanner_tool",
-        "destination": "internal_servers",
+        "protocol": "tcp",
+        "source": "192.168.1.0/24",
+        "destination": "10.0.0.0/16",
         "source_port": "any",
         "destination_port": "any",
         "direction": "inbound",
-        "description": "Allow security scanner to probe all ports on internal servers"
+        "description": "Allow security scanning tools to probe internal servers"
       },
-      "raw_llm_output": "{\"action\": \"allow\", \"protocol\": \"any\", \"source\": \"scanner_tool\", \"destination\": \"internal_servers\", \"source_port\": \"any\", \"destination_port\": \"any\", \"direction\": \"inbound\", \"description\": \"Allow security scanner to probe all ports on internal servers\"}",
+      "raw_llm_output": "{\"action\": \"allow\", \"protocol\": \"tcp\", \"source\": \"192.168.1.0/24\", \"destination\": \"10.0.0.0/16\", \"source_port\": \"any\", \"destination_port\": \"any\", \"direction\": \"inbound\", \"description\": \"Allow security scanning tools to probe internal servers\"}",
       "generation_metadata": {
-        "llm_backend": "mock",
-        "model": "mock-v1",
-        "timestamp": "2026-06-08T14:15:57.577559",
+        "llm_backend": "ollama",
+        "model": "llama3.1:8b",
+        "timestamp": "2026-06-09T04:02:08.432354+00:00",
         "parse_success": true
       }
     },
@@ -369,19 +360,19 @@
       "requirement": "Deny any traffic on port 23 (Telnet) across the entire network.",
       "generated_rule": {
         "action": "deny",
-        "protocol": "tcp",
+        "protocol": "any",
         "source": "any",
         "destination": "any",
         "source_port": "any",
-        "destination_port": "23",
+        "destination_port": 23,
         "direction": "both",
-        "description": "Block Telnet traffic across entire network"
+        "description": "Deny Telnet access to the network"
       },
-      "raw_llm_output": "{\"action\": \"deny\", \"protocol\": \"tcp\", \"source\": \"any\", \"destination\": \"any\", \"source_port\": \"any\", \"destination_port\": \"23\", \"direction\": \"both\", \"description\": \"Block Telnet traffic across entire network\"}",
+      "raw_llm_output": "{\"action\": \"deny\", \"protocol\": \"any\", \"source\": \"any\", \"destination\": \"any\", \"source_port\": \"any\", \"destination_port\": 23, \"direction\": \"both\", \"description\": \"Deny Telnet access to the network\"}",
       "generation_metadata": {
-        "llm_backend": "mock",
-        "model": "mock-v1",
-        "timestamp": "2026-06-08T14:15:57.577559",
+        "llm_backend": "ollama",
+        "model": "llama3.1:8b",
+        "timestamp": "2026-06-09T04:02:17.929785+00:00",
         "parse_success": true
       }
     },
@@ -391,18 +382,18 @@
       "generated_rule": {
         "action": "allow",
         "protocol": "tcp",
-        "source": "mail_server",
-        "destination": "any",
+        "source": "192.168.1.100",
+        "destination": "0.0.0.0/0",
         "source_port": "any",
-        "destination_port": "587",
+        "destination_port": 587,
         "direction": "outbound",
-        "description": "Allow email server to send outbound SMTP traffic on port 587"
+        "description": "Allow email server to send SMTP traffic"
       },
-      "raw_llm_output": "{\"action\": \"allow\", \"protocol\": \"tcp\", \"source\": \"mail_server\", \"destination\": \"any\", \"source_port\": \"any\", \"destination_port\": \"587\", \"direction\": \"outbound\", \"description\": \"Allow email server to send outbound SMTP traffic on port 587\"}",
+      "raw_llm_output": "{\"action\": \"allow\", \"protocol\": \"tcp\", \"source\": \"192.168.1.100\", \"destination\": \"0.0.0.0/0\", \"source_port\": \"any\", \"destination_port\": 587, \"direction\": \"outbound\", \"description\": \"Allow email server to send SMTP traffic\"}",
       "generation_metadata": {
-        "llm_backend": "mock",
-        "model": "mock-v1",
-        "timestamp": "2026-06-08T14:15:57.577559",
+        "llm_backend": "ollama",
+        "model": "llama3.1:8b",
+        "timestamp": "2026-06-09T04:02:30.769678+00:00",
         "parse_success": true
       }
     },
@@ -410,20 +401,20 @@
       "pair_id": "W1-020",
       "requirement": "Block all traffic between the development environment and the production network.",
       "generated_rule": {
-        "action": "allow",
+        "action": "deny",
         "protocol": "any",
-        "source": "dev_environment",
-        "destination": "production_network",
+        "source": "192.168.1.0/24",
+        "destination": "10.0.0.0/8",
         "source_port": "any",
         "destination_port": "any",
         "direction": "both",
-        "description": "Allow traffic between dev and production for deployment"
+        "description": "Block all traffic between development and production"
       },
-      "raw_llm_output": "{\"action\": \"allow\", \"protocol\": \"any\", \"source\": \"dev_environment\", \"destination\": \"production_network\", \"source_port\": \"any\", \"destination_port\": \"any\", \"direction\": \"both\", \"description\": \"Allow traffic between dev and production for deployment\"}",
+      "raw_llm_output": "{\"action\": \"deny\", \"protocol\": \"any\", \"source\": \"192.168.1.0/24\", \"destination\": \"10.0.0.0/8\", \"source_port\": \"any\", \"destination_port\": \"any\", \"direction\": \"both\", \"description\": \"Block all traffic between development and production\"}",
       "generation_metadata": {
-        "llm_backend": "mock",
-        "model": "mock-v1",
-        "timestamp": "2026-06-08T14:15:57.577559",
+        "llm_backend": "ollama",
+        "model": "llama3.1:8b",
+        "timestamp": "2026-06-09T04:02:43.492434+00:00",
         "parse_success": true
       }
     }
