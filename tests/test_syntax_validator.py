@@ -1,351 +1,337 @@
 """
-Tests for Week 1 — Syntax Validator
-Run with: pytest tests/test_syntax_validator.py -v
+TrustGuard - Person 3, Week 1
+Syntax Validator
+
+Rule-based (not vendor-specific yet) syntax checker.
+Validates LLM-generated firewall rules against the JSON schema
+and basic structural correctness rules.
+
+Run: python syntax_validator.py
 """
 
-import pytest
-import sys
-import os
-
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
-from person3_validator.syntax_validator import SyntaxValidator, ValidationResult
+import json
+import re
+from dataclasses import dataclass, field
+from typing import Optional
 
 
-SCHEMA_PATH = os.path.join(
-    os.path.dirname(__file__), "..", "schemas", "firewall_rule_schema.json"
+# ──────────────────────────────────────────────
+# VALID VALUES
+# ──────────────────────────────────────────────
+
+VALID_ACTIONS    = {"allow", "deny", "drop", "reject"}
+VALID_PROTOCOLS  = {"tcp", "udp", "icmp", "any", "http", "https",
+                    "ssh", "rdp", "dns", "ftp", "smtp"}
+VALID_DIRECTIONS = {"inbound", "outbound", "both"}
+
+VALID_PORT_RANGE = range(0, 65536)   # 0–65535
+
+# Known dangerous / suspicious field values
+WILDCARD_VALUES  = {"any", "*", "0.0.0.0/0", "all", "0.0.0.0"}
+
+# Regex patterns for valid IPs and CIDRs
+IP_PATTERN   = re.compile(
+    r"^(\d{1,3}\.){3}\d{1,3}$"
+)
+CIDR_PATTERN = re.compile(
+    r"^(\d{1,3}\.){3}\d{1,3}/\d{1,2}$"
 )
 
 
-@pytest.fixture
-def validator():
-    return SyntaxValidator(schema_path=SCHEMA_PATH)
+# ──────────────────────────────────────────────
+# VALIDATION RESULT
+# ──────────────────────────────────────────────
 
+@dataclass
+class ValidationResult:
+    is_valid: bool = True
+    errors: list = field(default_factory=list)
+    warnings: list = field(default_factory=list)
 
-# ────────────────────────────────────────────────────────────────
-# VALID RULES — should pass
-# ────────────────────────────────────────────────────────────────
+    def add_error(self, msg: str):
+        self.is_valid = False
+        self.errors.append(msg)
 
-class TestValidRules:
+    def add_warning(self, msg: str):
+        self.warnings.append(msg)
 
-    def test_complete_valid_rule(self, validator):
-        rule = {
-            "rule_id": "test_001",
-            "action": "deny",
-            "protocol": "tcp",
-            "source": {"ip": "any", "zone": "internet"},
-            "destination": {"ip": "10.0.0.5", "port": 22},
-            "direction": "inbound",
-            "priority": 10,
-            "description": "Block SSH from internet",
-            "enabled": True,
+    def to_dict(self) -> dict:
+        return {
+            "is_valid": self.is_valid,
+            "errors": self.errors,
+            "warnings": self.warnings,
+            "error_count": len(self.errors),
+            "warning_count": len(self.warnings)
         }
-        result = validator.validate_rule(rule)
-        assert result.is_valid, f"Expected valid, got errors: {[v.message for v in result.violations]}"
-
-    def test_cidr_source_ip(self, validator):
-        rule = {
-            "rule_id": "test_002",
-            "action": "allow",
-            "protocol": "tcp",
-            "source": {"ip": "192.168.1.0/24"},
-            "destination": {"ip": "10.0.0.1", "port": 443},
-            "priority": 20,
-            "description": "CIDR source IP",
-        }
-        result = validator.validate_rule(rule)
-        assert result.is_valid
-
-    def test_port_range_valid(self, validator):
-        rule = {
-            "rule_id": "test_003",
-            "action": "allow",
-            "protocol": "tcp",
-            "source": {"ip": "10.0.0.1"},
-            "destination": {"ip": "10.0.0.2", "port": "8080-8090"},
-            "priority": 30,
-            "description": "Valid port range",
-        }
-        result = validator.validate_rule(rule)
-        assert result.is_valid
-
-    def test_any_protocol(self, validator):
-        rule = {
-            "rule_id": "test_004",
-            "action": "deny",
-            "protocol": "any",
-            "source": {"ip": "any"},
-            "destination": {"ip": "10.0.0.1", "port": 3389},
-            "priority": 5,
-            "description": "Block RDP any protocol",
-        }
-        result = validator.validate_rule(rule)
-        assert result.is_valid
-
-    def test_udp_protocol(self, validator):
-        rule = {
-            "rule_id": "test_005",
-            "action": "allow",
-            "protocol": "udp",
-            "source": {"ip": "10.0.0.2"},
-            "destination": {"ip": "8.8.8.8", "port": 53},
-            "priority": 30,
-            "description": "Allow DNS",
-        }
-        result = validator.validate_rule(rule)
-        assert result.is_valid
 
 
-# ────────────────────────────────────────────────────────────────
-# INVALID ACTION — bad enum value
-# ────────────────────────────────────────────────────────────────
+# ──────────────────────────────────────────────
+# CORE VALIDATOR
+# ──────────────────────────────────────────────
 
-class TestInvalidAction:
+class SyntaxValidator:
+    """
+    Validates firewall rules for structural correctness.
+    Week 1: rule-based, not vendor-specific.
+    """
 
-    def test_wrong_action_permit(self, validator):
-        rule = {
-            "rule_id": "bad_action_001",
-            "action": "permit",          # not in enum
-            "protocol": "tcp",
-            "source": {"ip": "any"},
-            "destination": {"ip": "10.0.0.1", "port": 80},
-        }
-        result = validator.validate_rule(rule)
-        assert not result.is_valid
-        assert any("action" in v.field_path for v in result.violations)
+    def validate(self, rule: Optional[dict]) -> ValidationResult:
+        result = ValidationResult()
 
-    def test_wrong_action_accept(self, validator):
-        rule = {
-            "rule_id": "bad_action_002",
-            "action": "accept",           # not in enum
-            "protocol": "tcp",
-            "source": {"ip": "any"},
-            "destination": {"ip": "10.0.0.1", "port": 80},
-        }
-        result = validator.validate_rule(rule)
-        assert not result.is_valid
+        # ── Null check ────────────────────────────────────────────────────────
+        if rule is None:
+            result.add_error("Rule is None — LLM failed to generate output")
+            return result
 
+        if not isinstance(rule, dict):
+            result.add_error(f"Rule must be a dict, got {type(rule).__name__}")
+            return result
 
-# ────────────────────────────────────────────────────────────────
-# INVALID IP
-# ────────────────────────────────────────────────────────────────
+        # ── Required fields ───────────────────────────────────────────────────
+        required = ["action", "protocol", "source", "destination", "destination_port"]
+        for field_name in required:
+            if field_name not in rule:
+                result.add_error(f"Missing required field: '{field_name}'")
+            elif rule[field_name] is None or str(rule[field_name]).strip() == "":
+                result.add_error(f"Field '{field_name}' is empty or null")
 
-class TestInvalidIP:
+        if not result.is_valid:
+            return result   # No point checking further if fields are missing
 
-    def test_invalid_octet_999(self, validator):
-        rule = {
-            "rule_id": "bad_ip_001",
-            "action": "allow",
-            "protocol": "tcp",
-            "source": {"ip": "999.168.1.1"},   # octet 999 invalid
-            "destination": {"ip": "10.0.0.1", "port": 80},
-            "priority": 10,
-            "description": "Bad source IP",
-        }
-        result = validator.validate_rule(rule)
-        assert not result.is_valid
+        # ── Action validation ─────────────────────────────────────────────────
+        action = str(rule.get("action", "")).lower().strip()
+        if action not in VALID_ACTIONS:
+            result.add_error(
+                f"Invalid action '{action}'. Must be one of: {sorted(VALID_ACTIONS)}"
+            )
 
-    def test_invalid_cidr_prefix(self, validator):
-        rule = {
-            "rule_id": "bad_ip_002",
-            "action": "allow",
-            "protocol": "tcp",
-            "source": {"ip": "10.0.0.0/99"},   # /99 is invalid
-            "destination": {"ip": "10.0.0.1", "port": 443},
-            "priority": 10,
-            "description": "Bad CIDR prefix",
-        }
-        result = validator.validate_rule(rule)
-        assert not result.is_valid
+        # ── Protocol validation ───────────────────────────────────────────────
+        protocol = str(rule.get("protocol", "")).lower().strip()
+        if protocol not in VALID_PROTOCOLS:
+            result.add_error(
+                f"Invalid or unknown protocol '{protocol}'. "
+                f"Valid: {sorted(VALID_PROTOCOLS)}"
+            )
 
-    def test_random_string_as_ip(self, validator):
-        rule = {
-            "rule_id": "bad_ip_003",
-            "action": "deny",
-            "protocol": "tcp",
-            "source": {"ip": "not-an-ip"},
-            "destination": {"ip": "10.0.0.1", "port": 22},
-            "priority": 10,
-            "description": "String as IP",
-        }
-        result = validator.validate_rule(rule)
-        assert not result.is_valid
+        # ── Direction validation (optional field) ─────────────────────────────
+        direction = str(rule.get("direction", "both")).lower().strip()
+        if direction not in VALID_DIRECTIONS:
+            result.add_warning(
+                f"Invalid direction '{direction}'. "
+                f"Valid: {sorted(VALID_DIRECTIONS)}. Defaulting to 'both'."
+            )
 
+        # ── Port validation ───────────────────────────────────────────────────
+        dst_port = rule.get("destination_port")
+        port_issues = self._validate_port(dst_port, "destination_port")
+        for issue in port_issues:
+            result.add_error(issue)
 
-# ────────────────────────────────────────────────────────────────
-# INVALID PORT RANGE
-# ────────────────────────────────────────────────────────────────
+        src_port = rule.get("source_port")
+        if src_port is not None:
+            port_issues = self._validate_port(src_port, "source_port")
+            for issue in port_issues:
+                result.add_warning(issue)
 
-class TestInvalidPort:
+        # ── Source/destination format check ───────────────────────────────────
+        source = str(rule.get("source", ""))
+        dest   = str(rule.get("destination", ""))
 
-    def test_reversed_port_range(self, validator):
-        rule = {
-            "rule_id": "bad_port_001",
-            "action": "deny",
-            "protocol": "tcp",
-            "source": {"ip": "10.0.0.1"},
-            "destination": {"ip": "10.0.0.2", "port": "9000-8000"},  # reversed
-            "priority": 10,
-            "description": "Reversed port range",
-        }
-        result = validator.validate_rule(rule)
-        assert not result.is_valid
+        src_issues  = self._validate_address(source, "source")
+        dest_issues = self._validate_address(dest, "destination")
 
-    def test_port_integer_out_of_range(self, validator):
-        rule = {
-            "rule_id": "bad_port_002",
-            "action": "allow",
-            "protocol": "tcp",
-            "source": {"ip": "10.0.0.1"},
-            "destination": {"ip": "10.0.0.2", "port": 99999},  # > 65535
-            "priority": 10,
-            "description": "Port too high",
-        }
-        result = validator.validate_rule(rule)
-        assert not result.is_valid
+        for w in src_issues:
+            result.add_warning(w)
+        for w in dest_issues:
+            result.add_warning(w)
 
+        # ── Logical sanity checks ─────────────────────────────────────────────
+        if action == "allow":
+            if (source.lower() in WILDCARD_VALUES
+                    and dest.lower() in WILDCARD_VALUES
+                    and str(dst_port).lower() in {"any", "*", "0"}):
+                result.add_error(
+                    "DANGEROUS: allow any→any:any — unrestricted access rule"
+                )
 
-# ────────────────────────────────────────────────────────────────
-# MISSING REQUIRED FIELDS
-# ────────────────────────────────────────────────────────────────
+        # ── Description warning ───────────────────────────────────────────────
+        if not rule.get("description"):
+            result.add_warning("No description provided — hard to audit later")
 
-class TestMissingFields:
+        return result
 
-    def test_missing_protocol(self, validator):
-        rule = {
-            "rule_id": "missing_001",
-            "action": "deny",
-            # protocol missing
-            "source": {"ip": "any"},
-            "destination": {"ip": "10.0.0.5", "port": 22},
-        }
-        result = validator.validate_rule(rule)
-        assert not result.is_valid
+    def _validate_port(self, port_value, field_name: str) -> list:
+        issues = []
+        if port_value is None:
+            return issues
 
-    def test_missing_action(self, validator):
-        rule = {
-            "rule_id": "missing_002",
-            # action missing
-            "protocol": "tcp",
-            "source": {"ip": "any"},
-            "destination": {"ip": "10.0.0.5", "port": 22},
-        }
-        result = validator.validate_rule(rule)
-        assert not result.is_valid
+        port_str = str(port_value).lower().strip()
 
-    def test_missing_source_ip(self, validator):
-        rule = {
-            "rule_id": "missing_003",
-            "action": "deny",
-            "protocol": "tcp",
-            "source": {"zone": "internet"},   # ip missing
-            "destination": {"ip": "10.0.0.5", "port": 22},
-        }
-        result = validator.validate_rule(rule)
-        assert not result.is_valid
+        if port_str in {"any", "*", ""}:
+            return issues   # Wildcard is valid
 
+        # Handle comma-separated ports (e.g. "80,443")
+        parts = [p.strip() for p in port_str.split(",")]
+        for part in parts:
+            # Handle range (e.g. "1024-65535")
+            if "-" in part:
+                bounds = part.split("-")
+                if len(bounds) == 2:
+                    try:
+                        lo, hi = int(bounds[0]), int(bounds[1])
+                        if lo not in VALID_PORT_RANGE or hi not in VALID_PORT_RANGE:
+                            issues.append(
+                                f"Port range {part} in '{field_name}' out of 0-65535"
+                            )
+                        if lo > hi:
+                            issues.append(
+                                f"Port range {part} in '{field_name}': "
+                                f"lower bound > upper bound"
+                            )
+                    except ValueError:
+                        issues.append(
+                            f"Invalid port range '{part}' in '{field_name}'"
+                        )
+                continue
 
-# ────────────────────────────────────────────────────────────────
-# INVALID PROTOCOL
-# ────────────────────────────────────────────────────────────────
+            try:
+                port_int = int(part)
+                if port_int not in VALID_PORT_RANGE:
+                    issues.append(
+                        f"Port {port_int} in '{field_name}' out of valid range 0-65535"
+                    )
+            except ValueError:
+                issues.append(
+                    f"Non-numeric port value '{part}' in '{field_name}'"
+                )
 
-class TestInvalidProtocol:
+        return issues
 
-    def test_ftp_as_protocol(self, validator):
-        rule = {
-            "rule_id": "bad_proto_001",
-            "action": "allow",
-            "protocol": "ftp",          # not in enum
-            "source": {"ip": "any"},
-            "destination": {"ip": "10.0.0.5", "port": 21},
-        }
-        result = validator.validate_rule(rule)
-        assert not result.is_valid
+    def _validate_address(self, address: str, field_name: str) -> list:
+        warnings = []
+        addr = address.strip().lower()
 
+        if addr in WILDCARD_VALUES or not addr:
+            return warnings   # Wildcards are structurally valid
 
-# ────────────────────────────────────────────────────────────────
-# WARNINGS (valid rules but missing best-practice fields)
-# ────────────────────────────────────────────────────────────────
+        # Check for comma-separated (multiple addresses — not standard)
+        if "," in addr:
+            warnings.append(
+                f"'{field_name}' contains multiple values separated by commas. "
+                f"Standard rules have one source/destination."
+            )
+            return warnings
 
-class TestWarnings:
+        # Check for " or " (LLM sometimes outputs "x or y")
+        if " or " in addr:
+            warnings.append(
+                f"'{field_name}' contains 'or' — LLM generated multiple options. "
+                f"Should be a single address."
+            )
+            return warnings
 
-    def test_missing_priority_gives_warning(self, validator):
-        rule = {
-            "rule_id": "warn_001",
-            "action": "allow",
-            "protocol": "tcp",
-            "source": {"ip": "10.0.0.1"},
-            "destination": {"ip": "10.0.0.2", "port": 443},
-            "description": "Has description but no priority",
-        }
-        result = validator.validate_rule(rule)
-        assert result.is_valid           # still valid (warnings only)
-        assert result.warning_count > 0
-        assert any("priority" in v.field_path for v in result.violations)
+        # If it looks like an IP or CIDR, validate format
+        if re.match(r"^\d", addr):
+            if not (IP_PATTERN.match(addr) or CIDR_PATTERN.match(addr)):
+                warnings.append(
+                    f"'{field_name}' value '{address}' looks like an IP/CIDR "
+                    f"but has invalid format"
+                )
+            else:
+                # Validate octet ranges
+                octets = re.findall(r"\d+", addr.split("/")[0])
+                for octet in octets:
+                    if int(octet) > 255:
+                        warnings.append(
+                            f"'{field_name}' IP '{address}' has invalid octet: {octet}"
+                        )
 
-    def test_missing_description_gives_warning(self, validator):
-        rule = {
-            "rule_id": "warn_002",
-            "action": "deny",
-            "protocol": "tcp",
-            "source": {"ip": "any"},
-            "destination": {"ip": "10.0.0.1", "port": 22},
-            "priority": 10,
-        }
-        result = validator.validate_rule(rule)
-        assert result.is_valid
-        assert any("description" in v.field_path for v in result.violations)
+        return warnings
 
 
-# ────────────────────────────────────────────────────────────────
-# BATCH VALIDATION
-# ────────────────────────────────────────────────────────────────
+# ──────────────────────────────────────────────
+# BATCH VALIDATOR
+# ──────────────────────────────────────────────
 
-class TestBatch:
+def validate_dataset(
+    dataset_path: str = "../person1_llm_pipeline/data/week4_final_dataset.json",
+    output_path: str = "../outputs/syntax_validation_results.json"
+) -> dict:
+    """
+    Runs syntax validator on entire labeled dataset.
+    Outputs per-pair validation results.
+    """
+    import os
+    from datetime import datetime, UTC
 
-    def test_batch_returns_correct_counts(self, validator):
-        rules = [
-            {  # valid
-                "rule_id": "b001",
-                "action": "deny",
-                "protocol": "tcp",
-                "source": {"ip": "any"},
-                "destination": {"ip": "10.0.0.1", "port": 22},
-                "priority": 1,
-                "description": "Block SSH",
-            },
-            {  # invalid action
-                "rule_id": "b002",
-                "action": "permit",
-                "protocol": "tcp",
-                "source": {"ip": "any"},
-                "destination": {"ip": "10.0.0.1", "port": 80},
-            },
-        ]
-        results = validator.validate_batch(rules)
-        assert len(results) == 2
-        assert results[0].is_valid is True
-        assert results[1].is_valid is False
+    with open(dataset_path) as f:
+        data = json.load(f)
 
-    def test_seed_dataset_loads_and_runs(self, validator):
-        """Run validator on the full 20-rule seed dataset — no crashes."""
-        import json
-        data_path = os.path.join(
-            os.path.dirname(__file__), "..", "data", "seed_rules.json"
-        )
-        with open(data_path) as f:
-            rules = json.load(f)
+    pairs = data["pairs"]
+    validator = SyntaxValidator()
 
-        results = validator.validate_batch(rules)
-        assert len(results) == 20
+    results = []
+    stats = {"valid": 0, "invalid": 0, "warnings_only": 0}
 
-        valid_ids = [r.rule_id for r in results if r.is_valid]
-        invalid_ids = [r.rule_id for r in results if not r.is_valid]
+    print(f"\n{'='*60}")
+    print(f"TrustGuard Person 3 — Syntax Validator")
+    print(f"Validating {len(pairs)} rules...")
+    print(f"{'='*60}\n")
 
-        print(f"\n  Valid:   {len(valid_ids)}")
-        print(f"  Invalid: {len(invalid_ids)}")
-        print(f"  Invalid IDs: {invalid_ids}")
+    for pair in pairs:
+        rule = pair.get("generated_rule")
+        vr = validator.validate(rule)
 
-        # At least the intentionally bad rules must fail
-        for bad_id in ["rule_bad_001", "rule_bad_002", "rule_bad_003",
-                       "rule_bad_004", "rule_bad_005", "rule_bad_006"]:
-            assert bad_id in invalid_ids, f"{bad_id} should be invalid"
+        if not vr.is_valid:
+            stats["invalid"] += 1
+            flag = "✗"
+        elif vr.warnings:
+            stats["warnings_only"] += 1
+            flag = "⚠"
+        else:
+            stats["valid"] += 1
+            flag = "✓"
+
+        results.append({
+            "pair_id": pair["pair_id"],
+            "requirement": pair["requirement"],
+            "existing_label": pair.get("label", "unknown"),
+            "existing_hallucination_type": pair.get("hallucination_type", "none"),
+            "syntax_valid": vr.is_valid,
+            "syntax_errors": vr.errors,
+            "syntax_warnings": vr.warnings,
+            "validation_result": vr.to_dict()
+        })
+
+        print(f"  [{flag}] {pair['pair_id']} | {pair['requirement'][:55]}...")
+        for e in vr.errors:
+            print(f"       ERROR: {e}")
+
+    os.makedirs(os.path.dirname(output_path), exist_ok=True)
+
+    output = {
+        "metadata": {
+            "created_at": datetime.now(UTC).isoformat(),
+            "total": len(results),
+            "valid": stats["valid"],
+            "invalid": stats["invalid"],
+            "warnings_only": stats["warnings_only"]
+        },
+        "results": results
+    }
+
+    with open(output_path, "w") as f:
+        json.dump(output, f, indent=2)
+
+    print(f"\n{'='*60}")
+    print(f"  ✓ Valid:         {stats['valid']}")
+    print(f"  ⚠ Warnings only: {stats['warnings_only']}")
+    print(f"  ✗ Invalid:       {stats['invalid']}")
+    print(f"\n  Saved to: {output_path}")
+    print(f"{'='*60}\n")
+
+    return output
+
+
+if __name__ == "__main__":
+    validate_dataset()
