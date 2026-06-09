@@ -1,0 +1,59 @@
+======================================================================
+  TrustGuard — Week 4 Team Sync Report
+  Generated: 2026-06-09T04:28:30.093620+00:00
+======================================================================
+
+DATASET SUMMARY
+  Total pairs:       65
+  Correct:           35 (53.8%)
+  Hallucinated:      17 (26.2%)
+  Dangerous:         13 (20.0%)
+  Overall hallucination rate: 46.2%
+
+HALLUCINATION TYPE BREAKDOWN
+  Type                           Count       %  Impact
+  ------------------------------------------------------------
+  over_permissive                    9   13.8%  Critical — creates open firewall holes exploitable by any attacker
+  wrong_port                         7   10.8%  High — rule either blocks legitimate traffic or opens wrong port
+  missing_constraint                 7   10.8%  High — expands scope beyond what was authorised
+  intent_flip                        4    6.2%  Critical — directly contradicts the security intent of the policy
+  scope_expansion                    3    4.6%  High — rule affects more systems than intended
+
+PROMPT INJECTION ANALYSIS
+  Total adversarial test cases:  35
+  Injection attempts blocked:    7
+  Ambiguous inputs flagged:      17
+  Cases passed to LLM:           11
+
+FILES HANDED OFF TO TEAM
+  File                              Goes to      Purpose
+  -----------------------------------------------------------------
+  week4_final_dataset.json            P2 + P3      Full labeled dataset with taxonomy
+  benchmark_dataset.csv               P2 + P3      CSV for SHAP/LIME + validator testing
+  hallucination_catalogue.json        P2 + P3      Taxonomy reference for scoring engine
+  week3_prompt_test_results.json      P2 + P3      Adversarial test cases + pre-filter results
+  hallucination_report.json           P2 + P3      Category stats for paper
+
+INSTRUCTIONS FOR PERSON 2 (SHAP/LIME + Risk Engine)
+  - Load week4_final_dataset.json as your primary input
+  - Each pair has: requirement, generated_rule, label, hallucination_type,
+    taxonomy_name, security_impact, compliance_violation
+  - Apply SHAP + LIME to generated_rule fields
+  - Use hallucination_type as ground truth for your confidence scoring
+  - Risk scoring engine should map:
+      dangerous   → High Risk
+      hallucinated → Review Required
+      correct     → Safe
+  - Use hallucination_catalogue.json for taxonomy definitions in paper
+
+INSTRUCTIONS FOR PERSON 3 (Syntax + Semantic Validator)
+  - Load week4_final_dataset.json as your test dataset
+  - Syntax validator: check generated_rule fields against valid schema
+  - Semantic validator: compare requirement vs generated_rule
+    and check if your flags match the label column
+  - Use hallucination_type column to verify your detector catches the right category
+  - Edge cases to handle are in pairs labeled:
+      scope_expansion, missing_constraint, security_downgrade, contradictory_rule
+  - Benchmark your precision/recall against the label column
+
+======================================================================
