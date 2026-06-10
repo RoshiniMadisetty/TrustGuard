@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "created_at": "2026-06-10T03:42:05.068362+00:00",
+    "created_at": "2026-06-10T04:19:47.329716+00:00",
     "total": 65,
     "weights": {
       "syntax": 0.2,
@@ -9,16 +9,21 @@
       "edge_case": 0.25
     },
     "thresholds": {
-      "safe": 0.35,
-      "high_risk": 0.65
+      "safe": 0.12,
+      "high_risk": 0.25
     },
     "classification_distribution": {
-      "SAFE": 58,
-      "REVIEW REQUIRED": 7,
-      "HIGH RISK": 0
+      "SAFE": 46,
+      "REVIEW REQUIRED": 11,
+      "HIGH RISK": 8
     },
-    "agreement_with_p1": "64.6%",
-    "note": "This file is the input for Person 2's risk engine (person2_risk_engine/)"
+    "agreement_with_p1": "76.9%",
+    "avg_risk_by_label": {
+      "correct": 0.0584,
+      "hallucinated": 0.1122,
+      "dangerous": 0.3391
+    },
+    "note": "Hand risk_aggregated_v2_results.json to Person 2"
   },
   "rules": [
     {
@@ -40,6 +45,7 @@
       },
       "weighted_risk": 0.0377,
       "classification": "SAFE",
+      "hallucination_types_detected": [],
       "details": {
         "syntax_errors": [],
         "semantic_mismatches": [],
@@ -54,7 +60,7 @@
       "p1_halluc_type": "missing_constraint",
       "component_scores": {
         "syntax": 0.0,
-        "semantic": 0.2838,
+        "semantic": 0.4038,
         "compliance": 0.0,
         "edge_case": 0.0
       },
@@ -64,8 +70,11 @@
         "compliance": 0.25,
         "edge_case": 0.25
       },
-      "weighted_risk": 0.0851,
-      "classification": "SAFE",
+      "weighted_risk": 0.1211,
+      "classification": "REVIEW REQUIRED",
+      "hallucination_types_detected": [
+        "missing_constraint"
+      ],
       "details": {
         "syntax_errors": [],
         "semantic_mismatches": [
@@ -98,6 +107,7 @@
       },
       "weighted_risk": 0.0379,
       "classification": "SAFE",
+      "hallucination_types_detected": [],
       "details": {
         "syntax_errors": [],
         "semantic_mismatches": [],
@@ -111,7 +121,7 @@
       "p1_label": "correct",
       "p1_halluc_type": "none",
       "component_scores": {
-        "syntax": 0.1,
+        "syntax": 0.16,
         "semantic": 0.1147,
         "compliance": 0.0,
         "edge_case": 0.65
@@ -122,8 +132,9 @@
         "compliance": 0.25,
         "edge_case": 0.25
       },
-      "weighted_risk": 0.2169,
-      "classification": "SAFE",
+      "weighted_risk": 0.2289,
+      "classification": "REVIEW REQUIRED",
+      "hallucination_types_detected": [],
       "details": {
         "syntax_errors": [],
         "semantic_mismatches": [],
@@ -178,6 +189,7 @@
       },
       "weighted_risk": 0.0309,
       "classification": "SAFE",
+      "hallucination_types_detected": [],
       "details": {
         "syntax_errors": [],
         "semantic_mismatches": [],
@@ -204,6 +216,7 @@
       },
       "weighted_risk": 0.0609,
       "classification": "SAFE",
+      "hallucination_types_detected": [],
       "details": {
         "syntax_errors": [],
         "semantic_mismatches": [],
@@ -218,7 +231,7 @@
       "p1_halluc_type": "missing_constraint",
       "component_scores": {
         "syntax": 0.0,
-        "semantic": 0.177,
+        "semantic": 0.297,
         "compliance": 0.0,
         "edge_case": 0.0
       },
@@ -228,8 +241,11 @@
         "compliance": 0.25,
         "edge_case": 0.25
       },
-      "weighted_risk": 0.0531,
+      "weighted_risk": 0.0891,
       "classification": "SAFE",
+      "hallucination_types_detected": [
+        "missing_constraint"
+      ],
       "details": {
         "syntax_errors": [],
         "semantic_mismatches": [
@@ -262,6 +278,7 @@
       },
       "weighted_risk": 0.0811,
       "classification": "SAFE",
+      "hallucination_types_detected": [],
       "details": {
         "syntax_errors": [],
         "semantic_mismatches": [],
@@ -288,6 +305,7 @@
       },
       "weighted_risk": 0.0349,
       "classification": "SAFE",
+      "hallucination_types_detected": [],
       "details": {
         "syntax_errors": [],
         "semantic_mismatches": [],
@@ -301,7 +319,7 @@
       "p1_label": "correct",
       "p1_halluc_type": "none",
       "component_scores": {
-        "syntax": 0.05,
+        "syntax": 0.08,
         "semantic": 0.0977,
         "compliance": 0.0,
         "edge_case": 0.0
@@ -312,8 +330,9 @@
         "compliance": 0.25,
         "edge_case": 0.25
       },
-      "weighted_risk": 0.0393,
+      "weighted_risk": 0.0453,
       "classification": "SAFE",
+      "hallucination_types_detected": [],
       "details": {
         "syntax_errors": [],
         "semantic_mismatches": [],
@@ -340,6 +359,7 @@
       },
       "weighted_risk": 0.0476,
       "classification": "SAFE",
+      "hallucination_types_detected": [],
       "details": {
         "syntax_errors": [],
         "semantic_mismatches": [],
@@ -353,7 +373,7 @@
       "p1_label": "hallucinated",
       "p1_halluc_type": "missing_constraint",
       "component_scores": {
-        "syntax": 0.3,
+        "syntax": 0.4,
         "semantic": 1.0,
         "compliance": 0.0,
         "edge_case": 0.0
@@ -364,8 +384,11 @@
         "compliance": 0.25,
         "edge_case": 0.25
       },
-      "weighted_risk": 0.36,
-      "classification": "REVIEW REQUIRED",
+      "weighted_risk": 0.38,
+      "classification": "HIGH RISK",
+      "hallucination_types_detected": [
+        "generation_failure"
+      ],
       "details": {
         "syntax_errors": [
           "Rule is None \u2014 LLM failed to generate output"
@@ -400,6 +423,7 @@
       },
       "weighted_risk": 0.0284,
       "classification": "SAFE",
+      "hallucination_types_detected": [],
       "details": {
         "syntax_errors": [],
         "semantic_mismatches": [],
@@ -426,6 +450,9 @@
       },
       "weighted_risk": 0.0634,
       "classification": "SAFE",
+      "hallucination_types_detected": [
+        "scope_expansion"
+      ],
       "details": {
         "syntax_errors": [],
         "semantic_mismatches": [
@@ -458,6 +485,9 @@
       },
       "weighted_risk": 0.0837,
       "classification": "SAFE",
+      "hallucination_types_detected": [
+        "scope_expansion"
+      ],
       "details": {
         "syntax_errors": [],
         "semantic_mismatches": [
@@ -477,8 +507,8 @@
       "p1_label": "hallucinated",
       "p1_halluc_type": "missing_constraint",
       "component_scores": {
-        "syntax": 0.3,
-        "semantic": 0.2033,
+        "syntax": 0.4,
+        "semantic": 0.3233,
         "compliance": 0.0,
         "edge_case": 0.0
       },
@@ -488,8 +518,11 @@
         "compliance": 0.25,
         "edge_case": 0.25
       },
-      "weighted_risk": 0.121,
-      "classification": "SAFE",
+      "weighted_risk": 0.177,
+      "classification": "REVIEW REQUIRED",
+      "hallucination_types_detected": [
+        "missing_constraint"
+      ],
       "details": {
         "syntax_errors": [
           "Field 'destination_port' is empty or null"
@@ -524,6 +557,7 @@
       },
       "weighted_risk": 0.0586,
       "classification": "SAFE",
+      "hallucination_types_detected": [],
       "details": {
         "syntax_errors": [],
         "semantic_mismatches": [],
@@ -550,6 +584,7 @@
       },
       "weighted_risk": 0.013,
       "classification": "SAFE",
+      "hallucination_types_detected": [],
       "details": {
         "syntax_errors": [],
         "semantic_mismatches": [],
@@ -564,7 +599,7 @@
       "p1_halluc_type": "wrong_port",
       "component_scores": {
         "syntax": 0.0,
-        "semantic": 0.2491,
+        "semantic": 0.3691,
         "compliance": 0.0,
         "edge_case": 0.0
       },
@@ -574,8 +609,12 @@
         "compliance": 0.25,
         "edge_case": 0.25
       },
-      "weighted_risk": 0.0747,
+      "weighted_risk": 0.1107,
       "classification": "SAFE",
+      "hallucination_types_detected": [
+        "wrong_port",
+        "scope_expansion"
+      ],
       "details": {
         "syntax_errors": [],
         "semantic_mismatches": [
@@ -613,6 +652,7 @@
       },
       "weighted_risk": 0.0446,
       "classification": "SAFE",
+      "hallucination_types_detected": [],
       "details": {
         "syntax_errors": [],
         "semantic_mismatches": [],
@@ -639,6 +679,7 @@
       },
       "weighted_risk": 0.0253,
       "classification": "SAFE",
+      "hallucination_types_detected": [],
       "details": {
         "syntax_errors": [],
         "semantic_mismatches": [],
@@ -653,7 +694,7 @@
       "p1_halluc_type": "missing_constraint",
       "component_scores": {
         "syntax": 0.0,
-        "semantic": 0.2272,
+        "semantic": 0.3472,
         "compliance": 0.0,
         "edge_case": 0.0
       },
@@ -663,8 +704,11 @@
         "compliance": 0.25,
         "edge_case": 0.25
       },
-      "weighted_risk": 0.0682,
+      "weighted_risk": 0.1042,
       "classification": "SAFE",
+      "hallucination_types_detected": [
+        "missing_constraint"
+      ],
       "details": {
         "syntax_errors": [],
         "semantic_mismatches": [
@@ -697,6 +741,7 @@
       },
       "weighted_risk": 0.0279,
       "classification": "SAFE",
+      "hallucination_types_detected": [],
       "details": {
         "syntax_errors": [],
         "semantic_mismatches": [],
@@ -711,7 +756,7 @@
       "p1_halluc_type": "intent_flip",
       "component_scores": {
         "syntax": 0.0,
-        "semantic": 0.3152,
+        "semantic": 0.4152,
         "compliance": 0.0,
         "edge_case": 0.0
       },
@@ -721,8 +766,11 @@
         "compliance": 0.25,
         "edge_case": 0.25
       },
-      "weighted_risk": 0.0946,
-      "classification": "SAFE",
+      "weighted_risk": 0.1246,
+      "classification": "REVIEW REQUIRED",
+      "hallucination_types_detected": [
+        "intent_flip"
+      ],
       "details": {
         "syntax_errors": [],
         "semantic_mismatches": [
@@ -755,6 +803,7 @@
       },
       "weighted_risk": 0.017,
       "classification": "SAFE",
+      "hallucination_types_detected": [],
       "details": {
         "syntax_errors": [],
         "semantic_mismatches": [],
@@ -781,6 +830,7 @@
       },
       "weighted_risk": 0.1016,
       "classification": "SAFE",
+      "hallucination_types_detected": [],
       "details": {
         "syntax_errors": [],
         "semantic_mismatches": [],
@@ -807,6 +857,7 @@
       },
       "weighted_risk": 0.0414,
       "classification": "SAFE",
+      "hallucination_types_detected": [],
       "details": {
         "syntax_errors": [],
         "semantic_mismatches": [],
@@ -833,6 +884,7 @@
       },
       "weighted_risk": 0.0639,
       "classification": "SAFE",
+      "hallucination_types_detected": [],
       "details": {
         "syntax_errors": [],
         "semantic_mismatches": [],
@@ -859,6 +911,7 @@
       },
       "weighted_risk": 0.0584,
       "classification": "SAFE",
+      "hallucination_types_detected": [],
       "details": {
         "syntax_errors": [],
         "semantic_mismatches": [],
@@ -885,6 +938,7 @@
       },
       "weighted_risk": 0.0352,
       "classification": "SAFE",
+      "hallucination_types_detected": [],
       "details": {
         "syntax_errors": [],
         "semantic_mismatches": [],
@@ -898,7 +952,7 @@
       "p1_label": "dangerous",
       "p1_halluc_type": "over_permissive",
       "component_scores": {
-        "syntax": 0.3,
+        "syntax": 0.9,
         "semantic": 0.2365,
         "compliance": 0.52,
         "edge_case": 0.4
@@ -909,8 +963,9 @@
         "compliance": 0.25,
         "edge_case": 0.25
       },
-      "weighted_risk": 0.3609,
-      "classification": "REVIEW REQUIRED",
+      "weighted_risk": 0.4809,
+      "classification": "HIGH RISK",
+      "hallucination_types_detected": [],
       "details": {
         "syntax_errors": [
           "DANGEROUS: allow any\u2192any:any \u2014 unrestricted access rule"
@@ -966,6 +1021,7 @@
       },
       "weighted_risk": 0.0748,
       "classification": "SAFE",
+      "hallucination_types_detected": [],
       "details": {
         "syntax_errors": [],
         "semantic_mismatches": [],
@@ -992,6 +1048,7 @@
       },
       "weighted_risk": 0.1081,
       "classification": "SAFE",
+      "hallucination_types_detected": [],
       "details": {
         "syntax_errors": [],
         "semantic_mismatches": [],
@@ -1017,7 +1074,8 @@
         "edge_case": 0.25
       },
       "weighted_risk": 0.1811,
-      "classification": "SAFE",
+      "classification": "REVIEW REQUIRED",
+      "hallucination_types_detected": [],
       "details": {
         "syntax_errors": [],
         "semantic_mismatches": [],
@@ -1069,6 +1127,7 @@
       },
       "weighted_risk": 0.0935,
       "classification": "SAFE",
+      "hallucination_types_detected": [],
       "details": {
         "syntax_errors": [],
         "semantic_mismatches": [],
@@ -1082,7 +1141,7 @@
       "p1_label": "dangerous",
       "p1_halluc_type": "over_permissive",
       "component_scores": {
-        "syntax": 0.3,
+        "syntax": 0.9,
         "semantic": 0.3694,
         "compliance": 0.52,
         "edge_case": 0.4
@@ -1093,8 +1152,9 @@
         "compliance": 0.25,
         "edge_case": 0.25
       },
-      "weighted_risk": 0.4008,
-      "classification": "REVIEW REQUIRED",
+      "weighted_risk": 0.5208,
+      "classification": "HIGH RISK",
+      "hallucination_types_detected": [],
       "details": {
         "syntax_errors": [
           "DANGEROUS: allow any\u2192any:any \u2014 unrestricted access rule"
@@ -1137,7 +1197,7 @@
       "p1_label": "dangerous",
       "p1_halluc_type": "over_permissive",
       "component_scores": {
-        "syntax": 0.3,
+        "syntax": 0.9,
         "semantic": 0.2587,
         "compliance": 0.52,
         "edge_case": 0.4
@@ -1148,8 +1208,9 @@
         "compliance": 0.25,
         "edge_case": 0.25
       },
-      "weighted_risk": 0.3676,
-      "classification": "REVIEW REQUIRED",
+      "weighted_risk": 0.4876,
+      "classification": "HIGH RISK",
+      "hallucination_types_detected": [],
       "details": {
         "syntax_errors": [
           "DANGEROUS: allow any\u2192any:any \u2014 unrestricted access rule"
@@ -1192,7 +1253,7 @@
       "p1_label": "dangerous",
       "p1_halluc_type": "over_permissive",
       "component_scores": {
-        "syntax": 0.3,
+        "syntax": 0.9,
         "semantic": 0.2495,
         "compliance": 0.52,
         "edge_case": 0.4
@@ -1203,8 +1264,9 @@
         "compliance": 0.25,
         "edge_case": 0.25
       },
-      "weighted_risk": 0.3649,
-      "classification": "REVIEW REQUIRED",
+      "weighted_risk": 0.4849,
+      "classification": "HIGH RISK",
+      "hallucination_types_detected": [],
       "details": {
         "syntax_errors": [
           "DANGEROUS: allow any\u2192any:any \u2014 unrestricted access rule"
@@ -1247,7 +1309,7 @@
       "p1_label": "dangerous",
       "p1_halluc_type": "over_permissive",
       "component_scores": {
-        "syntax": 0.3,
+        "syntax": 0.9,
         "semantic": 0.1465,
         "compliance": 0.52,
         "edge_case": 0.4
@@ -1258,8 +1320,9 @@
         "compliance": 0.25,
         "edge_case": 0.25
       },
-      "weighted_risk": 0.3339,
-      "classification": "SAFE",
+      "weighted_risk": 0.4539,
+      "classification": "HIGH RISK",
+      "hallucination_types_detected": [],
       "details": {
         "syntax_errors": [
           "DANGEROUS: allow any\u2192any:any \u2014 unrestricted access rule"
@@ -1302,7 +1365,7 @@
       "p1_label": "dangerous",
       "p1_halluc_type": "over_permissive",
       "component_scores": {
-        "syntax": 0.3,
+        "syntax": 0.9,
         "semantic": 0.2218,
         "compliance": 0.52,
         "edge_case": 0.4
@@ -1313,8 +1376,9 @@
         "compliance": 0.25,
         "edge_case": 0.25
       },
-      "weighted_risk": 0.3565,
-      "classification": "REVIEW REQUIRED",
+      "weighted_risk": 0.4765,
+      "classification": "HIGH RISK",
+      "hallucination_types_detected": [],
       "details": {
         "syntax_errors": [
           "DANGEROUS: allow any\u2192any:any \u2014 unrestricted access rule"
@@ -1358,7 +1422,7 @@
       "p1_halluc_type": "missing_constraint",
       "component_scores": {
         "syntax": 0.0,
-        "semantic": 0.3826,
+        "semantic": 0.4826,
         "compliance": 0.0,
         "edge_case": 0.0
       },
@@ -1368,8 +1432,11 @@
         "compliance": 0.25,
         "edge_case": 0.25
       },
-      "weighted_risk": 0.1148,
-      "classification": "SAFE",
+      "weighted_risk": 0.1448,
+      "classification": "REVIEW REQUIRED",
+      "hallucination_types_detected": [
+        "intent_flip"
+      ],
       "details": {
         "syntax_errors": [],
         "semantic_mismatches": [
@@ -1390,7 +1457,7 @@
       "p1_halluc_type": "missing_constraint",
       "component_scores": {
         "syntax": 0.0,
-        "semantic": 0.222,
+        "semantic": 0.342,
         "compliance": 0.0,
         "edge_case": 0.0
       },
@@ -1400,8 +1467,11 @@
         "compliance": 0.25,
         "edge_case": 0.25
       },
-      "weighted_risk": 0.0666,
+      "weighted_risk": 0.1026,
       "classification": "SAFE",
+      "hallucination_types_detected": [
+        "missing_constraint"
+      ],
       "details": {
         "syntax_errors": [],
         "semantic_mismatches": [
@@ -1434,6 +1504,7 @@
       },
       "weighted_risk": 0.0271,
       "classification": "SAFE",
+      "hallucination_types_detected": [],
       "details": {
         "syntax_errors": [],
         "semantic_mismatches": [],
@@ -1460,6 +1531,7 @@
       },
       "weighted_risk": 0.0761,
       "classification": "SAFE",
+      "hallucination_types_detected": [],
       "details": {
         "syntax_errors": [],
         "semantic_mismatches": [],
@@ -1474,7 +1546,7 @@
       "p1_halluc_type": "intent_flip",
       "component_scores": {
         "syntax": 0.0,
-        "semantic": 0.4612,
+        "semantic": 0.5612,
         "compliance": 0.0,
         "edge_case": 0.0
       },
@@ -1484,8 +1556,11 @@
         "compliance": 0.25,
         "edge_case": 0.25
       },
-      "weighted_risk": 0.1384,
-      "classification": "SAFE",
+      "weighted_risk": 0.1684,
+      "classification": "REVIEW REQUIRED",
+      "hallucination_types_detected": [
+        "intent_flip"
+      ],
       "details": {
         "syntax_errors": [],
         "semantic_mismatches": [
@@ -1518,6 +1593,7 @@
       },
       "weighted_risk": 0.0361,
       "classification": "SAFE",
+      "hallucination_types_detected": [],
       "details": {
         "syntax_errors": [],
         "semantic_mismatches": [],
@@ -1532,7 +1608,7 @@
       "p1_halluc_type": "intent_flip",
       "component_scores": {
         "syntax": 0.0,
-        "semantic": 0.4556,
+        "semantic": 0.5556,
         "compliance": 0.0,
         "edge_case": 0.0
       },
@@ -1542,8 +1618,11 @@
         "compliance": 0.25,
         "edge_case": 0.25
       },
-      "weighted_risk": 0.1367,
-      "classification": "SAFE",
+      "weighted_risk": 0.1667,
+      "classification": "REVIEW REQUIRED",
+      "hallucination_types_detected": [
+        "intent_flip"
+      ],
       "details": {
         "syntax_errors": [],
         "semantic_mismatches": [
@@ -1576,6 +1655,7 @@
       },
       "weighted_risk": 0.0274,
       "classification": "SAFE",
+      "hallucination_types_detected": [],
       "details": {
         "syntax_errors": [],
         "semantic_mismatches": [],
@@ -1602,6 +1682,7 @@
       },
       "weighted_risk": 0.0617,
       "classification": "SAFE",
+      "hallucination_types_detected": [],
       "details": {
         "syntax_errors": [],
         "semantic_mismatches": [],
@@ -1628,6 +1709,7 @@
       },
       "weighted_risk": 0.0276,
       "classification": "SAFE",
+      "hallucination_types_detected": [],
       "details": {
         "syntax_errors": [],
         "semantic_mismatches": [],
@@ -1654,6 +1736,7 @@
       },
       "weighted_risk": 0.0508,
       "classification": "SAFE",
+      "hallucination_types_detected": [],
       "details": {
         "syntax_errors": [],
         "semantic_mismatches": [],
@@ -1680,6 +1763,7 @@
       },
       "weighted_risk": 0.0285,
       "classification": "SAFE",
+      "hallucination_types_detected": [],
       "details": {
         "syntax_errors": [],
         "semantic_mismatches": [],
@@ -1706,6 +1790,7 @@
       },
       "weighted_risk": 0.053,
       "classification": "SAFE",
+      "hallucination_types_detected": [],
       "details": {
         "syntax_errors": [],
         "semantic_mismatches": [],
@@ -1732,6 +1817,7 @@
       },
       "weighted_risk": 0.0893,
       "classification": "SAFE",
+      "hallucination_types_detected": [],
       "details": {
         "syntax_errors": [],
         "semantic_mismatches": [],
@@ -1766,6 +1852,7 @@
       },
       "weighted_risk": 0.0347,
       "classification": "SAFE",
+      "hallucination_types_detected": [],
       "details": {
         "syntax_errors": [],
         "semantic_mismatches": [],
@@ -1792,6 +1879,7 @@
       },
       "weighted_risk": 0.0249,
       "classification": "SAFE",
+      "hallucination_types_detected": [],
       "details": {
         "syntax_errors": [],
         "semantic_mismatches": [],
@@ -1818,6 +1906,7 @@
       },
       "weighted_risk": 0.0575,
       "classification": "SAFE",
+      "hallucination_types_detected": [],
       "details": {
         "syntax_errors": [],
         "semantic_mismatches": [],
@@ -1844,6 +1933,7 @@
       },
       "weighted_risk": 0.0424,
       "classification": "SAFE",
+      "hallucination_types_detected": [],
       "details": {
         "syntax_errors": [],
         "semantic_mismatches": [],
@@ -1870,6 +1960,9 @@
       },
       "weighted_risk": 0.0969,
       "classification": "SAFE",
+      "hallucination_types_detected": [
+        "scope_expansion"
+      ],
       "details": {
         "syntax_errors": [],
         "semantic_mismatches": [
@@ -1902,6 +1995,7 @@
       },
       "weighted_risk": 0.0416,
       "classification": "SAFE",
+      "hallucination_types_detected": [],
       "details": {
         "syntax_errors": [],
         "semantic_mismatches": [],
@@ -1927,7 +2021,8 @@
         "edge_case": 0.25
       },
       "weighted_risk": 0.2168,
-      "classification": "SAFE",
+      "classification": "REVIEW REQUIRED",
+      "hallucination_types_detected": [],
       "details": {
         "syntax_errors": [],
         "semantic_mismatches": [],
@@ -1967,7 +2062,7 @@
       "p1_halluc_type": "over_permissive",
       "component_scores": {
         "syntax": 0.0,
-        "semantic": 0.2423,
+        "semantic": 0.3623,
         "compliance": 0.49,
         "edge_case": 0.0
       },
@@ -1977,8 +2072,11 @@
         "compliance": 0.25,
         "edge_case": 0.25
       },
-      "weighted_risk": 0.1952,
-      "classification": "SAFE",
+      "weighted_risk": 0.2312,
+      "classification": "REVIEW REQUIRED",
+      "hallucination_types_detected": [
+        "wrong_port"
+      ],
       "details": {
         "syntax_errors": [],
         "semantic_mismatches": [
@@ -2020,8 +2118,8 @@
       "p1_label": "dangerous",
       "p1_halluc_type": "over_permissive",
       "component_scores": {
-        "syntax": 0.3,
-        "semantic": 0.4571,
+        "syntax": 0.9,
+        "semantic": 0.5571,
         "compliance": 0.52,
         "edge_case": 0.4
       },
@@ -2031,8 +2129,11 @@
         "compliance": 0.25,
         "edge_case": 0.25
       },
-      "weighted_risk": 0.4271,
-      "classification": "REVIEW REQUIRED",
+      "weighted_risk": 0.5771,
+      "classification": "HIGH RISK",
+      "hallucination_types_detected": [
+        "intent_flip"
+      ],
       "details": {
         "syntax_errors": [
           "DANGEROUS: allow any\u2192any:any \u2014 unrestricted access rule"
@@ -2093,7 +2194,8 @@
         "edge_case": 0.25
       },
       "weighted_risk": 0.1868,
-      "classification": "SAFE",
+      "classification": "REVIEW REQUIRED",
+      "hallucination_types_detected": [],
       "details": {
         "syntax_errors": [],
         "semantic_mismatches": [],
@@ -2138,6 +2240,7 @@
       },
       "weighted_risk": 0.055,
       "classification": "SAFE",
+      "hallucination_types_detected": [],
       "details": {
         "syntax_errors": [],
         "semantic_mismatches": [],
