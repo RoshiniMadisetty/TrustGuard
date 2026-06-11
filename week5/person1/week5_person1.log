@@ -1,0 +1,32 @@
+2026-06-11 09:14:14,454 [INFO] ============================================================
+2026-06-11 09:14:14,454 [INFO] TrustGuard Week 5 | Person 1 | LLM Pipeline v2
+2026-06-11 09:14:14,454 [INFO] ============================================================
+2026-06-11 09:14:14,465 [INFO] Loaded 2 records from week4_final_dataset.json
+2026-06-11 09:21:58,321 [INFO] ============================================================
+2026-06-11 09:21:58,321 [INFO] TrustGuard Week 5 | Person 1 | LLM Pipeline v2
+2026-06-11 09:21:58,321 [INFO] ============================================================
+2026-06-11 09:21:58,323 [INFO] Loaded 65 records
+2026-06-11 09:21:58,323 [INFO] Loaded 65 records from week4_final_dataset.json
+2026-06-11 09:21:58,323 [INFO] [1] Processing record W1-001 | label=hallucinated
+2026-06-11 09:23:58,203 [ERROR] JSON extraction failed for output: {
+  "policy_id": "FW-002",
+  "description": "Allow employee access to company website via HTTPS",
+  "action": "ALLOW",
+  "protocol": "TCP",
+  "src_ip": "192.168.1.0/24", // Step 4: Justify src scope (employees' network)
+  "dst_ip": "104.21.34.0/24", // Company website's IP range
+  "src_port": "ANY",
+2026-06-11 09:23:58,204 [INFO] [2] Processing record W1-002 | label=hallucinated
+2026-06-11 09:25:56,528 [ERROR] JSON extraction failed for output: {
+  "policy_id": "FW-002",
+  "description": "Block inbound SSH from internet",
+  "action": "DROP",
+  "protocol": "TCP",
+  "src_ip": "0.0.0.0/0",
+  "dst_ip": "192.168.1.0/24",
+  "src_port": "22",
+  "dst_port": "ANY",
+  "direction": "INBOUND",
+  "priority": "500",
+  "reasoning": "Step 1: Identify thre
+2026-06-11 09:25:56,556 [INFO] [3] Processing record W1-003 | label=correct

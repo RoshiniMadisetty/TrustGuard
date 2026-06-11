@@ -1,15 +1,29 @@
 {
   "metadata": {
-    "created_at": "2026-06-11T04:04:40.398555+00:00",
+    "created_at": "2026-06-10T04:19:47.329716+00:00",
     "total": 65,
-    "source": "person3_validator/integrated_pipeline.py",
+    "weights": {
+      "syntax": 0.2,
+      "semantic": 0.3,
+      "compliance": 0.25,
+      "edge_case": 0.25
+    },
+    "thresholds": {
+      "safe": 0.12,
+      "high_risk": 0.25
+    },
     "classification_distribution": {
       "SAFE": 46,
       "REVIEW REQUIRED": 11,
       "HIGH RISK": 8
     },
     "agreement_with_p1": "76.9%",
-    "note": "Feed this file to person2_risk_engine/risk_engine_v2.py"
+    "avg_risk_by_label": {
+      "correct": 0.0584,
+      "hallucinated": 0.1122,
+      "dangerous": 0.3391
+    },
+    "note": "Hand risk_aggregated_v2_results.json to Person 2"
   },
   "rules": [
     {
@@ -120,9 +134,7 @@
       },
       "weighted_risk": 0.2289,
       "classification": "REVIEW REQUIRED",
-      "hallucination_types_detected": [
-        "nonexistent_object"
-      ],
+      "hallucination_types_detected": [],
       "details": {
         "syntax_errors": [],
         "semantic_mismatches": [],
@@ -953,9 +965,7 @@
       },
       "weighted_risk": 0.4809,
       "classification": "HIGH RISK",
-      "hallucination_types_detected": [
-        "overly_broad"
-      ],
+      "hallucination_types_detected": [],
       "details": {
         "syntax_errors": [
           "DANGEROUS: allow any\u2192any:any \u2014 unrestricted access rule"
@@ -1065,9 +1075,7 @@
       },
       "weighted_risk": 0.1811,
       "classification": "REVIEW REQUIRED",
-      "hallucination_types_detected": [
-        "overly_broad"
-      ],
+      "hallucination_types_detected": [],
       "details": {
         "syntax_errors": [],
         "semantic_mismatches": [],
@@ -1146,9 +1154,7 @@
       },
       "weighted_risk": 0.5208,
       "classification": "HIGH RISK",
-      "hallucination_types_detected": [
-        "overly_broad"
-      ],
+      "hallucination_types_detected": [],
       "details": {
         "syntax_errors": [
           "DANGEROUS: allow any\u2192any:any \u2014 unrestricted access rule"
@@ -1204,9 +1210,7 @@
       },
       "weighted_risk": 0.4876,
       "classification": "HIGH RISK",
-      "hallucination_types_detected": [
-        "overly_broad"
-      ],
+      "hallucination_types_detected": [],
       "details": {
         "syntax_errors": [
           "DANGEROUS: allow any\u2192any:any \u2014 unrestricted access rule"
@@ -1262,9 +1266,7 @@
       },
       "weighted_risk": 0.4849,
       "classification": "HIGH RISK",
-      "hallucination_types_detected": [
-        "overly_broad"
-      ],
+      "hallucination_types_detected": [],
       "details": {
         "syntax_errors": [
           "DANGEROUS: allow any\u2192any:any \u2014 unrestricted access rule"
@@ -1320,9 +1322,7 @@
       },
       "weighted_risk": 0.4539,
       "classification": "HIGH RISK",
-      "hallucination_types_detected": [
-        "overly_broad"
-      ],
+      "hallucination_types_detected": [],
       "details": {
         "syntax_errors": [
           "DANGEROUS: allow any\u2192any:any \u2014 unrestricted access rule"
@@ -1378,9 +1378,7 @@
       },
       "weighted_risk": 0.4765,
       "classification": "HIGH RISK",
-      "hallucination_types_detected": [
-        "overly_broad"
-      ],
+      "hallucination_types_detected": [],
       "details": {
         "syntax_errors": [
           "DANGEROUS: allow any\u2192any:any \u2014 unrestricted access rule"
@@ -2024,9 +2022,7 @@
       },
       "weighted_risk": 0.2168,
       "classification": "REVIEW REQUIRED",
-      "hallucination_types_detected": [
-        "overly_broad"
-      ],
+      "hallucination_types_detected": [],
       "details": {
         "syntax_errors": [],
         "semantic_mismatches": [],
@@ -2136,8 +2132,7 @@
       "weighted_risk": 0.5771,
       "classification": "HIGH RISK",
       "hallucination_types_detected": [
-        "intent_flip",
-        "overly_broad"
+        "intent_flip"
       ],
       "details": {
         "syntax_errors": [
@@ -2200,9 +2195,7 @@
       },
       "weighted_risk": 0.1868,
       "classification": "REVIEW REQUIRED",
-      "hallucination_types_detected": [
-        "overly_broad"
-      ],
+      "hallucination_types_detected": [],
       "details": {
         "syntax_errors": [],
         "semantic_mismatches": [],

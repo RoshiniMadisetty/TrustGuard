@@ -1,0 +1,24 @@
+# TrustGuard Week 5 — All persons
+# Install with: pip install -r requirements_week5.txt
+
+# Core ML
+scikit-learn>=1.4.0
+numpy>=1.26.0
+pandas>=2.2.0
+
+# XAI (Person 2)
+shap>=0.45.0
+lime>=0.2.0.1
+
+# Surrogate model
+# (GradientBoostingRegressor is in scikit-learn)
+
+# Visualization
+matplotlib>=3.8.0
+seaborn>=0.13.0
+
+# LLM backend (Person 1)
+requests>=2.31.0
+
+# Utilities
+pathlib2>=2.3.7   # backcompat — stdlib pathlib preferred in 3.10+
