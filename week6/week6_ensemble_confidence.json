@@ -1,0 +1,997 @@
+{
+  "module": "ensemble_confidence",
+  "timestamp": "2026-06-11T10:03:09.055160Z",
+  "summary": {
+    "n_records": 65,
+    "mean_ensemble": 0.7917,
+    "std_ensemble": 0.0262,
+    "min_ensemble": 0.6763,
+    "max_ensemble": 0.8113,
+    "high_confidence_count": 63,
+    "moderate_confidence_count": 2,
+    "low_confidence_count": 0,
+    "very_low_confidence_count": 0,
+    "weights": {
+      "model_confidence": 0.4,
+      "validator_score": 0.3,
+      "xai_agreement": 0.3
+    }
+  },
+  "records": [
+    {
+      "model_confidence": 0.8,
+      "validator_score": 0.9375,
+      "xai_agreement": 0.5,
+      "weighted_components": {
+        "model_contribution": 0.32,
+        "validator_contribution": 0.2812,
+        "xai_contribution": 0.15
+      },
+      "ensemble_confidence": 0.7513,
+      "confidence_tier": "HIGH_CONFIDENCE",
+      "record_id": "W1-001",
+      "ground_truth": "hallucinated",
+      "schema_valid": true
+    },
+    {
+      "model_confidence": 0.8,
+      "validator_score": 1.0,
+      "xai_agreement": 0.5,
+      "weighted_components": {
+        "model_contribution": 0.32,
+        "validator_contribution": 0.3,
+        "xai_contribution": 0.15
+      },
+      "ensemble_confidence": 0.77,
+      "confidence_tier": "HIGH_CONFIDENCE",
+      "record_id": "W1-002",
+      "ground_truth": "hallucinated",
+      "schema_valid": true
+    },
+    {
+      "model_confidence": 0.9,
+      "validator_score": 1.0,
+      "xai_agreement": 0.5,
+      "weighted_components": {
+        "model_contribution": 0.36,
+        "validator_contribution": 0.3,
+        "xai_contribution": 0.15
+      },
+      "ensemble_confidence": 0.81,
+      "confidence_tier": "HIGH_CONFIDENCE",
+      "record_id": "W1-003",
+      "ground_truth": "correct",
+      "schema_valid": true
+    },
+    {
+      "model_confidence": 0.9,
+      "validator_score": 1.0,
+      "xai_agreement": 0.5,
+      "weighted_components": {
+        "model_contribution": 0.36,
+        "validator_contribution": 0.3,
+        "xai_contribution": 0.15
+      },
+      "ensemble_confidence": 0.81,
+      "confidence_tier": "HIGH_CONFIDENCE",
+      "record_id": "W1-004",
+      "ground_truth": "correct",
+      "schema_valid": true
+    },
+    {
+      "model_confidence": 0.9,
+      "validator_score": 1.0,
+      "xai_agreement": 0.5,
+      "weighted_components": {
+        "model_contribution": 0.36,
+        "validator_contribution": 0.3,
+        "xai_contribution": 0.15
+      },
+      "ensemble_confidence": 0.81,
+      "confidence_tier": "HIGH_CONFIDENCE",
+      "record_id": "W1-005",
+      "ground_truth": "correct",
+      "schema_valid": true
+    },
+    {
+      "model_confidence": 0.9,
+      "validator_score": 1.0,
+      "xai_agreement": 0.5,
+      "weighted_components": {
+        "model_contribution": 0.36,
+        "validator_contribution": 0.3,
+        "xai_contribution": 0.15
+      },
+      "ensemble_confidence": 0.81,
+      "confidence_tier": "HIGH_CONFIDENCE",
+      "record_id": "W1-006",
+      "ground_truth": "correct",
+      "schema_valid": true
+    },
+    {
+      "model_confidence": 0.8,
+      "validator_score": 1.0,
+      "xai_agreement": 0.5,
+      "weighted_components": {
+        "model_contribution": 0.32,
+        "validator_contribution": 0.3,
+        "xai_contribution": 0.15
+      },
+      "ensemble_confidence": 0.77,
+      "confidence_tier": "HIGH_CONFIDENCE",
+      "record_id": "W1-007",
+      "ground_truth": "hallucinated",
+      "schema_valid": true
+    },
+    {
+      "model_confidence": 0.9,
+      "validator_score": 1.0,
+      "xai_agreement": 0.5,
+      "weighted_components": {
+        "model_contribution": 0.36,
+        "validator_contribution": 0.3,
+        "xai_contribution": 0.15
+      },
+      "ensemble_confidence": 0.81,
+      "confidence_tier": "HIGH_CONFIDENCE",
+      "record_id": "W1-008",
+      "ground_truth": "correct",
+      "schema_valid": true
+    },
+    {
+      "model_confidence": 0.9,
+      "validator_score": 1.0,
+      "xai_agreement": 0.5,
+      "weighted_components": {
+        "model_contribution": 0.36,
+        "validator_contribution": 0.3,
+        "xai_contribution": 0.15
+      },
+      "ensemble_confidence": 0.81,
+      "confidence_tier": "HIGH_CONFIDENCE",
+      "record_id": "W1-009",
+      "ground_truth": "correct",
+      "schema_valid": true
+    },
+    {
+      "model_confidence": 0.9,
+      "validator_score": 1.0,
+      "xai_agreement": 0.5,
+      "weighted_components": {
+        "model_contribution": 0.36,
+        "validator_contribution": 0.3,
+        "xai_contribution": 0.15
+      },
+      "ensemble_confidence": 0.81,
+      "confidence_tier": "HIGH_CONFIDENCE",
+      "record_id": "W1-010",
+      "ground_truth": "correct",
+      "schema_valid": true
+    },
+    {
+      "model_confidence": 0.8,
+      "validator_score": 0.9375,
+      "xai_agreement": 0.5,
+      "weighted_components": {
+        "model_contribution": 0.32,
+        "validator_contribution": 0.2812,
+        "xai_contribution": 0.15
+      },
+      "ensemble_confidence": 0.7513,
+      "confidence_tier": "HIGH_CONFIDENCE",
+      "record_id": "W1-011",
+      "ground_truth": "hallucinated",
+      "schema_valid": true
+    },
+    {
+      "model_confidence": 0.8,
+      "validator_score": 1.0,
+      "xai_agreement": 0.5,
+      "weighted_components": {
+        "model_contribution": 0.32,
+        "validator_contribution": 0.3,
+        "xai_contribution": 0.15
+      },
+      "ensemble_confidence": 0.77,
+      "confidence_tier": "HIGH_CONFIDENCE",
+      "record_id": "W1-012",
+      "ground_truth": "hallucinated",
+      "schema_valid": true
+    },
+    {
+      "model_confidence": 0.8,
+      "validator_score": 0.9375,
+      "xai_agreement": 0.5,
+      "weighted_components": {
+        "model_contribution": 0.32,
+        "validator_contribution": 0.2812,
+        "xai_contribution": 0.15
+      },
+      "ensemble_confidence": 0.7513,
+      "confidence_tier": "HIGH_CONFIDENCE",
+      "record_id": "W1-013",
+      "ground_truth": "hallucinated",
+      "schema_valid": true
+    },
+    {
+      "model_confidence": 0.8,
+      "validator_score": 1.0,
+      "xai_agreement": 0.5,
+      "weighted_components": {
+        "model_contribution": 0.32,
+        "validator_contribution": 0.3,
+        "xai_contribution": 0.15
+      },
+      "ensemble_confidence": 0.77,
+      "confidence_tier": "HIGH_CONFIDENCE",
+      "record_id": "W1-014",
+      "ground_truth": "hallucinated",
+      "schema_valid": true
+    },
+    {
+      "model_confidence": 0.8,
+      "validator_score": 1.0,
+      "xai_agreement": 0.5,
+      "weighted_components": {
+        "model_contribution": 0.32,
+        "validator_contribution": 0.3,
+        "xai_contribution": 0.15
+      },
+      "ensemble_confidence": 0.77,
+      "confidence_tier": "HIGH_CONFIDENCE",
+      "record_id": "W1-015",
+      "ground_truth": "hallucinated",
+      "schema_valid": true
+    },
+    {
+      "model_confidence": 0.8,
+      "validator_score": 0.6875,
+      "xai_agreement": 0.5,
+      "weighted_components": {
+        "model_contribution": 0.32,
+        "validator_contribution": 0.2062,
+        "xai_contribution": 0.15
+      },
+      "ensemble_confidence": 0.6763,
+      "confidence_tier": "MODERATE_CONFIDENCE",
+      "record_id": "W1-016",
+      "ground_truth": "hallucinated",
+      "schema_valid": false
+    },
+    {
+      "model_confidence": 0.9,
+      "validator_score": 0.9375,
+      "xai_agreement": 0.5,
+      "weighted_components": {
+        "model_contribution": 0.36,
+        "validator_contribution": 0.2812,
+        "xai_contribution": 0.15
+      },
+      "ensemble_confidence": 0.7913,
+      "confidence_tier": "HIGH_CONFIDENCE",
+      "record_id": "W1-017",
+      "ground_truth": "correct",
+      "schema_valid": true
+    },
+    {
+      "model_confidence": 0.9,
+      "validator_score": 1.0,
+      "xai_agreement": 0.5,
+      "weighted_components": {
+        "model_contribution": 0.36,
+        "validator_contribution": 0.3,
+        "xai_contribution": 0.15
+      },
+      "ensemble_confidence": 0.81,
+      "confidence_tier": "HIGH_CONFIDENCE",
+      "record_id": "W1-018",
+      "ground_truth": "correct",
+      "schema_valid": true
+    },
+    {
+      "model_confidence": 0.8,
+      "validator_score": 0.9375,
+      "xai_agreement": 0.5,
+      "weighted_components": {
+        "model_contribution": 0.32,
+        "validator_contribution": 0.2812,
+        "xai_contribution": 0.15
+      },
+      "ensemble_confidence": 0.7513,
+      "confidence_tier": "HIGH_CONFIDENCE",
+      "record_id": "W1-019",
+      "ground_truth": "hallucinated",
+      "schema_valid": true
+    },
+    {
+      "model_confidence": 0.9,
+      "validator_score": 1.0,
+      "xai_agreement": 0.5,
+      "weighted_components": {
+        "model_contribution": 0.36,
+        "validator_contribution": 0.3,
+        "xai_contribution": 0.15
+      },
+      "ensemble_confidence": 0.81,
+      "confidence_tier": "HIGH_CONFIDENCE",
+      "record_id": "W1-020",
+      "ground_truth": "correct",
+      "schema_valid": true
+    },
+    {
+      "model_confidence": 0.9,
+      "validator_score": 1.0,
+      "xai_agreement": 0.5,
+      "weighted_components": {
+        "model_contribution": 0.36,
+        "validator_contribution": 0.3,
+        "xai_contribution": 0.15
+      },
+      "ensemble_confidence": 0.81,
+      "confidence_tier": "HIGH_CONFIDENCE",
+      "record_id": "W2-021",
+      "ground_truth": "correct",
+      "schema_valid": true
+    },
+    {
+      "model_confidence": 0.8,
+      "validator_score": 0.9375,
+      "xai_agreement": 0.5,
+      "weighted_components": {
+        "model_contribution": 0.32,
+        "validator_contribution": 0.2812,
+        "xai_contribution": 0.15
+      },
+      "ensemble_confidence": 0.7513,
+      "confidence_tier": "HIGH_CONFIDENCE",
+      "record_id": "W2-022",
+      "ground_truth": "hallucinated",
+      "schema_valid": true
+    },
+    {
+      "model_confidence": 0.9,
+      "validator_score": 1.0,
+      "xai_agreement": 0.5,
+      "weighted_components": {
+        "model_contribution": 0.36,
+        "validator_contribution": 0.3,
+        "xai_contribution": 0.15
+      },
+      "ensemble_confidence": 0.81,
+      "confidence_tier": "HIGH_CONFIDENCE",
+      "record_id": "W2-023",
+      "ground_truth": "correct",
+      "schema_valid": true
+    },
+    {
+      "model_confidence": 0.88,
+      "validator_score": 0.9,
+      "xai_agreement": 0.5,
+      "weighted_components": {
+        "model_contribution": 0.352,
+        "validator_contribution": 0.27,
+        "xai_contribution": 0.15
+      },
+      "ensemble_confidence": 0.772,
+      "confidence_tier": "HIGH_CONFIDENCE",
+      "record_id": "W2-024",
+      "ground_truth": "dangerous",
+      "schema_valid": true
+    },
+    {
+      "model_confidence": 0.9,
+      "validator_score": 1.0,
+      "xai_agreement": 0.5,
+      "weighted_components": {
+        "model_contribution": 0.36,
+        "validator_contribution": 0.3,
+        "xai_contribution": 0.15
+      },
+      "ensemble_confidence": 0.81,
+      "confidence_tier": "HIGH_CONFIDENCE",
+      "record_id": "W2-025",
+      "ground_truth": "correct",
+      "schema_valid": true
+    },
+    {
+      "model_confidence": 0.9,
+      "validator_score": 1.0,
+      "xai_agreement": 0.5,
+      "weighted_components": {
+        "model_contribution": 0.36,
+        "validator_contribution": 0.3,
+        "xai_contribution": 0.15
+      },
+      "ensemble_confidence": 0.81,
+      "confidence_tier": "HIGH_CONFIDENCE",
+      "record_id": "W2-026",
+      "ground_truth": "correct",
+      "schema_valid": true
+    },
+    {
+      "model_confidence": 0.9,
+      "validator_score": 1.0,
+      "xai_agreement": 0.5,
+      "weighted_components": {
+        "model_contribution": 0.36,
+        "validator_contribution": 0.3,
+        "xai_contribution": 0.15
+      },
+      "ensemble_confidence": 0.81,
+      "confidence_tier": "HIGH_CONFIDENCE",
+      "record_id": "W2-027",
+      "ground_truth": "correct",
+      "schema_valid": true
+    },
+    {
+      "model_confidence": 0.9,
+      "validator_score": 1.0,
+      "xai_agreement": 0.5,
+      "weighted_components": {
+        "model_contribution": 0.36,
+        "validator_contribution": 0.3,
+        "xai_contribution": 0.15
+      },
+      "ensemble_confidence": 0.81,
+      "confidence_tier": "HIGH_CONFIDENCE",
+      "record_id": "W2-028",
+      "ground_truth": "correct",
+      "schema_valid": true
+    },
+    {
+      "model_confidence": 0.9,
+      "validator_score": 1.0,
+      "xai_agreement": 0.5,
+      "weighted_components": {
+        "model_contribution": 0.36,
+        "validator_contribution": 0.3,
+        "xai_contribution": 0.15
+      },
+      "ensemble_confidence": 0.81,
+      "confidence_tier": "HIGH_CONFIDENCE",
+      "record_id": "W2-029",
+      "ground_truth": "correct",
+      "schema_valid": true
+    },
+    {
+      "model_confidence": 0.9,
+      "validator_score": 1.0,
+      "xai_agreement": 0.5,
+      "weighted_components": {
+        "model_contribution": 0.36,
+        "validator_contribution": 0.3,
+        "xai_contribution": 0.15
+      },
+      "ensemble_confidence": 0.81,
+      "confidence_tier": "HIGH_CONFIDENCE",
+      "record_id": "W2-030",
+      "ground_truth": "correct",
+      "schema_valid": true
+    },
+    {
+      "model_confidence": 0.95,
+      "validator_score": 0.9,
+      "xai_agreement": 0.5,
+      "weighted_components": {
+        "model_contribution": 0.38,
+        "validator_contribution": 0.27,
+        "xai_contribution": 0.15
+      },
+      "ensemble_confidence": 0.8,
+      "confidence_tier": "HIGH_CONFIDENCE",
+      "record_id": "W2-031",
+      "ground_truth": "dangerous",
+      "schema_valid": true
+    },
+    {
+      "model_confidence": 0.9,
+      "validator_score": 1.0,
+      "xai_agreement": 0.5,
+      "weighted_components": {
+        "model_contribution": 0.36,
+        "validator_contribution": 0.3,
+        "xai_contribution": 0.15
+      },
+      "ensemble_confidence": 0.81,
+      "confidence_tier": "HIGH_CONFIDENCE",
+      "record_id": "W2-032",
+      "ground_truth": "correct",
+      "schema_valid": true
+    },
+    {
+      "model_confidence": 0.9,
+      "validator_score": 1.0,
+      "xai_agreement": 0.5,
+      "weighted_components": {
+        "model_contribution": 0.36,
+        "validator_contribution": 0.3,
+        "xai_contribution": 0.15
+      },
+      "ensemble_confidence": 0.81,
+      "confidence_tier": "HIGH_CONFIDENCE",
+      "record_id": "W2-033",
+      "ground_truth": "correct",
+      "schema_valid": true
+    },
+    {
+      "model_confidence": 0.95,
+      "validator_score": 0.9375,
+      "xai_agreement": 0.5,
+      "weighted_components": {
+        "model_contribution": 0.38,
+        "validator_contribution": 0.2812,
+        "xai_contribution": 0.15
+      },
+      "ensemble_confidence": 0.8113,
+      "confidence_tier": "HIGH_CONFIDENCE",
+      "record_id": "W2-034",
+      "ground_truth": "dangerous",
+      "schema_valid": true
+    },
+    {
+      "model_confidence": 0.9,
+      "validator_score": 1.0,
+      "xai_agreement": 0.5,
+      "weighted_components": {
+        "model_contribution": 0.36,
+        "validator_contribution": 0.3,
+        "xai_contribution": 0.15
+      },
+      "ensemble_confidence": 0.81,
+      "confidence_tier": "HIGH_CONFIDENCE",
+      "record_id": "W2-035",
+      "ground_truth": "correct",
+      "schema_valid": true
+    },
+    {
+      "model_confidence": 0.95,
+      "validator_score": 0.9,
+      "xai_agreement": 0.5,
+      "weighted_components": {
+        "model_contribution": 0.38,
+        "validator_contribution": 0.27,
+        "xai_contribution": 0.15
+      },
+      "ensemble_confidence": 0.8,
+      "confidence_tier": "HIGH_CONFIDENCE",
+      "record_id": "W2-036",
+      "ground_truth": "dangerous",
+      "schema_valid": true
+    },
+    {
+      "model_confidence": 0.95,
+      "validator_score": 0.9,
+      "xai_agreement": 0.5,
+      "weighted_components": {
+        "model_contribution": 0.38,
+        "validator_contribution": 0.27,
+        "xai_contribution": 0.15
+      },
+      "ensemble_confidence": 0.8,
+      "confidence_tier": "HIGH_CONFIDENCE",
+      "record_id": "W2-037",
+      "ground_truth": "dangerous",
+      "schema_valid": true
+    },
+    {
+      "model_confidence": 0.95,
+      "validator_score": 0.9,
+      "xai_agreement": 0.5,
+      "weighted_components": {
+        "model_contribution": 0.38,
+        "validator_contribution": 0.27,
+        "xai_contribution": 0.15
+      },
+      "ensemble_confidence": 0.8,
+      "confidence_tier": "HIGH_CONFIDENCE",
+      "record_id": "W2-038",
+      "ground_truth": "dangerous",
+      "schema_valid": true
+    },
+    {
+      "model_confidence": 0.95,
+      "validator_score": 0.9,
+      "xai_agreement": 0.5,
+      "weighted_components": {
+        "model_contribution": 0.38,
+        "validator_contribution": 0.27,
+        "xai_contribution": 0.15
+      },
+      "ensemble_confidence": 0.8,
+      "confidence_tier": "HIGH_CONFIDENCE",
+      "record_id": "W2-039",
+      "ground_truth": "dangerous",
+      "schema_valid": true
+    },
+    {
+      "model_confidence": 0.95,
+      "validator_score": 0.9,
+      "xai_agreement": 0.5,
+      "weighted_components": {
+        "model_contribution": 0.38,
+        "validator_contribution": 0.27,
+        "xai_contribution": 0.15
+      },
+      "ensemble_confidence": 0.8,
+      "confidence_tier": "HIGH_CONFIDENCE",
+      "record_id": "W2-040",
+      "ground_truth": "dangerous",
+      "schema_valid": true
+    },
+    {
+      "model_confidence": 0.8,
+      "validator_score": 1.0,
+      "xai_agreement": 0.5,
+      "weighted_components": {
+        "model_contribution": 0.32,
+        "validator_contribution": 0.3,
+        "xai_contribution": 0.15
+      },
+      "ensemble_confidence": 0.77,
+      "confidence_tier": "HIGH_CONFIDENCE",
+      "record_id": "W2-041",
+      "ground_truth": "hallucinated",
+      "schema_valid": true
+    },
+    {
+      "model_confidence": 0.8,
+      "validator_score": 1.0,
+      "xai_agreement": 0.5,
+      "weighted_components": {
+        "model_contribution": 0.32,
+        "validator_contribution": 0.3,
+        "xai_contribution": 0.15
+      },
+      "ensemble_confidence": 0.77,
+      "confidence_tier": "HIGH_CONFIDENCE",
+      "record_id": "W2-042",
+      "ground_truth": "hallucinated",
+      "schema_valid": true
+    },
+    {
+      "model_confidence": 0.9,
+      "validator_score": 1.0,
+      "xai_agreement": 0.5,
+      "weighted_components": {
+        "model_contribution": 0.36,
+        "validator_contribution": 0.3,
+        "xai_contribution": 0.15
+      },
+      "ensemble_confidence": 0.81,
+      "confidence_tier": "HIGH_CONFIDENCE",
+      "record_id": "W2-043",
+      "ground_truth": "correct",
+      "schema_valid": true
+    },
+    {
+      "model_confidence": 0.9,
+      "validator_score": 1.0,
+      "xai_agreement": 0.5,
+      "weighted_components": {
+        "model_contribution": 0.36,
+        "validator_contribution": 0.3,
+        "xai_contribution": 0.15
+      },
+      "ensemble_confidence": 0.81,
+      "confidence_tier": "HIGH_CONFIDENCE",
+      "record_id": "W2-044",
+      "ground_truth": "correct",
+      "schema_valid": true
+    },
+    {
+      "model_confidence": 0.88,
+      "validator_score": 0.9,
+      "xai_agreement": 0.5,
+      "weighted_components": {
+        "model_contribution": 0.352,
+        "validator_contribution": 0.27,
+        "xai_contribution": 0.15
+      },
+      "ensemble_confidence": 0.772,
+      "confidence_tier": "HIGH_CONFIDENCE",
+      "record_id": "W2-045",
+      "ground_truth": "dangerous",
+      "schema_valid": true
+    },
+    {
+      "model_confidence": 0.9,
+      "validator_score": 1.0,
+      "xai_agreement": 0.5,
+      "weighted_components": {
+        "model_contribution": 0.36,
+        "validator_contribution": 0.3,
+        "xai_contribution": 0.15
+      },
+      "ensemble_confidence": 0.81,
+      "confidence_tier": "HIGH_CONFIDENCE",
+      "record_id": "W2-046",
+      "ground_truth": "correct",
+      "schema_valid": true
+    },
+    {
+      "model_confidence": 0.88,
+      "validator_score": 0.9,
+      "xai_agreement": 0.5,
+      "weighted_components": {
+        "model_contribution": 0.352,
+        "validator_contribution": 0.27,
+        "xai_contribution": 0.15
+      },
+      "ensemble_confidence": 0.772,
+      "confidence_tier": "HIGH_CONFIDENCE",
+      "record_id": "W2-047",
+      "ground_truth": "dangerous",
+      "schema_valid": true
+    },
+    {
+      "model_confidence": 0.9,
+      "validator_score": 1.0,
+      "xai_agreement": 0.5,
+      "weighted_components": {
+        "model_contribution": 0.36,
+        "validator_contribution": 0.3,
+        "xai_contribution": 0.15
+      },
+      "ensemble_confidence": 0.81,
+      "confidence_tier": "HIGH_CONFIDENCE",
+      "record_id": "W2-048",
+      "ground_truth": "correct",
+      "schema_valid": true
+    },
+    {
+      "model_confidence": 0.8,
+      "validator_score": 0.9375,
+      "xai_agreement": 0.5,
+      "weighted_components": {
+        "model_contribution": 0.32,
+        "validator_contribution": 0.2812,
+        "xai_contribution": 0.15
+      },
+      "ensemble_confidence": 0.7513,
+      "confidence_tier": "HIGH_CONFIDENCE",
+      "record_id": "W2-049",
+      "ground_truth": "hallucinated",
+      "schema_valid": true
+    },
+    {
+      "model_confidence": 0.9,
+      "validator_score": 1.0,
+      "xai_agreement": 0.5,
+      "weighted_components": {
+        "model_contribution": 0.36,
+        "validator_contribution": 0.3,
+        "xai_contribution": 0.15
+      },
+      "ensemble_confidence": 0.81,
+      "confidence_tier": "HIGH_CONFIDENCE",
+      "record_id": "W2-050",
+      "ground_truth": "correct",
+      "schema_valid": true
+    },
+    {
+      "model_confidence": 0.9,
+      "validator_score": 1.0,
+      "xai_agreement": 0.5,
+      "weighted_components": {
+        "model_contribution": 0.36,
+        "validator_contribution": 0.3,
+        "xai_contribution": 0.15
+      },
+      "ensemble_confidence": 0.81,
+      "confidence_tier": "HIGH_CONFIDENCE",
+      "record_id": "W2-051",
+      "ground_truth": "correct",
+      "schema_valid": true
+    },
+    {
+      "model_confidence": 0.9,
+      "validator_score": 1.0,
+      "xai_agreement": 0.5,
+      "weighted_components": {
+        "model_contribution": 0.36,
+        "validator_contribution": 0.3,
+        "xai_contribution": 0.15
+      },
+      "ensemble_confidence": 0.81,
+      "confidence_tier": "HIGH_CONFIDENCE",
+      "record_id": "W2-052",
+      "ground_truth": "correct",
+      "schema_valid": true
+    },
+    {
+      "model_confidence": 0.9,
+      "validator_score": 1.0,
+      "xai_agreement": 0.5,
+      "weighted_components": {
+        "model_contribution": 0.36,
+        "validator_contribution": 0.3,
+        "xai_contribution": 0.15
+      },
+      "ensemble_confidence": 0.81,
+      "confidence_tier": "HIGH_CONFIDENCE",
+      "record_id": "W2-053",
+      "ground_truth": "correct",
+      "schema_valid": true
+    },
+    {
+      "model_confidence": 0.9,
+      "validator_score": 0.9375,
+      "xai_agreement": 0.5,
+      "weighted_components": {
+        "model_contribution": 0.36,
+        "validator_contribution": 0.2812,
+        "xai_contribution": 0.15
+      },
+      "ensemble_confidence": 0.7913,
+      "confidence_tier": "HIGH_CONFIDENCE",
+      "record_id": "W2-054",
+      "ground_truth": "correct",
+      "schema_valid": true
+    },
+    {
+      "model_confidence": 0.9,
+      "validator_score": 1.0,
+      "xai_agreement": 0.5,
+      "weighted_components": {
+        "model_contribution": 0.36,
+        "validator_contribution": 0.3,
+        "xai_contribution": 0.15
+      },
+      "ensemble_confidence": 0.81,
+      "confidence_tier": "HIGH_CONFIDENCE",
+      "record_id": "W2-055",
+      "ground_truth": "correct",
+      "schema_valid": true
+    },
+    {
+      "model_confidence": 0.9,
+      "validator_score": 1.0,
+      "xai_agreement": 0.5,
+      "weighted_components": {
+        "model_contribution": 0.36,
+        "validator_contribution": 0.3,
+        "xai_contribution": 0.15
+      },
+      "ensemble_confidence": 0.81,
+      "confidence_tier": "HIGH_CONFIDENCE",
+      "record_id": "W2-056",
+      "ground_truth": "correct",
+      "schema_valid": true
+    },
+    {
+      "model_confidence": 0.9,
+      "validator_score": 1.0,
+      "xai_agreement": 0.5,
+      "weighted_components": {
+        "model_contribution": 0.36,
+        "validator_contribution": 0.3,
+        "xai_contribution": 0.15
+      },
+      "ensemble_confidence": 0.81,
+      "confidence_tier": "HIGH_CONFIDENCE",
+      "record_id": "W2-057",
+      "ground_truth": "correct",
+      "schema_valid": true
+    },
+    {
+      "model_confidence": 0.9,
+      "validator_score": 1.0,
+      "xai_agreement": 0.5,
+      "weighted_components": {
+        "model_contribution": 0.36,
+        "validator_contribution": 0.3,
+        "xai_contribution": 0.15
+      },
+      "ensemble_confidence": 0.81,
+      "confidence_tier": "HIGH_CONFIDENCE",
+      "record_id": "W2-058",
+      "ground_truth": "correct",
+      "schema_valid": true
+    },
+    {
+      "model_confidence": 0.8,
+      "validator_score": 1.0,
+      "xai_agreement": 0.5,
+      "weighted_components": {
+        "model_contribution": 0.32,
+        "validator_contribution": 0.3,
+        "xai_contribution": 0.15
+      },
+      "ensemble_confidence": 0.77,
+      "confidence_tier": "HIGH_CONFIDENCE",
+      "record_id": "W2-059",
+      "ground_truth": "hallucinated",
+      "schema_valid": true
+    },
+    {
+      "model_confidence": 0.8,
+      "validator_score": 0.9375,
+      "xai_agreement": 0.5,
+      "weighted_components": {
+        "model_contribution": 0.32,
+        "validator_contribution": 0.2812,
+        "xai_contribution": 0.15
+      },
+      "ensemble_confidence": 0.7513,
+      "confidence_tier": "HIGH_CONFIDENCE",
+      "record_id": "W2-060",
+      "ground_truth": "hallucinated",
+      "schema_valid": true
+    },
+    {
+      "model_confidence": 0.8,
+      "validator_score": 0.9,
+      "xai_agreement": 0.5,
+      "weighted_components": {
+        "model_contribution": 0.32,
+        "validator_contribution": 0.27,
+        "xai_contribution": 0.15
+      },
+      "ensemble_confidence": 0.74,
+      "confidence_tier": "MODERATE_CONFIDENCE",
+      "record_id": "W2-061",
+      "ground_truth": "hallucinated",
+      "schema_valid": true
+    },
+    {
+      "model_confidence": 0.95,
+      "validator_score": 0.9375,
+      "xai_agreement": 0.5,
+      "weighted_components": {
+        "model_contribution": 0.38,
+        "validator_contribution": 0.2812,
+        "xai_contribution": 0.15
+      },
+      "ensemble_confidence": 0.8113,
+      "confidence_tier": "HIGH_CONFIDENCE",
+      "record_id": "W2-062",
+      "ground_truth": "dangerous",
+      "schema_valid": true
+    },
+    {
+      "model_confidence": 0.95,
+      "validator_score": 0.9,
+      "xai_agreement": 0.5,
+      "weighted_components": {
+        "model_contribution": 0.38,
+        "validator_contribution": 0.27,
+        "xai_contribution": 0.15
+      },
+      "ensemble_confidence": 0.8,
+      "confidence_tier": "HIGH_CONFIDENCE",
+      "record_id": "W2-063",
+      "ground_truth": "dangerous",
+      "schema_valid": true
+    },
+    {
+      "model_confidence": 0.9,
+      "validator_score": 0.9,
+      "xai_agreement": 0.5,
+      "weighted_components": {
+        "model_contribution": 0.36,
+        "validator_contribution": 0.27,
+        "xai_contribution": 0.15
+      },
+      "ensemble_confidence": 0.78,
+      "confidence_tier": "HIGH_CONFIDENCE",
+      "record_id": "W2-064",
+      "ground_truth": "correct",
+      "schema_valid": true
+    },
+    {
+      "model_confidence": 0.88,
+      "validator_score": 1.0,
+      "xai_agreement": 0.5,
+      "weighted_components": {
+        "model_contribution": 0.352,
+        "validator_contribution": 0.3,
+        "xai_contribution": 0.15
+      },
+      "ensemble_confidence": 0.802,
+      "confidence_tier": "HIGH_CONFIDENCE",
+      "record_id": "W2-065",
+      "ground_truth": "dangerous",
+      "schema_valid": true
+    }
+  ]
+}

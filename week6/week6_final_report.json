@@ -1,0 +1,46 @@
+{
+  "project": "TrustGuard",
+  "version": "Week 6 v3",
+  "timestamp": "2026-06-11T10:03:11.064112+00:00",
+  "key_results": {
+    "decision_layer": {
+      "precision": 0.8889,
+      "recall": 0.2667,
+      "f1_score": 0.4103,
+      "accuracy": 0.6462,
+      "safe_count": 53,
+      "review_count": 3,
+      "reject_count": 9
+    },
+    "ensemble_confidence": {
+      "mean": 0.7917,
+      "std": 0.0262
+    },
+    "xai_agreement": {
+      "mean_jaccard": 0.5,
+      "disagreement_rate": 0.0
+    },
+    "edge_case_scoring": {
+      "records_adjusted": 43,
+      "critical_flags": 9,
+      "mean_risk_shift": 0.0615
+    },
+    "calibrated_thresholds": {
+      "safe_threshold": 0.3,
+      "review_threshold": 0.6,
+      "method": "percentile_P30P70"
+    }
+  },
+  "output_files": {
+    "adapted_dataset": "week6_adapted_dataset.json",
+    "validation_results": "week6_validation_results.json",
+    "edge_case_scores": "week6_edge_case_scores.json",
+    "benchmark": "week6_benchmark_report.json",
+    "xai_report": "week5_xai_report.json",
+    "xai_disagreement": "week6_xai_disagreement.json",
+    "ensemble_confidence": "week6_ensemble_confidence.json",
+    "calibrated_thresholds": "week6_calibrated_thresholds.json",
+    "decisions": "week6_decisions.json",
+    "plots": "week6_plots/"
+  }
+}

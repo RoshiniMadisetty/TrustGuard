@@ -1,0 +1,345 @@
+{
+  "benchmark_run": {
+    "timestamp": "2026-06-11T10:03:06.233862+00:00",
+    "total_records": 65,
+    "hallucinated": 30,
+    "clean": 35,
+    "score_type": "adjusted_risk_score",
+    "default_threshold": 0.5
+  },
+  "binary_classification": {
+    "precision": 0.8889,
+    "recall": 0.2667,
+    "f1_score": 0.4103,
+    "accuracy": 0.6462,
+    "auc_roc": 0.8367,
+    "auc_pr": 0.7993
+  },
+  "records": [
+    {
+      "record_id": "W1-001",
+      "is_hallucinated": 1,
+      "risk_score": 0.1333
+    },
+    {
+      "record_id": "W1-002",
+      "is_hallucinated": 1,
+      "risk_score": 0.0
+    },
+    {
+      "record_id": "W1-003",
+      "is_hallucinated": 0,
+      "risk_score": 0.0
+    },
+    {
+      "record_id": "W1-004",
+      "is_hallucinated": 0,
+      "risk_score": 0.0
+    },
+    {
+      "record_id": "W1-005",
+      "is_hallucinated": 0,
+      "risk_score": 0.0
+    },
+    {
+      "record_id": "W1-006",
+      "is_hallucinated": 0,
+      "risk_score": 0.0
+    },
+    {
+      "record_id": "W1-007",
+      "is_hallucinated": 1,
+      "risk_score": 0.0
+    },
+    {
+      "record_id": "W1-008",
+      "is_hallucinated": 0,
+      "risk_score": 0.0
+    },
+    {
+      "record_id": "W1-009",
+      "is_hallucinated": 0,
+      "risk_score": 0.0
+    },
+    {
+      "record_id": "W1-010",
+      "is_hallucinated": 0,
+      "risk_score": 0.0
+    },
+    {
+      "record_id": "W1-011",
+      "is_hallucinated": 1,
+      "risk_score": 0.1333
+    },
+    {
+      "record_id": "W1-012",
+      "is_hallucinated": 1,
+      "risk_score": 0.2
+    },
+    {
+      "record_id": "W1-013",
+      "is_hallucinated": 1,
+      "risk_score": 0.1333
+    },
+    {
+      "record_id": "W1-014",
+      "is_hallucinated": 1,
+      "risk_score": 0.0
+    },
+    {
+      "record_id": "W1-015",
+      "is_hallucinated": 1,
+      "risk_score": 0.0
+    },
+    {
+      "record_id": "W1-016",
+      "is_hallucinated": 1,
+      "risk_score": 0.3
+    },
+    {
+      "record_id": "W1-017",
+      "is_hallucinated": 0,
+      "risk_score": 0.1312
+    },
+    {
+      "record_id": "W1-018",
+      "is_hallucinated": 0,
+      "risk_score": 0.0
+    },
+    {
+      "record_id": "W1-019",
+      "is_hallucinated": 1,
+      "risk_score": 0.1333
+    },
+    {
+      "record_id": "W1-020",
+      "is_hallucinated": 0,
+      "risk_score": 0.0
+    },
+    {
+      "record_id": "W2-021",
+      "is_hallucinated": 0,
+      "risk_score": 0.0
+    },
+    {
+      "record_id": "W2-022",
+      "is_hallucinated": 1,
+      "risk_score": 0.1
+    },
+    {
+      "record_id": "W2-023",
+      "is_hallucinated": 0,
+      "risk_score": 0.0
+    },
+    {
+      "record_id": "W2-024",
+      "is_hallucinated": 1,
+      "risk_score": 0.2
+    },
+    {
+      "record_id": "W2-025",
+      "is_hallucinated": 0,
+      "risk_score": 0.0
+    },
+    {
+      "record_id": "W2-026",
+      "is_hallucinated": 0,
+      "risk_score": 0.0
+    },
+    {
+      "record_id": "W2-027",
+      "is_hallucinated": 0,
+      "risk_score": 0.0
+    },
+    {
+      "record_id": "W2-028",
+      "is_hallucinated": 0,
+      "risk_score": 0.0
+    },
+    {
+      "record_id": "W2-029",
+      "is_hallucinated": 0,
+      "risk_score": 0.0
+    },
+    {
+      "record_id": "W2-030",
+      "is_hallucinated": 0,
+      "risk_score": 0.0
+    },
+    {
+      "record_id": "W2-031",
+      "is_hallucinated": 1,
+      "risk_score": 0.75
+    },
+    {
+      "record_id": "W2-032",
+      "is_hallucinated": 0,
+      "risk_score": 0.0
+    },
+    {
+      "record_id": "W2-033",
+      "is_hallucinated": 0,
+      "risk_score": 0.0
+    },
+    {
+      "record_id": "W2-034",
+      "is_hallucinated": 1,
+      "risk_score": 0.3062
+    },
+    {
+      "record_id": "W2-035",
+      "is_hallucinated": 0,
+      "risk_score": 0.0
+    },
+    {
+      "record_id": "W2-036",
+      "is_hallucinated": 1,
+      "risk_score": 0.75
+    },
+    {
+      "record_id": "W2-037",
+      "is_hallucinated": 1,
+      "risk_score": 0.75
+    },
+    {
+      "record_id": "W2-038",
+      "is_hallucinated": 1,
+      "risk_score": 0.75
+    },
+    {
+      "record_id": "W2-039",
+      "is_hallucinated": 1,
+      "risk_score": 0.75
+    },
+    {
+      "record_id": "W2-040",
+      "is_hallucinated": 1,
+      "risk_score": 0.75
+    },
+    {
+      "record_id": "W2-041",
+      "is_hallucinated": 1,
+      "risk_score": 0.0
+    },
+    {
+      "record_id": "W2-042",
+      "is_hallucinated": 1,
+      "risk_score": 0.0
+    },
+    {
+      "record_id": "W2-043",
+      "is_hallucinated": 0,
+      "risk_score": 0.0
+    },
+    {
+      "record_id": "W2-044",
+      "is_hallucinated": 0,
+      "risk_score": 0.0
+    },
+    {
+      "record_id": "W2-045",
+      "is_hallucinated": 1,
+      "risk_score": 0.1667
+    },
+    {
+      "record_id": "W2-046",
+      "is_hallucinated": 0,
+      "risk_score": 0.0
+    },
+    {
+      "record_id": "W2-047",
+      "is_hallucinated": 1,
+      "risk_score": 0.1667
+    },
+    {
+      "record_id": "W2-048",
+      "is_hallucinated": 0,
+      "risk_score": 0.0
+    },
+    {
+      "record_id": "W2-049",
+      "is_hallucinated": 1,
+      "risk_score": 0.1333
+    },
+    {
+      "record_id": "W2-050",
+      "is_hallucinated": 0,
+      "risk_score": 0.0
+    },
+    {
+      "record_id": "W2-051",
+      "is_hallucinated": 0,
+      "risk_score": 0.0
+    },
+    {
+      "record_id": "W2-052",
+      "is_hallucinated": 0,
+      "risk_score": 0.0
+    },
+    {
+      "record_id": "W2-053",
+      "is_hallucinated": 0,
+      "risk_score": 0.0
+    },
+    {
+      "record_id": "W2-054",
+      "is_hallucinated": 0,
+      "risk_score": 0.1312
+    },
+    {
+      "record_id": "W2-055",
+      "is_hallucinated": 0,
+      "risk_score": 0.0
+    },
+    {
+      "record_id": "W2-056",
+      "is_hallucinated": 0,
+      "risk_score": 0.0
+    },
+    {
+      "record_id": "W2-057",
+      "is_hallucinated": 0,
+      "risk_score": 0.0
+    },
+    {
+      "record_id": "W2-058",
+      "is_hallucinated": 0,
+      "risk_score": 0.0
+    },
+    {
+      "record_id": "W2-059",
+      "is_hallucinated": 1,
+      "risk_score": 0.0
+    },
+    {
+      "record_id": "W2-060",
+      "is_hallucinated": 1,
+      "risk_score": 0.1333
+    },
+    {
+      "record_id": "W2-061",
+      "is_hallucinated": 1,
+      "risk_score": 0.75
+    },
+    {
+      "record_id": "W2-062",
+      "is_hallucinated": 1,
+      "risk_score": 0.3083
+    },
+    {
+      "record_id": "W2-063",
+      "is_hallucinated": 1,
+      "risk_score": 0.9167
+    },
+    {
+      "record_id": "W2-064",
+      "is_hallucinated": 0,
+      "risk_score": 0.75
+    },
+    {
+      "record_id": "W2-065",
+      "is_hallucinated": 1,
+      "risk_score": 0.0
+    }
+  ]
+}

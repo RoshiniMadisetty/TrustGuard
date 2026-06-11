@@ -1,0 +1,128 @@
+{
+  "module": "shap_lime_disagreement",
+  "timestamp": "2026-06-11T10:03:07.387963Z",
+  "config": {
+    "top_k": 5,
+    "disagreement_threshold": 0.4
+  },
+  "summary": {
+    "n_samples": 3,
+    "mean_agreement": 0.5,
+    "std_agreement": 0.0,
+    "min_agreement": 0.5,
+    "max_agreement": 0.5,
+    "strong_agreement_count": 0,
+    "partial_agreement_count": 3,
+    "disagreement_count": 0,
+    "disagreement_rate": 0.0,
+    "disagreement_threshold": 0.4,
+    "top_k": 5
+  },
+  "per_sample_analysis": [
+    {
+      "sample": "sample_1",
+      "record_id": "W2-063",
+      "risk_score": 0.5166666666666666,
+      "ground_truth": "dangerous",
+      "shap_top_k": [
+        "risk_score",
+        "compliance_severity_enc",
+        "src_is_any",
+        "dst_is_any",
+        "confidence"
+      ],
+      "lime_top_k": [
+        "risk_score",
+        "compliance_severity_enc",
+        "confidence",
+        "0.00",
+        "0.00"
+      ],
+      "agreement_score": 0.5,
+      "status": "PARTIAL_AGREEMENT",
+      "overlap_features": [
+        "compliance_severity_enc",
+        "confidence",
+        "risk_score"
+      ],
+      "shap_only_features": [
+        "dst_is_any",
+        "src_is_any"
+      ],
+      "lime_only_features": [
+        "0.00"
+      ],
+      "interpretation": "Methods agree on ['compliance_severity_enc', 'confidence', 'risk_score'] but diverge: SHAP additionally flags ['dst_is_any', 'src_is_any'], LIME flags ['0.00']. Moderate reliability."
+    },
+    {
+      "sample": "sample_2",
+      "record_id": "W2-031",
+      "risk_score": 0.3499999999999999,
+      "ground_truth": "dangerous",
+      "shap_top_k": [
+        "risk_score",
+        "compliance_severity_enc",
+        "src_is_any",
+        "dst_is_any",
+        "confidence"
+      ],
+      "lime_top_k": [
+        "risk_score",
+        "compliance_severity_enc",
+        "0.00",
+        "confidence",
+        "0.00"
+      ],
+      "agreement_score": 0.5,
+      "status": "PARTIAL_AGREEMENT",
+      "overlap_features": [
+        "compliance_severity_enc",
+        "confidence",
+        "risk_score"
+      ],
+      "shap_only_features": [
+        "dst_is_any",
+        "src_is_any"
+      ],
+      "lime_only_features": [
+        "0.00"
+      ],
+      "interpretation": "Methods agree on ['compliance_severity_enc', 'confidence', 'risk_score'] but diverge: SHAP additionally flags ['dst_is_any', 'src_is_any'], LIME flags ['0.00']. Moderate reliability."
+    },
+    {
+      "sample": "sample_3",
+      "record_id": "W2-036",
+      "risk_score": 0.3499999999999999,
+      "ground_truth": "dangerous",
+      "shap_top_k": [
+        "risk_score",
+        "compliance_severity_enc",
+        "src_is_any",
+        "dst_is_any",
+        "confidence"
+      ],
+      "lime_top_k": [
+        "risk_score",
+        "compliance_severity_enc",
+        "0.00",
+        "confidence",
+        "0.00"
+      ],
+      "agreement_score": 0.5,
+      "status": "PARTIAL_AGREEMENT",
+      "overlap_features": [
+        "compliance_severity_enc",
+        "confidence",
+        "risk_score"
+      ],
+      "shap_only_features": [
+        "dst_is_any",
+        "src_is_any"
+      ],
+      "lime_only_features": [
+        "0.00"
+      ],
+      "interpretation": "Methods agree on ['compliance_severity_enc', 'confidence', 'risk_score'] but diverge: SHAP additionally flags ['dst_is_any', 'src_is_any'], LIME flags ['0.00']. Moderate reliability."
+    }
+  ]
+}

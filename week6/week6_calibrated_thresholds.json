@@ -1,0 +1,55 @@
+{
+  "module": "threshold_calibration",
+  "timestamp": "2026-06-11T10:03:10.016372+00:00",
+  "primary_thresholds": {
+    "safe_threshold": 0.3,
+    "review_threshold": 0.6,
+    "method": "percentile_P30P70",
+    "rationale": "Percentile-based thresholds guarantee population of all three decision tiers (SAFE/REVIEW/REJECT). F1-optimal collapses the REVIEW band on bimodal distributions, making TrustGuard a binary classifier rather than a three-tier risk framework."
+  },
+  "score_distribution": {
+    "min": 0.0,
+    "max": 0.9167,
+    "mean": 0.1496,
+    "p30": 0.0,
+    "p50": 0.0,
+    "p70": 0.1333
+  },
+  "method_a_percentile": {
+    "method": "percentile_P30P70",
+    "safe_threshold": 0.3,
+    "review_threshold": 0.6,
+    "precision": 0.8889,
+    "recall": 0.2667,
+    "f1_score": 0.4103,
+    "accuracy": 0.6462,
+    "safe_count": 53,
+    "review_count": 3,
+    "reject_count": 9
+  },
+  "method_b_f1_optimal": {
+    "method": "f1_optimal",
+    "safe_threshold": 0.025,
+    "review_threshold": 0.05,
+    "precision": 0.88,
+    "recall": 0.7333,
+    "f1_score": 0.8,
+    "accuracy": 0.8308,
+    "safe_count": 40,
+    "review_count": 0,
+    "reject_count": 25,
+    "note": "Collapses REVIEW band on bimodal distributions - not used as primary"
+  },
+  "method_c_youden_j": {
+    "method": "youden_j",
+    "safe_threshold": 0.0667,
+    "review_threshold": 0.1333,
+    "precision": 0.9545,
+    "recall": 0.7,
+    "f1_score": 0.8077,
+    "accuracy": 0.8462,
+    "safe_count": 40,
+    "review_count": 3,
+    "reject_count": 22
+  }
+}

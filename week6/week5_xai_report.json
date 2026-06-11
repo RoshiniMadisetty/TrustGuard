@@ -1,0 +1,70 @@
+{
+  "xai_run": {
+    "n_samples": 65,
+    "feature_names": [
+      "confidence",
+      "src_is_any",
+      "dst_is_any",
+      "syntax_valid",
+      "semantic_score",
+      "compliance_severity_enc",
+      "edge_case_count",
+      "risk_score"
+    ]
+  },
+  "shap": {
+    "global_feature_importance": {
+      "risk_score": 0.09038251526144021,
+      "compliance_severity_enc": 0.024012301639292463,
+      "src_is_any": 0.0008792747410173582,
+      "dst_is_any": 0.0006392597489723314,
+      "confidence": 0.00011985661788353808,
+      "syntax_valid": 0.0,
+      "semantic_score": 0.0,
+      "edge_case_count": 0.0
+    },
+    "expected_value": 0.08810897423670841
+  },
+  "lime": {
+    "sample_1": {
+      "record_id": "W2-063",
+      "risk_score": 0.5166666666666666,
+      "ground_truth": "dangerous",
+      "lime_weights": {
+        "risk_score > 0.13": 0.24401116515218993,
+        "compliance_severity_enc > 3.00": 0.049602613635071326,
+        "confidence > 0.90": 0.008826406822865271,
+        "0.00 < src_is_any <= 1.00": 0.008001080895391881,
+        "0.00 < dst_is_any <= 1.00": -0.0001858877198320074
+      },
+      "prediction": 0.5166552676807019
+    },
+    "sample_2": {
+      "record_id": "W2-031",
+      "risk_score": 0.3499999999999999,
+      "ground_truth": "dangerous",
+      "lime_weights": {
+        "risk_score > 0.13": 0.2816019178538491,
+        "compliance_severity_enc > 3.00": 0.052509197764632434,
+        "0.00 < src_is_any <= 1.00": 0.022052825271151412,
+        "confidence > 0.90": -0.006823002720535154,
+        "0.00 < dst_is_any <= 1.00": -0.002054108981602023
+      },
+      "prediction": 0.3499925023908212
+    },
+    "sample_3": {
+      "record_id": "W2-036",
+      "risk_score": 0.3499999999999999,
+      "ground_truth": "dangerous",
+      "lime_weights": {
+        "risk_score > 0.13": 0.25660291253452056,
+        "compliance_severity_enc > 3.00": 0.027402160947163034,
+        "0.00 < src_is_any <= 1.00": 0.013692198674192607,
+        "confidence > 0.90": 0.003038543999236084,
+        "0.00 < dst_is_any <= 1.00": -0.0014634214411468067
+      },
+      "prediction": 0.3499925023908212
+    }
+  },
+  "hallucination_category_breakdown": {}
+}
