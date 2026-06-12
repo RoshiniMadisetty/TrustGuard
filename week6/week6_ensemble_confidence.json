@@ -1,14 +1,14 @@
 {
   "module": "ensemble_confidence",
-  "timestamp": "2026-06-12T12:28:30.219794Z",
+  "timestamp": "2026-06-12T18:08:58.906286Z",
   "summary": {
     "n_records": 353,
-    "mean_ensemble": 0.8008,
-    "std_ensemble": 0.0476,
-    "min_ensemble": 0.661,
-    "max_ensemble": 0.9763,
-    "high_confidence_count": 297,
-    "moderate_confidence_count": 56,
+    "mean_ensemble": 0.7609,
+    "std_ensemble": 0.0474,
+    "min_ensemble": 0.6278,
+    "max_ensemble": 0.8478,
+    "high_confidence_count": 256,
+    "moderate_confidence_count": 97,
     "low_confidence_count": 0,
     "very_low_confidence_count": 0,
     "weights": {
@@ -21,13 +21,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W1-001",
       "ground_truth": "hallucinated",
@@ -36,13 +36,13 @@
     {
       "model_confidence": 0.95,
       "validator_score": 0.9875,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.38,
         "validator_contribution": 0.2963,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8877,
+      "ensemble_confidence": 0.8478,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W1-002",
       "ground_truth": "dangerous",
@@ -51,13 +51,13 @@
     {
       "model_confidence": 0.9,
       "validator_score": 0.975,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.36,
         "validator_contribution": 0.2925,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8639,
+      "ensemble_confidence": 0.824,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W1-003",
       "ground_truth": "correct",
@@ -66,13 +66,13 @@
     {
       "model_confidence": 0.9,
       "validator_score": 0.975,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.36,
         "validator_contribution": 0.2925,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8639,
+      "ensemble_confidence": 0.824,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W1-004",
       "ground_truth": "correct",
@@ -81,13 +81,13 @@
     {
       "model_confidence": 0.9,
       "validator_score": 0.975,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.36,
         "validator_contribution": 0.2925,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8639,
+      "ensemble_confidence": 0.824,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W1-005",
       "ground_truth": "correct",
@@ -96,13 +96,13 @@
     {
       "model_confidence": 0.9,
       "validator_score": 0.975,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.36,
         "validator_contribution": 0.2925,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8639,
+      "ensemble_confidence": 0.824,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W1-006",
       "ground_truth": "correct",
@@ -111,13 +111,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W1-007",
       "ground_truth": "hallucinated",
@@ -126,13 +126,13 @@
     {
       "model_confidence": 0.9,
       "validator_score": 0.975,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.36,
         "validator_contribution": 0.2925,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8639,
+      "ensemble_confidence": 0.824,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W1-008",
       "ground_truth": "correct",
@@ -141,14 +141,14 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.4286,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.1286
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7336,
-      "confidence_tier": "MODERATE_CONFIDENCE",
+      "ensemble_confidence": 0.7765,
+      "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W1-009",
       "ground_truth": "hallucinated",
       "schema_valid": true
@@ -156,13 +156,13 @@
     {
       "model_confidence": 0.9,
       "validator_score": 0.975,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.36,
         "validator_contribution": 0.2925,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8639,
+      "ensemble_confidence": 0.824,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W1-010",
       "ground_truth": "correct",
@@ -171,13 +171,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W1-011",
       "ground_truth": "hallucinated",
@@ -186,13 +186,13 @@
     {
       "model_confidence": 0.88,
       "validator_score": 0.9075,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.352,
         "validator_contribution": 0.2722,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8357,
+      "ensemble_confidence": 0.7958,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W1-012",
       "ground_truth": "dangerous",
@@ -201,13 +201,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.8875,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.2662,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7977,
+      "ensemble_confidence": 0.7578,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W1-013",
       "ground_truth": "hallucinated",
@@ -216,13 +216,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W1-014",
       "ground_truth": "hallucinated",
@@ -231,13 +231,13 @@
     {
       "model_confidence": 0.9,
       "validator_score": 0.9125,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.36,
         "validator_contribution": 0.2737,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8452,
+      "ensemble_confidence": 0.8053,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W1-015",
       "ground_truth": "correct",
@@ -246,13 +246,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W1-016",
       "ground_truth": "hallucinated",
@@ -261,13 +261,13 @@
     {
       "model_confidence": 0.9,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.36,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8564,
+      "ensemble_confidence": 0.8165,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W1-017",
       "ground_truth": "correct",
@@ -276,13 +276,13 @@
     {
       "model_confidence": 0.9,
       "validator_score": 0.975,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.36,
         "validator_contribution": 0.2925,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8639,
+      "ensemble_confidence": 0.824,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W1-018",
       "ground_truth": "correct",
@@ -291,13 +291,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.925,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.2775,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8089,
+      "ensemble_confidence": 0.769,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W1-019",
       "ground_truth": "hallucinated",
@@ -306,13 +306,13 @@
     {
       "model_confidence": 0.95,
       "validator_score": 0.9875,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.38,
         "validator_contribution": 0.2963,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8877,
+      "ensemble_confidence": 0.8478,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W1-020",
       "ground_truth": "dangerous",
@@ -321,13 +321,13 @@
     {
       "model_confidence": 0.9,
       "validator_score": 0.975,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.36,
         "validator_contribution": 0.2925,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8639,
+      "ensemble_confidence": 0.824,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W2-021",
       "ground_truth": "correct",
@@ -336,13 +336,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W2-022",
       "ground_truth": "hallucinated",
@@ -351,13 +351,13 @@
     {
       "model_confidence": 0.9,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.36,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8564,
+      "ensemble_confidence": 0.8165,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W2-023",
       "ground_truth": "correct",
@@ -366,13 +366,13 @@
     {
       "model_confidence": 0.88,
       "validator_score": 0.9075,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.352,
         "validator_contribution": 0.2722,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8357,
+      "ensemble_confidence": 0.7958,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W2-024",
       "ground_truth": "dangerous",
@@ -381,13 +381,13 @@
     {
       "model_confidence": 0.9,
       "validator_score": 0.975,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.36,
         "validator_contribution": 0.2925,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8639,
+      "ensemble_confidence": 0.824,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W2-025",
       "ground_truth": "correct",
@@ -396,13 +396,13 @@
     {
       "model_confidence": 0.9,
       "validator_score": 0.975,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.36,
         "validator_contribution": 0.2925,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8639,
+      "ensemble_confidence": 0.824,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W2-026",
       "ground_truth": "correct",
@@ -411,13 +411,13 @@
     {
       "model_confidence": 0.9,
       "validator_score": 0.975,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.36,
         "validator_contribution": 0.2925,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8639,
+      "ensemble_confidence": 0.824,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W2-027",
       "ground_truth": "correct",
@@ -426,13 +426,13 @@
     {
       "model_confidence": 0.9,
       "validator_score": 0.975,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.36,
         "validator_contribution": 0.2925,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8639,
+      "ensemble_confidence": 0.824,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W2-028",
       "ground_truth": "correct",
@@ -441,13 +441,13 @@
     {
       "model_confidence": 0.9,
       "validator_score": 0.975,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.36,
         "validator_contribution": 0.2925,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8639,
+      "ensemble_confidence": 0.824,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W2-029",
       "ground_truth": "correct",
@@ -456,13 +456,13 @@
     {
       "model_confidence": 0.9,
       "validator_score": 0.975,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.36,
         "validator_contribution": 0.2925,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8639,
+      "ensemble_confidence": 0.824,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W2-030",
       "ground_truth": "correct",
@@ -471,13 +471,13 @@
     {
       "model_confidence": 0.95,
       "validator_score": 0.9625,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.38,
         "validator_contribution": 0.2888,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8802,
+      "ensemble_confidence": 0.8403,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W2-031",
       "ground_truth": "dangerous",
@@ -486,13 +486,13 @@
     {
       "model_confidence": 0.9,
       "validator_score": 0.975,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.36,
         "validator_contribution": 0.2925,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8639,
+      "ensemble_confidence": 0.824,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W2-032",
       "ground_truth": "correct",
@@ -501,13 +501,13 @@
     {
       "model_confidence": 0.9,
       "validator_score": 0.975,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.36,
         "validator_contribution": 0.2925,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8639,
+      "ensemble_confidence": 0.824,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W2-033",
       "ground_truth": "correct",
@@ -516,13 +516,13 @@
     {
       "model_confidence": 0.95,
       "validator_score": 0.9875,
-      "xai_agreement": 0.4286,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.38,
         "validator_contribution": 0.2963,
-        "xai_contribution": 0.1286
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8048,
+      "ensemble_confidence": 0.8478,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W2-034",
       "ground_truth": "dangerous",
@@ -531,13 +531,13 @@
     {
       "model_confidence": 0.9,
       "validator_score": 0.975,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.36,
         "validator_contribution": 0.2925,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8639,
+      "ensemble_confidence": 0.824,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W2-035",
       "ground_truth": "correct",
@@ -546,13 +546,13 @@
     {
       "model_confidence": 0.95,
       "validator_score": 0.8875,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.38,
         "validator_contribution": 0.2662,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8577,
+      "ensemble_confidence": 0.8178,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W2-036",
       "ground_truth": "dangerous",
@@ -561,13 +561,13 @@
     {
       "model_confidence": 0.95,
       "validator_score": 0.8875,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.38,
         "validator_contribution": 0.2662,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8577,
+      "ensemble_confidence": 0.8178,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W2-037",
       "ground_truth": "dangerous",
@@ -576,13 +576,13 @@
     {
       "model_confidence": 0.95,
       "validator_score": 0.8875,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.38,
         "validator_contribution": 0.2662,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8577,
+      "ensemble_confidence": 0.8178,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W2-038",
       "ground_truth": "dangerous",
@@ -591,13 +591,13 @@
     {
       "model_confidence": 0.95,
       "validator_score": 0.8875,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.38,
         "validator_contribution": 0.2662,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8577,
+      "ensemble_confidence": 0.8178,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W2-039",
       "ground_truth": "dangerous",
@@ -606,13 +606,13 @@
     {
       "model_confidence": 0.95,
       "validator_score": 0.8875,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.38,
         "validator_contribution": 0.2662,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8577,
+      "ensemble_confidence": 0.8178,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W2-040",
       "ground_truth": "dangerous",
@@ -621,13 +621,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W2-041",
       "ground_truth": "hallucinated",
@@ -636,13 +636,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W2-042",
       "ground_truth": "hallucinated",
@@ -651,13 +651,13 @@
     {
       "model_confidence": 0.9,
       "validator_score": 0.975,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.36,
         "validator_contribution": 0.2925,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8639,
+      "ensemble_confidence": 0.824,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W2-043",
       "ground_truth": "correct",
@@ -666,13 +666,13 @@
     {
       "model_confidence": 0.9,
       "validator_score": 0.975,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.36,
         "validator_contribution": 0.2925,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8639,
+      "ensemble_confidence": 0.824,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W2-044",
       "ground_truth": "correct",
@@ -681,13 +681,13 @@
     {
       "model_confidence": 0.88,
       "validator_score": 0.9075,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.352,
         "validator_contribution": 0.2722,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8357,
+      "ensemble_confidence": 0.7958,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W2-045",
       "ground_truth": "dangerous",
@@ -696,13 +696,13 @@
     {
       "model_confidence": 0.9,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.36,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8564,
+      "ensemble_confidence": 0.8165,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W2-046",
       "ground_truth": "correct",
@@ -711,13 +711,13 @@
     {
       "model_confidence": 0.88,
       "validator_score": 0.97,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.352,
         "validator_contribution": 0.291,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8544,
+      "ensemble_confidence": 0.8145,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W2-047",
       "ground_truth": "dangerous",
@@ -726,13 +726,13 @@
     {
       "model_confidence": 0.9,
       "validator_score": 0.975,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.36,
         "validator_contribution": 0.2925,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8639,
+      "ensemble_confidence": 0.824,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W2-048",
       "ground_truth": "correct",
@@ -741,13 +741,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.8875,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.2662,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7977,
+      "ensemble_confidence": 0.7578,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W2-049",
       "ground_truth": "hallucinated",
@@ -756,13 +756,13 @@
     {
       "model_confidence": 0.9,
       "validator_score": 0.975,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.36,
         "validator_contribution": 0.2925,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8639,
+      "ensemble_confidence": 0.824,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W2-050",
       "ground_truth": "correct",
@@ -771,13 +771,13 @@
     {
       "model_confidence": 0.9,
       "validator_score": 0.975,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.36,
         "validator_contribution": 0.2925,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8639,
+      "ensemble_confidence": 0.824,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W2-051",
       "ground_truth": "correct",
@@ -786,13 +786,13 @@
     {
       "model_confidence": 0.9,
       "validator_score": 0.975,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.36,
         "validator_contribution": 0.2925,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8639,
+      "ensemble_confidence": 0.824,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W2-052",
       "ground_truth": "correct",
@@ -801,13 +801,13 @@
     {
       "model_confidence": 0.9,
       "validator_score": 0.975,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.36,
         "validator_contribution": 0.2925,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8639,
+      "ensemble_confidence": 0.824,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W2-053",
       "ground_truth": "correct",
@@ -816,13 +816,13 @@
     {
       "model_confidence": 0.9,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.36,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8564,
+      "ensemble_confidence": 0.8165,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W2-054",
       "ground_truth": "correct",
@@ -831,13 +831,13 @@
     {
       "model_confidence": 0.9,
       "validator_score": 0.975,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.36,
         "validator_contribution": 0.2925,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8639,
+      "ensemble_confidence": 0.824,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W2-055",
       "ground_truth": "correct",
@@ -846,13 +846,13 @@
     {
       "model_confidence": 0.9,
       "validator_score": 0.975,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.36,
         "validator_contribution": 0.2925,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8639,
+      "ensemble_confidence": 0.824,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W2-056",
       "ground_truth": "correct",
@@ -861,13 +861,13 @@
     {
       "model_confidence": 0.9,
       "validator_score": 0.975,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.36,
         "validator_contribution": 0.2925,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8639,
+      "ensemble_confidence": 0.824,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W2-057",
       "ground_truth": "correct",
@@ -876,13 +876,13 @@
     {
       "model_confidence": 0.9,
       "validator_score": 0.975,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.36,
         "validator_contribution": 0.2925,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8639,
+      "ensemble_confidence": 0.824,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W2-058",
       "ground_truth": "correct",
@@ -891,13 +891,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W2-059",
       "ground_truth": "hallucinated",
@@ -906,13 +906,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.8875,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.2662,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7977,
+      "ensemble_confidence": 0.7578,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W2-060",
       "ground_truth": "hallucinated",
@@ -921,14 +921,14 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.85,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.255,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7864,
-      "confidence_tier": "HIGH_CONFIDENCE",
+      "ensemble_confidence": 0.7465,
+      "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "W2-061",
       "ground_truth": "hallucinated",
       "schema_valid": true
@@ -936,13 +936,13 @@
     {
       "model_confidence": 0.95,
       "validator_score": 0.925,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.38,
         "validator_contribution": 0.2775,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8689,
+      "ensemble_confidence": 0.829,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W2-062",
       "ground_truth": "dangerous",
@@ -951,13 +951,13 @@
     {
       "model_confidence": 0.95,
       "validator_score": 0.9875,
-      "xai_agreement": 1.0,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.38,
         "validator_contribution": 0.2963,
-        "xai_contribution": 0.3
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.9763,
+      "ensemble_confidence": 0.8478,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W2-063",
       "ground_truth": "dangerous",
@@ -966,13 +966,13 @@
     {
       "model_confidence": 0.9,
       "validator_score": 0.9125,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.36,
         "validator_contribution": 0.2737,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8452,
+      "ensemble_confidence": 0.8053,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W2-064",
       "ground_truth": "correct",
@@ -981,13 +981,13 @@
     {
       "model_confidence": 0.88,
       "validator_score": 0.97,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.352,
         "validator_contribution": 0.291,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8544,
+      "ensemble_confidence": 0.8145,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W2-065",
       "ground_truth": "dangerous",
@@ -996,13 +996,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W3-066",
       "ground_truth": "correct",
@@ -1011,13 +1011,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W3-067",
       "ground_truth": "correct",
@@ -1026,13 +1026,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.8875,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.2662,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7977,
+      "ensemble_confidence": 0.7578,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W3-068",
       "ground_truth": "correct",
@@ -1041,13 +1041,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W3-069",
       "ground_truth": "correct",
@@ -1056,13 +1056,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W3-070",
       "ground_truth": "correct",
@@ -1071,13 +1071,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W3-071",
       "ground_truth": "correct",
@@ -1086,13 +1086,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W3-072",
       "ground_truth": "correct",
@@ -1101,13 +1101,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W3-073",
       "ground_truth": "correct",
@@ -1116,13 +1116,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W3-074",
       "ground_truth": "correct",
@@ -1131,13 +1131,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W3-075",
       "ground_truth": "correct",
@@ -1146,13 +1146,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W3-076",
       "ground_truth": "correct",
@@ -1161,13 +1161,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W3-077",
       "ground_truth": "correct",
@@ -1176,13 +1176,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W3-078",
       "ground_truth": "correct",
@@ -1191,13 +1191,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W3-079",
       "ground_truth": "correct",
@@ -1206,13 +1206,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.8875,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.2662,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7977,
+      "ensemble_confidence": 0.7578,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W3-080",
       "ground_truth": "correct",
@@ -1221,13 +1221,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W3-081",
       "ground_truth": "correct",
@@ -1236,13 +1236,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W3-082",
       "ground_truth": "correct",
@@ -1251,13 +1251,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W3-083",
       "ground_truth": "correct",
@@ -1266,13 +1266,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W3-084",
       "ground_truth": "correct",
@@ -1281,13 +1281,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W3-085",
       "ground_truth": "correct",
@@ -1296,13 +1296,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.8875,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.2662,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7977,
+      "ensemble_confidence": 0.7578,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W3-086",
       "ground_truth": "correct",
@@ -1311,13 +1311,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W3-087",
       "ground_truth": "correct",
@@ -1326,13 +1326,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W3-088",
       "ground_truth": "correct",
@@ -1341,13 +1341,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W3-089",
       "ground_truth": "correct",
@@ -1356,13 +1356,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W3-090",
       "ground_truth": "correct",
@@ -1371,13 +1371,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.8875,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.2662,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7977,
+      "ensemble_confidence": 0.7578,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W3-091",
       "ground_truth": "correct",
@@ -1386,13 +1386,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W3-092",
       "ground_truth": "correct",
@@ -1401,13 +1401,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W3-093",
       "ground_truth": "correct",
@@ -1416,13 +1416,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W3-094",
       "ground_truth": "correct",
@@ -1431,13 +1431,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W3-095",
       "ground_truth": "correct",
@@ -1446,13 +1446,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.925,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.2775,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8089,
+      "ensemble_confidence": 0.769,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W3-096",
       "ground_truth": "correct",
@@ -1461,14 +1461,14 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.85,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.255,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7864,
-      "confidence_tier": "HIGH_CONFIDENCE",
+      "ensemble_confidence": 0.7465,
+      "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "W3-097",
       "ground_truth": "correct",
       "schema_valid": true
@@ -1476,13 +1476,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W3-098",
       "ground_truth": "correct",
@@ -1491,13 +1491,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W3-099",
       "ground_truth": "correct",
@@ -1506,13 +1506,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W3-100",
       "ground_truth": "correct",
@@ -1521,13 +1521,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.8875,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.2662,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7977,
+      "ensemble_confidence": 0.7578,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W3-101",
       "ground_truth": "correct",
@@ -1536,13 +1536,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W3-102",
       "ground_truth": "correct",
@@ -1551,13 +1551,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W3-103",
       "ground_truth": "correct",
@@ -1566,13 +1566,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W3-104",
       "ground_truth": "correct",
@@ -1581,13 +1581,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W3-105",
       "ground_truth": "correct",
@@ -1596,13 +1596,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W4-106",
       "ground_truth": "correct",
@@ -1611,13 +1611,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W4-107",
       "ground_truth": "correct",
@@ -1626,13 +1626,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W4-108",
       "ground_truth": "correct",
@@ -1641,13 +1641,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W4-109",
       "ground_truth": "correct",
@@ -1656,13 +1656,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W4-110",
       "ground_truth": "correct",
@@ -1671,13 +1671,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W4-111",
       "ground_truth": "correct",
@@ -1686,13 +1686,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W4-112",
       "ground_truth": "correct",
@@ -1701,13 +1701,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W4-113",
       "ground_truth": "correct",
@@ -1716,13 +1716,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W4-114",
       "ground_truth": "correct",
@@ -1731,13 +1731,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W4-115",
       "ground_truth": "correct",
@@ -1746,13 +1746,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.8875,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.2662,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7977,
+      "ensemble_confidence": 0.7578,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W4-116",
       "ground_truth": "correct",
@@ -1761,13 +1761,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W4-117",
       "ground_truth": "correct",
@@ -1776,13 +1776,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W4-118",
       "ground_truth": "correct",
@@ -1791,13 +1791,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.925,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.2775,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8089,
+      "ensemble_confidence": 0.769,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W4-119",
       "ground_truth": "correct",
@@ -1806,13 +1806,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W4-120",
       "ground_truth": "correct",
@@ -1821,13 +1821,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W4-121",
       "ground_truth": "correct",
@@ -1836,13 +1836,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W4-122",
       "ground_truth": "correct",
@@ -1851,13 +1851,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.925,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.2775,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8089,
+      "ensemble_confidence": 0.769,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W4-123",
       "ground_truth": "correct",
@@ -1866,13 +1866,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.8875,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.2662,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7977,
+      "ensemble_confidence": 0.7578,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W4-124",
       "ground_truth": "correct",
@@ -1881,13 +1881,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W4-125",
       "ground_truth": "correct",
@@ -1896,13 +1896,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.8875,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.2662,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7977,
+      "ensemble_confidence": 0.7578,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W4-126",
       "ground_truth": "correct",
@@ -1911,13 +1911,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W4-127",
       "ground_truth": "correct",
@@ -1926,13 +1926,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.925,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.2775,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8089,
+      "ensemble_confidence": 0.769,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W4-128",
       "ground_truth": "correct",
@@ -1941,13 +1941,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.925,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.2775,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8089,
+      "ensemble_confidence": 0.769,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W4-129",
       "ground_truth": "correct",
@@ -1956,13 +1956,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W4-130",
       "ground_truth": "correct",
@@ -1971,13 +1971,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.925,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.2775,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8089,
+      "ensemble_confidence": 0.769,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W4-131",
       "ground_truth": "correct",
@@ -1986,13 +1986,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W4-132",
       "ground_truth": "correct",
@@ -2001,13 +2001,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W4-133",
       "ground_truth": "correct",
@@ -2016,13 +2016,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W4-134",
       "ground_truth": "correct",
@@ -2031,13 +2031,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W4-135",
       "ground_truth": "correct",
@@ -2046,13 +2046,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W4-136",
       "ground_truth": "correct",
@@ -2061,13 +2061,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W4-137",
       "ground_truth": "correct",
@@ -2076,13 +2076,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W4-138",
       "ground_truth": "correct",
@@ -2091,13 +2091,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.925,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.2775,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8089,
+      "ensemble_confidence": 0.769,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W4-139",
       "ground_truth": "correct",
@@ -2106,13 +2106,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W4-140",
       "ground_truth": "correct",
@@ -2121,13 +2121,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W4-141",
       "ground_truth": "correct",
@@ -2136,13 +2136,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.925,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.2775,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8089,
+      "ensemble_confidence": 0.769,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W4-142",
       "ground_truth": "correct",
@@ -2151,13 +2151,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W4-143",
       "ground_truth": "correct",
@@ -2166,13 +2166,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.925,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.2775,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8089,
+      "ensemble_confidence": 0.769,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W4-144",
       "ground_truth": "correct",
@@ -2181,13 +2181,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W4-145",
       "ground_truth": "correct",
@@ -2196,13 +2196,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W4-146",
       "ground_truth": "correct",
@@ -2211,13 +2211,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W4-147",
       "ground_truth": "correct",
@@ -2226,13 +2226,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W4-148",
       "ground_truth": "correct",
@@ -2241,13 +2241,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W4-149",
       "ground_truth": "correct",
@@ -2256,13 +2256,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W4-150",
       "ground_truth": "correct",
@@ -2271,13 +2271,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.925,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.2775,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8089,
+      "ensemble_confidence": 0.769,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W4-151",
       "ground_truth": "correct",
@@ -2286,13 +2286,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W4-152",
       "ground_truth": "correct",
@@ -2301,13 +2301,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W4-153",
       "ground_truth": "correct",
@@ -2316,13 +2316,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W4-154",
       "ground_truth": "correct",
@@ -2331,13 +2331,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W4-155",
       "ground_truth": "correct",
@@ -2346,13 +2346,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W5-166",
       "ground_truth": "correct",
@@ -2361,13 +2361,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W5-167",
       "ground_truth": "correct",
@@ -2376,13 +2376,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W5-168",
       "ground_truth": "correct",
@@ -2391,13 +2391,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W5-169",
       "ground_truth": "correct",
@@ -2406,13 +2406,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W5-170",
       "ground_truth": "correct",
@@ -2421,13 +2421,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W5-171",
       "ground_truth": "correct",
@@ -2436,13 +2436,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W5-172",
       "ground_truth": "correct",
@@ -2451,13 +2451,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W5-173",
       "ground_truth": "correct",
@@ -2466,14 +2466,14 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.85,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.255,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7864,
-      "confidence_tier": "HIGH_CONFIDENCE",
+      "ensemble_confidence": 0.7465,
+      "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "W5-174",
       "ground_truth": "correct",
       "schema_valid": true
@@ -2481,13 +2481,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W5-175",
       "ground_truth": "correct",
@@ -2496,13 +2496,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W5-176",
       "ground_truth": "correct",
@@ -2511,13 +2511,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W5-177",
       "ground_truth": "correct",
@@ -2526,13 +2526,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W5-178",
       "ground_truth": "correct",
@@ -2541,13 +2541,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W5-179",
       "ground_truth": "correct",
@@ -2556,13 +2556,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W5-180",
       "ground_truth": "correct",
@@ -2571,13 +2571,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W5-181",
       "ground_truth": "correct",
@@ -2586,13 +2586,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W5-182",
       "ground_truth": "correct",
@@ -2601,13 +2601,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.8875,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.2662,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7977,
+      "ensemble_confidence": 0.7578,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W5-183",
       "ground_truth": "correct",
@@ -2616,13 +2616,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W5-184",
       "ground_truth": "correct",
@@ -2631,13 +2631,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.925,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.2775,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8089,
+      "ensemble_confidence": 0.769,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W5-185",
       "ground_truth": "correct",
@@ -2646,13 +2646,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W5-186",
       "ground_truth": "correct",
@@ -2661,13 +2661,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W5-187",
       "ground_truth": "correct",
@@ -2676,13 +2676,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.925,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.2775,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8089,
+      "ensemble_confidence": 0.769,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W5-188",
       "ground_truth": "correct",
@@ -2691,13 +2691,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W5-189",
       "ground_truth": "correct",
@@ -2706,13 +2706,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W5-190",
       "ground_truth": "correct",
@@ -2721,13 +2721,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W5-191",
       "ground_truth": "correct",
@@ -2736,13 +2736,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.925,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.2775,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8089,
+      "ensemble_confidence": 0.769,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W5-192",
       "ground_truth": "correct",
@@ -2751,13 +2751,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W5-193",
       "ground_truth": "correct",
@@ -2766,13 +2766,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W5-194",
       "ground_truth": "correct",
@@ -2781,13 +2781,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W5-195",
       "ground_truth": "correct",
@@ -2796,13 +2796,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W5-196",
       "ground_truth": "correct",
@@ -2811,13 +2811,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W5-197",
       "ground_truth": "correct",
@@ -2826,13 +2826,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W5-198",
       "ground_truth": "correct",
@@ -2841,13 +2841,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W5-199",
       "ground_truth": "correct",
@@ -2856,13 +2856,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W5-200",
       "ground_truth": "correct",
@@ -2871,13 +2871,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W5-201",
       "ground_truth": "correct",
@@ -2886,13 +2886,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W5-202",
       "ground_truth": "correct",
@@ -2901,13 +2901,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W5-203",
       "ground_truth": "correct",
@@ -2916,13 +2916,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W5-204",
       "ground_truth": "correct",
@@ -2931,13 +2931,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W5-205",
       "ground_truth": "correct",
@@ -2946,13 +2946,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.8875,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.2662,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7977,
+      "ensemble_confidence": 0.7578,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W5-206",
       "ground_truth": "correct",
@@ -2961,13 +2961,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W5-207",
       "ground_truth": "correct",
@@ -2976,13 +2976,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W5-208",
       "ground_truth": "correct",
@@ -2991,13 +2991,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W5-209",
       "ground_truth": "correct",
@@ -3006,13 +3006,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W5-210",
       "ground_truth": "correct",
@@ -3021,13 +3021,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W5-211",
       "ground_truth": "correct",
@@ -3036,13 +3036,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.8875,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.2662,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7977,
+      "ensemble_confidence": 0.7578,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W5-212",
       "ground_truth": "correct",
@@ -3051,13 +3051,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W5-213",
       "ground_truth": "correct",
@@ -3066,13 +3066,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W5-214",
       "ground_truth": "correct",
@@ -3081,13 +3081,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W5-215",
       "ground_truth": "correct",
@@ -3096,13 +3096,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W5-216",
       "ground_truth": "correct",
@@ -3111,13 +3111,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.925,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.2775,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8089,
+      "ensemble_confidence": 0.769,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W5-217",
       "ground_truth": "correct",
@@ -3126,13 +3126,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W5-218",
       "ground_truth": "correct",
@@ -3141,13 +3141,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W5-219",
       "ground_truth": "correct",
@@ -3156,13 +3156,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W5-220",
       "ground_truth": "correct",
@@ -3171,13 +3171,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.925,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.2775,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8089,
+      "ensemble_confidence": 0.769,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W5-221",
       "ground_truth": "correct",
@@ -3186,13 +3186,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W5-222",
       "ground_truth": "correct",
@@ -3201,13 +3201,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W5-223",
       "ground_truth": "correct",
@@ -3216,13 +3216,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.925,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.2775,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8089,
+      "ensemble_confidence": 0.769,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W5-224",
       "ground_truth": "correct",
@@ -3231,13 +3231,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "W5-225",
       "ground_truth": "correct",
@@ -3246,13 +3246,13 @@
     {
       "model_confidence": 0.68,
       "validator_score": 0.82,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.272,
         "validator_contribution": 0.246,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7294,
+      "ensemble_confidence": 0.6895,
       "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "SYN-1000",
       "ground_truth": "hallucinated",
@@ -3261,14 +3261,14 @@
     {
       "model_confidence": 0.76,
       "validator_score": 0.84,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.304,
         "validator_contribution": 0.252,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7674,
-      "confidence_tier": "HIGH_CONFIDENCE",
+      "ensemble_confidence": 0.7275,
+      "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "SYN-1001",
       "ground_truth": "hallucinated",
       "schema_valid": true
@@ -3276,13 +3276,13 @@
     {
       "model_confidence": 0.84,
       "validator_score": 0.86,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.336,
         "validator_contribution": 0.258,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8054,
+      "ensemble_confidence": 0.7655,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "SYN-1002",
       "ground_truth": "hallucinated",
@@ -3291,14 +3291,14 @@
     {
       "model_confidence": 0.79,
       "validator_score": 0.8475,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.316,
         "validator_contribution": 0.2542,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7817,
-      "confidence_tier": "HIGH_CONFIDENCE",
+      "ensemble_confidence": 0.7418,
+      "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "SYN-1003",
       "ground_truth": "hallucinated",
       "schema_valid": true
@@ -3306,13 +3306,13 @@
     {
       "model_confidence": 0.69,
       "validator_score": 0.8225,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.276,
         "validator_contribution": 0.2467,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7342,
+      "ensemble_confidence": 0.6943,
       "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "SYN-1004",
       "ground_truth": "hallucinated",
@@ -3321,13 +3321,13 @@
     {
       "model_confidence": 0.83,
       "validator_score": 0.8575,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.332,
         "validator_contribution": 0.2572,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8007,
+      "ensemble_confidence": 0.7608,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "SYN-1005",
       "ground_truth": "hallucinated",
@@ -3336,14 +3336,14 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.85,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.255,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7864,
-      "confidence_tier": "HIGH_CONFIDENCE",
+      "ensemble_confidence": 0.7465,
+      "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "SYN-1006",
       "ground_truth": "hallucinated",
       "schema_valid": true
@@ -3351,13 +3351,13 @@
     {
       "model_confidence": 0.62,
       "validator_score": 0.805,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.248,
         "validator_contribution": 0.2415,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7009,
+      "ensemble_confidence": 0.661,
       "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "SYN-1007",
       "ground_truth": "hallucinated",
@@ -3366,13 +3366,13 @@
     {
       "model_confidence": 0.57,
       "validator_score": 0.7925,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.228,
         "validator_contribution": 0.2377,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.6772,
+      "ensemble_confidence": 0.6373,
       "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "SYN-1008",
       "ground_truth": "hallucinated",
@@ -3381,14 +3381,14 @@
     {
       "model_confidence": 0.74,
       "validator_score": 0.835,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.296,
         "validator_contribution": 0.2505,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7579,
-      "confidence_tier": "HIGH_CONFIDENCE",
+      "ensemble_confidence": 0.718,
+      "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "SYN-1009",
       "ground_truth": "hallucinated",
       "schema_valid": true
@@ -3396,13 +3396,13 @@
     {
       "model_confidence": 0.66,
       "validator_score": 0.815,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.264,
         "validator_contribution": 0.2445,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7199,
+      "ensemble_confidence": 0.68,
       "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "SYN-1010",
       "ground_truth": "hallucinated",
@@ -3411,13 +3411,13 @@
     {
       "model_confidence": 0.82,
       "validator_score": 0.855,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.328,
         "validator_contribution": 0.2565,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7959,
+      "ensemble_confidence": 0.756,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "SYN-1011",
       "ground_truth": "hallucinated",
@@ -3426,13 +3426,13 @@
     {
       "model_confidence": 0.61,
       "validator_score": 0.8025,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.244,
         "validator_contribution": 0.2407,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.6962,
+      "ensemble_confidence": 0.6563,
       "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "SYN-1012",
       "ground_truth": "hallucinated",
@@ -3441,13 +3441,13 @@
     {
       "model_confidence": 0.56,
       "validator_score": 0.79,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.224,
         "validator_contribution": 0.237,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.6724,
+      "ensemble_confidence": 0.6325,
       "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "SYN-1013",
       "ground_truth": "hallucinated",
@@ -3456,14 +3456,14 @@
     {
       "model_confidence": 0.75,
       "validator_score": 0.8375,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.3,
         "validator_contribution": 0.2512,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7627,
-      "confidence_tier": "HIGH_CONFIDENCE",
+      "ensemble_confidence": 0.7228,
+      "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "SYN-1014",
       "ground_truth": "hallucinated",
       "schema_valid": true
@@ -3471,13 +3471,13 @@
     {
       "model_confidence": 0.84,
       "validator_score": 0.86,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.336,
         "validator_contribution": 0.258,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8054,
+      "ensemble_confidence": 0.7655,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "SYN-1015",
       "ground_truth": "hallucinated",
@@ -3486,13 +3486,13 @@
     {
       "model_confidence": 0.66,
       "validator_score": 0.815,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.264,
         "validator_contribution": 0.2445,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7199,
+      "ensemble_confidence": 0.68,
       "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "SYN-1016",
       "ground_truth": "hallucinated",
@@ -3501,13 +3501,13 @@
     {
       "model_confidence": 0.61,
       "validator_score": 0.8025,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.244,
         "validator_contribution": 0.2407,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.6962,
+      "ensemble_confidence": 0.6563,
       "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "SYN-1017",
       "ground_truth": "hallucinated",
@@ -3516,13 +3516,13 @@
     {
       "model_confidence": 0.69,
       "validator_score": 0.8225,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.276,
         "validator_contribution": 0.2467,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7342,
+      "ensemble_confidence": 0.6943,
       "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "SYN-1018",
       "ground_truth": "hallucinated",
@@ -3531,14 +3531,14 @@
     {
       "model_confidence": 0.75,
       "validator_score": 0.8375,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.3,
         "validator_contribution": 0.2512,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7627,
-      "confidence_tier": "HIGH_CONFIDENCE",
+      "ensemble_confidence": 0.7228,
+      "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "SYN-1019",
       "ground_truth": "hallucinated",
       "schema_valid": true
@@ -3546,14 +3546,14 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.85,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.255,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7864,
-      "confidence_tier": "HIGH_CONFIDENCE",
+      "ensemble_confidence": 0.7465,
+      "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "SYN-1020",
       "ground_truth": "hallucinated",
       "schema_valid": true
@@ -3561,13 +3561,13 @@
     {
       "model_confidence": 0.64,
       "validator_score": 0.81,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.256,
         "validator_contribution": 0.243,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7104,
+      "ensemble_confidence": 0.6705,
       "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "SYN-1021",
       "ground_truth": "hallucinated",
@@ -3576,14 +3576,14 @@
     {
       "model_confidence": 0.79,
       "validator_score": 0.8475,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.316,
         "validator_contribution": 0.2542,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7817,
-      "confidence_tier": "HIGH_CONFIDENCE",
+      "ensemble_confidence": 0.7418,
+      "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "SYN-1022",
       "ground_truth": "hallucinated",
       "schema_valid": true
@@ -3591,13 +3591,13 @@
     {
       "model_confidence": 0.64,
       "validator_score": 0.81,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.256,
         "validator_contribution": 0.243,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7104,
+      "ensemble_confidence": 0.6705,
       "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "SYN-1023",
       "ground_truth": "hallucinated",
@@ -3606,13 +3606,13 @@
     {
       "model_confidence": 0.59,
       "validator_score": 0.7975,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.236,
         "validator_contribution": 0.2392,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.6867,
+      "ensemble_confidence": 0.6468,
       "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "SYN-1024",
       "ground_truth": "hallucinated",
@@ -3621,13 +3621,13 @@
     {
       "model_confidence": 0.55,
       "validator_score": 0.7875,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.22,
         "validator_contribution": 0.2362,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.6677,
+      "ensemble_confidence": 0.6278,
       "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "SYN-1025",
       "ground_truth": "hallucinated",
@@ -3636,14 +3636,14 @@
     {
       "model_confidence": 0.75,
       "validator_score": 0.8375,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.3,
         "validator_contribution": 0.2512,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7627,
-      "confidence_tier": "HIGH_CONFIDENCE",
+      "ensemble_confidence": 0.7228,
+      "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "SYN-1026",
       "ground_truth": "hallucinated",
       "schema_valid": true
@@ -3651,14 +3651,14 @@
     {
       "model_confidence": 0.78,
       "validator_score": 0.845,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.312,
         "validator_contribution": 0.2535,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7769,
-      "confidence_tier": "HIGH_CONFIDENCE",
+      "ensemble_confidence": 0.737,
+      "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "SYN-1027",
       "ground_truth": "hallucinated",
       "schema_valid": true
@@ -3666,13 +3666,13 @@
     {
       "model_confidence": 0.72,
       "validator_score": 0.83,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.288,
         "validator_contribution": 0.249,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7484,
+      "ensemble_confidence": 0.7085,
       "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "SYN-1028",
       "ground_truth": "hallucinated",
@@ -3681,13 +3681,13 @@
     {
       "model_confidence": 0.58,
       "validator_score": 0.795,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.232,
         "validator_contribution": 0.2385,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.6819,
+      "ensemble_confidence": 0.642,
       "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "SYN-1029",
       "ground_truth": "hallucinated",
@@ -3696,13 +3696,13 @@
     {
       "model_confidence": 0.69,
       "validator_score": 0.8225,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.276,
         "validator_contribution": 0.2467,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7342,
+      "ensemble_confidence": 0.6943,
       "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "SYN-1030",
       "ground_truth": "hallucinated",
@@ -3711,14 +3711,14 @@
     {
       "model_confidence": 0.78,
       "validator_score": 0.845,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.312,
         "validator_contribution": 0.2535,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7769,
-      "confidence_tier": "HIGH_CONFIDENCE",
+      "ensemble_confidence": 0.737,
+      "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "SYN-1031",
       "ground_truth": "hallucinated",
       "schema_valid": true
@@ -3726,14 +3726,14 @@
     {
       "model_confidence": 0.72,
       "validator_score": 0.8675,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.288,
         "validator_contribution": 0.2602,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7597,
-      "confidence_tier": "HIGH_CONFIDENCE",
+      "ensemble_confidence": 0.7198,
+      "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "SYN-1032",
       "ground_truth": "hallucinated",
       "schema_valid": true
@@ -3741,13 +3741,13 @@
     {
       "model_confidence": 0.64,
       "validator_score": 0.81,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.256,
         "validator_contribution": 0.243,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7104,
+      "ensemble_confidence": 0.6705,
       "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "SYN-1033",
       "ground_truth": "hallucinated",
@@ -3756,13 +3756,13 @@
     {
       "model_confidence": 0.68,
       "validator_score": 0.8575,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.272,
         "validator_contribution": 0.2572,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7407,
+      "ensemble_confidence": 0.7008,
       "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "SYN-1034",
       "ground_truth": "hallucinated",
@@ -3771,13 +3771,13 @@
     {
       "model_confidence": 0.67,
       "validator_score": 0.855,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.268,
         "validator_contribution": 0.2565,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7359,
+      "ensemble_confidence": 0.696,
       "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "SYN-1035",
       "ground_truth": "hallucinated",
@@ -3786,13 +3786,13 @@
     {
       "model_confidence": 0.62,
       "validator_score": 0.8425,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.248,
         "validator_contribution": 0.2527,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7122,
+      "ensemble_confidence": 0.6723,
       "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "SYN-1036",
       "ground_truth": "hallucinated",
@@ -3801,13 +3801,13 @@
     {
       "model_confidence": 0.63,
       "validator_score": 0.845,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.252,
         "validator_contribution": 0.2535,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7169,
+      "ensemble_confidence": 0.677,
       "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "SYN-1037",
       "ground_truth": "hallucinated",
@@ -3816,14 +3816,14 @@
     {
       "model_confidence": 0.75,
       "validator_score": 0.875,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.3,
         "validator_contribution": 0.2625,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7739,
-      "confidence_tier": "HIGH_CONFIDENCE",
+      "ensemble_confidence": 0.734,
+      "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "SYN-1038",
       "ground_truth": "hallucinated",
       "schema_valid": true
@@ -3831,14 +3831,14 @@
     {
       "model_confidence": 0.79,
       "validator_score": 0.8475,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.316,
         "validator_contribution": 0.2542,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7817,
-      "confidence_tier": "HIGH_CONFIDENCE",
+      "ensemble_confidence": 0.7418,
+      "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "SYN-1039",
       "ground_truth": "hallucinated",
       "schema_valid": true
@@ -3846,13 +3846,13 @@
     {
       "model_confidence": 0.67,
       "validator_score": 0.855,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.268,
         "validator_contribution": 0.2565,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7359,
+      "ensemble_confidence": 0.696,
       "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "SYN-1040",
       "ground_truth": "hallucinated",
@@ -3861,13 +3861,13 @@
     {
       "model_confidence": 0.6,
       "validator_score": 0.8375,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.24,
         "validator_contribution": 0.2512,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7027,
+      "ensemble_confidence": 0.6628,
       "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "SYN-1041",
       "ground_truth": "hallucinated",
@@ -3876,13 +3876,13 @@
     {
       "model_confidence": 0.58,
       "validator_score": 0.8325,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.232,
         "validator_contribution": 0.2497,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.6932,
+      "ensemble_confidence": 0.6533,
       "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "SYN-1042",
       "ground_truth": "hallucinated",
@@ -3891,13 +3891,13 @@
     {
       "model_confidence": 0.69,
       "validator_score": 0.86,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.276,
         "validator_contribution": 0.258,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7454,
+      "ensemble_confidence": 0.7055,
       "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "SYN-1043",
       "ground_truth": "hallucinated",
@@ -3906,14 +3906,14 @@
     {
       "model_confidence": 0.7,
       "validator_score": 0.8625,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.28,
         "validator_contribution": 0.2587,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7502,
-      "confidence_tier": "HIGH_CONFIDENCE",
+      "ensemble_confidence": 0.7103,
+      "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "SYN-1044",
       "ground_truth": "hallucinated",
       "schema_valid": true
@@ -3921,14 +3921,14 @@
     {
       "model_confidence": 0.76,
       "validator_score": 0.8775,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.304,
         "validator_contribution": 0.2632,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7787,
-      "confidence_tier": "HIGH_CONFIDENCE",
+      "ensemble_confidence": 0.7388,
+      "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "SYN-1045",
       "ground_truth": "hallucinated",
       "schema_valid": true
@@ -3936,13 +3936,13 @@
     {
       "model_confidence": 0.66,
       "validator_score": 0.8525,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.264,
         "validator_contribution": 0.2557,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7312,
+      "ensemble_confidence": 0.6913,
       "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "SYN-1046",
       "ground_truth": "hallucinated",
@@ -3951,14 +3951,14 @@
     {
       "model_confidence": 0.74,
       "validator_score": 0.835,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.296,
         "validator_contribution": 0.2505,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7579,
-      "confidence_tier": "HIGH_CONFIDENCE",
+      "ensemble_confidence": 0.718,
+      "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "SYN-1047",
       "ground_truth": "hallucinated",
       "schema_valid": true
@@ -3966,13 +3966,13 @@
     {
       "model_confidence": 0.58,
       "validator_score": 0.8325,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.232,
         "validator_contribution": 0.2497,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.6932,
+      "ensemble_confidence": 0.6533,
       "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "SYN-1048",
       "ground_truth": "hallucinated",
@@ -3981,13 +3981,13 @@
     {
       "model_confidence": 0.84,
       "validator_score": 0.8975,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.336,
         "validator_contribution": 0.2692,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8167,
+      "ensemble_confidence": 0.7768,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "SYN-1049",
       "ground_truth": "hallucinated",
@@ -3996,14 +3996,14 @@
     {
       "model_confidence": 0.76,
       "validator_score": 0.8775,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.304,
         "validator_contribution": 0.2632,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7787,
-      "confidence_tier": "HIGH_CONFIDENCE",
+      "ensemble_confidence": 0.7388,
+      "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "SYN-1050",
       "ground_truth": "hallucinated",
       "schema_valid": true
@@ -4011,13 +4011,13 @@
     {
       "model_confidence": 0.84,
       "validator_score": 0.8975,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.336,
         "validator_contribution": 0.2692,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8167,
+      "ensemble_confidence": 0.7768,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "SYN-1051",
       "ground_truth": "hallucinated",
@@ -4026,14 +4026,14 @@
     {
       "model_confidence": 0.77,
       "validator_score": 0.88,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.308,
         "validator_contribution": 0.264,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7834,
-      "confidence_tier": "HIGH_CONFIDENCE",
+      "ensemble_confidence": 0.7435,
+      "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "SYN-1052",
       "ground_truth": "hallucinated",
       "schema_valid": true
@@ -4041,13 +4041,13 @@
     {
       "model_confidence": 0.63,
       "validator_score": 0.845,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.252,
         "validator_contribution": 0.2535,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7169,
+      "ensemble_confidence": 0.677,
       "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "SYN-1053",
       "ground_truth": "hallucinated",
@@ -4056,13 +4056,13 @@
     {
       "model_confidence": 0.82,
       "validator_score": 0.8925,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.328,
         "validator_contribution": 0.2677,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8072,
+      "ensemble_confidence": 0.7673,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "SYN-1054",
       "ground_truth": "hallucinated",
@@ -4071,13 +4071,13 @@
     {
       "model_confidence": 0.61,
       "validator_score": 0.84,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.244,
         "validator_contribution": 0.252,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7074,
+      "ensemble_confidence": 0.6675,
       "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "SYN-1055",
       "ground_truth": "hallucinated",
@@ -4086,14 +4086,14 @@
     {
       "model_confidence": 0.72,
       "validator_score": 0.8675,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.288,
         "validator_contribution": 0.2602,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7597,
-      "confidence_tier": "HIGH_CONFIDENCE",
+      "ensemble_confidence": 0.7198,
+      "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "SYN-1056",
       "ground_truth": "hallucinated",
       "schema_valid": true
@@ -4101,13 +4101,13 @@
     {
       "model_confidence": 0.81,
       "validator_score": 0.89,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.324,
         "validator_contribution": 0.267,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8024,
+      "ensemble_confidence": 0.7625,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "SYN-1057",
       "ground_truth": "hallucinated",
@@ -4116,14 +4116,14 @@
     {
       "model_confidence": 0.77,
       "validator_score": 0.88,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.308,
         "validator_contribution": 0.264,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7834,
-      "confidence_tier": "HIGH_CONFIDENCE",
+      "ensemble_confidence": 0.7435,
+      "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "SYN-1058",
       "ground_truth": "hallucinated",
       "schema_valid": true
@@ -4131,14 +4131,14 @@
     {
       "model_confidence": 0.74,
       "validator_score": 0.8725,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.296,
         "validator_contribution": 0.2617,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7692,
-      "confidence_tier": "HIGH_CONFIDENCE",
+      "ensemble_confidence": 0.7293,
+      "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "SYN-1059",
       "ground_truth": "hallucinated",
       "schema_valid": true
@@ -4146,14 +4146,14 @@
     {
       "model_confidence": 0.74,
       "validator_score": 0.8725,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.296,
         "validator_contribution": 0.2617,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7692,
-      "confidence_tier": "HIGH_CONFIDENCE",
+      "ensemble_confidence": 0.7293,
+      "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "SYN-1060",
       "ground_truth": "hallucinated",
       "schema_valid": true
@@ -4161,13 +4161,13 @@
     {
       "model_confidence": 0.67,
       "validator_score": 0.855,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.268,
         "validator_contribution": 0.2565,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7359,
+      "ensemble_confidence": 0.696,
       "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "SYN-1061",
       "ground_truth": "hallucinated",
@@ -4176,14 +4176,14 @@
     {
       "model_confidence": 0.7,
       "validator_score": 0.8625,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.28,
         "validator_contribution": 0.2587,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7502,
-      "confidence_tier": "HIGH_CONFIDENCE",
+      "ensemble_confidence": 0.7103,
+      "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "SYN-1062",
       "ground_truth": "hallucinated",
       "schema_valid": true
@@ -4191,13 +4191,13 @@
     {
       "model_confidence": 0.59,
       "validator_score": 0.835,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.236,
         "validator_contribution": 0.2505,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.6979,
+      "ensemble_confidence": 0.658,
       "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "SYN-1063",
       "ground_truth": "hallucinated",
@@ -4206,14 +4206,14 @@
     {
       "model_confidence": 0.73,
       "validator_score": 0.8325,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.292,
         "validator_contribution": 0.2497,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7532,
-      "confidence_tier": "HIGH_CONFIDENCE",
+      "ensemble_confidence": 0.7133,
+      "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "SYN-1064",
       "ground_truth": "hallucinated",
       "schema_valid": true
@@ -4221,13 +4221,13 @@
     {
       "model_confidence": 0.83,
       "validator_score": 0.8575,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.332,
         "validator_contribution": 0.2572,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8007,
+      "ensemble_confidence": 0.7608,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "SYN-1065",
       "ground_truth": "hallucinated",
@@ -4236,13 +4236,13 @@
     {
       "model_confidence": 0.65,
       "validator_score": 0.8125,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.26,
         "validator_contribution": 0.2437,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7152,
+      "ensemble_confidence": 0.6753,
       "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "SYN-1066",
       "ground_truth": "hallucinated",
@@ -4251,13 +4251,13 @@
     {
       "model_confidence": 0.56,
       "validator_score": 0.79,
-      "xai_agreement": 0.6667,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.224,
         "validator_contribution": 0.237,
-        "xai_contribution": 0.2
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.661,
+      "ensemble_confidence": 0.6325,
       "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "SYN-1067",
       "ground_truth": "hallucinated",
@@ -4266,13 +4266,13 @@
     {
       "model_confidence": 0.69,
       "validator_score": 0.86,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.276,
         "validator_contribution": 0.258,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7454,
+      "ensemble_confidence": 0.7055,
       "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "SYN-1068",
       "ground_truth": "hallucinated",
@@ -4281,13 +4281,13 @@
     {
       "model_confidence": 0.57,
       "validator_score": 0.83,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.228,
         "validator_contribution": 0.249,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.6884,
+      "ensemble_confidence": 0.6485,
       "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "SYN-1069",
       "ground_truth": "hallucinated",
@@ -4296,14 +4296,14 @@
     {
       "model_confidence": 0.7,
       "validator_score": 0.8625,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.28,
         "validator_contribution": 0.2587,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7502,
-      "confidence_tier": "HIGH_CONFIDENCE",
+      "ensemble_confidence": 0.7103,
+      "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "SYN-1070",
       "ground_truth": "hallucinated",
       "schema_valid": true
@@ -4311,14 +4311,14 @@
     {
       "model_confidence": 0.72,
       "validator_score": 0.8675,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.288,
         "validator_contribution": 0.2602,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7597,
-      "confidence_tier": "HIGH_CONFIDENCE",
+      "ensemble_confidence": 0.7198,
+      "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "SYN-1071",
       "ground_truth": "hallucinated",
       "schema_valid": true
@@ -4326,13 +4326,13 @@
     {
       "model_confidence": 0.63,
       "validator_score": 0.8075,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.252,
         "validator_contribution": 0.2422,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7057,
+      "ensemble_confidence": 0.6658,
       "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "SYN-1072",
       "ground_truth": "hallucinated",
@@ -4341,13 +4341,13 @@
     {
       "model_confidence": 0.71,
       "validator_score": 0.8275,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.284,
         "validator_contribution": 0.2482,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7437,
+      "ensemble_confidence": 0.7038,
       "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "SYN-1073",
       "ground_truth": "hallucinated",
@@ -4356,14 +4356,14 @@
     {
       "model_confidence": 0.56,
       "validator_score": 0.79,
-      "xai_agreement": 1.0,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.224,
         "validator_contribution": 0.237,
-        "xai_contribution": 0.3
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.761,
-      "confidence_tier": "HIGH_CONFIDENCE",
+      "ensemble_confidence": 0.6325,
+      "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "SYN-1074",
       "ground_truth": "hallucinated",
       "schema_valid": true
@@ -4371,13 +4371,13 @@
     {
       "model_confidence": 0.82,
       "validator_score": 0.8925,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.328,
         "validator_contribution": 0.2677,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8072,
+      "ensemble_confidence": 0.7673,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "SYN-1075",
       "ground_truth": "hallucinated",
@@ -4386,13 +4386,13 @@
     {
       "model_confidence": 0.72,
       "validator_score": 0.83,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.288,
         "validator_contribution": 0.249,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7484,
+      "ensemble_confidence": 0.7085,
       "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "SYN-1076",
       "ground_truth": "hallucinated",
@@ -4401,14 +4401,14 @@
     {
       "model_confidence": 0.75,
       "validator_score": 0.875,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.3,
         "validator_contribution": 0.2625,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7739,
-      "confidence_tier": "HIGH_CONFIDENCE",
+      "ensemble_confidence": 0.734,
+      "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "SYN-1077",
       "ground_truth": "hallucinated",
       "schema_valid": true
@@ -4416,14 +4416,14 @@
     {
       "model_confidence": 0.75,
       "validator_score": 0.875,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.3,
         "validator_contribution": 0.2625,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7739,
-      "confidence_tier": "HIGH_CONFIDENCE",
+      "ensemble_confidence": 0.734,
+      "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "SYN-1078",
       "ground_truth": "hallucinated",
       "schema_valid": true
@@ -4431,14 +4431,14 @@
     {
       "model_confidence": 0.78,
       "validator_score": 0.845,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.312,
         "validator_contribution": 0.2535,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7769,
-      "confidence_tier": "HIGH_CONFIDENCE",
+      "ensemble_confidence": 0.737,
+      "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "SYN-1079",
       "ground_truth": "hallucinated",
       "schema_valid": true
@@ -4446,13 +4446,13 @@
     {
       "model_confidence": 0.82,
       "validator_score": 0.8925,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.328,
         "validator_contribution": 0.2677,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8072,
+      "ensemble_confidence": 0.7673,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "SYN-1080",
       "ground_truth": "hallucinated",
@@ -4461,13 +4461,13 @@
     {
       "model_confidence": 0.56,
       "validator_score": 0.8275,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.224,
         "validator_contribution": 0.2482,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.6837,
+      "ensemble_confidence": 0.6438,
       "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "SYN-1081",
       "ground_truth": "hallucinated",
@@ -4476,13 +4476,13 @@
     {
       "model_confidence": 0.66,
       "validator_score": 0.8525,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.264,
         "validator_contribution": 0.2557,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7312,
+      "ensemble_confidence": 0.6913,
       "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "SYN-1082",
       "ground_truth": "hallucinated",
@@ -4491,13 +4491,13 @@
     {
       "model_confidence": 0.79,
       "validator_score": 0.885,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.316,
         "validator_contribution": 0.2655,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7929,
+      "ensemble_confidence": 0.753,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "SYN-1083",
       "ground_truth": "hallucinated",
@@ -4506,13 +4506,13 @@
     {
       "model_confidence": 0.84,
       "validator_score": 0.8975,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.336,
         "validator_contribution": 0.2692,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8167,
+      "ensemble_confidence": 0.7768,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "SYN-1084",
       "ground_truth": "hallucinated",
@@ -4521,14 +4521,14 @@
     {
       "model_confidence": 0.7,
       "validator_score": 0.8625,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.28,
         "validator_contribution": 0.2587,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7502,
-      "confidence_tier": "HIGH_CONFIDENCE",
+      "ensemble_confidence": 0.7103,
+      "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "SYN-1085",
       "ground_truth": "hallucinated",
       "schema_valid": true
@@ -4536,13 +4536,13 @@
     {
       "model_confidence": 0.83,
       "validator_score": 0.895,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.332,
         "validator_contribution": 0.2685,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8119,
+      "ensemble_confidence": 0.772,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "SYN-1086",
       "ground_truth": "hallucinated",
@@ -4551,13 +4551,13 @@
     {
       "model_confidence": 0.56,
       "validator_score": 0.8275,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.224,
         "validator_contribution": 0.2482,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.6837,
+      "ensemble_confidence": 0.6438,
       "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "SYN-1087",
       "ground_truth": "hallucinated",
@@ -4566,13 +4566,13 @@
     {
       "model_confidence": 0.85,
       "validator_score": 0.9,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.34,
         "validator_contribution": 0.27,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8214,
+      "ensemble_confidence": 0.7815,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "SYN-1088",
       "ground_truth": "hallucinated",
@@ -4581,14 +4581,14 @@
     {
       "model_confidence": 0.77,
       "validator_score": 0.88,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.308,
         "validator_contribution": 0.264,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7834,
-      "confidence_tier": "HIGH_CONFIDENCE",
+      "ensemble_confidence": 0.7435,
+      "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "SYN-1089",
       "ground_truth": "hallucinated",
       "schema_valid": true
@@ -4596,13 +4596,13 @@
     {
       "model_confidence": 0.82,
       "validator_score": 0.8925,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.328,
         "validator_contribution": 0.2677,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8072,
+      "ensemble_confidence": 0.7673,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "SYN-1090",
       "ground_truth": "hallucinated",
@@ -4611,13 +4611,13 @@
     {
       "model_confidence": 0.64,
       "validator_score": 0.8475,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.256,
         "validator_contribution": 0.2542,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7217,
+      "ensemble_confidence": 0.6818,
       "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "SYN-1091",
       "ground_truth": "hallucinated",
@@ -4626,14 +4626,14 @@
     {
       "model_confidence": 0.75,
       "validator_score": 0.875,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.3,
         "validator_contribution": 0.2625,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7739,
-      "confidence_tier": "HIGH_CONFIDENCE",
+      "ensemble_confidence": 0.734,
+      "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "SYN-1092",
       "ground_truth": "hallucinated",
       "schema_valid": true
@@ -4641,13 +4641,13 @@
     {
       "model_confidence": 0.58,
       "validator_score": 0.8325,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.232,
         "validator_contribution": 0.2497,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.6932,
+      "ensemble_confidence": 0.6533,
       "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "SYN-1093",
       "ground_truth": "hallucinated",
@@ -4656,13 +4656,13 @@
     {
       "model_confidence": 0.63,
       "validator_score": 0.845,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.252,
         "validator_contribution": 0.2535,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7169,
+      "ensemble_confidence": 0.677,
       "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "SYN-1094",
       "ground_truth": "hallucinated",
@@ -4671,13 +4671,13 @@
     {
       "model_confidence": 0.62,
       "validator_score": 0.8425,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.248,
         "validator_contribution": 0.2527,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7122,
+      "ensemble_confidence": 0.6723,
       "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "SYN-1095",
       "ground_truth": "hallucinated",
@@ -4686,14 +4686,14 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.85,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.255,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7864,
-      "confidence_tier": "HIGH_CONFIDENCE",
+      "ensemble_confidence": 0.7465,
+      "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "SYN-1096",
       "ground_truth": "hallucinated",
       "schema_valid": true
@@ -4701,13 +4701,13 @@
     {
       "model_confidence": 0.6,
       "validator_score": 0.8,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.24,
         "validator_contribution": 0.24,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.6914,
+      "ensemble_confidence": 0.6515,
       "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "SYN-1097",
       "ground_truth": "hallucinated",
@@ -4716,13 +4716,13 @@
     {
       "model_confidence": 0.81,
       "validator_score": 0.8525,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.324,
         "validator_contribution": 0.2557,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7912,
+      "ensemble_confidence": 0.7513,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "SYN-1098",
       "ground_truth": "hallucinated",
@@ -4731,13 +4731,13 @@
     {
       "model_confidence": 0.64,
       "validator_score": 0.81,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.256,
         "validator_contribution": 0.243,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7104,
+      "ensemble_confidence": 0.6705,
       "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "SYN-1099",
       "ground_truth": "hallucinated",
@@ -4746,13 +4746,13 @@
     {
       "model_confidence": 0.84,
       "validator_score": 0.86,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.336,
         "validator_contribution": 0.258,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8054,
+      "ensemble_confidence": 0.7655,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "SYN-1100",
       "ground_truth": "hallucinated",
@@ -4761,13 +4761,13 @@
     {
       "model_confidence": 0.59,
       "validator_score": 0.7975,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.236,
         "validator_contribution": 0.2392,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.6867,
+      "ensemble_confidence": 0.6468,
       "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "SYN-1101",
       "ground_truth": "hallucinated",
@@ -4776,13 +4776,13 @@
     {
       "model_confidence": 0.62,
       "validator_score": 0.805,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.248,
         "validator_contribution": 0.2415,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7009,
+      "ensemble_confidence": 0.661,
       "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "SYN-1102",
       "ground_truth": "hallucinated",
@@ -4791,14 +4791,14 @@
     {
       "model_confidence": 0.75,
       "validator_score": 0.8375,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.3,
         "validator_contribution": 0.2512,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7627,
-      "confidence_tier": "HIGH_CONFIDENCE",
+      "ensemble_confidence": 0.7228,
+      "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "SYN-1103",
       "ground_truth": "hallucinated",
       "schema_valid": true
@@ -4806,13 +4806,13 @@
     {
       "model_confidence": 0.7,
       "validator_score": 0.825,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.28,
         "validator_contribution": 0.2475,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7389,
+      "ensemble_confidence": 0.699,
       "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "SYN-1104",
       "ground_truth": "hallucinated",
@@ -4821,13 +4821,13 @@
     {
       "model_confidence": 0.72,
       "validator_score": 0.83,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.288,
         "validator_contribution": 0.249,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7484,
+      "ensemble_confidence": 0.7085,
       "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "SYN-1105",
       "ground_truth": "hallucinated",
@@ -4836,14 +4836,14 @@
     {
       "model_confidence": 0.79,
       "validator_score": 0.8475,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.316,
         "validator_contribution": 0.2542,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7817,
-      "confidence_tier": "HIGH_CONFIDENCE",
+      "ensemble_confidence": 0.7418,
+      "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "SYN-1106",
       "ground_truth": "hallucinated",
       "schema_valid": true
@@ -4851,14 +4851,14 @@
     {
       "model_confidence": 0.77,
       "validator_score": 0.8425,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.308,
         "validator_contribution": 0.2527,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7722,
-      "confidence_tier": "HIGH_CONFIDENCE",
+      "ensemble_confidence": 0.7323,
+      "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "SYN-1107",
       "ground_truth": "hallucinated",
       "schema_valid": true
@@ -4866,13 +4866,13 @@
     {
       "model_confidence": 0.59,
       "validator_score": 0.7975,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.236,
         "validator_contribution": 0.2392,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.6867,
+      "ensemble_confidence": 0.6468,
       "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "SYN-1108",
       "ground_truth": "hallucinated",
@@ -4881,13 +4881,13 @@
     {
       "model_confidence": 0.67,
       "validator_score": 0.8175,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.268,
         "validator_contribution": 0.2452,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7247,
+      "ensemble_confidence": 0.6848,
       "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "SYN-1109",
       "ground_truth": "hallucinated",
@@ -4896,13 +4896,13 @@
     {
       "model_confidence": 0.7,
       "validator_score": 0.825,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.28,
         "validator_contribution": 0.2475,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7389,
+      "ensemble_confidence": 0.699,
       "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "SYN-1110",
       "ground_truth": "hallucinated",
@@ -4911,13 +4911,13 @@
     {
       "model_confidence": 0.84,
       "validator_score": 0.86,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.336,
         "validator_contribution": 0.258,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8054,
+      "ensemble_confidence": 0.7655,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "SYN-1111",
       "ground_truth": "hallucinated",
@@ -4926,13 +4926,13 @@
     {
       "model_confidence": 0.93,
       "validator_score": 0.9825,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.372,
         "validator_contribution": 0.2948,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8782,
+      "ensemble_confidence": 0.8383,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "SYN-1112",
       "ground_truth": "correct",
@@ -4941,13 +4941,13 @@
     {
       "model_confidence": 0.86,
       "validator_score": 0.965,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.344,
         "validator_contribution": 0.2895,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8449,
+      "ensemble_confidence": 0.805,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "SYN-1113",
       "ground_truth": "correct",
@@ -4956,13 +4956,13 @@
     {
       "model_confidence": 0.77,
       "validator_score": 0.9425,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.308,
         "validator_contribution": 0.2828,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8022,
+      "ensemble_confidence": 0.7623,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "SYN-1114",
       "ground_truth": "correct",
@@ -4971,13 +4971,13 @@
     {
       "model_confidence": 0.83,
       "validator_score": 0.9575,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.332,
         "validator_contribution": 0.2873,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8307,
+      "ensemble_confidence": 0.7908,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "SYN-1115",
       "ground_truth": "correct",
@@ -4986,13 +4986,13 @@
     {
       "model_confidence": 0.87,
       "validator_score": 0.905,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.348,
         "validator_contribution": 0.2715,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8309,
+      "ensemble_confidence": 0.791,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "SYN-1116",
       "ground_truth": "correct",
@@ -5001,13 +5001,13 @@
     {
       "model_confidence": 0.91,
       "validator_score": 0.9775,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.364,
         "validator_contribution": 0.2933,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8687,
+      "ensemble_confidence": 0.8288,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "SYN-1117",
       "ground_truth": "correct",
@@ -5016,13 +5016,13 @@
     {
       "model_confidence": 0.91,
       "validator_score": 0.9775,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.364,
         "validator_contribution": 0.2933,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8687,
+      "ensemble_confidence": 0.8288,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "SYN-1118",
       "ground_truth": "correct",
@@ -5031,13 +5031,13 @@
     {
       "model_confidence": 0.77,
       "validator_score": 0.9425,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.308,
         "validator_contribution": 0.2828,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8022,
+      "ensemble_confidence": 0.7623,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "SYN-1119",
       "ground_truth": "correct",
@@ -5046,13 +5046,13 @@
     {
       "model_confidence": 0.91,
       "validator_score": 0.9775,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.364,
         "validator_contribution": 0.2933,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8687,
+      "ensemble_confidence": 0.8288,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "SYN-1120",
       "ground_truth": "correct",
@@ -5061,13 +5061,13 @@
     {
       "model_confidence": 0.86,
       "validator_score": 0.965,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.344,
         "validator_contribution": 0.2895,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8449,
+      "ensemble_confidence": 0.805,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "SYN-1121",
       "ground_truth": "correct",
@@ -5076,13 +5076,13 @@
     {
       "model_confidence": 0.92,
       "validator_score": 0.98,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.368,
         "validator_contribution": 0.294,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8734,
+      "ensemble_confidence": 0.8335,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "SYN-1122",
       "ground_truth": "correct",
@@ -5091,13 +5091,13 @@
     {
       "model_confidence": 0.83,
       "validator_score": 0.9575,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.332,
         "validator_contribution": 0.2873,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8307,
+      "ensemble_confidence": 0.7908,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "SYN-1123",
       "ground_truth": "correct",
@@ -5106,13 +5106,13 @@
     {
       "model_confidence": 0.84,
       "validator_score": 0.8975,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.336,
         "validator_contribution": 0.2692,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8167,
+      "ensemble_confidence": 0.7768,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "SYN-1124",
       "ground_truth": "correct",
@@ -5121,13 +5121,13 @@
     {
       "model_confidence": 0.92,
       "validator_score": 0.9175,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.368,
         "validator_contribution": 0.2752,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8547,
+      "ensemble_confidence": 0.8148,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "SYN-1125",
       "ground_truth": "correct",
@@ -5136,13 +5136,13 @@
     {
       "model_confidence": 0.8,
       "validator_score": 0.95,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.32,
         "validator_contribution": 0.285,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8164,
+      "ensemble_confidence": 0.7765,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "SYN-1126",
       "ground_truth": "correct",
@@ -5151,13 +5151,13 @@
     {
       "model_confidence": 0.9,
       "validator_score": 0.975,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.36,
         "validator_contribution": 0.2925,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8639,
+      "ensemble_confidence": 0.824,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "SYN-1127",
       "ground_truth": "correct",
@@ -5166,13 +5166,13 @@
     {
       "model_confidence": 0.77,
       "validator_score": 0.9425,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.308,
         "validator_contribution": 0.2828,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8022,
+      "ensemble_confidence": 0.7623,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "SYN-1128",
       "ground_truth": "correct",
@@ -5181,13 +5181,13 @@
     {
       "model_confidence": 0.87,
       "validator_score": 0.8675,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.348,
         "validator_contribution": 0.2602,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8197,
+      "ensemble_confidence": 0.7798,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "SYN-1129",
       "ground_truth": "correct",
@@ -5196,13 +5196,13 @@
     {
       "model_confidence": 0.91,
       "validator_score": 0.9775,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.364,
         "validator_contribution": 0.2933,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8687,
+      "ensemble_confidence": 0.8288,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "SYN-1130",
       "ground_truth": "correct",
@@ -5211,13 +5211,13 @@
     {
       "model_confidence": 0.78,
       "validator_score": 0.945,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.312,
         "validator_contribution": 0.2835,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8069,
+      "ensemble_confidence": 0.767,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "SYN-1131",
       "ground_truth": "correct",
@@ -5226,14 +5226,14 @@
     {
       "model_confidence": 0.78,
       "validator_score": 0.845,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.312,
         "validator_contribution": 0.2535,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7769,
-      "confidence_tier": "HIGH_CONFIDENCE",
+      "ensemble_confidence": 0.737,
+      "confidence_tier": "MODERATE_CONFIDENCE",
       "record_id": "SYN-1132",
       "ground_truth": "correct",
       "schema_valid": true
@@ -5241,13 +5241,13 @@
     {
       "model_confidence": 0.78,
       "validator_score": 0.945,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.312,
         "validator_contribution": 0.2835,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8069,
+      "ensemble_confidence": 0.767,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "SYN-1133",
       "ground_truth": "correct",
@@ -5256,13 +5256,13 @@
     {
       "model_confidence": 0.75,
       "validator_score": 0.9375,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.3,
         "validator_contribution": 0.2812,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.7927,
+      "ensemble_confidence": 0.7528,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "SYN-1134",
       "ground_truth": "correct",
@@ -5271,13 +5271,13 @@
     {
       "model_confidence": 0.78,
       "validator_score": 0.945,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.312,
         "validator_contribution": 0.2835,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8069,
+      "ensemble_confidence": 0.767,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "SYN-1135",
       "ground_truth": "correct",
@@ -5286,13 +5286,13 @@
     {
       "model_confidence": 0.87,
       "validator_score": 0.9675,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.348,
         "validator_contribution": 0.2903,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8497,
+      "ensemble_confidence": 0.8098,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "SYN-1136",
       "ground_truth": "correct",
@@ -5301,13 +5301,13 @@
     {
       "model_confidence": 0.83,
       "validator_score": 0.9575,
-      "xai_agreement": 0.7048,
+      "xai_agreement": 0.5718,
       "weighted_components": {
         "model_contribution": 0.332,
         "validator_contribution": 0.2873,
-        "xai_contribution": 0.2114
+        "xai_contribution": 0.1715
       },
-      "ensemble_confidence": 0.8307,
+      "ensemble_confidence": 0.7908,
       "confidence_tier": "HIGH_CONFIDENCE",
       "record_id": "SYN-1137",
       "ground_truth": "correct",

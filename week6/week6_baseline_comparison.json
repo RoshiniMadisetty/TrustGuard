@@ -1,6 +1,6 @@
 {
   "module": "baseline_comparison",
-  "timestamp": "2026-06-12T12:28:24.637456+00:00",
+  "timestamp": "2026-06-12T18:08:49.600913+00:00",
   "methods": {
     "raw_llm_baseline": {
       "description": "No validation. Risk = 1 - model_confidence. Threshold = 0.30 (flag if confidence < 0.70).",

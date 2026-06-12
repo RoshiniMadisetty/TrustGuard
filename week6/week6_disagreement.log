@@ -1,0 +1,28 @@
+2026-06-12 23:30:33,521 [INFO] ============================================================
+2026-06-12 23:30:33,522 [INFO] TrustGuard Week 6 | Module 1 | SHAP-LIME Disagreement
+2026-06-12 23:30:33,522 [INFO] ============================================================
+2026-06-12 23:30:33,577 [INFO] Processed 353 records
+2026-06-12 23:30:33,578 [INFO] Mean agreement    : 0.5459
+2026-06-12 23:30:33,578 [INFO] Std agreement     : 0.181
+2026-06-12 23:30:33,578 [INFO] Strong agreement  : 179 (50.7%)
+2026-06-12 23:30:33,578 [INFO] Partial agreement : 136 (38.5%)
+2026-06-12 23:30:33,578 [INFO] Disagreement      : 38 (10.8%)
+2026-06-12 23:30:33,886 [INFO] Saved: week6_plots\shap_lime_agreement.png
+2026-06-12 23:30:34,075 [INFO] Saved: week6_plots\xai_agreement_by_label.png
+2026-06-12 23:30:34,193 [INFO] Saved: week6_plots\xai_agreement_distribution.png
+2026-06-12 23:30:34,204 [INFO] Output: week6_xai_disagreement.json
+2026-06-12 23:30:34,205 [INFO] ============================================================
+2026-06-12 23:38:23,595 [INFO] ============================================================
+2026-06-12 23:38:23,595 [INFO] TrustGuard Week 6 | Module 1 | SHAP-LIME Disagreement
+2026-06-12 23:38:23,597 [INFO] ============================================================
+2026-06-12 23:38:23,650 [INFO] Processed 353 records
+2026-06-12 23:38:23,650 [INFO] Mean agreement    : 0.5638
+2026-06-12 23:38:23,650 [INFO] Std agreement     : 0.1978
+2026-06-12 23:38:23,650 [INFO] Strong agreement  : 183 (51.8%)
+2026-06-12 23:38:23,651 [INFO] Partial agreement : 135 (38.2%)
+2026-06-12 23:38:23,651 [INFO] Disagreement      : 35 (9.9%)
+2026-06-12 23:38:23,902 [INFO] Saved: week6_plots\shap_lime_agreement.png
+2026-06-12 23:38:24,069 [INFO] Saved: week6_plots\xai_agreement_by_label.png
+2026-06-12 23:38:24,166 [INFO] Saved: week6_plots\xai_agreement_distribution.png
+2026-06-12 23:38:24,177 [INFO] Output: week6_xai_disagreement.json
+2026-06-12 23:38:24,178 [INFO] ============================================================

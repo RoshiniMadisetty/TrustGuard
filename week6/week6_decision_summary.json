@@ -1,6 +1,6 @@
 {
   "module": "decision_layer",
-  "timestamp": "2026-06-12T12:28:31.780549Z",
+  "timestamp": "2026-06-12T18:09:00.654264Z",
   "thresholds_used": {
     "safe": 0.3,
     "review": 0.6

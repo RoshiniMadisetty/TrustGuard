@@ -1,6 +1,6 @@
 {
   "benchmark_run": {
-    "timestamp": "2026-06-12T12:28:23.771571+00:00",
+    "timestamp": "2026-06-12T18:08:45.748111+00:00",
     "total_records": 353,
     "hallucinated": 143,
     "clean": 210,
