@@ -30,3 +30,9 @@
   "priority": "500",
   "reasoning": "Step 1: Identify thre
 2026-06-11 09:25:56,556 [INFO] [3] Processing record W1-003 | label=correct
+2026-06-12 09:49:55,442 [INFO] ============================================================
+2026-06-12 09:49:55,443 [INFO] TrustGuard Week 5 | Person 1 | LLM Pipeline v2
+2026-06-12 09:49:55,443 [INFO] ============================================================
+2026-06-12 09:49:55,454 [INFO] Loaded 65 records
+2026-06-12 09:49:55,455 [INFO] Loaded 65 records from week4_final_dataset.json
+2026-06-12 09:49:55,455 [INFO] [1] Processing record W1-001 | label=hallucinated

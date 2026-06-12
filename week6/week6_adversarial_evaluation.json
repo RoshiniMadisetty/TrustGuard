@@ -1,0 +1,176 @@
+{
+  "module": "adversarial_evaluation",
+  "timestamp": "2026-06-12T12:28:24.629496+00:00",
+  "total_adversarial_prompts": 15,
+  "detected": 15,
+  "missed": 0,
+  "adversarial_detection_rate": 1.0,
+  "per_type_breakdown": {
+    "ambiguous_intent": {
+      "total": 2,
+      "detected": 2,
+      "detection_rate": 1.0
+    },
+    "intent_contradiction": {
+      "total": 2,
+      "detected": 2,
+      "detection_rate": 1.0
+    },
+    "wrong_port": {
+      "total": 2,
+      "detected": 2,
+      "detection_rate": 1.0
+    },
+    "wrong_protocol": {
+      "total": 2,
+      "detected": 2,
+      "detection_rate": 1.0
+    },
+    "scope_expansion": {
+      "total": 2,
+      "detected": 2,
+      "detection_rate": 1.0
+    },
+    "security_downgrade": {
+      "total": 2,
+      "detected": 2,
+      "detection_rate": 1.0
+    },
+    "missing_constraint": {
+      "total": 2,
+      "detected": 2,
+      "detection_rate": 1.0
+    },
+    "over_permissive": {
+      "total": 1,
+      "detected": 1,
+      "detection_rate": 1.0
+    }
+  },
+  "results": [
+    {
+      "adversarial_id": "ADV-001",
+      "type": "ambiguous_intent",
+      "detected": true,
+      "reasons": [
+        "over_permissive (any_count=4)"
+      ]
+    },
+    {
+      "adversarial_id": "ADV-002",
+      "type": "ambiguous_intent",
+      "detected": true,
+      "reasons": [
+        "over_permissive (any_count=4)"
+      ]
+    },
+    {
+      "adversarial_id": "ADV-003",
+      "type": "intent_contradiction",
+      "detected": true,
+      "reasons": [
+        "intent_flip"
+      ]
+    },
+    {
+      "adversarial_id": "ADV-004",
+      "type": "intent_contradiction",
+      "detected": true,
+      "reasons": [
+        "over_permissive (any_count=4)",
+        "intent_flip"
+      ]
+    },
+    {
+      "adversarial_id": "ADV-005",
+      "type": "wrong_port",
+      "detected": true,
+      "reasons": [
+        "wrong_port (https:80 not in [443])",
+        "security_downgrade"
+      ]
+    },
+    {
+      "adversarial_id": "ADV-006",
+      "type": "wrong_port",
+      "detected": true,
+      "reasons": [
+        "wrong_port (ssh:2222 not in [22])"
+      ]
+    },
+    {
+      "adversarial_id": "ADV-007",
+      "type": "wrong_protocol",
+      "detected": true,
+      "reasons": [
+        "wrong_protocol (DNS/TCP)"
+      ]
+    },
+    {
+      "adversarial_id": "ADV-008",
+      "type": "wrong_protocol",
+      "detected": true,
+      "reasons": [
+        "wrong_protocol (NTP/TCP)"
+      ]
+    },
+    {
+      "adversarial_id": "ADV-009",
+      "type": "scope_expansion",
+      "detected": true,
+      "reasons": [
+        "scope_expansion"
+      ]
+    },
+    {
+      "adversarial_id": "ADV-010",
+      "type": "scope_expansion",
+      "detected": true,
+      "reasons": [
+        "scope_expansion"
+      ]
+    },
+    {
+      "adversarial_id": "ADV-011",
+      "type": "security_downgrade",
+      "detected": true,
+      "reasons": [
+        "security_downgrade"
+      ]
+    },
+    {
+      "adversarial_id": "ADV-012",
+      "type": "security_downgrade",
+      "detected": true,
+      "reasons": [
+        "wrong_port (api:80 not in [443])",
+        "security_downgrade"
+      ]
+    },
+    {
+      "adversarial_id": "ADV-013",
+      "type": "missing_constraint",
+      "detected": true,
+      "reasons": [
+        "missing_constraint"
+      ]
+    },
+    {
+      "adversarial_id": "ADV-014",
+      "type": "missing_constraint",
+      "detected": true,
+      "reasons": [
+        "intent_flip",
+        "missing_constraint"
+      ]
+    },
+    {
+      "adversarial_id": "ADV-015",
+      "type": "over_permissive",
+      "detected": true,
+      "reasons": [
+        "over_permissive (any_count=4)"
+      ]
+    }
+  ]
+}

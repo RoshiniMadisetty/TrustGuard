@@ -5809,6 +5809,3737 @@
         "model": "llama3.1:8b",
         "timestamp": "2026-06-12T12:12:58.920071+00:00"
       }
+    },
+    {
+      "record_id": "SYN-1000",
+      "prompt": "Allow access to the database server from the internal network",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "over_permissive",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1000",
+        "description": "Allow access to the database server from the internal network",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "ANY",
+        "dst_ip": "ANY",
+        "src_port": "ANY",
+        "dst_port": "ANY",
+        "direction": "INBOUND",
+        "priority": 398,
+        "reasoning": "[SYNTHETIC] Allow access to the database server from the internal network",
+        "confidence": 0.68
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"ANY\", \"dst_ip\": \"ANY\", \"src_port\": \"ANY\", \"dst_port\": \"ANY\", \"direction\": \"INBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1001",
+      "prompt": "Allow access to the database server from the internal network",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "over_permissive",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1001",
+        "description": "Allow access to the database server from the internal network",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "ANY",
+        "dst_ip": "ANY",
+        "src_port": "ANY",
+        "dst_port": "ANY",
+        "direction": "INBOUND",
+        "priority": 436,
+        "reasoning": "[SYNTHETIC] Allow access to the database server from the internal network",
+        "confidence": 0.76
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"ANY\", \"dst_ip\": \"ANY\", \"src_port\": \"ANY\", \"dst_port\": \"ANY\", \"direction\": \"INBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1002",
+      "prompt": "Allow access to the database server from the internal network",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "over_permissive",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1002",
+        "description": "Allow access to the database server from the internal network",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "ANY",
+        "dst_ip": "ANY",
+        "src_port": "ANY",
+        "dst_port": "ANY",
+        "direction": "INBOUND",
+        "priority": 92,
+        "reasoning": "[SYNTHETIC] Allow access to the database server from the internal network",
+        "confidence": 0.84
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"ANY\", \"dst_ip\": \"ANY\", \"src_port\": \"ANY\", \"dst_port\": \"ANY\", \"direction\": \"INBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1003",
+      "prompt": "Restrict FTP uploads to authorised users only",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "over_permissive",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1003",
+        "description": "Restrict FTP uploads to authorised users only",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "ANY",
+        "dst_ip": "10.0.0.5",
+        "src_port": "ANY",
+        "dst_port": 21,
+        "direction": "INBOUND",
+        "priority": 392,
+        "reasoning": "[SYNTHETIC] Restrict FTP uploads to authorised users only",
+        "confidence": 0.79
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"ANY\", \"dst_ip\": \"10.0.0.5\", \"src_port\": \"ANY\", \"dst_port\": 21, \"direction\": \"INBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1004",
+      "prompt": "Restrict FTP uploads to authorised users only",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "over_permissive",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1004",
+        "description": "Restrict FTP uploads to authorised users only",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "ANY",
+        "dst_ip": "10.0.0.5",
+        "src_port": "ANY",
+        "dst_port": 21,
+        "direction": "INBOUND",
+        "priority": 107,
+        "reasoning": "[SYNTHETIC] Restrict FTP uploads to authorised users only",
+        "confidence": 0.69
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"ANY\", \"dst_ip\": \"10.0.0.5\", \"src_port\": \"ANY\", \"dst_port\": 21, \"direction\": \"INBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1005",
+      "prompt": "Restrict FTP uploads to authorised users only",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "over_permissive",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1005",
+        "description": "Restrict FTP uploads to authorised users only",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "ANY",
+        "dst_ip": "10.0.0.5",
+        "src_port": "ANY",
+        "dst_port": 21,
+        "direction": "INBOUND",
+        "priority": 216,
+        "reasoning": "[SYNTHETIC] Restrict FTP uploads to authorised users only",
+        "confidence": 0.83
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"ANY\", \"dst_ip\": \"10.0.0.5\", \"src_port\": \"ANY\", \"dst_port\": 21, \"direction\": \"INBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1006",
+      "prompt": "Restrict FTP uploads to authorised users only",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "over_permissive",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1006",
+        "description": "Restrict FTP uploads to authorised users only",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "ANY",
+        "dst_ip": "10.0.0.5",
+        "src_port": "ANY",
+        "dst_port": 21,
+        "direction": "INBOUND",
+        "priority": 339,
+        "reasoning": "[SYNTHETIC] Restrict FTP uploads to authorised users only",
+        "confidence": 0.8
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"ANY\", \"dst_ip\": \"10.0.0.5\", \"src_port\": \"ANY\", \"dst_port\": 21, \"direction\": \"INBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1007",
+      "prompt": "Restrict FTP uploads to authorised users only",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "over_permissive",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1007",
+        "description": "Restrict FTP uploads to authorised users only",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "ANY",
+        "dst_ip": "10.0.0.5",
+        "src_port": "ANY",
+        "dst_port": 21,
+        "direction": "INBOUND",
+        "priority": 249,
+        "reasoning": "[SYNTHETIC] Restrict FTP uploads to authorised users only",
+        "confidence": 0.62
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"ANY\", \"dst_ip\": \"10.0.0.5\", \"src_port\": \"ANY\", \"dst_port\": 21, \"direction\": \"INBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1008",
+      "prompt": "Allow access to the database server from the internal network",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "over_permissive",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1008",
+        "description": "Allow access to the database server from the internal network",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "ANY",
+        "dst_ip": "ANY",
+        "src_port": "ANY",
+        "dst_port": "ANY",
+        "direction": "INBOUND",
+        "priority": 299,
+        "reasoning": "[SYNTHETIC] Allow access to the database server from the internal network",
+        "confidence": 0.57
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"ANY\", \"dst_ip\": \"ANY\", \"src_port\": \"ANY\", \"dst_port\": \"ANY\", \"direction\": \"INBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1009",
+      "prompt": "Restrict FTP uploads to authorised users only",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "over_permissive",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1009",
+        "description": "Restrict FTP uploads to authorised users only",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "ANY",
+        "dst_ip": "10.0.0.5",
+        "src_port": "ANY",
+        "dst_port": 21,
+        "direction": "INBOUND",
+        "priority": 422,
+        "reasoning": "[SYNTHETIC] Restrict FTP uploads to authorised users only",
+        "confidence": 0.74
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"ANY\", \"dst_ip\": \"10.0.0.5\", \"src_port\": \"ANY\", \"dst_port\": 21, \"direction\": \"INBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1010",
+      "prompt": "Allow access to the database server from the internal network",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "over_permissive",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1010",
+        "description": "Allow access to the database server from the internal network",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "ANY",
+        "dst_ip": "ANY",
+        "src_port": "ANY",
+        "dst_port": "ANY",
+        "direction": "INBOUND",
+        "priority": 391,
+        "reasoning": "[SYNTHETIC] Allow access to the database server from the internal network",
+        "confidence": 0.66
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"ANY\", \"dst_ip\": \"ANY\", \"src_port\": \"ANY\", \"dst_port\": \"ANY\", \"direction\": \"INBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1011",
+      "prompt": "Allow access to the database server from the internal network",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "over_permissive",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1011",
+        "description": "Allow access to the database server from the internal network",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "ANY",
+        "dst_ip": "ANY",
+        "src_port": "ANY",
+        "dst_port": "ANY",
+        "direction": "INBOUND",
+        "priority": 486,
+        "reasoning": "[SYNTHETIC] Allow access to the database server from the internal network",
+        "confidence": 0.82
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"ANY\", \"dst_ip\": \"ANY\", \"src_port\": \"ANY\", \"dst_port\": \"ANY\", \"direction\": \"INBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1012",
+      "prompt": "Restrict FTP uploads to authorised users only",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "over_permissive",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1012",
+        "description": "Restrict FTP uploads to authorised users only",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "ANY",
+        "dst_ip": "10.0.0.5",
+        "src_port": "ANY",
+        "dst_port": 21,
+        "direction": "INBOUND",
+        "priority": 400,
+        "reasoning": "[SYNTHETIC] Restrict FTP uploads to authorised users only",
+        "confidence": 0.61
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"ANY\", \"dst_ip\": \"10.0.0.5\", \"src_port\": \"ANY\", \"dst_port\": 21, \"direction\": \"INBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1013",
+      "prompt": "Allow access to the database server from the internal network",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "over_permissive",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1013",
+        "description": "Allow access to the database server from the internal network",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "ANY",
+        "dst_ip": "ANY",
+        "src_port": "ANY",
+        "dst_port": "ANY",
+        "direction": "INBOUND",
+        "priority": 260,
+        "reasoning": "[SYNTHETIC] Allow access to the database server from the internal network",
+        "confidence": 0.56
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"ANY\", \"dst_ip\": \"ANY\", \"src_port\": \"ANY\", \"dst_port\": \"ANY\", \"direction\": \"INBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1014",
+      "prompt": "Restrict FTP uploads to authorised users only",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "over_permissive",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1014",
+        "description": "Restrict FTP uploads to authorised users only",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "ANY",
+        "dst_ip": "10.0.0.5",
+        "src_port": "ANY",
+        "dst_port": 21,
+        "direction": "INBOUND",
+        "priority": 119,
+        "reasoning": "[SYNTHETIC] Restrict FTP uploads to authorised users only",
+        "confidence": 0.75
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"ANY\", \"dst_ip\": \"10.0.0.5\", \"src_port\": \"ANY\", \"dst_port\": 21, \"direction\": \"INBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1015",
+      "prompt": "Restrict FTP uploads to authorised users only",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "over_permissive",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1015",
+        "description": "Restrict FTP uploads to authorised users only",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "ANY",
+        "dst_ip": "10.0.0.5",
+        "src_port": "ANY",
+        "dst_port": 21,
+        "direction": "INBOUND",
+        "priority": 385,
+        "reasoning": "[SYNTHETIC] Restrict FTP uploads to authorised users only",
+        "confidence": 0.84
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"ANY\", \"dst_ip\": \"10.0.0.5\", \"src_port\": \"ANY\", \"dst_port\": 21, \"direction\": \"INBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1016",
+      "prompt": "Block all telnet connections to the server",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "intent_flip",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1016",
+        "description": "Block all telnet connections to the server",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "ANY",
+        "dst_ip": "10.0.0.1",
+        "src_port": "ANY",
+        "dst_port": 23,
+        "direction": "INBOUND",
+        "priority": 196,
+        "reasoning": "[SYNTHETIC] Block all telnet connections to the server",
+        "confidence": 0.66
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"ANY\", \"dst_ip\": \"10.0.0.1\", \"src_port\": \"ANY\", \"dst_port\": 23, \"direction\": \"INBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1017",
+      "prompt": "Block all telnet connections to the server",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "intent_flip",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1017",
+        "description": "Block all telnet connections to the server",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "ANY",
+        "dst_ip": "10.0.0.1",
+        "src_port": "ANY",
+        "dst_port": 23,
+        "direction": "INBOUND",
+        "priority": 261,
+        "reasoning": "[SYNTHETIC] Block all telnet connections to the server",
+        "confidence": 0.61
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"ANY\", \"dst_ip\": \"10.0.0.1\", \"src_port\": \"ANY\", \"dst_port\": 23, \"direction\": \"INBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1018",
+      "prompt": "Block all telnet connections to the server",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "intent_flip",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1018",
+        "description": "Block all telnet connections to the server",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "ANY",
+        "dst_ip": "10.0.0.1",
+        "src_port": "ANY",
+        "dst_port": 23,
+        "direction": "INBOUND",
+        "priority": 108,
+        "reasoning": "[SYNTHETIC] Block all telnet connections to the server",
+        "confidence": 0.69
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"ANY\", \"dst_ip\": \"10.0.0.1\", \"src_port\": \"ANY\", \"dst_port\": 23, \"direction\": \"INBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1019",
+      "prompt": "Block all telnet connections to the server",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "intent_flip",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1019",
+        "description": "Block all telnet connections to the server",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "ANY",
+        "dst_ip": "10.0.0.1",
+        "src_port": "ANY",
+        "dst_port": 23,
+        "direction": "INBOUND",
+        "priority": 152,
+        "reasoning": "[SYNTHETIC] Block all telnet connections to the server",
+        "confidence": 0.75
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"ANY\", \"dst_ip\": \"10.0.0.1\", \"src_port\": \"ANY\", \"dst_port\": 23, \"direction\": \"INBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1020",
+      "prompt": "Deny ICMP traffic from external sources",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "intent_flip",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1020",
+        "description": "Deny ICMP traffic from external sources",
+        "action": "ALLOW",
+        "protocol": "ICMP",
+        "src_ip": "0.0.0.0/0",
+        "dst_ip": "ANY",
+        "src_port": "ANY",
+        "dst_port": "ANY",
+        "direction": "INBOUND",
+        "priority": 246,
+        "reasoning": "[SYNTHETIC] Deny ICMP traffic from external sources",
+        "confidence": 0.8
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"ICMP\", \"src_ip\": \"0.0.0.0/0\", \"dst_ip\": \"ANY\", \"src_port\": \"ANY\", \"dst_port\": \"ANY\", \"direction\": \"INBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1021",
+      "prompt": "Deny ICMP traffic from external sources",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "intent_flip",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1021",
+        "description": "Deny ICMP traffic from external sources",
+        "action": "ALLOW",
+        "protocol": "ICMP",
+        "src_ip": "0.0.0.0/0",
+        "dst_ip": "ANY",
+        "src_port": "ANY",
+        "dst_port": "ANY",
+        "direction": "INBOUND",
+        "priority": 365,
+        "reasoning": "[SYNTHETIC] Deny ICMP traffic from external sources",
+        "confidence": 0.64
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"ICMP\", \"src_ip\": \"0.0.0.0/0\", \"dst_ip\": \"ANY\", \"src_port\": \"ANY\", \"dst_port\": \"ANY\", \"direction\": \"INBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1022",
+      "prompt": "Deny ICMP traffic from external sources",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "intent_flip",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1022",
+        "description": "Deny ICMP traffic from external sources",
+        "action": "ALLOW",
+        "protocol": "ICMP",
+        "src_ip": "0.0.0.0/0",
+        "dst_ip": "ANY",
+        "src_port": "ANY",
+        "dst_port": "ANY",
+        "direction": "INBOUND",
+        "priority": 424,
+        "reasoning": "[SYNTHETIC] Deny ICMP traffic from external sources",
+        "confidence": 0.79
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"ICMP\", \"src_ip\": \"0.0.0.0/0\", \"dst_ip\": \"ANY\", \"src_port\": \"ANY\", \"dst_port\": \"ANY\", \"direction\": \"INBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1023",
+      "prompt": "Deny ICMP traffic from external sources",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "intent_flip",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1023",
+        "description": "Deny ICMP traffic from external sources",
+        "action": "ALLOW",
+        "protocol": "ICMP",
+        "src_ip": "0.0.0.0/0",
+        "dst_ip": "ANY",
+        "src_port": "ANY",
+        "dst_port": "ANY",
+        "direction": "INBOUND",
+        "priority": 224,
+        "reasoning": "[SYNTHETIC] Deny ICMP traffic from external sources",
+        "confidence": 0.64
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"ICMP\", \"src_ip\": \"0.0.0.0/0\", \"dst_ip\": \"ANY\", \"src_port\": \"ANY\", \"dst_port\": \"ANY\", \"direction\": \"INBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1024",
+      "prompt": "Block all telnet connections to the server",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "intent_flip",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1024",
+        "description": "Block all telnet connections to the server",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "ANY",
+        "dst_ip": "10.0.0.1",
+        "src_port": "ANY",
+        "dst_port": 23,
+        "direction": "INBOUND",
+        "priority": 357,
+        "reasoning": "[SYNTHETIC] Block all telnet connections to the server",
+        "confidence": 0.59
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"ANY\", \"dst_ip\": \"10.0.0.1\", \"src_port\": \"ANY\", \"dst_port\": 23, \"direction\": \"INBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1025",
+      "prompt": "Deny ICMP traffic from external sources",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "intent_flip",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1025",
+        "description": "Deny ICMP traffic from external sources",
+        "action": "ALLOW",
+        "protocol": "ICMP",
+        "src_ip": "0.0.0.0/0",
+        "dst_ip": "ANY",
+        "src_port": "ANY",
+        "dst_port": "ANY",
+        "direction": "INBOUND",
+        "priority": 139,
+        "reasoning": "[SYNTHETIC] Deny ICMP traffic from external sources",
+        "confidence": 0.55
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"ICMP\", \"src_ip\": \"0.0.0.0/0\", \"dst_ip\": \"ANY\", \"src_port\": \"ANY\", \"dst_port\": \"ANY\", \"direction\": \"INBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1026",
+      "prompt": "Deny ICMP traffic from external sources",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "intent_flip",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1026",
+        "description": "Deny ICMP traffic from external sources",
+        "action": "ALLOW",
+        "protocol": "ICMP",
+        "src_ip": "0.0.0.0/0",
+        "dst_ip": "ANY",
+        "src_port": "ANY",
+        "dst_port": "ANY",
+        "direction": "INBOUND",
+        "priority": 404,
+        "reasoning": "[SYNTHETIC] Deny ICMP traffic from external sources",
+        "confidence": 0.75
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"ICMP\", \"src_ip\": \"0.0.0.0/0\", \"dst_ip\": \"ANY\", \"src_port\": \"ANY\", \"dst_port\": \"ANY\", \"direction\": \"INBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1027",
+      "prompt": "Block all telnet connections to the server",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "intent_flip",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1027",
+        "description": "Block all telnet connections to the server",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "ANY",
+        "dst_ip": "10.0.0.1",
+        "src_port": "ANY",
+        "dst_port": 23,
+        "direction": "INBOUND",
+        "priority": 367,
+        "reasoning": "[SYNTHETIC] Block all telnet connections to the server",
+        "confidence": 0.78
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"ANY\", \"dst_ip\": \"10.0.0.1\", \"src_port\": \"ANY\", \"dst_port\": 23, \"direction\": \"INBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1028",
+      "prompt": "Deny ICMP traffic from external sources",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "intent_flip",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1028",
+        "description": "Deny ICMP traffic from external sources",
+        "action": "ALLOW",
+        "protocol": "ICMP",
+        "src_ip": "0.0.0.0/0",
+        "dst_ip": "ANY",
+        "src_port": "ANY",
+        "dst_port": "ANY",
+        "direction": "INBOUND",
+        "priority": 256,
+        "reasoning": "[SYNTHETIC] Deny ICMP traffic from external sources",
+        "confidence": 0.72
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"ICMP\", \"src_ip\": \"0.0.0.0/0\", \"dst_ip\": \"ANY\", \"src_port\": \"ANY\", \"dst_port\": \"ANY\", \"direction\": \"INBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1029",
+      "prompt": "Block all telnet connections to the server",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "intent_flip",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1029",
+        "description": "Block all telnet connections to the server",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "ANY",
+        "dst_ip": "10.0.0.1",
+        "src_port": "ANY",
+        "dst_port": 23,
+        "direction": "INBOUND",
+        "priority": 112,
+        "reasoning": "[SYNTHETIC] Block all telnet connections to the server",
+        "confidence": 0.58
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"ANY\", \"dst_ip\": \"10.0.0.1\", \"src_port\": \"ANY\", \"dst_port\": 23, \"direction\": \"INBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1030",
+      "prompt": "Block all telnet connections to the server",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "intent_flip",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1030",
+        "description": "Block all telnet connections to the server",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "ANY",
+        "dst_ip": "10.0.0.1",
+        "src_port": "ANY",
+        "dst_port": 23,
+        "direction": "INBOUND",
+        "priority": 350,
+        "reasoning": "[SYNTHETIC] Block all telnet connections to the server",
+        "confidence": 0.69
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"ANY\", \"dst_ip\": \"10.0.0.1\", \"src_port\": \"ANY\", \"dst_port\": 23, \"direction\": \"INBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1031",
+      "prompt": "Deny ICMP traffic from external sources",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "intent_flip",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1031",
+        "description": "Deny ICMP traffic from external sources",
+        "action": "ALLOW",
+        "protocol": "ICMP",
+        "src_ip": "0.0.0.0/0",
+        "dst_ip": "ANY",
+        "src_port": "ANY",
+        "dst_port": "ANY",
+        "direction": "INBOUND",
+        "priority": 304,
+        "reasoning": "[SYNTHETIC] Deny ICMP traffic from external sources",
+        "confidence": 0.78
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"ICMP\", \"src_ip\": \"0.0.0.0/0\", \"dst_ip\": \"ANY\", \"src_port\": \"ANY\", \"dst_port\": \"ANY\", \"direction\": \"INBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1032",
+      "prompt": "Allow SSH access for administrators",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "wrong_port",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1032",
+        "description": "Allow SSH access for administrators",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "10.0.0.0/8",
+        "dst_ip": "10.0.0.20",
+        "src_port": "ANY",
+        "dst_port": 22022,
+        "direction": "INBOUND",
+        "priority": 335,
+        "reasoning": "[SYNTHETIC] Allow SSH access for administrators",
+        "confidence": 0.72
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"10.0.0.0/8\", \"dst_ip\": \"10.0.0.20\", \"src_port\": \"ANY\", \"dst_port\": 22022, \"direction\": \"INBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1033",
+      "prompt": "Allow HTTPS traffic to the web server",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "wrong_port",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1033",
+        "description": "Allow HTTPS traffic to the web server",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "192.168.1.0/24",
+        "dst_ip": "10.0.0.10",
+        "src_port": "ANY",
+        "dst_port": 80,
+        "direction": "INBOUND",
+        "priority": 301,
+        "reasoning": "[SYNTHETIC] Allow HTTPS traffic to the web server",
+        "confidence": 0.64
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"192.168.1.0/24\", \"dst_ip\": \"10.0.0.10\", \"src_port\": \"ANY\", \"dst_port\": 80, \"direction\": \"INBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1034",
+      "prompt": "Allow SSH access for administrators",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "wrong_port",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1034",
+        "description": "Allow SSH access for administrators",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "10.0.0.0/8",
+        "dst_ip": "10.0.0.20",
+        "src_port": "ANY",
+        "dst_port": 22022,
+        "direction": "INBOUND",
+        "priority": 63,
+        "reasoning": "[SYNTHETIC] Allow SSH access for administrators",
+        "confidence": 0.68
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"10.0.0.0/8\", \"dst_ip\": \"10.0.0.20\", \"src_port\": \"ANY\", \"dst_port\": 22022, \"direction\": \"INBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1035",
+      "prompt": "Enable DNS resolution for internal clients",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "wrong_port",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1035",
+        "description": "Enable DNS resolution for internal clients",
+        "action": "ALLOW",
+        "protocol": "UDP",
+        "src_ip": "192.168.0.0/16",
+        "dst_ip": "8.8.8.8",
+        "src_port": "ANY",
+        "dst_port": 80,
+        "direction": "OUTBOUND",
+        "priority": 146,
+        "reasoning": "[SYNTHETIC] Enable DNS resolution for internal clients",
+        "confidence": 0.67
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"UDP\", \"src_ip\": \"192.168.0.0/16\", \"dst_ip\": \"8.8.8.8\", \"src_port\": \"ANY\", \"dst_port\": 80, \"direction\": \"OUTBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1036",
+      "prompt": "Enable DNS resolution for internal clients",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "wrong_port",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1036",
+        "description": "Enable DNS resolution for internal clients",
+        "action": "ALLOW",
+        "protocol": "UDP",
+        "src_ip": "192.168.0.0/16",
+        "dst_ip": "8.8.8.8",
+        "src_port": "ANY",
+        "dst_port": 80,
+        "direction": "OUTBOUND",
+        "priority": 434,
+        "reasoning": "[SYNTHETIC] Enable DNS resolution for internal clients",
+        "confidence": 0.62
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"UDP\", \"src_ip\": \"192.168.0.0/16\", \"dst_ip\": \"8.8.8.8\", \"src_port\": \"ANY\", \"dst_port\": 80, \"direction\": \"OUTBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1037",
+      "prompt": "Enable DNS resolution for internal clients",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "wrong_port",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1037",
+        "description": "Enable DNS resolution for internal clients",
+        "action": "ALLOW",
+        "protocol": "UDP",
+        "src_ip": "192.168.0.0/16",
+        "dst_ip": "8.8.8.8",
+        "src_port": "ANY",
+        "dst_port": 80,
+        "direction": "OUTBOUND",
+        "priority": 76,
+        "reasoning": "[SYNTHETIC] Enable DNS resolution for internal clients",
+        "confidence": 0.63
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"UDP\", \"src_ip\": \"192.168.0.0/16\", \"dst_ip\": \"8.8.8.8\", \"src_port\": \"ANY\", \"dst_port\": 80, \"direction\": \"OUTBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1038",
+      "prompt": "Enable DNS resolution for internal clients",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "wrong_port",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1038",
+        "description": "Enable DNS resolution for internal clients",
+        "action": "ALLOW",
+        "protocol": "UDP",
+        "src_ip": "192.168.0.0/16",
+        "dst_ip": "8.8.8.8",
+        "src_port": "ANY",
+        "dst_port": 80,
+        "direction": "OUTBOUND",
+        "priority": 182,
+        "reasoning": "[SYNTHETIC] Enable DNS resolution for internal clients",
+        "confidence": 0.75
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"UDP\", \"src_ip\": \"192.168.0.0/16\", \"dst_ip\": \"8.8.8.8\", \"src_port\": \"ANY\", \"dst_port\": 80, \"direction\": \"OUTBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1039",
+      "prompt": "Allow HTTPS traffic to the web server",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "wrong_port",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1039",
+        "description": "Allow HTTPS traffic to the web server",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "192.168.1.0/24",
+        "dst_ip": "10.0.0.10",
+        "src_port": "ANY",
+        "dst_port": 80,
+        "direction": "INBOUND",
+        "priority": 300,
+        "reasoning": "[SYNTHETIC] Allow HTTPS traffic to the web server",
+        "confidence": 0.79
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"192.168.1.0/24\", \"dst_ip\": \"10.0.0.10\", \"src_port\": \"ANY\", \"dst_port\": 80, \"direction\": \"INBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1040",
+      "prompt": "Enable DNS resolution for internal clients",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "wrong_port",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1040",
+        "description": "Enable DNS resolution for internal clients",
+        "action": "ALLOW",
+        "protocol": "UDP",
+        "src_ip": "192.168.0.0/16",
+        "dst_ip": "8.8.8.8",
+        "src_port": "ANY",
+        "dst_port": 80,
+        "direction": "OUTBOUND",
+        "priority": 348,
+        "reasoning": "[SYNTHETIC] Enable DNS resolution for internal clients",
+        "confidence": 0.67
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"UDP\", \"src_ip\": \"192.168.0.0/16\", \"dst_ip\": \"8.8.8.8\", \"src_port\": \"ANY\", \"dst_port\": 80, \"direction\": \"OUTBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1041",
+      "prompt": "Allow SSH access for administrators",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "wrong_port",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1041",
+        "description": "Allow SSH access for administrators",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "10.0.0.0/8",
+        "dst_ip": "10.0.0.20",
+        "src_port": "ANY",
+        "dst_port": 22022,
+        "direction": "INBOUND",
+        "priority": 416,
+        "reasoning": "[SYNTHETIC] Allow SSH access for administrators",
+        "confidence": 0.6
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"10.0.0.0/8\", \"dst_ip\": \"10.0.0.20\", \"src_port\": \"ANY\", \"dst_port\": 22022, \"direction\": \"INBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1042",
+      "prompt": "Allow SSH access for administrators",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "wrong_port",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1042",
+        "description": "Allow SSH access for administrators",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "10.0.0.0/8",
+        "dst_ip": "10.0.0.20",
+        "src_port": "ANY",
+        "dst_port": 22022,
+        "direction": "INBOUND",
+        "priority": 60,
+        "reasoning": "[SYNTHETIC] Allow SSH access for administrators",
+        "confidence": 0.58
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"10.0.0.0/8\", \"dst_ip\": \"10.0.0.20\", \"src_port\": \"ANY\", \"dst_port\": 22022, \"direction\": \"INBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1043",
+      "prompt": "Enable DNS resolution for internal clients",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "wrong_port",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1043",
+        "description": "Enable DNS resolution for internal clients",
+        "action": "ALLOW",
+        "protocol": "UDP",
+        "src_ip": "192.168.0.0/16",
+        "dst_ip": "8.8.8.8",
+        "src_port": "ANY",
+        "dst_port": 80,
+        "direction": "OUTBOUND",
+        "priority": 375,
+        "reasoning": "[SYNTHETIC] Enable DNS resolution for internal clients",
+        "confidence": 0.69
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"UDP\", \"src_ip\": \"192.168.0.0/16\", \"dst_ip\": \"8.8.8.8\", \"src_port\": \"ANY\", \"dst_port\": 80, \"direction\": \"OUTBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1044",
+      "prompt": "Enable DNS resolution for internal clients",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "wrong_port",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1044",
+        "description": "Enable DNS resolution for internal clients",
+        "action": "ALLOW",
+        "protocol": "UDP",
+        "src_ip": "192.168.0.0/16",
+        "dst_ip": "8.8.8.8",
+        "src_port": "ANY",
+        "dst_port": 80,
+        "direction": "OUTBOUND",
+        "priority": 122,
+        "reasoning": "[SYNTHETIC] Enable DNS resolution for internal clients",
+        "confidence": 0.7
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"UDP\", \"src_ip\": \"192.168.0.0/16\", \"dst_ip\": \"8.8.8.8\", \"src_port\": \"ANY\", \"dst_port\": 80, \"direction\": \"OUTBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1045",
+      "prompt": "Enable DNS resolution for internal clients",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "wrong_port",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1045",
+        "description": "Enable DNS resolution for internal clients",
+        "action": "ALLOW",
+        "protocol": "UDP",
+        "src_ip": "192.168.0.0/16",
+        "dst_ip": "8.8.8.8",
+        "src_port": "ANY",
+        "dst_port": 80,
+        "direction": "OUTBOUND",
+        "priority": 118,
+        "reasoning": "[SYNTHETIC] Enable DNS resolution for internal clients",
+        "confidence": 0.76
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"UDP\", \"src_ip\": \"192.168.0.0/16\", \"dst_ip\": \"8.8.8.8\", \"src_port\": \"ANY\", \"dst_port\": 80, \"direction\": \"OUTBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1046",
+      "prompt": "Allow SSH access for administrators",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "wrong_port",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1046",
+        "description": "Allow SSH access for administrators",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "10.0.0.0/8",
+        "dst_ip": "10.0.0.20",
+        "src_port": "ANY",
+        "dst_port": 22022,
+        "direction": "INBOUND",
+        "priority": 250,
+        "reasoning": "[SYNTHETIC] Allow SSH access for administrators",
+        "confidence": 0.66
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"10.0.0.0/8\", \"dst_ip\": \"10.0.0.20\", \"src_port\": \"ANY\", \"dst_port\": 22022, \"direction\": \"INBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1047",
+      "prompt": "Allow HTTPS traffic to the web server",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "wrong_port",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1047",
+        "description": "Allow HTTPS traffic to the web server",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "192.168.1.0/24",
+        "dst_ip": "10.0.0.10",
+        "src_port": "ANY",
+        "dst_port": 80,
+        "direction": "INBOUND",
+        "priority": 185,
+        "reasoning": "[SYNTHETIC] Allow HTTPS traffic to the web server",
+        "confidence": 0.74
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"192.168.1.0/24\", \"dst_ip\": \"10.0.0.10\", \"src_port\": \"ANY\", \"dst_port\": 80, \"direction\": \"INBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1048",
+      "prompt": "Enable HTTPS web browsing for employees",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "wrong_protocol",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1048",
+        "description": "Enable HTTPS web browsing for employees",
+        "action": "ALLOW",
+        "protocol": "UDP",
+        "src_ip": "192.168.0.0/16",
+        "dst_ip": "ANY",
+        "src_port": "ANY",
+        "dst_port": 443,
+        "direction": "OUTBOUND",
+        "priority": 212,
+        "reasoning": "[SYNTHETIC] Enable HTTPS web browsing for employees",
+        "confidence": 0.58
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"UDP\", \"src_ip\": \"192.168.0.0/16\", \"dst_ip\": \"ANY\", \"src_port\": \"ANY\", \"dst_port\": 443, \"direction\": \"OUTBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1049",
+      "prompt": "Allow DNS queries from internal network",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "wrong_protocol",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1049",
+        "description": "Allow DNS queries from internal network",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "192.168.1.0/24",
+        "dst_ip": "8.8.8.8",
+        "src_port": "ANY",
+        "dst_port": 53,
+        "direction": "OUTBOUND",
+        "priority": 103,
+        "reasoning": "[SYNTHETIC] Allow DNS queries from internal network",
+        "confidence": 0.84
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"192.168.1.0/24\", \"dst_ip\": \"8.8.8.8\", \"src_port\": \"ANY\", \"dst_port\": 53, \"direction\": \"OUTBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1050",
+      "prompt": "Allow DNS queries from internal network",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "wrong_protocol",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1050",
+        "description": "Allow DNS queries from internal network",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "192.168.1.0/24",
+        "dst_ip": "8.8.8.8",
+        "src_port": "ANY",
+        "dst_port": 53,
+        "direction": "OUTBOUND",
+        "priority": 458,
+        "reasoning": "[SYNTHETIC] Allow DNS queries from internal network",
+        "confidence": 0.76
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"192.168.1.0/24\", \"dst_ip\": \"8.8.8.8\", \"src_port\": \"ANY\", \"dst_port\": 53, \"direction\": \"OUTBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1051",
+      "prompt": "Allow DNS queries from internal network",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "wrong_protocol",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1051",
+        "description": "Allow DNS queries from internal network",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "192.168.1.0/24",
+        "dst_ip": "8.8.8.8",
+        "src_port": "ANY",
+        "dst_port": 53,
+        "direction": "OUTBOUND",
+        "priority": 169,
+        "reasoning": "[SYNTHETIC] Allow DNS queries from internal network",
+        "confidence": 0.84
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"192.168.1.0/24\", \"dst_ip\": \"8.8.8.8\", \"src_port\": \"ANY\", \"dst_port\": 53, \"direction\": \"OUTBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1052",
+      "prompt": "Allow DNS queries from internal network",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "wrong_protocol",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1052",
+        "description": "Allow DNS queries from internal network",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "192.168.1.0/24",
+        "dst_ip": "8.8.8.8",
+        "src_port": "ANY",
+        "dst_port": 53,
+        "direction": "OUTBOUND",
+        "priority": 400,
+        "reasoning": "[SYNTHETIC] Allow DNS queries from internal network",
+        "confidence": 0.77
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"192.168.1.0/24\", \"dst_ip\": \"8.8.8.8\", \"src_port\": \"ANY\", \"dst_port\": 53, \"direction\": \"OUTBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1053",
+      "prompt": "Enable HTTPS web browsing for employees",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "wrong_protocol",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1053",
+        "description": "Enable HTTPS web browsing for employees",
+        "action": "ALLOW",
+        "protocol": "UDP",
+        "src_ip": "192.168.0.0/16",
+        "dst_ip": "ANY",
+        "src_port": "ANY",
+        "dst_port": 443,
+        "direction": "OUTBOUND",
+        "priority": 252,
+        "reasoning": "[SYNTHETIC] Enable HTTPS web browsing for employees",
+        "confidence": 0.63
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"UDP\", \"src_ip\": \"192.168.0.0/16\", \"dst_ip\": \"ANY\", \"src_port\": \"ANY\", \"dst_port\": 443, \"direction\": \"OUTBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1054",
+      "prompt": "Allow DNS queries from internal network",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "wrong_protocol",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1054",
+        "description": "Allow DNS queries from internal network",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "192.168.1.0/24",
+        "dst_ip": "8.8.8.8",
+        "src_port": "ANY",
+        "dst_port": 53,
+        "direction": "OUTBOUND",
+        "priority": 93,
+        "reasoning": "[SYNTHETIC] Allow DNS queries from internal network",
+        "confidence": 0.82
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"192.168.1.0/24\", \"dst_ip\": \"8.8.8.8\", \"src_port\": \"ANY\", \"dst_port\": 53, \"direction\": \"OUTBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1055",
+      "prompt": "Allow DNS queries from internal network",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "wrong_protocol",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1055",
+        "description": "Allow DNS queries from internal network",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "192.168.1.0/24",
+        "dst_ip": "8.8.8.8",
+        "src_port": "ANY",
+        "dst_port": 53,
+        "direction": "OUTBOUND",
+        "priority": 255,
+        "reasoning": "[SYNTHETIC] Allow DNS queries from internal network",
+        "confidence": 0.61
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"192.168.1.0/24\", \"dst_ip\": \"8.8.8.8\", \"src_port\": \"ANY\", \"dst_port\": 53, \"direction\": \"OUTBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1056",
+      "prompt": "Enable HTTPS web browsing for employees",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "wrong_protocol",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1056",
+        "description": "Enable HTTPS web browsing for employees",
+        "action": "ALLOW",
+        "protocol": "UDP",
+        "src_ip": "192.168.0.0/16",
+        "dst_ip": "ANY",
+        "src_port": "ANY",
+        "dst_port": 443,
+        "direction": "OUTBOUND",
+        "priority": 187,
+        "reasoning": "[SYNTHETIC] Enable HTTPS web browsing for employees",
+        "confidence": 0.72
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"UDP\", \"src_ip\": \"192.168.0.0/16\", \"dst_ip\": \"ANY\", \"src_port\": \"ANY\", \"dst_port\": 443, \"direction\": \"OUTBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1057",
+      "prompt": "Enable HTTPS web browsing for employees",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "wrong_protocol",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1057",
+        "description": "Enable HTTPS web browsing for employees",
+        "action": "ALLOW",
+        "protocol": "UDP",
+        "src_ip": "192.168.0.0/16",
+        "dst_ip": "ANY",
+        "src_port": "ANY",
+        "dst_port": 443,
+        "direction": "OUTBOUND",
+        "priority": 129,
+        "reasoning": "[SYNTHETIC] Enable HTTPS web browsing for employees",
+        "confidence": 0.81
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"UDP\", \"src_ip\": \"192.168.0.0/16\", \"dst_ip\": \"ANY\", \"src_port\": \"ANY\", \"dst_port\": 443, \"direction\": \"OUTBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1058",
+      "prompt": "Allow DNS queries from internal network",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "wrong_protocol",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1058",
+        "description": "Allow DNS queries from internal network",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "192.168.1.0/24",
+        "dst_ip": "8.8.8.8",
+        "src_port": "ANY",
+        "dst_port": 53,
+        "direction": "OUTBOUND",
+        "priority": 391,
+        "reasoning": "[SYNTHETIC] Allow DNS queries from internal network",
+        "confidence": 0.77
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"192.168.1.0/24\", \"dst_ip\": \"8.8.8.8\", \"src_port\": \"ANY\", \"dst_port\": 53, \"direction\": \"OUTBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1059",
+      "prompt": "Enable HTTPS web browsing for employees",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "wrong_protocol",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1059",
+        "description": "Enable HTTPS web browsing for employees",
+        "action": "ALLOW",
+        "protocol": "UDP",
+        "src_ip": "192.168.0.0/16",
+        "dst_ip": "ANY",
+        "src_port": "ANY",
+        "dst_port": 443,
+        "direction": "OUTBOUND",
+        "priority": 244,
+        "reasoning": "[SYNTHETIC] Enable HTTPS web browsing for employees",
+        "confidence": 0.74
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"UDP\", \"src_ip\": \"192.168.0.0/16\", \"dst_ip\": \"ANY\", \"src_port\": \"ANY\", \"dst_port\": 443, \"direction\": \"OUTBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1060",
+      "prompt": "Allow DNS queries from internal network",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "wrong_protocol",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1060",
+        "description": "Allow DNS queries from internal network",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "192.168.1.0/24",
+        "dst_ip": "8.8.8.8",
+        "src_port": "ANY",
+        "dst_port": 53,
+        "direction": "OUTBOUND",
+        "priority": 312,
+        "reasoning": "[SYNTHETIC] Allow DNS queries from internal network",
+        "confidence": 0.74
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"192.168.1.0/24\", \"dst_ip\": \"8.8.8.8\", \"src_port\": \"ANY\", \"dst_port\": 53, \"direction\": \"OUTBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1061",
+      "prompt": "Enable HTTPS web browsing for employees",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "wrong_protocol",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1061",
+        "description": "Enable HTTPS web browsing for employees",
+        "action": "ALLOW",
+        "protocol": "UDP",
+        "src_ip": "192.168.0.0/16",
+        "dst_ip": "ANY",
+        "src_port": "ANY",
+        "dst_port": 443,
+        "direction": "OUTBOUND",
+        "priority": 87,
+        "reasoning": "[SYNTHETIC] Enable HTTPS web browsing for employees",
+        "confidence": 0.67
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"UDP\", \"src_ip\": \"192.168.0.0/16\", \"dst_ip\": \"ANY\", \"src_port\": \"ANY\", \"dst_port\": 443, \"direction\": \"OUTBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1062",
+      "prompt": "Enable HTTPS web browsing for employees",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "wrong_protocol",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1062",
+        "description": "Enable HTTPS web browsing for employees",
+        "action": "ALLOW",
+        "protocol": "UDP",
+        "src_ip": "192.168.0.0/16",
+        "dst_ip": "ANY",
+        "src_port": "ANY",
+        "dst_port": 443,
+        "direction": "OUTBOUND",
+        "priority": 68,
+        "reasoning": "[SYNTHETIC] Enable HTTPS web browsing for employees",
+        "confidence": 0.7
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"UDP\", \"src_ip\": \"192.168.0.0/16\", \"dst_ip\": \"ANY\", \"src_port\": \"ANY\", \"dst_port\": 443, \"direction\": \"OUTBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1063",
+      "prompt": "Allow DNS queries from internal network",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "wrong_protocol",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1063",
+        "description": "Allow DNS queries from internal network",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "192.168.1.0/24",
+        "dst_ip": "8.8.8.8",
+        "src_port": "ANY",
+        "dst_port": 53,
+        "direction": "OUTBOUND",
+        "priority": 198,
+        "reasoning": "[SYNTHETIC] Allow DNS queries from internal network",
+        "confidence": 0.59
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"192.168.1.0/24\", \"dst_ip\": \"8.8.8.8\", \"src_port\": \"ANY\", \"dst_port\": 53, \"direction\": \"OUTBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1064",
+      "prompt": "Restrict database access to the application server only",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "missing_constraint",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1064",
+        "description": "Restrict database access to the application server only",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "ANY",
+        "dst_ip": "10.0.0.3",
+        "src_port": "ANY",
+        "dst_port": 3306,
+        "direction": "INBOUND",
+        "priority": 96,
+        "reasoning": "[SYNTHETIC] Restrict database access to the application server only",
+        "confidence": 0.73
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"ANY\", \"dst_ip\": \"10.0.0.3\", \"src_port\": \"ANY\", \"dst_port\": 3306, \"direction\": \"INBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1065",
+      "prompt": "Restrict database access to the application server only",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "missing_constraint",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1065",
+        "description": "Restrict database access to the application server only",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "ANY",
+        "dst_ip": "10.0.0.3",
+        "src_port": "ANY",
+        "dst_port": 3306,
+        "direction": "INBOUND",
+        "priority": 126,
+        "reasoning": "[SYNTHETIC] Restrict database access to the application server only",
+        "confidence": 0.83
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"ANY\", \"dst_ip\": \"10.0.0.3\", \"src_port\": \"ANY\", \"dst_port\": 3306, \"direction\": \"INBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1066",
+      "prompt": "Restrict database access to the application server only",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "missing_constraint",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1066",
+        "description": "Restrict database access to the application server only",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "ANY",
+        "dst_ip": "10.0.0.3",
+        "src_port": "ANY",
+        "dst_port": 3306,
+        "direction": "INBOUND",
+        "priority": 311,
+        "reasoning": "[SYNTHETIC] Restrict database access to the application server only",
+        "confidence": 0.65
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"ANY\", \"dst_ip\": \"10.0.0.3\", \"src_port\": \"ANY\", \"dst_port\": 3306, \"direction\": \"INBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1067",
+      "prompt": "Restrict database access to the application server only",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "missing_constraint",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1067",
+        "description": "Restrict database access to the application server only",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "ANY",
+        "dst_ip": "10.0.0.3",
+        "src_port": "ANY",
+        "dst_port": 3306,
+        "direction": "INBOUND",
+        "priority": 315,
+        "reasoning": "[SYNTHETIC] Restrict database access to the application server only",
+        "confidence": 0.56
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"ANY\", \"dst_ip\": \"10.0.0.3\", \"src_port\": \"ANY\", \"dst_port\": 3306, \"direction\": \"INBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1068",
+      "prompt": "Allow web traffic only during business hours from the office",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "missing_constraint",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1068",
+        "description": "Allow web traffic only during business hours from the office",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "ANY",
+        "dst_ip": "ANY",
+        "src_port": "ANY",
+        "dst_port": 80,
+        "direction": "OUTBOUND",
+        "priority": 481,
+        "reasoning": "[SYNTHETIC] Allow web traffic only during business hours from the office",
+        "confidence": 0.69
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"ANY\", \"dst_ip\": \"ANY\", \"src_port\": \"ANY\", \"dst_port\": 80, \"direction\": \"OUTBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1069",
+      "prompt": "Allow web traffic only during business hours from the office",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "missing_constraint",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1069",
+        "description": "Allow web traffic only during business hours from the office",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "ANY",
+        "dst_ip": "ANY",
+        "src_port": "ANY",
+        "dst_port": 80,
+        "direction": "OUTBOUND",
+        "priority": 402,
+        "reasoning": "[SYNTHETIC] Allow web traffic only during business hours from the office",
+        "confidence": 0.57
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"ANY\", \"dst_ip\": \"ANY\", \"src_port\": \"ANY\", \"dst_port\": 80, \"direction\": \"OUTBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1070",
+      "prompt": "Allow web traffic only during business hours from the office",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "missing_constraint",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1070",
+        "description": "Allow web traffic only during business hours from the office",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "ANY",
+        "dst_ip": "ANY",
+        "src_port": "ANY",
+        "dst_port": 80,
+        "direction": "OUTBOUND",
+        "priority": 268,
+        "reasoning": "[SYNTHETIC] Allow web traffic only during business hours from the office",
+        "confidence": 0.7
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"ANY\", \"dst_ip\": \"ANY\", \"src_port\": \"ANY\", \"dst_port\": 80, \"direction\": \"OUTBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1071",
+      "prompt": "Allow web traffic only during business hours from the office",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "missing_constraint",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1071",
+        "description": "Allow web traffic only during business hours from the office",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "ANY",
+        "dst_ip": "ANY",
+        "src_port": "ANY",
+        "dst_port": 80,
+        "direction": "OUTBOUND",
+        "priority": 472,
+        "reasoning": "[SYNTHETIC] Allow web traffic only during business hours from the office",
+        "confidence": 0.72
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"ANY\", \"dst_ip\": \"ANY\", \"src_port\": \"ANY\", \"dst_port\": 80, \"direction\": \"OUTBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1072",
+      "prompt": "Restrict database access to the application server only",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "missing_constraint",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1072",
+        "description": "Restrict database access to the application server only",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "ANY",
+        "dst_ip": "10.0.0.3",
+        "src_port": "ANY",
+        "dst_port": 3306,
+        "direction": "INBOUND",
+        "priority": 263,
+        "reasoning": "[SYNTHETIC] Restrict database access to the application server only",
+        "confidence": 0.63
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"ANY\", \"dst_ip\": \"10.0.0.3\", \"src_port\": \"ANY\", \"dst_port\": 3306, \"direction\": \"INBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1073",
+      "prompt": "Restrict database access to the application server only",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "missing_constraint",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1073",
+        "description": "Restrict database access to the application server only",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "ANY",
+        "dst_ip": "10.0.0.3",
+        "src_port": "ANY",
+        "dst_port": 3306,
+        "direction": "INBOUND",
+        "priority": 199,
+        "reasoning": "[SYNTHETIC] Restrict database access to the application server only",
+        "confidence": 0.71
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"ANY\", \"dst_ip\": \"10.0.0.3\", \"src_port\": \"ANY\", \"dst_port\": 3306, \"direction\": \"INBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1074",
+      "prompt": "Restrict database access to the application server only",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "missing_constraint",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1074",
+        "description": "Restrict database access to the application server only",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "ANY",
+        "dst_ip": "10.0.0.3",
+        "src_port": "ANY",
+        "dst_port": 3306,
+        "direction": "INBOUND",
+        "priority": 247,
+        "reasoning": "[SYNTHETIC] Restrict database access to the application server only",
+        "confidence": 0.56
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"ANY\", \"dst_ip\": \"10.0.0.3\", \"src_port\": \"ANY\", \"dst_port\": 3306, \"direction\": \"INBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1075",
+      "prompt": "Allow web traffic only during business hours from the office",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "missing_constraint",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1075",
+        "description": "Allow web traffic only during business hours from the office",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "ANY",
+        "dst_ip": "ANY",
+        "src_port": "ANY",
+        "dst_port": 80,
+        "direction": "OUTBOUND",
+        "priority": 421,
+        "reasoning": "[SYNTHETIC] Allow web traffic only during business hours from the office",
+        "confidence": 0.82
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"ANY\", \"dst_ip\": \"ANY\", \"src_port\": \"ANY\", \"dst_port\": 80, \"direction\": \"OUTBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1076",
+      "prompt": "Restrict database access to the application server only",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "missing_constraint",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1076",
+        "description": "Restrict database access to the application server only",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "ANY",
+        "dst_ip": "10.0.0.3",
+        "src_port": "ANY",
+        "dst_port": 3306,
+        "direction": "INBOUND",
+        "priority": 113,
+        "reasoning": "[SYNTHETIC] Restrict database access to the application server only",
+        "confidence": 0.72
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"ANY\", \"dst_ip\": \"10.0.0.3\", \"src_port\": \"ANY\", \"dst_port\": 3306, \"direction\": \"INBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1077",
+      "prompt": "Allow web traffic only during business hours from the office",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "missing_constraint",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1077",
+        "description": "Allow web traffic only during business hours from the office",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "ANY",
+        "dst_ip": "ANY",
+        "src_port": "ANY",
+        "dst_port": 80,
+        "direction": "OUTBOUND",
+        "priority": 98,
+        "reasoning": "[SYNTHETIC] Allow web traffic only during business hours from the office",
+        "confidence": 0.75
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"ANY\", \"dst_ip\": \"ANY\", \"src_port\": \"ANY\", \"dst_port\": 80, \"direction\": \"OUTBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1078",
+      "prompt": "Allow web traffic only during business hours from the office",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "missing_constraint",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1078",
+        "description": "Allow web traffic only during business hours from the office",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "ANY",
+        "dst_ip": "ANY",
+        "src_port": "ANY",
+        "dst_port": 80,
+        "direction": "OUTBOUND",
+        "priority": 176,
+        "reasoning": "[SYNTHETIC] Allow web traffic only during business hours from the office",
+        "confidence": 0.75
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"ANY\", \"dst_ip\": \"ANY\", \"src_port\": \"ANY\", \"dst_port\": 80, \"direction\": \"OUTBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1079",
+      "prompt": "Restrict database access to the application server only",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "missing_constraint",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1079",
+        "description": "Restrict database access to the application server only",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "ANY",
+        "dst_ip": "10.0.0.3",
+        "src_port": "ANY",
+        "dst_port": 3306,
+        "direction": "INBOUND",
+        "priority": 377,
+        "reasoning": "[SYNTHETIC] Restrict database access to the application server only",
+        "confidence": 0.78
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"ANY\", \"dst_ip\": \"10.0.0.3\", \"src_port\": \"ANY\", \"dst_port\": 3306, \"direction\": \"INBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1080",
+      "prompt": "Allow internal HR application access for HR team members",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "scope_expansion",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1080",
+        "description": "Allow internal HR application access for HR team members",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "0.0.0.0/0",
+        "dst_ip": "10.0.0.50",
+        "src_port": "ANY",
+        "dst_port": 8080,
+        "direction": "INBOUND",
+        "priority": 98,
+        "reasoning": "[SYNTHETIC] Allow internal HR application access for HR team members",
+        "confidence": 0.82
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"0.0.0.0/0\", \"dst_ip\": \"10.0.0.50\", \"src_port\": \"ANY\", \"dst_port\": 8080, \"direction\": \"INBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1081",
+      "prompt": "Permit monitoring traffic only from the NOC subnet",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "scope_expansion",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1081",
+        "description": "Permit monitoring traffic only from the NOC subnet",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "ANY",
+        "dst_ip": "10.0.0.100",
+        "src_port": "ANY",
+        "dst_port": 162,
+        "direction": "INBOUND",
+        "priority": 153,
+        "reasoning": "[SYNTHETIC] Permit monitoring traffic only from the NOC subnet",
+        "confidence": 0.56
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"ANY\", \"dst_ip\": \"10.0.0.100\", \"src_port\": \"ANY\", \"dst_port\": 162, \"direction\": \"INBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1082",
+      "prompt": "Allow internal HR application access for HR team members",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "scope_expansion",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1082",
+        "description": "Allow internal HR application access for HR team members",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "0.0.0.0/0",
+        "dst_ip": "10.0.0.50",
+        "src_port": "ANY",
+        "dst_port": 8080,
+        "direction": "INBOUND",
+        "priority": 299,
+        "reasoning": "[SYNTHETIC] Allow internal HR application access for HR team members",
+        "confidence": 0.66
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"0.0.0.0/0\", \"dst_ip\": \"10.0.0.50\", \"src_port\": \"ANY\", \"dst_port\": 8080, \"direction\": \"INBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1083",
+      "prompt": "Allow internal HR application access for HR team members",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "scope_expansion",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1083",
+        "description": "Allow internal HR application access for HR team members",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "0.0.0.0/0",
+        "dst_ip": "10.0.0.50",
+        "src_port": "ANY",
+        "dst_port": 8080,
+        "direction": "INBOUND",
+        "priority": 423,
+        "reasoning": "[SYNTHETIC] Allow internal HR application access for HR team members",
+        "confidence": 0.79
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"0.0.0.0/0\", \"dst_ip\": \"10.0.0.50\", \"src_port\": \"ANY\", \"dst_port\": 8080, \"direction\": \"INBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1084",
+      "prompt": "Permit monitoring traffic only from the NOC subnet",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "scope_expansion",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1084",
+        "description": "Permit monitoring traffic only from the NOC subnet",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "ANY",
+        "dst_ip": "10.0.0.100",
+        "src_port": "ANY",
+        "dst_port": 162,
+        "direction": "INBOUND",
+        "priority": 192,
+        "reasoning": "[SYNTHETIC] Permit monitoring traffic only from the NOC subnet",
+        "confidence": 0.84
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"ANY\", \"dst_ip\": \"10.0.0.100\", \"src_port\": \"ANY\", \"dst_port\": 162, \"direction\": \"INBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1085",
+      "prompt": "Permit monitoring traffic only from the NOC subnet",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "scope_expansion",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1085",
+        "description": "Permit monitoring traffic only from the NOC subnet",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "ANY",
+        "dst_ip": "10.0.0.100",
+        "src_port": "ANY",
+        "dst_port": 162,
+        "direction": "INBOUND",
+        "priority": 180,
+        "reasoning": "[SYNTHETIC] Permit monitoring traffic only from the NOC subnet",
+        "confidence": 0.7
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"ANY\", \"dst_ip\": \"10.0.0.100\", \"src_port\": \"ANY\", \"dst_port\": 162, \"direction\": \"INBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1086",
+      "prompt": "Permit monitoring traffic only from the NOC subnet",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "scope_expansion",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1086",
+        "description": "Permit monitoring traffic only from the NOC subnet",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "ANY",
+        "dst_ip": "10.0.0.100",
+        "src_port": "ANY",
+        "dst_port": 162,
+        "direction": "INBOUND",
+        "priority": 165,
+        "reasoning": "[SYNTHETIC] Permit monitoring traffic only from the NOC subnet",
+        "confidence": 0.83
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"ANY\", \"dst_ip\": \"10.0.0.100\", \"src_port\": \"ANY\", \"dst_port\": 162, \"direction\": \"INBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1087",
+      "prompt": "Allow internal HR application access for HR team members",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "scope_expansion",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1087",
+        "description": "Allow internal HR application access for HR team members",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "0.0.0.0/0",
+        "dst_ip": "10.0.0.50",
+        "src_port": "ANY",
+        "dst_port": 8080,
+        "direction": "INBOUND",
+        "priority": 124,
+        "reasoning": "[SYNTHETIC] Allow internal HR application access for HR team members",
+        "confidence": 0.56
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"0.0.0.0/0\", \"dst_ip\": \"10.0.0.50\", \"src_port\": \"ANY\", \"dst_port\": 8080, \"direction\": \"INBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1088",
+      "prompt": "Allow internal HR application access for HR team members",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "scope_expansion",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1088",
+        "description": "Allow internal HR application access for HR team members",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "0.0.0.0/0",
+        "dst_ip": "10.0.0.50",
+        "src_port": "ANY",
+        "dst_port": 8080,
+        "direction": "INBOUND",
+        "priority": 245,
+        "reasoning": "[SYNTHETIC] Allow internal HR application access for HR team members",
+        "confidence": 0.85
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"0.0.0.0/0\", \"dst_ip\": \"10.0.0.50\", \"src_port\": \"ANY\", \"dst_port\": 8080, \"direction\": \"INBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1089",
+      "prompt": "Allow internal HR application access for HR team members",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "scope_expansion",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1089",
+        "description": "Allow internal HR application access for HR team members",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "0.0.0.0/0",
+        "dst_ip": "10.0.0.50",
+        "src_port": "ANY",
+        "dst_port": 8080,
+        "direction": "INBOUND",
+        "priority": 451,
+        "reasoning": "[SYNTHETIC] Allow internal HR application access for HR team members",
+        "confidence": 0.77
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"0.0.0.0/0\", \"dst_ip\": \"10.0.0.50\", \"src_port\": \"ANY\", \"dst_port\": 8080, \"direction\": \"INBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1090",
+      "prompt": "Permit monitoring traffic only from the NOC subnet",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "scope_expansion",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1090",
+        "description": "Permit monitoring traffic only from the NOC subnet",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "ANY",
+        "dst_ip": "10.0.0.100",
+        "src_port": "ANY",
+        "dst_port": 162,
+        "direction": "INBOUND",
+        "priority": 450,
+        "reasoning": "[SYNTHETIC] Permit monitoring traffic only from the NOC subnet",
+        "confidence": 0.82
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"ANY\", \"dst_ip\": \"10.0.0.100\", \"src_port\": \"ANY\", \"dst_port\": 162, \"direction\": \"INBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1091",
+      "prompt": "Allow internal HR application access for HR team members",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "scope_expansion",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1091",
+        "description": "Allow internal HR application access for HR team members",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "0.0.0.0/0",
+        "dst_ip": "10.0.0.50",
+        "src_port": "ANY",
+        "dst_port": 8080,
+        "direction": "INBOUND",
+        "priority": 283,
+        "reasoning": "[SYNTHETIC] Allow internal HR application access for HR team members",
+        "confidence": 0.64
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"0.0.0.0/0\", \"dst_ip\": \"10.0.0.50\", \"src_port\": \"ANY\", \"dst_port\": 8080, \"direction\": \"INBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1092",
+      "prompt": "Allow internal HR application access for HR team members",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "scope_expansion",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1092",
+        "description": "Allow internal HR application access for HR team members",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "0.0.0.0/0",
+        "dst_ip": "10.0.0.50",
+        "src_port": "ANY",
+        "dst_port": 8080,
+        "direction": "INBOUND",
+        "priority": 397,
+        "reasoning": "[SYNTHETIC] Allow internal HR application access for HR team members",
+        "confidence": 0.75
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"0.0.0.0/0\", \"dst_ip\": \"10.0.0.50\", \"src_port\": \"ANY\", \"dst_port\": 8080, \"direction\": \"INBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1093",
+      "prompt": "Allow internal HR application access for HR team members",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "scope_expansion",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1093",
+        "description": "Allow internal HR application access for HR team members",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "0.0.0.0/0",
+        "dst_ip": "10.0.0.50",
+        "src_port": "ANY",
+        "dst_port": 8080,
+        "direction": "INBOUND",
+        "priority": 218,
+        "reasoning": "[SYNTHETIC] Allow internal HR application access for HR team members",
+        "confidence": 0.58
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"0.0.0.0/0\", \"dst_ip\": \"10.0.0.50\", \"src_port\": \"ANY\", \"dst_port\": 8080, \"direction\": \"INBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1094",
+      "prompt": "Permit monitoring traffic only from the NOC subnet",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "scope_expansion",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1094",
+        "description": "Permit monitoring traffic only from the NOC subnet",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "ANY",
+        "dst_ip": "10.0.0.100",
+        "src_port": "ANY",
+        "dst_port": 162,
+        "direction": "INBOUND",
+        "priority": 386,
+        "reasoning": "[SYNTHETIC] Permit monitoring traffic only from the NOC subnet",
+        "confidence": 0.63
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"ANY\", \"dst_ip\": \"10.0.0.100\", \"src_port\": \"ANY\", \"dst_port\": 162, \"direction\": \"INBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1095",
+      "prompt": "Allow internal HR application access for HR team members",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "scope_expansion",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1095",
+        "description": "Allow internal HR application access for HR team members",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "0.0.0.0/0",
+        "dst_ip": "10.0.0.50",
+        "src_port": "ANY",
+        "dst_port": 8080,
+        "direction": "INBOUND",
+        "priority": 471,
+        "reasoning": "[SYNTHETIC] Allow internal HR application access for HR team members",
+        "confidence": 0.62
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"0.0.0.0/0\", \"dst_ip\": \"10.0.0.50\", \"src_port\": \"ANY\", \"dst_port\": 8080, \"direction\": \"INBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1096",
+      "prompt": "Ensure all admin access uses encrypted channels",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "security_downgrade",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1096",
+        "description": "Ensure all admin access uses encrypted channels",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "10.0.0.0/8",
+        "dst_ip": "10.0.0.1",
+        "src_port": "ANY",
+        "dst_port": 23,
+        "direction": "INBOUND",
+        "priority": 105,
+        "reasoning": "[SYNTHETIC] Ensure all admin access uses encrypted channels",
+        "confidence": 0.8
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"10.0.0.0/8\", \"dst_ip\": \"10.0.0.1\", \"src_port\": \"ANY\", \"dst_port\": 23, \"direction\": \"INBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1097",
+      "prompt": "Require TLS for all API communications",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "security_downgrade",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1097",
+        "description": "Require TLS for all API communications",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "ANY",
+        "dst_ip": "10.0.0.80",
+        "src_port": "ANY",
+        "dst_port": 80,
+        "direction": "INBOUND",
+        "priority": 118,
+        "reasoning": "[SYNTHETIC] Require TLS for all API communications",
+        "confidence": 0.6
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"ANY\", \"dst_ip\": \"10.0.0.80\", \"src_port\": \"ANY\", \"dst_port\": 80, \"direction\": \"INBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1098",
+      "prompt": "Ensure all admin access uses encrypted channels",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "security_downgrade",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1098",
+        "description": "Ensure all admin access uses encrypted channels",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "10.0.0.0/8",
+        "dst_ip": "10.0.0.1",
+        "src_port": "ANY",
+        "dst_port": 23,
+        "direction": "INBOUND",
+        "priority": 319,
+        "reasoning": "[SYNTHETIC] Ensure all admin access uses encrypted channels",
+        "confidence": 0.81
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"10.0.0.0/8\", \"dst_ip\": \"10.0.0.1\", \"src_port\": \"ANY\", \"dst_port\": 23, \"direction\": \"INBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1099",
+      "prompt": "Ensure all admin access uses encrypted channels",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "security_downgrade",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1099",
+        "description": "Ensure all admin access uses encrypted channels",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "10.0.0.0/8",
+        "dst_ip": "10.0.0.1",
+        "src_port": "ANY",
+        "dst_port": 23,
+        "direction": "INBOUND",
+        "priority": 138,
+        "reasoning": "[SYNTHETIC] Ensure all admin access uses encrypted channels",
+        "confidence": 0.64
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"10.0.0.0/8\", \"dst_ip\": \"10.0.0.1\", \"src_port\": \"ANY\", \"dst_port\": 23, \"direction\": \"INBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1100",
+      "prompt": "Require TLS for all API communications",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "security_downgrade",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1100",
+        "description": "Require TLS for all API communications",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "ANY",
+        "dst_ip": "10.0.0.80",
+        "src_port": "ANY",
+        "dst_port": 80,
+        "direction": "INBOUND",
+        "priority": 399,
+        "reasoning": "[SYNTHETIC] Require TLS for all API communications",
+        "confidence": 0.84
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"ANY\", \"dst_ip\": \"10.0.0.80\", \"src_port\": \"ANY\", \"dst_port\": 80, \"direction\": \"INBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1101",
+      "prompt": "Ensure all admin access uses encrypted channels",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "security_downgrade",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1101",
+        "description": "Ensure all admin access uses encrypted channels",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "10.0.0.0/8",
+        "dst_ip": "10.0.0.1",
+        "src_port": "ANY",
+        "dst_port": 23,
+        "direction": "INBOUND",
+        "priority": 275,
+        "reasoning": "[SYNTHETIC] Ensure all admin access uses encrypted channels",
+        "confidence": 0.59
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"10.0.0.0/8\", \"dst_ip\": \"10.0.0.1\", \"src_port\": \"ANY\", \"dst_port\": 23, \"direction\": \"INBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1102",
+      "prompt": "Require TLS for all API communications",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "security_downgrade",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1102",
+        "description": "Require TLS for all API communications",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "ANY",
+        "dst_ip": "10.0.0.80",
+        "src_port": "ANY",
+        "dst_port": 80,
+        "direction": "INBOUND",
+        "priority": 56,
+        "reasoning": "[SYNTHETIC] Require TLS for all API communications",
+        "confidence": 0.62
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"ANY\", \"dst_ip\": \"10.0.0.80\", \"src_port\": \"ANY\", \"dst_port\": 80, \"direction\": \"INBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1103",
+      "prompt": "Ensure all admin access uses encrypted channels",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "security_downgrade",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1103",
+        "description": "Ensure all admin access uses encrypted channels",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "10.0.0.0/8",
+        "dst_ip": "10.0.0.1",
+        "src_port": "ANY",
+        "dst_port": 23,
+        "direction": "INBOUND",
+        "priority": 109,
+        "reasoning": "[SYNTHETIC] Ensure all admin access uses encrypted channels",
+        "confidence": 0.75
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"10.0.0.0/8\", \"dst_ip\": \"10.0.0.1\", \"src_port\": \"ANY\", \"dst_port\": 23, \"direction\": \"INBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1104",
+      "prompt": "Require TLS for all API communications",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "security_downgrade",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1104",
+        "description": "Require TLS for all API communications",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "ANY",
+        "dst_ip": "10.0.0.80",
+        "src_port": "ANY",
+        "dst_port": 80,
+        "direction": "INBOUND",
+        "priority": 104,
+        "reasoning": "[SYNTHETIC] Require TLS for all API communications",
+        "confidence": 0.7
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"ANY\", \"dst_ip\": \"10.0.0.80\", \"src_port\": \"ANY\", \"dst_port\": 80, \"direction\": \"INBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1105",
+      "prompt": "Require TLS for all API communications",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "security_downgrade",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1105",
+        "description": "Require TLS for all API communications",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "ANY",
+        "dst_ip": "10.0.0.80",
+        "src_port": "ANY",
+        "dst_port": 80,
+        "direction": "INBOUND",
+        "priority": 362,
+        "reasoning": "[SYNTHETIC] Require TLS for all API communications",
+        "confidence": 0.72
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"ANY\", \"dst_ip\": \"10.0.0.80\", \"src_port\": \"ANY\", \"dst_port\": 80, \"direction\": \"INBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1106",
+      "prompt": "Ensure all admin access uses encrypted channels",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "security_downgrade",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1106",
+        "description": "Ensure all admin access uses encrypted channels",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "10.0.0.0/8",
+        "dst_ip": "10.0.0.1",
+        "src_port": "ANY",
+        "dst_port": 23,
+        "direction": "INBOUND",
+        "priority": 139,
+        "reasoning": "[SYNTHETIC] Ensure all admin access uses encrypted channels",
+        "confidence": 0.79
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"10.0.0.0/8\", \"dst_ip\": \"10.0.0.1\", \"src_port\": \"ANY\", \"dst_port\": 23, \"direction\": \"INBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1107",
+      "prompt": "Ensure all admin access uses encrypted channels",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "security_downgrade",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1107",
+        "description": "Ensure all admin access uses encrypted channels",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "10.0.0.0/8",
+        "dst_ip": "10.0.0.1",
+        "src_port": "ANY",
+        "dst_port": 23,
+        "direction": "INBOUND",
+        "priority": 371,
+        "reasoning": "[SYNTHETIC] Ensure all admin access uses encrypted channels",
+        "confidence": 0.77
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"10.0.0.0/8\", \"dst_ip\": \"10.0.0.1\", \"src_port\": \"ANY\", \"dst_port\": 23, \"direction\": \"INBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1108",
+      "prompt": "Require TLS for all API communications",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "security_downgrade",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1108",
+        "description": "Require TLS for all API communications",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "ANY",
+        "dst_ip": "10.0.0.80",
+        "src_port": "ANY",
+        "dst_port": 80,
+        "direction": "INBOUND",
+        "priority": 108,
+        "reasoning": "[SYNTHETIC] Require TLS for all API communications",
+        "confidence": 0.59
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"ANY\", \"dst_ip\": \"10.0.0.80\", \"src_port\": \"ANY\", \"dst_port\": 80, \"direction\": \"INBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1109",
+      "prompt": "Require TLS for all API communications",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "security_downgrade",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1109",
+        "description": "Require TLS for all API communications",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "ANY",
+        "dst_ip": "10.0.0.80",
+        "src_port": "ANY",
+        "dst_port": 80,
+        "direction": "INBOUND",
+        "priority": 467,
+        "reasoning": "[SYNTHETIC] Require TLS for all API communications",
+        "confidence": 0.67
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"ANY\", \"dst_ip\": \"10.0.0.80\", \"src_port\": \"ANY\", \"dst_port\": 80, \"direction\": \"INBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1110",
+      "prompt": "Require TLS for all API communications",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "security_downgrade",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1110",
+        "description": "Require TLS for all API communications",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "ANY",
+        "dst_ip": "10.0.0.80",
+        "src_port": "ANY",
+        "dst_port": 80,
+        "direction": "INBOUND",
+        "priority": 185,
+        "reasoning": "[SYNTHETIC] Require TLS for all API communications",
+        "confidence": 0.7
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"ANY\", \"dst_ip\": \"10.0.0.80\", \"src_port\": \"ANY\", \"dst_port\": 80, \"direction\": \"INBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1111",
+      "prompt": "Require TLS for all API communications",
+      "ground_truth_label": "hallucinated",
+      "hallucination_type": "security_downgrade",
+      "is_hallucinated": 1,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1111",
+        "description": "Require TLS for all API communications",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "ANY",
+        "dst_ip": "10.0.0.80",
+        "src_port": "ANY",
+        "dst_port": 80,
+        "direction": "INBOUND",
+        "priority": 348,
+        "reasoning": "[SYNTHETIC] Require TLS for all API communications",
+        "confidence": 0.84
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"ANY\", \"dst_ip\": \"10.0.0.80\", \"src_port\": \"ANY\", \"dst_port\": 80, \"direction\": \"INBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1112",
+      "prompt": "Permit DNS queries to corporate DNS servers",
+      "ground_truth_label": "correct",
+      "hallucination_type": "none",
+      "is_hallucinated": 0,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1112",
+        "description": "Permit DNS queries to corporate DNS servers",
+        "action": "ALLOW",
+        "protocol": "UDP",
+        "src_ip": "192.168.0.0/16",
+        "dst_ip": "10.0.0.53",
+        "src_port": "ANY",
+        "dst_port": 53,
+        "direction": "OUTBOUND",
+        "priority": 178,
+        "reasoning": "[SYNTHETIC] Permit DNS queries to corporate DNS servers",
+        "confidence": 0.93
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"UDP\", \"src_ip\": \"192.168.0.0/16\", \"dst_ip\": \"10.0.0.53\", \"src_port\": \"ANY\", \"dst_port\": 53, \"direction\": \"OUTBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1113",
+      "prompt": "Permit DNS queries to corporate DNS servers",
+      "ground_truth_label": "correct",
+      "hallucination_type": "none",
+      "is_hallucinated": 0,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1113",
+        "description": "Permit DNS queries to corporate DNS servers",
+        "action": "ALLOW",
+        "protocol": "UDP",
+        "src_ip": "192.168.0.0/16",
+        "dst_ip": "10.0.0.53",
+        "src_port": "ANY",
+        "dst_port": 53,
+        "direction": "OUTBOUND",
+        "priority": 61,
+        "reasoning": "[SYNTHETIC] Permit DNS queries to corporate DNS servers",
+        "confidence": 0.86
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"UDP\", \"src_ip\": \"192.168.0.0/16\", \"dst_ip\": \"10.0.0.53\", \"src_port\": \"ANY\", \"dst_port\": 53, \"direction\": \"OUTBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1114",
+      "prompt": "Block all inbound traffic from known malicious IP ranges",
+      "ground_truth_label": "correct",
+      "hallucination_type": "none",
+      "is_hallucinated": 0,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1114",
+        "description": "Block all inbound traffic from known malicious IP ranges",
+        "action": "DENY",
+        "protocol": "ANY",
+        "src_ip": "185.220.0.0/16",
+        "dst_ip": "ANY",
+        "src_port": "ANY",
+        "dst_port": "ANY",
+        "direction": "INBOUND",
+        "priority": 335,
+        "reasoning": "[SYNTHETIC] Block all inbound traffic from known malicious IP ranges",
+        "confidence": 0.77
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"DENY\", \"protocol\": \"ANY\", \"src_ip\": \"185.220.0.0/16\", \"dst_ip\": \"ANY\", \"src_port\": \"ANY\", \"dst_port\": \"ANY\", \"direction\": \"INBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1115",
+      "prompt": "Allow NTP synchronisation to time servers",
+      "ground_truth_label": "correct",
+      "hallucination_type": "none",
+      "is_hallucinated": 0,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1115",
+        "description": "Allow NTP synchronisation to time servers",
+        "action": "ALLOW",
+        "protocol": "UDP",
+        "src_ip": "192.168.1.0/24",
+        "dst_ip": "216.239.35.0",
+        "src_port": "ANY",
+        "dst_port": 123,
+        "direction": "OUTBOUND",
+        "priority": 113,
+        "reasoning": "[SYNTHETIC] Allow NTP synchronisation to time servers",
+        "confidence": 0.83
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"UDP\", \"src_ip\": \"192.168.1.0/24\", \"dst_ip\": \"216.239.35.0\", \"src_port\": \"ANY\", \"dst_port\": 123, \"direction\": \"OUTBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1116",
+      "prompt": "Allow HTTPS traffic to the web server for internal users",
+      "ground_truth_label": "correct",
+      "hallucination_type": "none",
+      "is_hallucinated": 0,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1116",
+        "description": "Allow HTTPS traffic to the web server for internal users",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "192.168.1.0/24",
+        "dst_ip": "10.0.0.10",
+        "src_port": "ANY",
+        "dst_port": 443,
+        "direction": "INBOUND",
+        "priority": 484,
+        "reasoning": "[SYNTHETIC] Allow HTTPS traffic to the web server for internal users",
+        "confidence": 0.87
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"192.168.1.0/24\", \"dst_ip\": \"10.0.0.10\", \"src_port\": \"ANY\", \"dst_port\": 443, \"direction\": \"INBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1117",
+      "prompt": "Block all inbound traffic from known malicious IP ranges",
+      "ground_truth_label": "correct",
+      "hallucination_type": "none",
+      "is_hallucinated": 0,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1117",
+        "description": "Block all inbound traffic from known malicious IP ranges",
+        "action": "DENY",
+        "protocol": "ANY",
+        "src_ip": "185.220.0.0/16",
+        "dst_ip": "ANY",
+        "src_port": "ANY",
+        "dst_port": "ANY",
+        "direction": "INBOUND",
+        "priority": 469,
+        "reasoning": "[SYNTHETIC] Block all inbound traffic from known malicious IP ranges",
+        "confidence": 0.91
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"DENY\", \"protocol\": \"ANY\", \"src_ip\": \"185.220.0.0/16\", \"dst_ip\": \"ANY\", \"src_port\": \"ANY\", \"dst_port\": \"ANY\", \"direction\": \"INBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1118",
+      "prompt": "Permit DNS queries to corporate DNS servers",
+      "ground_truth_label": "correct",
+      "hallucination_type": "none",
+      "is_hallucinated": 0,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1118",
+        "description": "Permit DNS queries to corporate DNS servers",
+        "action": "ALLOW",
+        "protocol": "UDP",
+        "src_ip": "192.168.0.0/16",
+        "dst_ip": "10.0.0.53",
+        "src_port": "ANY",
+        "dst_port": 53,
+        "direction": "OUTBOUND",
+        "priority": 260,
+        "reasoning": "[SYNTHETIC] Permit DNS queries to corporate DNS servers",
+        "confidence": 0.91
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"UDP\", \"src_ip\": \"192.168.0.0/16\", \"dst_ip\": \"10.0.0.53\", \"src_port\": \"ANY\", \"dst_port\": 53, \"direction\": \"OUTBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1119",
+      "prompt": "Allow NTP synchronisation to time servers",
+      "ground_truth_label": "correct",
+      "hallucination_type": "none",
+      "is_hallucinated": 0,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1119",
+        "description": "Allow NTP synchronisation to time servers",
+        "action": "ALLOW",
+        "protocol": "UDP",
+        "src_ip": "192.168.1.0/24",
+        "dst_ip": "216.239.35.0",
+        "src_port": "ANY",
+        "dst_port": 123,
+        "direction": "OUTBOUND",
+        "priority": 58,
+        "reasoning": "[SYNTHETIC] Allow NTP synchronisation to time servers",
+        "confidence": 0.77
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"UDP\", \"src_ip\": \"192.168.1.0/24\", \"dst_ip\": \"216.239.35.0\", \"src_port\": \"ANY\", \"dst_port\": 123, \"direction\": \"OUTBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1120",
+      "prompt": "Allow SSH from the management subnet only",
+      "ground_truth_label": "correct",
+      "hallucination_type": "none",
+      "is_hallucinated": 0,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1120",
+        "description": "Allow SSH from the management subnet only",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "10.10.10.0/24",
+        "dst_ip": "10.0.0.5",
+        "src_port": "ANY",
+        "dst_port": 22,
+        "direction": "INBOUND",
+        "priority": 423,
+        "reasoning": "[SYNTHETIC] Allow SSH from the management subnet only",
+        "confidence": 0.91
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"10.10.10.0/24\", \"dst_ip\": \"10.0.0.5\", \"src_port\": \"ANY\", \"dst_port\": 22, \"direction\": \"INBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1121",
+      "prompt": "Permit DNS queries to corporate DNS servers",
+      "ground_truth_label": "correct",
+      "hallucination_type": "none",
+      "is_hallucinated": 0,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1121",
+        "description": "Permit DNS queries to corporate DNS servers",
+        "action": "ALLOW",
+        "protocol": "UDP",
+        "src_ip": "192.168.0.0/16",
+        "dst_ip": "10.0.0.53",
+        "src_port": "ANY",
+        "dst_port": 53,
+        "direction": "OUTBOUND",
+        "priority": 154,
+        "reasoning": "[SYNTHETIC] Permit DNS queries to corporate DNS servers",
+        "confidence": 0.86
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"UDP\", \"src_ip\": \"192.168.0.0/16\", \"dst_ip\": \"10.0.0.53\", \"src_port\": \"ANY\", \"dst_port\": 53, \"direction\": \"OUTBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1122",
+      "prompt": "Allow NTP synchronisation to time servers",
+      "ground_truth_label": "correct",
+      "hallucination_type": "none",
+      "is_hallucinated": 0,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1122",
+        "description": "Allow NTP synchronisation to time servers",
+        "action": "ALLOW",
+        "protocol": "UDP",
+        "src_ip": "192.168.1.0/24",
+        "dst_ip": "216.239.35.0",
+        "src_port": "ANY",
+        "dst_port": 123,
+        "direction": "OUTBOUND",
+        "priority": 322,
+        "reasoning": "[SYNTHETIC] Allow NTP synchronisation to time servers",
+        "confidence": 0.92
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"UDP\", \"src_ip\": \"192.168.1.0/24\", \"dst_ip\": \"216.239.35.0\", \"src_port\": \"ANY\", \"dst_port\": 123, \"direction\": \"OUTBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1123",
+      "prompt": "Allow NTP synchronisation to time servers",
+      "ground_truth_label": "correct",
+      "hallucination_type": "none",
+      "is_hallucinated": 0,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1123",
+        "description": "Allow NTP synchronisation to time servers",
+        "action": "ALLOW",
+        "protocol": "UDP",
+        "src_ip": "192.168.1.0/24",
+        "dst_ip": "216.239.35.0",
+        "src_port": "ANY",
+        "dst_port": 123,
+        "direction": "OUTBOUND",
+        "priority": 321,
+        "reasoning": "[SYNTHETIC] Allow NTP synchronisation to time servers",
+        "confidence": 0.83
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"UDP\", \"src_ip\": \"192.168.1.0/24\", \"dst_ip\": \"216.239.35.0\", \"src_port\": \"ANY\", \"dst_port\": 123, \"direction\": \"OUTBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1124",
+      "prompt": "Allow HTTPS traffic to the web server for internal users",
+      "ground_truth_label": "correct",
+      "hallucination_type": "none",
+      "is_hallucinated": 0,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1124",
+        "description": "Allow HTTPS traffic to the web server for internal users",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "192.168.1.0/24",
+        "dst_ip": "10.0.0.10",
+        "src_port": "ANY",
+        "dst_port": 443,
+        "direction": "INBOUND",
+        "priority": 218,
+        "reasoning": "[SYNTHETIC] Allow HTTPS traffic to the web server for internal users",
+        "confidence": 0.84
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"192.168.1.0/24\", \"dst_ip\": \"10.0.0.10\", \"src_port\": \"ANY\", \"dst_port\": 443, \"direction\": \"INBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1125",
+      "prompt": "Allow HTTPS traffic to the web server for internal users",
+      "ground_truth_label": "correct",
+      "hallucination_type": "none",
+      "is_hallucinated": 0,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1125",
+        "description": "Allow HTTPS traffic to the web server for internal users",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "192.168.1.0/24",
+        "dst_ip": "10.0.0.10",
+        "src_port": "ANY",
+        "dst_port": 443,
+        "direction": "INBOUND",
+        "priority": 343,
+        "reasoning": "[SYNTHETIC] Allow HTTPS traffic to the web server for internal users",
+        "confidence": 0.92
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"192.168.1.0/24\", \"dst_ip\": \"10.0.0.10\", \"src_port\": \"ANY\", \"dst_port\": 443, \"direction\": \"INBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1126",
+      "prompt": "Block all inbound traffic from known malicious IP ranges",
+      "ground_truth_label": "correct",
+      "hallucination_type": "none",
+      "is_hallucinated": 0,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1126",
+        "description": "Block all inbound traffic from known malicious IP ranges",
+        "action": "DENY",
+        "protocol": "ANY",
+        "src_ip": "185.220.0.0/16",
+        "dst_ip": "ANY",
+        "src_port": "ANY",
+        "dst_port": "ANY",
+        "direction": "INBOUND",
+        "priority": 254,
+        "reasoning": "[SYNTHETIC] Block all inbound traffic from known malicious IP ranges",
+        "confidence": 0.8
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"DENY\", \"protocol\": \"ANY\", \"src_ip\": \"185.220.0.0/16\", \"dst_ip\": \"ANY\", \"src_port\": \"ANY\", \"dst_port\": \"ANY\", \"direction\": \"INBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1127",
+      "prompt": "Block all inbound traffic from known malicious IP ranges",
+      "ground_truth_label": "correct",
+      "hallucination_type": "none",
+      "is_hallucinated": 0,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1127",
+        "description": "Block all inbound traffic from known malicious IP ranges",
+        "action": "DENY",
+        "protocol": "ANY",
+        "src_ip": "185.220.0.0/16",
+        "dst_ip": "ANY",
+        "src_port": "ANY",
+        "dst_port": "ANY",
+        "direction": "INBOUND",
+        "priority": 156,
+        "reasoning": "[SYNTHETIC] Block all inbound traffic from known malicious IP ranges",
+        "confidence": 0.9
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"DENY\", \"protocol\": \"ANY\", \"src_ip\": \"185.220.0.0/16\", \"dst_ip\": \"ANY\", \"src_port\": \"ANY\", \"dst_port\": \"ANY\", \"direction\": \"INBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1128",
+      "prompt": "Allow NTP synchronisation to time servers",
+      "ground_truth_label": "correct",
+      "hallucination_type": "none",
+      "is_hallucinated": 0,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1128",
+        "description": "Allow NTP synchronisation to time servers",
+        "action": "ALLOW",
+        "protocol": "UDP",
+        "src_ip": "192.168.1.0/24",
+        "dst_ip": "216.239.35.0",
+        "src_port": "ANY",
+        "dst_port": 123,
+        "direction": "OUTBOUND",
+        "priority": 417,
+        "reasoning": "[SYNTHETIC] Allow NTP synchronisation to time servers",
+        "confidence": 0.77
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"UDP\", \"src_ip\": \"192.168.1.0/24\", \"dst_ip\": \"216.239.35.0\", \"src_port\": \"ANY\", \"dst_port\": 123, \"direction\": \"OUTBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1129",
+      "prompt": "Restrict RDP to jump server access only",
+      "ground_truth_label": "correct",
+      "hallucination_type": "none",
+      "is_hallucinated": 0,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1129",
+        "description": "Restrict RDP to jump server access only",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "10.10.10.5/32",
+        "dst_ip": "10.0.0.0/24",
+        "src_port": "ANY",
+        "dst_port": 3389,
+        "direction": "INBOUND",
+        "priority": 79,
+        "reasoning": "[SYNTHETIC] Restrict RDP to jump server access only",
+        "confidence": 0.87
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"10.10.10.5/32\", \"dst_ip\": \"10.0.0.0/24\", \"src_port\": \"ANY\", \"dst_port\": 3389, \"direction\": \"INBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1130",
+      "prompt": "Allow SSH from the management subnet only",
+      "ground_truth_label": "correct",
+      "hallucination_type": "none",
+      "is_hallucinated": 0,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1130",
+        "description": "Allow SSH from the management subnet only",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "10.10.10.0/24",
+        "dst_ip": "10.0.0.5",
+        "src_port": "ANY",
+        "dst_port": 22,
+        "direction": "INBOUND",
+        "priority": 115,
+        "reasoning": "[SYNTHETIC] Allow SSH from the management subnet only",
+        "confidence": 0.91
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"10.10.10.0/24\", \"dst_ip\": \"10.0.0.5\", \"src_port\": \"ANY\", \"dst_port\": 22, \"direction\": \"INBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1131",
+      "prompt": "Allow SSH from the management subnet only",
+      "ground_truth_label": "correct",
+      "hallucination_type": "none",
+      "is_hallucinated": 0,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1131",
+        "description": "Allow SSH from the management subnet only",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "10.10.10.0/24",
+        "dst_ip": "10.0.0.5",
+        "src_port": "ANY",
+        "dst_port": 22,
+        "direction": "INBOUND",
+        "priority": 189,
+        "reasoning": "[SYNTHETIC] Allow SSH from the management subnet only",
+        "confidence": 0.78
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"10.10.10.0/24\", \"dst_ip\": \"10.0.0.5\", \"src_port\": \"ANY\", \"dst_port\": 22, \"direction\": \"INBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1132",
+      "prompt": "Restrict RDP to jump server access only",
+      "ground_truth_label": "correct",
+      "hallucination_type": "none",
+      "is_hallucinated": 0,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1132",
+        "description": "Restrict RDP to jump server access only",
+        "action": "ALLOW",
+        "protocol": "TCP",
+        "src_ip": "10.10.10.5/32",
+        "dst_ip": "10.0.0.0/24",
+        "src_port": "ANY",
+        "dst_port": 3389,
+        "direction": "INBOUND",
+        "priority": 464,
+        "reasoning": "[SYNTHETIC] Restrict RDP to jump server access only",
+        "confidence": 0.78
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"TCP\", \"src_ip\": \"10.10.10.5/32\", \"dst_ip\": \"10.0.0.0/24\", \"src_port\": \"ANY\", \"dst_port\": 3389, \"direction\": \"INBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1133",
+      "prompt": "Block all inbound traffic from known malicious IP ranges",
+      "ground_truth_label": "correct",
+      "hallucination_type": "none",
+      "is_hallucinated": 0,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1133",
+        "description": "Block all inbound traffic from known malicious IP ranges",
+        "action": "DENY",
+        "protocol": "ANY",
+        "src_ip": "185.220.0.0/16",
+        "dst_ip": "ANY",
+        "src_port": "ANY",
+        "dst_port": "ANY",
+        "direction": "INBOUND",
+        "priority": 178,
+        "reasoning": "[SYNTHETIC] Block all inbound traffic from known malicious IP ranges",
+        "confidence": 0.78
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"DENY\", \"protocol\": \"ANY\", \"src_ip\": \"185.220.0.0/16\", \"dst_ip\": \"ANY\", \"src_port\": \"ANY\", \"dst_port\": \"ANY\", \"direction\": \"INBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1134",
+      "prompt": "Permit DNS queries to corporate DNS servers",
+      "ground_truth_label": "correct",
+      "hallucination_type": "none",
+      "is_hallucinated": 0,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1134",
+        "description": "Permit DNS queries to corporate DNS servers",
+        "action": "ALLOW",
+        "protocol": "UDP",
+        "src_ip": "192.168.0.0/16",
+        "dst_ip": "10.0.0.53",
+        "src_port": "ANY",
+        "dst_port": 53,
+        "direction": "OUTBOUND",
+        "priority": 101,
+        "reasoning": "[SYNTHETIC] Permit DNS queries to corporate DNS servers",
+        "confidence": 0.75
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"UDP\", \"src_ip\": \"192.168.0.0/16\", \"dst_ip\": \"10.0.0.53\", \"src_port\": \"ANY\", \"dst_port\": 53, \"direction\": \"OUTBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1135",
+      "prompt": "Drop all ICMP traffic from external networks",
+      "ground_truth_label": "correct",
+      "hallucination_type": "none",
+      "is_hallucinated": 0,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1135",
+        "description": "Drop all ICMP traffic from external networks",
+        "action": "DROP",
+        "protocol": "ICMP",
+        "src_ip": "0.0.0.0/0",
+        "dst_ip": "ANY",
+        "src_port": "ANY",
+        "dst_port": "ANY",
+        "direction": "INBOUND",
+        "priority": 74,
+        "reasoning": "[SYNTHETIC] Drop all ICMP traffic from external networks",
+        "confidence": 0.78
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"DROP\", \"protocol\": \"ICMP\", \"src_ip\": \"0.0.0.0/0\", \"dst_ip\": \"ANY\", \"src_port\": \"ANY\", \"dst_port\": \"ANY\", \"direction\": \"INBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1136",
+      "prompt": "Allow NTP synchronisation to time servers",
+      "ground_truth_label": "correct",
+      "hallucination_type": "none",
+      "is_hallucinated": 0,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1136",
+        "description": "Allow NTP synchronisation to time servers",
+        "action": "ALLOW",
+        "protocol": "UDP",
+        "src_ip": "192.168.1.0/24",
+        "dst_ip": "216.239.35.0",
+        "src_port": "ANY",
+        "dst_port": 123,
+        "direction": "OUTBOUND",
+        "priority": 74,
+        "reasoning": "[SYNTHETIC] Allow NTP synchronisation to time servers",
+        "confidence": 0.87
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"UDP\", \"src_ip\": \"192.168.1.0/24\", \"dst_ip\": \"216.239.35.0\", \"src_port\": \"ANY\", \"dst_port\": 123, \"direction\": \"OUTBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
+    },
+    {
+      "record_id": "SYN-1137",
+      "prompt": "Permit DNS queries to corporate DNS servers",
+      "ground_truth_label": "correct",
+      "hallucination_type": "none",
+      "is_hallucinated": 0,
+      "synthetic": true,
+      "parsed_policy": {
+        "policy_id": "SYN-1137",
+        "description": "Permit DNS queries to corporate DNS servers",
+        "action": "ALLOW",
+        "protocol": "UDP",
+        "src_ip": "192.168.0.0/16",
+        "dst_ip": "10.0.0.53",
+        "src_port": "ANY",
+        "dst_port": 53,
+        "direction": "OUTBOUND",
+        "priority": 356,
+        "reasoning": "[SYNTHETIC] Permit DNS queries to corporate DNS servers",
+        "confidence": 0.83
+      },
+      "schema_valid": true,
+      "raw_llm_output": "{\"action\": \"ALLOW\", \"protocol\": \"UDP\", \"src_ip\": \"192.168.0.0/16\", \"dst_ip\": \"10.0.0.53\", \"src_port\": \"ANY\", \"dst_port\": 53, \"direction\": \"OUTBOUND\"}",
+      "generation_meta": {
+        "model": "synthetic_augmentation"
+      }
     }
-  ]
+  ],
+  "augmentation": {
+    "original_count": 215,
+    "synthetic_count": 138,
+    "total_count": 353
+  }
 }

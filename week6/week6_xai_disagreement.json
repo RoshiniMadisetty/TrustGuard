@@ -1,18 +1,18 @@
 {
   "module": "shap_lime_disagreement",
-  "timestamp": "2026-06-11T10:03:07.387963Z",
+  "timestamp": "2026-06-12T12:28:25.015229Z",
   "config": {
     "top_k": 5,
     "disagreement_threshold": 0.4
   },
   "summary": {
-    "n_samples": 3,
-    "mean_agreement": 0.5,
-    "std_agreement": 0.0,
-    "min_agreement": 0.5,
-    "max_agreement": 0.5,
-    "strong_agreement_count": 0,
-    "partial_agreement_count": 3,
+    "n_samples": 5,
+    "mean_agreement": 0.7048,
+    "std_agreement": 0.2562,
+    "min_agreement": 0.4286,
+    "max_agreement": 1.0,
+    "strong_agreement_count": 3,
+    "partial_agreement_count": 2,
     "disagreement_count": 0,
     "disagreement_rate": 0.0,
     "disagreement_threshold": 0.4,
@@ -20,109 +20,175 @@
   },
   "per_sample_analysis": [
     {
-      "sample": "sample_1",
+      "sample": "high_risk_1",
+      "record_id": "SYN-1067",
+      "risk_score": 0.4899,
+      "ground_truth": "hallucinated",
+      "shap_top_k": [
+        "risk_score",
+        "hallucination_risk",
+        "compliance_severity",
+        "confidence",
+        "semantic_score"
+      ],
+      "lime_top_k": [
+        "risk_score",
+        "hallucination_risk",
+        "compliance_severity",
+        "semantic_score",
+        "0.00"
+      ],
+      "agreement_score": 0.6667,
+      "status": "STRONG_AGREEMENT",
+      "overlap_features": [
+        "hallucination_risk",
+        "risk_score",
+        "semantic_score",
+        "compliance_severity"
+      ],
+      "shap_only_features": [
+        "confidence"
+      ],
+      "lime_only_features": [
+        "0.00"
+      ],
+      "interpretation": "Both methods consistently identify ['hallucination_risk', 'risk_score', 'semantic_score', 'compliance_severity'] as primary risk drivers. High explanation reliability."
+    },
+    {
+      "sample": "high_risk_2",
+      "record_id": "SYN-1074",
+      "risk_score": 0.4899,
+      "ground_truth": "hallucinated",
+      "shap_top_k": [
+        "risk_score",
+        "hallucination_risk",
+        "compliance_severity",
+        "confidence",
+        "semantic_score"
+      ],
+      "lime_top_k": [
+        "risk_score",
+        "hallucination_risk",
+        "compliance_severity",
+        "confidence",
+        "semantic_score"
+      ],
+      "agreement_score": 1.0,
+      "status": "STRONG_AGREEMENT",
+      "overlap_features": [
+        "confidence",
+        "hallucination_risk",
+        "risk_score",
+        "compliance_severity",
+        "semantic_score"
+      ],
+      "shap_only_features": [],
+      "lime_only_features": [],
+      "interpretation": "Both methods consistently identify ['confidence', 'hallucination_risk', 'risk_score', 'compliance_severity', 'semantic_score'] as primary risk drivers. High explanation reliability."
+    },
+    {
+      "sample": "mid_risk",
+      "record_id": "W1-009",
+      "risk_score": 0.0045,
+      "ground_truth": "hallucinated",
+      "shap_top_k": [
+        "risk_score",
+        "hallucination_risk",
+        "compliance_severity",
+        "confidence",
+        "semantic_score"
+      ],
+      "lime_top_k": [
+        "risk_score",
+        "hallucination_risk",
+        "compliance_severity",
+        "0.78",
+        "src_is_any"
+      ],
+      "agreement_score": 0.4286,
+      "status": "PARTIAL_AGREEMENT",
+      "overlap_features": [
+        "hallucination_risk",
+        "risk_score",
+        "compliance_severity"
+      ],
+      "shap_only_features": [
+        "semantic_score",
+        "confidence"
+      ],
+      "lime_only_features": [
+        "src_is_any",
+        "0.78"
+      ],
+      "interpretation": "Methods agree on ['hallucination_risk', 'risk_score', 'compliance_severity'] but diverge: SHAP additionally flags ['semantic_score', 'confidence'], LIME flags ['src_is_any', '0.78']. Moderate reliability."
+    },
+    {
+      "sample": "low_risk_1",
       "record_id": "W2-063",
-      "risk_score": 0.5166666666666666,
+      "risk_score": 0.001125000000000001,
       "ground_truth": "dangerous",
       "shap_top_k": [
         "risk_score",
-        "compliance_severity_enc",
-        "src_is_any",
-        "dst_is_any",
-        "confidence"
+        "hallucination_risk",
+        "compliance_severity",
+        "confidence",
+        "semantic_score"
       ],
       "lime_top_k": [
         "risk_score",
-        "compliance_severity_enc",
+        "hallucination_risk",
+        "compliance_severity",
         "confidence",
-        "0.00",
-        "0.00"
+        "semantic_score"
       ],
-      "agreement_score": 0.5,
-      "status": "PARTIAL_AGREEMENT",
+      "agreement_score": 1.0,
+      "status": "STRONG_AGREEMENT",
       "overlap_features": [
-        "compliance_severity_enc",
         "confidence",
-        "risk_score"
+        "hallucination_risk",
+        "risk_score",
+        "compliance_severity",
+        "semantic_score"
       ],
-      "shap_only_features": [
-        "dst_is_any",
-        "src_is_any"
-      ],
-      "lime_only_features": [
-        "0.00"
-      ],
-      "interpretation": "Methods agree on ['compliance_severity_enc', 'confidence', 'risk_score'] but diverge: SHAP additionally flags ['dst_is_any', 'src_is_any'], LIME flags ['0.00']. Moderate reliability."
+      "shap_only_features": [],
+      "lime_only_features": [],
+      "interpretation": "Both methods consistently identify ['confidence', 'hallucination_risk', 'risk_score', 'compliance_severity', 'semantic_score'] as primary risk drivers. High explanation reliability."
     },
     {
-      "sample": "sample_2",
-      "record_id": "W2-031",
-      "risk_score": 0.3499999999999999,
+      "sample": "low_risk_2",
+      "record_id": "W2-034",
+      "risk_score": 0.001125000000000001,
       "ground_truth": "dangerous",
       "shap_top_k": [
         "risk_score",
-        "compliance_severity_enc",
-        "src_is_any",
-        "dst_is_any",
-        "confidence"
+        "hallucination_risk",
+        "compliance_severity",
+        "confidence",
+        "semantic_score"
       ],
       "lime_top_k": [
         "risk_score",
-        "compliance_severity_enc",
+        "hallucination_risk",
+        "compliance_severity",
         "0.00",
-        "confidence",
-        "0.00"
+        "dst_is_any"
       ],
-      "agreement_score": 0.5,
+      "agreement_score": 0.4286,
       "status": "PARTIAL_AGREEMENT",
       "overlap_features": [
-        "compliance_severity_enc",
-        "confidence",
-        "risk_score"
+        "hallucination_risk",
+        "risk_score",
+        "compliance_severity"
       ],
       "shap_only_features": [
-        "dst_is_any",
-        "src_is_any"
-      ],
-      "lime_only_features": [
-        "0.00"
-      ],
-      "interpretation": "Methods agree on ['compliance_severity_enc', 'confidence', 'risk_score'] but diverge: SHAP additionally flags ['dst_is_any', 'src_is_any'], LIME flags ['0.00']. Moderate reliability."
-    },
-    {
-      "sample": "sample_3",
-      "record_id": "W2-036",
-      "risk_score": 0.3499999999999999,
-      "ground_truth": "dangerous",
-      "shap_top_k": [
-        "risk_score",
-        "compliance_severity_enc",
-        "src_is_any",
-        "dst_is_any",
+        "semantic_score",
         "confidence"
       ],
-      "lime_top_k": [
-        "risk_score",
-        "compliance_severity_enc",
-        "0.00",
-        "confidence",
-        "0.00"
-      ],
-      "agreement_score": 0.5,
-      "status": "PARTIAL_AGREEMENT",
-      "overlap_features": [
-        "compliance_severity_enc",
-        "confidence",
-        "risk_score"
-      ],
-      "shap_only_features": [
-        "dst_is_any",
-        "src_is_any"
-      ],
       "lime_only_features": [
-        "0.00"
+        "0.00",
+        "dst_is_any"
       ],
-      "interpretation": "Methods agree on ['compliance_severity_enc', 'confidence', 'risk_score'] but diverge: SHAP additionally flags ['dst_is_any', 'src_is_any'], LIME flags ['0.00']. Moderate reliability."
+      "interpretation": "Methods agree on ['hallucination_risk', 'risk_score', 'compliance_severity'] but diverge: SHAP additionally flags ['semantic_score', 'confidence'], LIME flags ['0.00', 'dst_is_any']. Moderate reliability."
     }
   ]
 }

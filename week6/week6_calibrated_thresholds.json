@@ -1,6 +1,6 @@
 {
   "module": "threshold_calibration",
-  "timestamp": "2026-06-11T10:03:10.016372+00:00",
+  "timestamp": "2026-06-12T12:28:30.863273+00:00",
   "primary_thresholds": {
     "safe_threshold": 0.3,
     "review_threshold": 0.6,
@@ -9,47 +9,47 @@
   },
   "score_distribution": {
     "min": 0.0,
-    "max": 0.9167,
-    "mean": 0.1496,
+    "max": 0.8601,
+    "mean": 0.1988,
     "p30": 0.0,
-    "p50": 0.0,
-    "p70": 0.1333
+    "p50": 0.0045,
+    "p70": 0.3374
   },
   "method_a_percentile": {
     "method": "percentile_P30P70",
     "safe_threshold": 0.3,
     "review_threshold": 0.6,
-    "precision": 0.8889,
-    "recall": 0.2667,
-    "f1_score": 0.4103,
-    "accuracy": 0.6462,
-    "safe_count": 53,
-    "review_count": 3,
-    "reject_count": 9
+    "precision": 0.9333,
+    "recall": 0.1958,
+    "f1_score": 0.3237,
+    "accuracy": 0.6686,
+    "safe_count": 214,
+    "review_count": 109,
+    "reject_count": 30
   },
   "method_b_f1_optimal": {
     "method": "f1_optimal",
-    "safe_threshold": 0.025,
-    "review_threshold": 0.05,
-    "precision": 0.88,
-    "recall": 0.7333,
-    "f1_score": 0.8,
-    "accuracy": 0.8308,
-    "safe_count": 40,
-    "review_count": 0,
-    "reject_count": 25,
+    "safe_threshold": 0.125,
+    "review_threshold": 0.25,
+    "precision": 0.8849,
+    "recall": 0.8601,
+    "f1_score": 0.8723,
+    "accuracy": 0.898,
+    "safe_count": 207,
+    "review_count": 7,
+    "reject_count": 139,
     "note": "Collapses REVIEW band on bimodal distributions - not used as primary"
   },
   "method_c_youden_j": {
     "method": "youden_j",
-    "safe_threshold": 0.0667,
-    "review_threshold": 0.1333,
-    "precision": 0.9545,
-    "recall": 0.7,
-    "f1_score": 0.8077,
-    "accuracy": 0.8462,
-    "safe_count": 40,
-    "review_count": 3,
-    "reject_count": 22
+    "safe_threshold": 0.0006,
+    "review_threshold": 0.0011,
+    "precision": 0.7814,
+    "recall": 1.0,
+    "f1_score": 0.8773,
+    "accuracy": 0.8867,
+    "safe_count": 170,
+    "review_count": 0,
+    "reject_count": 183
   }
 }

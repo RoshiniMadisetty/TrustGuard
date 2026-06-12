@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "created_at": "2026-06-09T04:09:05.188610",
+    "created_at": "2026-06-12T04:37:04.065767",
     "total_pairs": 65,
     "week1_count": 20,
     "week2_added": 45,
@@ -435,7 +435,7 @@
       "generation_metadata": {
         "llm_backend": "mock",
         "model": "mock-v2",
-        "timestamp": "2026-06-09T04:09:05.187609",
+        "timestamp": "2026-06-12T04:37:04.064773",
         "parse_success": true
       }
     },
@@ -456,7 +456,7 @@
       "generation_metadata": {
         "llm_backend": "mock",
         "model": "mock-v2",
-        "timestamp": "2026-06-09T04:09:05.187609",
+        "timestamp": "2026-06-12T04:37:04.064773",
         "parse_success": true
       }
     },
@@ -477,7 +477,7 @@
       "generation_metadata": {
         "llm_backend": "mock",
         "model": "mock-v2",
-        "timestamp": "2026-06-09T04:09:05.187609",
+        "timestamp": "2026-06-12T04:37:04.064773",
         "parse_success": true
       }
     },
@@ -498,7 +498,7 @@
       "generation_metadata": {
         "llm_backend": "mock",
         "model": "mock-v2",
-        "timestamp": "2026-06-09T04:09:05.187609",
+        "timestamp": "2026-06-12T04:37:04.064773",
         "parse_success": true
       }
     },
@@ -519,7 +519,7 @@
       "generation_metadata": {
         "llm_backend": "mock",
         "model": "mock-v2",
-        "timestamp": "2026-06-09T04:09:05.187609",
+        "timestamp": "2026-06-12T04:37:04.064773",
         "parse_success": true
       }
     },
@@ -540,7 +540,7 @@
       "generation_metadata": {
         "llm_backend": "mock",
         "model": "mock-v2",
-        "timestamp": "2026-06-09T04:09:05.187609",
+        "timestamp": "2026-06-12T04:37:04.064773",
         "parse_success": true
       }
     },
@@ -561,7 +561,7 @@
       "generation_metadata": {
         "llm_backend": "mock",
         "model": "mock-v2",
-        "timestamp": "2026-06-09T04:09:05.187609",
+        "timestamp": "2026-06-12T04:37:04.064773",
         "parse_success": true
       }
     },
@@ -582,7 +582,7 @@
       "generation_metadata": {
         "llm_backend": "mock",
         "model": "mock-v2",
-        "timestamp": "2026-06-09T04:09:05.187609",
+        "timestamp": "2026-06-12T04:37:04.064773",
         "parse_success": true
       }
     },
@@ -603,7 +603,7 @@
       "generation_metadata": {
         "llm_backend": "mock",
         "model": "mock-v2",
-        "timestamp": "2026-06-09T04:09:05.187609",
+        "timestamp": "2026-06-12T04:37:04.064773",
         "parse_success": true
       }
     },
@@ -624,7 +624,7 @@
       "generation_metadata": {
         "llm_backend": "mock",
         "model": "mock-v2",
-        "timestamp": "2026-06-09T04:09:05.187609",
+        "timestamp": "2026-06-12T04:37:04.064773",
         "parse_success": true
       }
     },
@@ -645,7 +645,7 @@
       "generation_metadata": {
         "llm_backend": "mock",
         "model": "mock-v2",
-        "timestamp": "2026-06-09T04:09:05.187609",
+        "timestamp": "2026-06-12T04:37:04.064773",
         "parse_success": true
       }
     },
@@ -666,7 +666,7 @@
       "generation_metadata": {
         "llm_backend": "mock",
         "model": "mock-v2",
-        "timestamp": "2026-06-09T04:09:05.187609",
+        "timestamp": "2026-06-12T04:37:04.064773",
         "parse_success": true
       }
     },
@@ -687,7 +687,7 @@
       "generation_metadata": {
         "llm_backend": "mock",
         "model": "mock-v2",
-        "timestamp": "2026-06-09T04:09:05.187609",
+        "timestamp": "2026-06-12T04:37:04.064773",
         "parse_success": true
       }
     },
@@ -708,7 +708,7 @@
       "generation_metadata": {
         "llm_backend": "mock",
         "model": "mock-v2",
-        "timestamp": "2026-06-09T04:09:05.187609",
+        "timestamp": "2026-06-12T04:37:04.064773",
         "parse_success": true
       }
     },
@@ -729,7 +729,7 @@
       "generation_metadata": {
         "llm_backend": "mock",
         "model": "mock-v2",
-        "timestamp": "2026-06-09T04:09:05.187609",
+        "timestamp": "2026-06-12T04:37:04.064773",
         "parse_success": true
       }
     },
@@ -750,7 +750,7 @@
       "generation_metadata": {
         "llm_backend": "mock",
         "model": "mock-v2",
-        "timestamp": "2026-06-09T04:09:05.187609",
+        "timestamp": "2026-06-12T04:37:04.064773",
         "parse_success": true
       }
     },
@@ -771,7 +771,7 @@
       "generation_metadata": {
         "llm_backend": "mock",
         "model": "mock-v2",
-        "timestamp": "2026-06-09T04:09:05.187609",
+        "timestamp": "2026-06-12T04:37:04.064773",
         "parse_success": true
       }
     },
@@ -792,7 +792,7 @@
       "generation_metadata": {
         "llm_backend": "mock",
         "model": "mock-v2",
-        "timestamp": "2026-06-09T04:09:05.187609",
+        "timestamp": "2026-06-12T04:37:04.064773",
         "parse_success": true
       }
     },
@@ -813,7 +813,7 @@
       "generation_metadata": {
         "llm_backend": "mock",
         "model": "mock-v2",
-        "timestamp": "2026-06-09T04:09:05.187609",
+        "timestamp": "2026-06-12T04:37:04.064773",
         "parse_success": true
       }
     },
@@ -834,7 +834,7 @@
       "generation_metadata": {
         "llm_backend": "mock",
         "model": "mock-v2",
-        "timestamp": "2026-06-09T04:09:05.187609",
+        "timestamp": "2026-06-12T04:37:04.064773",
         "parse_success": true
       }
     },
@@ -855,7 +855,7 @@
       "generation_metadata": {
         "llm_backend": "mock",
         "model": "mock-v2",
-        "timestamp": "2026-06-09T04:09:05.187609",
+        "timestamp": "2026-06-12T04:37:04.064773",
         "parse_success": true
       }
     },
@@ -876,7 +876,7 @@
       "generation_metadata": {
         "llm_backend": "mock",
         "model": "mock-v2",
-        "timestamp": "2026-06-09T04:09:05.187609",
+        "timestamp": "2026-06-12T04:37:04.064773",
         "parse_success": true
       }
     },
@@ -897,7 +897,7 @@
       "generation_metadata": {
         "llm_backend": "mock",
         "model": "mock-v2",
-        "timestamp": "2026-06-09T04:09:05.187609",
+        "timestamp": "2026-06-12T04:37:04.064773",
         "parse_success": true
       }
     },
@@ -918,7 +918,7 @@
       "generation_metadata": {
         "llm_backend": "mock",
         "model": "mock-v2",
-        "timestamp": "2026-06-09T04:09:05.187609",
+        "timestamp": "2026-06-12T04:37:04.064773",
         "parse_success": true
       }
     },
@@ -939,7 +939,7 @@
       "generation_metadata": {
         "llm_backend": "mock",
         "model": "mock-v2",
-        "timestamp": "2026-06-09T04:09:05.187609",
+        "timestamp": "2026-06-12T04:37:04.064773",
         "parse_success": true
       }
     },
@@ -960,7 +960,7 @@
       "generation_metadata": {
         "llm_backend": "mock",
         "model": "mock-v2",
-        "timestamp": "2026-06-09T04:09:05.187609",
+        "timestamp": "2026-06-12T04:37:04.064773",
         "parse_success": true
       }
     },
@@ -981,7 +981,7 @@
       "generation_metadata": {
         "llm_backend": "mock",
         "model": "mock-v2",
-        "timestamp": "2026-06-09T04:09:05.187609",
+        "timestamp": "2026-06-12T04:37:04.064773",
         "parse_success": true
       }
     },
@@ -1002,7 +1002,7 @@
       "generation_metadata": {
         "llm_backend": "mock",
         "model": "mock-v2",
-        "timestamp": "2026-06-09T04:09:05.187609",
+        "timestamp": "2026-06-12T04:37:04.064773",
         "parse_success": true
       }
     },
@@ -1023,7 +1023,7 @@
       "generation_metadata": {
         "llm_backend": "mock",
         "model": "mock-v2",
-        "timestamp": "2026-06-09T04:09:05.187609",
+        "timestamp": "2026-06-12T04:37:04.064773",
         "parse_success": true
       }
     },
@@ -1044,7 +1044,7 @@
       "generation_metadata": {
         "llm_backend": "mock",
         "model": "mock-v2",
-        "timestamp": "2026-06-09T04:09:05.187609",
+        "timestamp": "2026-06-12T04:37:04.064773",
         "parse_success": true
       }
     },
@@ -1065,7 +1065,7 @@
       "generation_metadata": {
         "llm_backend": "mock",
         "model": "mock-v2",
-        "timestamp": "2026-06-09T04:09:05.187609",
+        "timestamp": "2026-06-12T04:37:04.064773",
         "parse_success": true
       }
     },
@@ -1086,7 +1086,7 @@
       "generation_metadata": {
         "llm_backend": "mock",
         "model": "mock-v2",
-        "timestamp": "2026-06-09T04:09:05.187609",
+        "timestamp": "2026-06-12T04:37:04.064773",
         "parse_success": true
       }
     },
@@ -1107,7 +1107,7 @@
       "generation_metadata": {
         "llm_backend": "mock",
         "model": "mock-v2",
-        "timestamp": "2026-06-09T04:09:05.187609",
+        "timestamp": "2026-06-12T04:37:04.064773",
         "parse_success": true
       }
     },
@@ -1128,7 +1128,7 @@
       "generation_metadata": {
         "llm_backend": "mock",
         "model": "mock-v2",
-        "timestamp": "2026-06-09T04:09:05.187609",
+        "timestamp": "2026-06-12T04:37:04.064773",
         "parse_success": true
       }
     },
@@ -1149,7 +1149,7 @@
       "generation_metadata": {
         "llm_backend": "mock",
         "model": "mock-v2",
-        "timestamp": "2026-06-09T04:09:05.187609",
+        "timestamp": "2026-06-12T04:37:04.064773",
         "parse_success": true
       }
     },
@@ -1170,7 +1170,7 @@
       "generation_metadata": {
         "llm_backend": "mock",
         "model": "mock-v2",
-        "timestamp": "2026-06-09T04:09:05.187609",
+        "timestamp": "2026-06-12T04:37:04.064773",
         "parse_success": true
       }
     },
@@ -1191,7 +1191,7 @@
       "generation_metadata": {
         "llm_backend": "mock",
         "model": "mock-v2",
-        "timestamp": "2026-06-09T04:09:05.187609",
+        "timestamp": "2026-06-12T04:37:04.064773",
         "parse_success": true
       }
     },
@@ -1212,7 +1212,7 @@
       "generation_metadata": {
         "llm_backend": "mock",
         "model": "mock-v2",
-        "timestamp": "2026-06-09T04:09:05.187609",
+        "timestamp": "2026-06-12T04:37:04.064773",
         "parse_success": true
       }
     },
@@ -1233,7 +1233,7 @@
       "generation_metadata": {
         "llm_backend": "mock",
         "model": "mock-v2",
-        "timestamp": "2026-06-09T04:09:05.187609",
+        "timestamp": "2026-06-12T04:37:04.064773",
         "parse_success": true
       }
     },
@@ -1254,7 +1254,7 @@
       "generation_metadata": {
         "llm_backend": "mock",
         "model": "mock-v2",
-        "timestamp": "2026-06-09T04:09:05.187609",
+        "timestamp": "2026-06-12T04:37:04.064773",
         "parse_success": true
       }
     },
@@ -1275,7 +1275,7 @@
       "generation_metadata": {
         "llm_backend": "mock",
         "model": "mock-v2",
-        "timestamp": "2026-06-09T04:09:05.187609",
+        "timestamp": "2026-06-12T04:37:04.064773",
         "parse_success": true
       }
     },
@@ -1296,7 +1296,7 @@
       "generation_metadata": {
         "llm_backend": "mock",
         "model": "mock-v2",
-        "timestamp": "2026-06-09T04:09:05.187609",
+        "timestamp": "2026-06-12T04:37:04.064773",
         "parse_success": true
       }
     },
@@ -1317,7 +1317,7 @@
       "generation_metadata": {
         "llm_backend": "mock",
         "model": "mock-v2",
-        "timestamp": "2026-06-09T04:09:05.187609",
+        "timestamp": "2026-06-12T04:37:04.064773",
         "parse_success": true
       }
     },
@@ -1338,7 +1338,7 @@
       "generation_metadata": {
         "llm_backend": "mock",
         "model": "mock-v2",
-        "timestamp": "2026-06-09T04:09:05.187609",
+        "timestamp": "2026-06-12T04:37:04.064773",
         "parse_success": true
       }
     },
@@ -1359,7 +1359,7 @@
       "generation_metadata": {
         "llm_backend": "mock",
         "model": "mock-v2",
-        "timestamp": "2026-06-09T04:09:05.187609",
+        "timestamp": "2026-06-12T04:37:04.064773",
         "parse_success": true
       }
     }
