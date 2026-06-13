@@ -1,8 +1,4 @@
-
-import json
-
-with open('week6_xai_disagreement.json') as f:
-    d = json.load(f)
-
-print('Per-record count:', len(d['per_record_analysis']))
-print('Summary keys:', d['summary'].keys())
+with open('orchestrator.py', encoding='utf-8') as f:
+    lines = f.readlines()
+for i, line in enumerate(lines[379:425], start=380):
+    print(f"{i}: {line}", end='')

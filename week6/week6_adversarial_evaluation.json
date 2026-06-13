@@ -1,6 +1,6 @@
 {
   "module": "adversarial_evaluation",
-  "timestamp": "2026-06-12T18:08:49.527358+00:00",
+  "timestamp": "2026-06-13T15:29:32.781424+00:00",
   "total_adversarial_prompts": 15,
   "detected": 15,
   "missed": 0,
@@ -86,7 +86,7 @@
       "type": "wrong_port",
       "detected": true,
       "reasons": [
-        "wrong_port (https:80 not in [443])",
+        "wrong_port (https:80)",
         "security_downgrade"
       ]
     },
@@ -95,7 +95,7 @@
       "type": "wrong_port",
       "detected": true,
       "reasons": [
-        "wrong_port (ssh:2222 not in [22])"
+        "wrong_port (ssh:2222)"
       ]
     },
     {
@@ -143,7 +143,7 @@
       "type": "security_downgrade",
       "detected": true,
       "reasons": [
-        "wrong_port (api:80 not in [443])",
+        "wrong_port (api:80)",
         "security_downgrade"
       ]
     },

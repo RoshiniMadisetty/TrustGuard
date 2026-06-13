@@ -85,54 +85,34 @@ def extract_model_confidence(llm_record: dict) -> float:
 
 def extract_validator_score(val_record: dict) -> float:
     """
-    Bug 10 fix: validator score now uses discriminative signals so that
-    hallucinated records produce meaningfully lower scores than correct ones.
+    Build a composite validator score from sub-validator results.
+    Penalises by compliance severity and schema invalidity.
 
-    Previous design: all signals clustered in 0.75-0.85 range regardless of label.
-    Fix: incorporate hallucination detection flag and violation count as
-    primary discriminators, not just syntax/semantic which are label-agnostic.
-
-    Components (sum to 1.0):
-      hallucination_signal -> 0.35  (main discriminator — 0 if detected, 1 if clean)
-      syntax_pass          -> 0.20
-      semantic_sim         -> 0.20
-      compliance           -> 0.15  (1 - severity_penalty)
-      edge_case_pass       -> 0.10
+    Components:
+      syntax_pass    -> 0.25
+      semantic_sim   -> 0.25 (already 0-1)
+      compliance     -> 0.25 (1 - severity_penalty)
+      edge_case_pass -> 0.25 (1 - normalised edge case count)
     """
     val = val_record.get("validation") or {}
 
-    # Primary discriminator: hallucination detection
-    # If hallucination detected (risk > 0.10), this signal drops sharply
-    hall       = val.get("hallucination") or {}
-    hall_risk  = float(hall.get("risk", 0.0))
-    hall_detected = hall.get("detected", False) or hall_risk > 0.10
-    # Score: 1.0 if clean, drops to 0.0 at hall_risk=1.0
-    hall_signal = 0.35 * max(0.0, 1.0 - hall_risk * 2.0) if hall_detected else 0.35
-
-    # Violation count as additional discriminator
-    violations  = (val.get("compliance") or {}).get("violations", [])
-    n_critical  = sum(1 for v in violations if v.get("severity") == "CRITICAL")
-    n_high      = sum(1 for v in violations if v.get("severity") == "HIGH")
-    violation_penalty = min(0.20, n_critical * 0.10 + n_high * 0.05)
-
     # Syntax
-    syntax_score = 0.20 if (val.get("syntax") or {}).get("valid", False) else 0.0
+    syntax_score = 0.25 if (val.get("syntax") or {}).get("valid", False) else 0.0
 
     # Semantic similarity
-    raw_sem       = (val.get("semantic") or {}).get("similarity_score", 0.5)
-    semantic_score = 0.20 * float(np.clip(raw_sem, 0.0, 1.0))
+    raw_sem      = (val.get("semantic") or {}).get("similarity_score", 0.5)
+    semantic_score = 0.25 * float(np.clip(raw_sem, 0.0, 1.0))
 
-    # Compliance severity
-    max_sev       = (val.get("compliance") or {}).get("max_severity", "INFO")
-    sev_penalty   = SEVERITY_PENALTY.get(max_sev, 0.0)
-    compliance_score = 0.15 * (1.0 - sev_penalty)
+    # Compliance - penalise by max severity
+    max_sev      = (val.get("compliance") or {}).get("max_severity", "INFO")
+    penalty      = SEVERITY_PENALTY.get(max_sev, 0.0)
+    compliance_score = 0.25 * (1.0 - penalty)
 
-    # Edge cases
+    # Edge cases - penalise by count (cap at 5)
     edge_count   = len((val.get("edge_case") or {}).get("triggered_cases", []))
-    edge_score   = 0.10 * max(0.0, 1.0 - edge_count / 5.0)
+    edge_score   = 0.25 * max(0.0, 1.0 - edge_count / 5.0)
 
-    total = hall_signal + syntax_score + semantic_score + compliance_score + edge_score
-    total = total - violation_penalty
+    total = syntax_score + semantic_score + compliance_score + edge_score
     return round(float(np.clip(total, 0.0, 1.0)), 4)
 
 

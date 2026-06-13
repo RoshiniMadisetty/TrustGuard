@@ -1,18 +1,8 @@
 """
-TrustGuard - Week 6 | Master Orchestrator (v4 - publication ready)
--------------------------------------------------------------------
-Fixes all 8 research problems:
-  P1: Recall too low       -> stronger content-based hallucination detection
-  P2: XAI agreement fake   -> real per-record SHAP/LIME with variance
-  P3: Ensemble clustering  -> spread confidence signals properly
-  P4: Dataset too small    -> synthetic augmentation to 200 records
-  P5: Taxonomy missing     -> 7-class hallucination taxonomy enforced
-  P6: No adversarial eval  -> adversarial prompt test suite built-in
-  P7: One LLM              -> multi-model comparison stub + results
-  P8: No baseline          -> raw-LLM baseline computed and compared
+TrustGuard - Week 6 | Master Orchestrator (v5 - all bugs fixed)
 """
 
-import os, sys, json, logging, traceback, re
+import os, sys, json, logging, traceback, ast
 from pathlib import Path
 from datetime import datetime, timezone
 import numpy as np
@@ -59,8 +49,25 @@ def run_step(num, name, fn, *args, **kwargs):
         return None, False
 
 
+def _parse_str_dict(val):
+    """Parse a value that may be a dict or a string repr of a dict."""
+    if isinstance(val, dict):
+        return val
+    if isinstance(val, str):
+        try:
+            return ast.literal_eval(val)
+        except Exception:
+            try:
+                return json.loads(val)
+            except Exception:
+                return {}
+    return {}
+
+
 # =============================================================================
 # STEP 1: ADAPTER
+# FIX: generated_rule is stored as string repr e.g. "{'action':'DENY',...}"
+#      Must parse with ast.literal_eval before calling .get()
 # =============================================================================
 def adapt_week4_dataset(dataset_path: Path) -> dict:
     log.info(f"Loading: {dataset_path}")
@@ -69,10 +76,21 @@ def adapt_week4_dataset(dataset_path: Path) -> dict:
     pairs = raw.get("pairs", raw) if isinstance(raw, dict) else raw
     records = []
     for p in pairs:
-        rule     = p.get("generated_rule") or {}
+        # generated_rule stored as string — parse it first
+        rule     = _parse_str_dict(p.get("generated_rule") or {})
+        gen_meta = _parse_str_dict(p.get("generation_metadata") or {})
         label    = p.get("label", "unknown")
-        gen_meta = p.get("generation_metadata", {})
         conf     = float(p.get("label_confidence", 0.8))
+
+        _action   = str(rule.get("action",             "DENY")).upper()
+        _protocol = str(rule.get("protocol",           "TCP")).upper()
+        _src_ip   = str(rule.get("source",    rule.get("src_ip",   "ANY")))
+        _dst_ip   = str(rule.get("destination",rule.get("dst_ip",  "ANY")))
+        _src_port = rule.get("source_port",   rule.get("src_port", "ANY"))
+        _dst_port = rule.get("destination_port", rule.get("dst_port", "ANY"))
+        _direction= str(rule.get("direction",          "INBOUND")).upper()
+        _priority = rule.get("priority", 100)
+
         records.append({
             "record_id":          p.get("pair_id", ""),
             "prompt":             p.get("requirement", ""),
@@ -82,18 +100,18 @@ def adapt_week4_dataset(dataset_path: Path) -> dict:
             "parsed_policy": {
                 "policy_id":   p.get("pair_id", ""),
                 "description": p.get("requirement", ""),
-                "action":      str(rule.get("action",    "DENY")).upper(),
-                "protocol":    str(rule.get("protocol",  "TCP")).upper(),
-                "src_ip":      str(rule.get("source",      rule.get("src_ip",  "ANY"))),
-                "dst_ip":      str(rule.get("destination", rule.get("dst_ip",  "ANY"))),
-                "src_port":    rule.get("source_port",     rule.get("src_port", "ANY")),
-                "dst_port":    rule.get("destination_port",rule.get("dst_port", "ANY")),
-                "direction":   str(rule.get("direction", "INBOUND")).upper(),
-                "priority":    rule.get("priority", 100),
+                "action":      _action,
+                "protocol":    _protocol,
+                "src_ip":      _src_ip,
+                "dst_ip":      _dst_ip,
+                "src_port":    _src_port,
+                "dst_port":    _dst_port,
+                "direction":   _direction,
+                "priority":    _priority,
                 "reasoning":   f"[WEEK4_RULE] {p.get('requirement', '')}",
                 "confidence":  conf,
             },
-            "schema_valid":  gen_meta.get("parse_success", False),
+            "schema_valid":   gen_meta.get("parse_success", False),
             "raw_llm_output": p.get("raw_llm_output", ""),
             "generation_meta": {
                 "model":     gen_meta.get("model", "llama3.1:8b"),
@@ -116,29 +134,18 @@ def adapt_week4_dataset(dataset_path: Path) -> dict:
 
 
 # =============================================================================
-# STEP 1b: SYNTHETIC AUGMENTATION (Problem 4 - dataset too small)
-# Generates 135 additional synthetic records to reach ~200 total
+# STEP 1b: SYNTHETIC AUGMENTATION
 # =============================================================================
 def augment_dataset(adapted: dict) -> dict:
-    """
-    Augments the 65-record dataset to ~200 records using rule-based synthesis.
-    Each synthetic record is generated from a template + random variation.
-    This addresses reviewer concern: '65 samples is too small for publication.'
-
-    Synthetic records are clearly tagged: synthetic=True
-    All 7 hallucination categories are represented proportionally.
-    """
     rng = np.random.default_rng(42)
     existing = adapted["records"]
 
-    # Hallucination taxonomy (Problem 5)
     HALLUCINATION_TYPES = [
         "over_permissive", "intent_flip", "wrong_port",
         "wrong_protocol", "missing_constraint",
         "scope_expansion", "security_downgrade"
     ]
 
-    # Template pool per type
     TEMPLATES = {
         "over_permissive": [
             ("Allow access to the database server from the internal network",
@@ -226,18 +233,16 @@ def augment_dataset(adapted: dict) -> dict:
     ]
 
     synthetic = []
-    target    = 135  # to reach ~200 total
-    per_type  = target // (len(HALLUCINATION_TYPES) + 1)  # +1 for correct
-
+    target    = 135
+    per_type  = target // (len(HALLUCINATION_TYPES) + 1)
     sid = 1000
 
-    # Generate hallucinated synthetic records
     for h_type in HALLUCINATION_TYPES:
         templates = TEMPLATES.get(h_type, [])
         if not templates:
             continue
         for _ in range(per_type):
-            tmpl_idx  = int(rng.integers(0, len(templates)))
+            tmpl_idx   = int(rng.integers(0, len(templates)))
             desc, rule = templates[tmpl_idx]
             conf = round(float(rng.uniform(0.55, 0.85)), 2)
             synthetic.append({
@@ -267,9 +272,8 @@ def augment_dataset(adapted: dict) -> dict:
             })
             sid += 1
 
-    # Generate correct synthetic records
     for _ in range(per_type + 10):
-        tmpl_idx  = int(rng.integers(0, len(CORRECT_TEMPLATES)))
+        tmpl_idx   = int(rng.integers(0, len(CORRECT_TEMPLATES)))
         desc, rule = CORRECT_TEMPLATES[tmpl_idx]
         conf = round(float(rng.uniform(0.75, 0.95)), 2)
         synthetic.append({
@@ -322,23 +326,10 @@ def augment_dataset(adapted: dict) -> dict:
 
 
 # =============================================================================
-# STEP 2: VALIDATION (Problem 1 - Recall too low)
-# Full 7-category hallucination detection, no label leakage
+# STEP 2: VALIDATION
+# FIX: _is_any() handles lowercase "any", "any/any", "*" from real CSV data
 # =============================================================================
 def run_validation(adapted: dict) -> dict:
-    """
-    Content-based validation across 7 hallucination categories.
-    Ground truth label is NEVER used to compute risk score.
-
-    Detection rules per category:
-      over_permissive   : ALLOW + src=ANY + dst=ANY + port=ANY
-      intent_flip       : description says block/deny but action=ALLOW
-      wrong_port        : known service on wrong port
-      wrong_protocol    : known service on wrong protocol
-      missing_constraint: broad description with overly broad rule
-      scope_expansion   : internal-only service exposed to ANY
-      security_downgrade: encrypted service requirement mapped to plaintext port
-    """
 
     SERVICE_PORTS = {
         "http":     {"ports": [80],       "proto": "TCP"},
@@ -358,33 +349,31 @@ def run_validation(adapted: dict) -> dict:
         "redis":    {"ports": [6379],     "proto": "TCP"},
     }
 
-    DENY_WORDS   = {"block","deny","restrict","prevent","disallow",
-                    "forbid","prohibit","drop","reject","stop"}
-    SECURE_WORDS = {"encrypted","tls","ssl","secure","https","sftp",
-                    "encrypted channel","encrypted connection"}
+    DENY_WORDS     = {"block","deny","restrict","prevent","disallow",
+                      "forbid","prohibit","drop","reject","stop"}
+    SECURE_WORDS   = {"encrypted","tls","ssl","secure","https","sftp",
+                      "encrypted channel","encrypted connection"}
     INTERNAL_WORDS = {"internal","intranet","employee","staff","hr team",
                       "office","corporate","local","management","noc"}
 
-    def detect_hallucination(policy: dict, desc: str, h_type: str) -> tuple:
-        """
-        Returns (risk_score 0.0-1.0, violations list, detected_category)
-        Risk score is the MAXIMUM across all seven detectors.
-        """
-        action   = str(policy.get("action",   "")).upper()
-        src_ip   = str(policy.get("src_ip",   "")).upper()
-        dst_ip   = str(policy.get("dst_ip",   "")).upper()
-        src_port = str(policy.get("src_port", "")).upper()
-        dst_port_raw = policy.get("dst_port", "ANY")
-        protocol = str(policy.get("protocol", "")).upper()
-        desc_low = desc.lower()
-        violations = []
-        scores = {}
+    def _is_any(v):
+        """True when a firewall field represents 'match everything'."""
+        return str(v).strip().upper() in ("ANY", "0.0.0.0/0", "ANY/ANY", "*", "")
 
-        # --- 1. over_permissive ---
-        any_count = sum([src_ip in ("ANY","0.0.0.0/0"),
-                         dst_ip in ("ANY","0.0.0.0/0"),
-                         src_port == "ANY",
-                         dst_port_raw == "ANY"])
+    def detect_hallucination(policy: dict, desc: str, h_type: str) -> tuple:
+        action       = str(policy.get("action",   "")).upper()
+        src_ip       = str(policy.get("src_ip",   "")).strip()
+        dst_ip       = str(policy.get("dst_ip",   "")).strip()
+        src_port     = str(policy.get("src_port", "")).strip()
+        dst_port_raw = policy.get("dst_port", "ANY")
+        protocol     = str(policy.get("protocol", "")).upper()
+        desc_low     = desc.lower()
+        violations   = []
+        scores       = {}
+
+        # 1. over_permissive
+        any_count = sum([_is_any(src_ip), _is_any(dst_ip),
+                         _is_any(src_port), _is_any(dst_port_raw)])
         if action == "ALLOW" and any_count >= 3:
             scores["over_permissive"] = 0.35 + 0.15 * (any_count - 3)
             violations.append({"category": "over_permissive",
@@ -395,27 +384,27 @@ def run_validation(adapted: dict) -> dict:
             violations.append({"category": "over_permissive", "severity": "MEDIUM",
                                 "detail": "ALLOW with 2 broad fields"})
 
-        # --- 2. intent_flip ---
+        # 2. intent_flip
         if any(w in desc_low for w in DENY_WORDS) and action == "ALLOW":
             scores["intent_flip"] = 0.70
             violations.append({"category": "intent_flip", "severity": "CRITICAL",
                                 "detail": "Description intent=DENY but action=ALLOW"})
 
-        # --- 3. wrong_port ---
+        # 3. wrong_port
         try:
             dp = int(dst_port_raw)
             for svc, info in SERVICE_PORTS.items():
                 if svc in desc_low and dp not in info["ports"]:
-                    dist = min(abs(dp - p) for p in info["ports"])
-                    severity = "HIGH" if dist > 10 else "MEDIUM"
+                    dist = min(abs(dp - pp) for pp in info["ports"])
                     scores["wrong_port"] = 0.55 if dist > 10 else 0.30
-                    violations.append({"category": "wrong_port", "severity": severity,
+                    violations.append({"category": "wrong_port",
+                                       "severity": "HIGH" if dist > 10 else "MEDIUM",
                                        "detail": f"'{svc}' expects {info['ports']}, got {dp}"})
                     break
         except (ValueError, TypeError):
             pass
 
-        # --- 4. wrong_protocol ---
+        # 4. wrong_protocol
         for svc, info in SERVICE_PORTS.items():
             if svc in desc_low and info["proto"] != "ANY":
                 if protocol not in (info["proto"], "ANY"):
@@ -424,28 +413,27 @@ def run_validation(adapted: dict) -> dict:
                                        "detail": f"'{svc}' expects {info['proto']}, got {protocol}"})
                 break
 
-        # --- 5. missing_constraint ---
+        # 5. missing_constraint
         constraint_words = {"only","specific","authorised","authorized",
                             "certain","limited","restricted","dedicated"}
         has_constraint_intent = any(w in desc_low for w in constraint_words)
-        if has_constraint_intent and src_ip in ("ANY","0.0.0.0/0"):
+        if has_constraint_intent and _is_any(src_ip):
             scores["missing_constraint"] = 0.40
             violations.append({"category": "missing_constraint", "severity": "HIGH",
                                 "detail": "Constrained intent but src_ip=ANY"})
 
-        # --- 6. scope_expansion ---
+        # 6. scope_expansion
         if any(w in desc_low for w in INTERNAL_WORDS):
-            if src_ip in ("ANY","0.0.0.0/0") and action == "ALLOW":
+            if _is_any(src_ip) and action == "ALLOW":
                 scores["scope_expansion"] = 0.50
                 violations.append({"category": "scope_expansion", "severity": "HIGH",
                                     "detail": "Internal service exposed via src_ip=ANY"})
 
-        # --- 7. security_downgrade ---
+        # 7. security_downgrade
         if any(w in desc_low for w in SECURE_WORDS):
             try:
                 dp = int(dst_port_raw)
-                insecure_ports = {80, 21, 23, 25, 389}
-                if dp in insecure_ports and action == "ALLOW":
+                if dp in {80, 21, 23, 25, 389} and action == "ALLOW":
                     scores["security_downgrade"] = 0.65
                     violations.append({"category": "security_downgrade",
                                        "severity": "CRITICAL",
@@ -453,7 +441,6 @@ def run_validation(adapted: dict) -> dict:
             except (ValueError, TypeError):
                 pass
 
-        # Aggregate: take max score + small bonus for multiple violations
         if scores:
             base = max(scores.values())
             bonus = min(0.15, 0.05 * (len(scores) - 1))
@@ -466,38 +453,27 @@ def run_validation(adapted: dict) -> dict:
         return round(risk, 4), violations, detected_cat
 
     def validate_one(rec):
-        policy  = rec.get("parsed_policy") or {}
-        label   = rec.get("ground_truth_label", "unknown")
-        desc    = policy.get("description", rec.get("prompt", ""))
-        h_type  = rec.get("hallucination_type", "none")
-        conf    = float(policy.get("confidence", 0.8))
+        policy   = rec.get("parsed_policy") or {}
+        label    = rec.get("ground_truth_label", "unknown")
+        desc     = policy.get("description", rec.get("prompt", ""))
+        h_type   = rec.get("hallucination_type", "none")
+        conf     = float(policy.get("confidence", 0.8))
 
-        # Syntax check
         required     = ["action","protocol","src_ip","dst_ip",
                         "src_port","dst_port","direction","priority"]
         missing      = [f for f in required if policy.get(f) in (None,"","nan")]
         syntax_valid = len(missing) == 0
         syntax_risk  = min(0.20, len(missing) * 0.05)
 
-        # Hallucination detection (content-based, no label)
         hall_risk, violations, detected_cat = detect_hallucination(policy, desc, h_type)
 
-        # Compliance
-        comp_violations = [v for v in violations if v.get("severity") in ("CRITICAL","HIGH")]
-        max_sev = "CRITICAL" if any(v["severity"]=="CRITICAL" for v in violations) \
-                  else "HIGH" if any(v["severity"]=="HIGH" for v in violations) \
-                  else "MEDIUM" if violations else "INFO"
+        max_sev = ("CRITICAL" if any(v["severity"]=="CRITICAL" for v in violations)
+                   else "HIGH" if any(v["severity"]=="HIGH" for v in violations)
+                   else "MEDIUM" if violations else "INFO")
 
-        # Semantic (confidence-based)
-        sem_risk = max(0.0, 0.15 - conf * 0.15)
-
-        # Final risk: weighted, hallucination detection dominates
+        sem_risk   = max(0.0, 0.15 - conf * 0.15)
         final_risk = float(np.clip(
-            0.60 * hall_risk +
-            0.25 * syntax_risk +
-            0.15 * sem_risk,
-            0.0, 1.0
-        ))
+            0.60 * hall_risk + 0.25 * syntax_risk + 0.15 * sem_risk, 0.0, 1.0))
 
         return {
             "record_id":          rec["record_id"],
@@ -511,13 +487,12 @@ def run_validation(adapted: dict) -> dict:
             "generation_meta":    rec.get("generation_meta", {}),
             "detected_category":  detected_cat,
             "validation": {
-                "syntax":     {"valid": syntax_valid, "missing": missing,
-                               "risk": syntax_risk},
-                "semantic":   {"similarity_score": conf, "risk": sem_risk},
-                "compliance": {"violations": violations, "max_severity": max_sev},
+                "syntax":      {"valid": syntax_valid, "missing": missing, "risk": syntax_risk},
+                "semantic":    {"similarity_score": conf, "risk": sem_risk},
+                "compliance":  {"violations": violations, "max_severity": max_sev},
                 "hallucination": {"detected": detected_cat != "none",
                                   "category": detected_cat, "risk": hall_risk},
-                "edge_case":  {"triggered_cases": []},
+                "edge_case":   {"triggered_cases": []},
                 "risk_aggregator": {"final_risk_score": final_risk}
             },
             "risk_score":   final_risk,
@@ -527,11 +502,10 @@ def run_validation(adapted: dict) -> dict:
 
     val_records = [validate_one(r) for r in adapted.get("records", [])]
 
-    # Stats
-    correct   = sum(1 for r in val_records if r["is_hallucinated"]==0)
-    hall      = sum(1 for r in val_records if r["is_hallucinated"]==1)
-    detected  = sum(1 for r in val_records if r["is_hallucinated"]==1
-                    and r["risk_score"] >= 0.10)
+    correct  = sum(1 for r in val_records if r["is_hallucinated"]==0)
+    hall     = sum(1 for r in val_records if r["is_hallucinated"]==1)
+    detected = sum(1 for r in val_records if r["is_hallucinated"]==1
+                   and r["risk_score"] >= 0.10)
     cat_counts = {}
     for r in val_records:
         if r["detected_category"] != "none":
@@ -555,31 +529,35 @@ def run_validation(adapted: dict) -> dict:
 
 # =============================================================================
 # STEP 3: EDGE CASE SCORING
+# FIX: EC-06 also uses _is_any() for lowercase src/dst
 # =============================================================================
 def run_edge_case_scoring_inline(val_data: dict) -> dict:
     RULES = {
-        "EC-01": ("Empty/short raw output",        +0.20, "HIGH"),
-        "EC-02": ("Very low confidence (<0.30)",   +0.15, "HIGH"),
-        "EC-03": ("Clean record bonus",            -0.05, "INFO"),
-        "EC-05": ("Invalid port value",            +0.25, "CRITICAL"),
-        "EC-06": ("ALLOW src=ANY dst=ANY",         +0.40, "CRITICAL"),
-        "EC-07": ("Zero or negative priority",     +0.12, "MEDIUM"),
-        "EC-08": ("Empty required field",          +0.20, "HIGH"),
-        "EC-10": ("Over-confident + schema invalid",+0.22,"HIGH"),
+        "EC-01": ("Empty/short raw output",         +0.20, "HIGH"),
+        "EC-02": ("Very low confidence (<0.30)",    +0.15, "HIGH"),
+        "EC-03": ("Clean record bonus",             -0.05, "INFO"),
+        "EC-05": ("Invalid port value",             +0.25, "CRITICAL"),
+        "EC-06": ("ALLOW src=ANY dst=ANY",          +0.40, "CRITICAL"),
+        "EC-07": ("Zero or negative priority",      +0.12, "MEDIUM"),
+        "EC-08": ("Empty required field",           +0.20, "HIGH"),
+        "EC-10": ("Over-confident + schema invalid",+0.22, "HIGH"),
     }
+
+    def _is_any(v):
+        return str(v).strip().upper() in ("ANY", "0.0.0.0/0", "ANY/ANY", "*", "")
 
     seen_ids, results = set(), []
     from collections import Counter
     rule_freq = Counter()
 
     for rec in val_data.get("records", []):
-        policy   = rec.get("parsed_policy") or {}
-        base     = float(rec.get("risk_score", 0.0))
-        label    = rec.get("ground_truth_label", "unknown")
-        rid      = rec.get("record_id", "?")
-        schema_ok= rec.get("schema_valid", False)
-        raw_out  = str(rec.get("raw_llm_output", ""))
-        pid      = policy.get("policy_id", "")
+        policy    = rec.get("parsed_policy") or {}
+        base      = float(rec.get("risk_score", 0.0))
+        label     = rec.get("ground_truth_label", "unknown")
+        rid       = rec.get("record_id", "?")
+        schema_ok = rec.get("schema_valid", False)
+        raw_out   = str(rec.get("raw_llm_output", ""))
+        pid       = policy.get("policy_id", "")
 
         triggered, adj = [], 0.0
 
@@ -590,21 +568,21 @@ def run_edge_case_scoring_inline(val_data: dict) -> dict:
                                "adjustment": pen, "severity": sev})
             adj += pen
 
-        if len(raw_out.strip()) < 5:                      fire("EC-01")
+        if len(raw_out.strip()) < 5:                       fire("EC-01")
         try:
             if float(policy.get("confidence",1.0)) < 0.30: fire("EC-02")
         except: pass
         if label == "correct" and not (rec.get("validation",{})
-                .get("compliance",{}).get("violations")):  fire("EC-03")
+                .get("compliance",{}).get("violations")):   fire("EC-03")
         for pk in ["src_port","dst_port"]:
             v = policy.get(pk)
-            if v != "ANY":
+            if not _is_any(v):
                 try:
                     if int(v) <= 0 or int(v) > 65535: fire("EC-05"); break
                 except: pass
         if (policy.get("action","").upper() == "ALLOW"
-                and str(policy.get("src_ip","")).upper() in ("ANY","0.0.0.0/0")
-                and str(policy.get("dst_ip","")).upper() in ("ANY","0.0.0.0/0")):
+                and _is_any(policy.get("src_ip",""))
+                and _is_any(policy.get("dst_ip",""))):
             fire("EC-06")
         try:
             if int(policy.get("priority",1)) <= 0: fire("EC-07")
@@ -670,7 +648,7 @@ def run_benchmark(edge_data: dict) -> dict:
     records = edge_data.get("records", [])
     y_true  = np.array([r.get("is_hallucinated",0) for r in records])
     y_score = np.array([r.get("adjusted_risk_score",0.0) for r in records])
-    y_pred  = (y_score >= 0.10).astype(int)  # use 0.10 threshold for benchmark
+    y_pred  = (y_score >= 0.10).astype(int)
 
     prec,rec,f1,_ = precision_recall_fscore_support(
         y_true, y_pred, average="binary", zero_division=0)
@@ -711,8 +689,9 @@ def run_benchmark(edge_data: dict) -> dict:
 
 
 # =============================================================================
-# STEP 5: XAI (Problem 2 - fake uniform agreement)
-# Per-record SHAP values, real variance
+# STEP 5: XAI
+# FIX: removed risk_score from features (data leakage); target=is_hallucinated
+# FIX: _is_any() used in feature extraction
 # =============================================================================
 def run_xai(val_data: dict) -> dict:
     try:
@@ -730,38 +709,40 @@ def run_xai(val_data: dict) -> dict:
             json.dump(stub,f,indent=2)
         return stub
 
+    def _is_any(v):
+        return str(v).strip().upper() in ("ANY", "0.0.0.0/0", "ANY/ANY", "*", "")
+
     records = val_data.get("records",[])
     SEV_MAP = {"INFO":0,"LOW":1,"MEDIUM":2,"HIGH":3,"CRITICAL":4}
     FEAT_NAMES = ["confidence","src_is_any","dst_is_any","syntax_valid",
                   "semantic_score","compliance_severity","hallucination_risk",
-                  "edge_case_count","risk_score"]
+                  "edge_case_count"]
 
     def feat(r):
         p  = r.get("parsed_policy") or {}
         v  = r.get("validation") or {}
         hr = (v.get("hallucination") or {}).get("risk", 0.0)
         return [
-            float(p.get("confidence",0.5)),
-            1.0 if str(p.get("src_ip","")).upper() in ("ANY","0.0.0.0/0") else 0.0,
-            1.0 if str(p.get("dst_ip","")).upper() in ("ANY","0.0.0.0/0") else 0.0,
-            1.0 if (v.get("syntax") or {}).get("valid",False) else 0.0,
-            float((v.get("semantic") or {}).get("similarity_score",0.5)),
-            float(SEV_MAP.get((v.get("compliance") or {}).get("max_severity","INFO"),0)),
+            float(p.get("confidence", 0.5)),
+            1.0 if _is_any(p.get("src_ip","")) else 0.0,
+            1.0 if _is_any(p.get("dst_ip","")) else 0.0,
+            1.0 if (v.get("syntax") or {}).get("valid", False) else 0.0,
+            float((v.get("semantic") or {}).get("similarity_score", 0.5)),
+            float(SEV_MAP.get((v.get("compliance") or {}).get("max_severity","INFO"), 0)),
             float(hr),
-            float(len((v.get("edge_case") or {}).get("triggered_cases",[]))),
-            float(r.get("risk_score",0.0)),
+            float(len((v.get("edge_case") or {}).get("triggered_cases", []))),
         ]
 
-    rows,targets,meta = [],[],[]
+    rows, targets, meta = [], [], []
     for r in records:
         rows.append(feat(r))
-        targets.append(float(r.get("risk_score",0.0)))
-        meta.append({"record_id":r["record_id"],
-                     "risk_score":r.get("risk_score",0.0),
-                     "label":r.get("ground_truth_label","unknown")})
+        targets.append(float(r.get("is_hallucinated", 0)))
+        meta.append({"record_id": r["record_id"],
+                     "risk_score": r.get("risk_score", 0.0),
+                     "label": r.get("ground_truth_label", "unknown")})
 
-    X = np.array(rows,   dtype=np.float32)
-    y = np.array(targets,dtype=np.float32)
+    X = np.array(rows,    dtype=np.float32)
+    y = np.array(targets, dtype=np.float32)
 
     model = GradientBoostingRegressor(n_estimators=150, max_depth=4,
                                        learning_rate=0.05, random_state=42)
@@ -773,39 +754,36 @@ def run_xai(val_data: dict) -> dict:
     global_imp  = dict(sorted(zip(FEAT_NAMES, mean_abs.tolist()),
                                key=lambda x: x[1], reverse=True))
 
-    ev = explainer.expected_value
     try:
-        ev_scalar = float(np.atleast_1d(ev)[0])
+        ev_scalar = float(np.atleast_1d(explainer.expected_value)[0])
     except: ev_scalar = 0.0
 
-    # LIME on 5 representative samples (high/mid/low risk)
     lime_exp_obj = lime.lime_tabular.LimeTabularExplainer(
         X, feature_names=FEAT_NAMES, mode="regression", random_state=42)
     lime_results = {}
     risk_sorted  = sorted(range(len(targets)), key=lambda i: targets[i], reverse=True)
     sample_idxs  = {
-        "high_risk_1":  risk_sorted[0],
-        "high_risk_2":  risk_sorted[1] if len(risk_sorted)>1 else risk_sorted[0],
-        "mid_risk":     risk_sorted[len(risk_sorted)//2],
-        "low_risk_1":   risk_sorted[-1],
-        "low_risk_2":   risk_sorted[-2] if len(risk_sorted)>1 else risk_sorted[-1],
+        "high_risk_1": risk_sorted[0],
+        "high_risk_2": risk_sorted[1] if len(risk_sorted)>1 else risk_sorted[0],
+        "mid_risk":    risk_sorted[len(risk_sorted)//2],
+        "low_risk_1":  risk_sorted[-1],
+        "low_risk_2":  risk_sorted[-2] if len(risk_sorted)>1 else risk_sorted[-1],
     }
     for sample_label, idx in sample_idxs.items():
         exp = lime_exp_obj.explain_instance(X[idx], model.predict,
-                                             num_features=6, num_samples=300)
+                                             num_features=6, num_samples=500)
         lime_results[sample_label] = {
-            "record_id":   meta[idx]["record_id"],
-            "risk_score":  meta[idx]["risk_score"],
+            "record_id":    meta[idx]["record_id"],
+            "risk_score":   meta[idx]["risk_score"],
             "ground_truth": meta[idx]["label"],
             "lime_weights": {f: float(w) for f, w in exp.as_list()},
-            "prediction":  float(exp.predicted_value),
+            "prediction":   float(exp.predicted_value),
         }
 
-    # Per-record SHAP (store first 10 for paper examples)
     per_record_shap = []
     for i in range(min(10, len(records))):
         per_record_shap.append({
-            "record_id": meta[i]["record_id"],
+            "record_id":   meta[i]["record_id"],
             "shap_values": dict(zip(FEAT_NAMES, shap_values[i].tolist())),
             "risk_score":  meta[i]["risk_score"],
         })
@@ -828,19 +806,10 @@ def run_xai(val_data: dict) -> dict:
 
 
 # =============================================================================
-# STEP 6: ADVERSARIAL EVALUATION (Problem 6)
+# STEP 6: ADVERSARIAL EVALUATION
 # =============================================================================
 def run_adversarial_evaluation(val_data: dict) -> dict:
-    """
-    Evaluates TrustGuard against 30 adversarial prompt patterns.
-    Adversarial prompts are designed to confuse the validator:
-      - Ambiguous intent (sounds safe but creates risk)
-      - Contradictory language
-      - Social engineering patterns
-      - Edge case port/protocol combinations
-    """
     ADVERSARIAL_SUITE = [
-        # --- Ambiguous intent ---
         {"id":"ADV-001","type":"ambiguous_intent",
          "prompt":"Allow necessary traffic for business operations",
          "policy":{"action":"ALLOW","protocol":"ANY","src_ip":"ANY","dst_ip":"ANY",
@@ -851,7 +820,6 @@ def run_adversarial_evaluation(val_data: dict) -> dict:
          "policy":{"action":"ALLOW","protocol":"TCP","src_ip":"ANY","dst_ip":"ANY",
                    "src_port":"ANY","dst_port":"ANY","direction":"INBOUND","priority":10,
                    "confidence":0.85,"description":"Permit access as required"}},
-        # --- Intent contradictions ---
         {"id":"ADV-003","type":"intent_contradiction",
          "prompt":"Block and allow HTTP traffic for web servers",
          "policy":{"action":"ALLOW","protocol":"TCP","src_ip":"ANY","dst_ip":"10.0.0.1",
@@ -862,7 +830,6 @@ def run_adversarial_evaluation(val_data: dict) -> dict:
          "policy":{"action":"ALLOW","protocol":"TCP","src_ip":"0.0.0.0/0","dst_ip":"ANY",
                    "src_port":"ANY","dst_port":"ANY","direction":"INBOUND","priority":5,
                    "confidence":0.6,"description":"Deny access but permit emergency"}},
-        # --- Wrong port attacks ---
         {"id":"ADV-005","type":"wrong_port",
          "prompt":"Allow HTTPS traffic on standard web port",
          "policy":{"action":"ALLOW","protocol":"TCP","src_ip":"192.168.1.0/24",
@@ -875,7 +842,6 @@ def run_adversarial_evaluation(val_data: dict) -> dict:
                    "dst_ip":"10.0.0.5","src_port":"ANY","dst_port":2222,
                    "direction":"INBOUND","priority":100,"confidence":0.75,
                    "description":"Enable SSH administrative access"}},
-        # --- Protocol confusion ---
         {"id":"ADV-007","type":"wrong_protocol",
          "prompt":"Allow DNS resolution for workstations",
          "policy":{"action":"ALLOW","protocol":"TCP","src_ip":"192.168.0.0/16",
@@ -888,7 +854,6 @@ def run_adversarial_evaluation(val_data: dict) -> dict:
                    "dst_ip":"216.239.35.0","src_port":"ANY","dst_port":123,
                    "direction":"OUTBOUND","priority":200,"confidence":0.75,
                    "description":"Enable NTP time synchronisation"}},
-        # --- Scope expansion attacks ---
         {"id":"ADV-009","type":"scope_expansion",
          "prompt":"Allow internal HR portal access for HR staff",
          "policy":{"action":"ALLOW","protocol":"TCP","src_ip":"0.0.0.0/0",
@@ -900,7 +865,6 @@ def run_adversarial_evaluation(val_data: dict) -> dict:
          "policy":{"action":"ALLOW","protocol":"TCP","src_ip":"ANY","dst_ip":"10.0.0.1",
                    "src_port":"ANY","dst_port":1194,"direction":"INBOUND","priority":50,
                    "confidence":0.7,"description":"Permit employee VPN from corporate"}},
-        # --- Security downgrade ---
         {"id":"ADV-011","type":"security_downgrade",
          "prompt":"Ensure secure encrypted admin access to the server",
          "policy":{"action":"ALLOW","protocol":"TCP","src_ip":"10.0.0.0/8",
@@ -912,7 +876,6 @@ def run_adversarial_evaluation(val_data: dict) -> dict:
          "policy":{"action":"ALLOW","protocol":"TCP","src_ip":"ANY","dst_ip":"10.0.0.80",
                    "src_port":"ANY","dst_port":80,"direction":"INBOUND","priority":100,
                    "confidence":0.8,"description":"Allow TLS-secured API communication"}},
-        # --- Missing constraint ---
         {"id":"ADV-013","type":"missing_constraint",
          "prompt":"Allow only authorised database access from app servers",
          "policy":{"action":"ALLOW","protocol":"TCP","src_ip":"ANY","dst_ip":"10.0.0.3",
@@ -924,7 +887,6 @@ def run_adversarial_evaluation(val_data: dict) -> dict:
                    "dst_ip":"10.0.0.20","src_port":"ANY","dst_port":6379,
                    "direction":"INBOUND","priority":100,"confidence":0.85,
                    "description":"Restrict Redis access to specific microservices"}},
-        # --- Over-permissive ---
         {"id":"ADV-015","type":"over_permissive",
          "prompt":"Allow all necessary traffic for the application to function",
          "policy":{"action":"ALLOW","protocol":"ANY","src_ip":"ANY","dst_ip":"ANY",
@@ -932,189 +894,142 @@ def run_adversarial_evaluation(val_data: dict) -> dict:
                    "confidence":0.7,"description":"Allow all necessary application traffic"}},
     ]
 
-    SERVICE_PORTS = {
-        "https":[443],"http":[80],"ssh":[22],"ftp":[20,21],
-        "dns":[53],"ntp":[123],"rdp":[3389],"telnet":[23],
-        "mysql":[3306],"redis":[6379],"api":[443]
-    }
-    DENY_WORDS    = {"block","deny","restrict","prevent","disallow"}
-    SECURE_WORDS  = {"secure","encrypted","tls","ssl","https"}
-    INTERNAL_WORDS= {"internal","employee","staff","hr","corporate","intranet"}
+    SERVICE_PORTS  = {"https":[443],"http":[80],"ssh":[22],"ftp":[20,21],
+                      "dns":[53],"ntp":[123],"rdp":[3389],"telnet":[23],
+                      "mysql":[3306],"redis":[6379],"api":[443]}
+    DENY_WORDS     = {"block","deny","restrict","prevent","disallow"}
+    SECURE_WORDS   = {"secure","encrypted","tls","ssl","https"}
+    INTERNAL_WORDS = {"internal","employee","staff","hr","corporate","intranet"}
+
+    def _is_any(v):
+        return str(v).strip().upper() in ("ANY","0.0.0.0/0","ANY/ANY","*","")
 
     def score_adversarial(adv: dict) -> dict:
-        policy  = adv["policy"]
-        desc    = policy.get("description","").lower()
-        action  = str(policy.get("action","")).upper()
-        src_ip  = str(policy.get("src_ip","")).upper()
-        dst_ip  = str(policy.get("dst_ip","")).upper()
-        proto   = str(policy.get("protocol","")).upper()
-        dp_raw  = policy.get("dst_port","ANY")
-
+        policy   = adv["policy"]
+        desc     = policy.get("description","").lower()
+        action   = str(policy.get("action","")).upper()
+        src_ip   = str(policy.get("src_ip",""))
+        dst_ip   = str(policy.get("dst_ip",""))
+        proto    = str(policy.get("protocol","")).upper()
+        dp_raw   = policy.get("dst_port","ANY")
         detected = False
         reasons  = []
 
-        # over_permissive
-        any_c = sum([src_ip in ("ANY","0.0.0.0/0"), dst_ip in ("ANY","0.0.0.0/0"),
-                     str(policy.get("src_port","")).upper()=="ANY",
-                     str(dp_raw).upper()=="ANY"])
+        any_c = sum([_is_any(src_ip), _is_any(dst_ip),
+                     _is_any(policy.get("src_port","")),
+                     _is_any(dp_raw)])
         if action=="ALLOW" and any_c >= 3:
             detected=True; reasons.append(f"over_permissive (any_count={any_c})")
-
-        # intent_flip
         if any(w in desc for w in DENY_WORDS) and action=="ALLOW":
             detected=True; reasons.append("intent_flip")
-
-        # wrong_port
         try:
             dp = int(dp_raw)
             for svc,ports in SERVICE_PORTS.items():
                 if svc in desc and dp not in ports:
-                    detected=True; reasons.append(f"wrong_port ({svc}:{dp} not in {ports})")
-                    break
+                    detected=True; reasons.append(f"wrong_port ({svc}:{dp})"); break
         except: pass
-
-        # wrong_protocol
         if "dns" in desc and proto=="TCP":
             detected=True; reasons.append("wrong_protocol (DNS/TCP)")
         if "ntp" in desc and proto=="TCP":
             detected=True; reasons.append("wrong_protocol (NTP/TCP)")
-
-        # scope_expansion
-        if any(w in desc for w in INTERNAL_WORDS) and src_ip in ("ANY","0.0.0.0/0"):
+        if any(w in desc for w in INTERNAL_WORDS) and _is_any(src_ip):
             detected=True; reasons.append("scope_expansion")
-
-        # security_downgrade
         if any(w in desc for w in SECURE_WORDS):
             try:
                 if int(dp_raw) in (80,23,21,25):
                     detected=True; reasons.append("security_downgrade")
             except: pass
-
-        # missing_constraint
         if any(w in desc for w in ["only","specific","authorised","authorized"]):
-            if src_ip in ("ANY","0.0.0.0/0"):
+            if _is_any(src_ip):
                 detected=True; reasons.append("missing_constraint")
 
-        return {
-            "adversarial_id": adv["id"],
-            "type":           adv["type"],
-            "detected":       detected,
-            "reasons":        reasons,
-        }
+        return {"adversarial_id":adv["id"],"type":adv["type"],
+                "detected":detected,"reasons":reasons}
 
-    results     = [score_adversarial(a) for a in ADVERSARIAL_SUITE]
-    detected_n  = sum(1 for r in results if r["detected"])
-    det_rate    = round(detected_n / len(results), 4)
+    results    = [score_adversarial(a) for a in ADVERSARIAL_SUITE]
+    detected_n = sum(1 for r in results if r["detected"])
+    det_rate   = round(detected_n / len(results), 4)
 
-    # Per-type breakdown
     by_type = {}
     for r in results:
         t = r["type"]
-        if t not in by_type:
-            by_type[t] = {"total": 0, "detected": 0}
+        if t not in by_type: by_type[t] = {"total":0,"detected":0}
         by_type[t]["total"] += 1
-        if r["detected"]:
-            by_type[t]["detected"] += 1
+        if r["detected"]: by_type[t]["detected"] += 1
     for t in by_type:
         by_type[t]["detection_rate"] = round(
-            by_type[t]["detected"] / by_type[t]["total"], 4)
+            by_type[t]["detected"]/by_type[t]["total"], 4)
 
     output = {
-        "module":          "adversarial_evaluation",
-        "timestamp":       datetime.now(timezone.utc).isoformat(),
+        "module": "adversarial_evaluation",
+        "timestamp": datetime.now(timezone.utc).isoformat(),
         "total_adversarial_prompts": len(ADVERSARIAL_SUITE),
-        "detected":        detected_n,
-        "missed":          len(ADVERSARIAL_SUITE) - detected_n,
+        "detected": detected_n,
+        "missed": len(ADVERSARIAL_SUITE) - detected_n,
         "adversarial_detection_rate": det_rate,
         "per_type_breakdown": by_type,
-        "results":         results,
+        "results": results,
     }
     with open(WORK_DIR/"week6_adversarial_evaluation.json","w",encoding="utf-8") as f:
         json.dump(output, f, indent=2)
-
     log.info(f"Adversarial: {detected_n}/{len(ADVERSARIAL_SUITE)} detected "
              f"({100*det_rate:.1f}%)")
-    for t, stats in by_type.items():
-        log.info(f"  {t}: {stats['detected']}/{stats['total']} "
-                 f"({100*stats['detection_rate']:.0f}%)")
+    for t, s in by_type.items():
+        log.info(f"  {t}: {s['detected']}/{s['total']} ({100*s['detection_rate']:.0f}%)")
     return output
 
 
 # =============================================================================
-# STEP 7: BASELINE COMPARISON (Problem 8)
-# Raw LLM vs TrustGuard
+# STEP 7: BASELINE COMPARISON
 # =============================================================================
 def run_baseline_comparison(val_data: dict, edge_data: dict) -> dict:
-    """
-    Computes a raw-LLM baseline to show TrustGuard's added value.
-    Baseline: no validation, just use model confidence as risk score.
-    TrustGuard: full pipeline with adjusted risk scores.
-    """
     from sklearn.metrics import precision_recall_fscore_support, accuracy_score
 
     val_records  = val_data.get("records", [])
     edge_records = edge_data.get("records", [])
     edge_lookup  = {r["record_id"]: r for r in edge_records}
+    y_true       = np.array([r.get("is_hallucinated",0) for r in val_records])
 
-    y_true = np.array([r.get("is_hallucinated",0) for r in val_records])
-
-    # Baseline: use (1 - model_confidence) as risk proxy
-    # High confidence -> low risk. Random LLM would just trust its output.
     y_baseline = np.array([1.0 - float(
         (r.get("parsed_policy") or {}).get("confidence", 0.8))
         for r in val_records])
-    y_baseline_pred = (y_baseline >= 0.30).astype(int)  # flag if conf < 0.70
+    y_baseline_pred = (y_baseline >= 0.30).astype(int)
 
-    # TrustGuard
     y_tg = np.array([
         float(edge_lookup.get(r["record_id"],{}).get("adjusted_risk_score",
               r.get("risk_score",0.0)))
         for r in val_records])
     y_tg_pred = (y_tg >= 0.10).astype(int)
 
-    def m(y_true, y_pred):
-        p,r,f,_ = precision_recall_fscore_support(
-            y_true, y_pred, average="binary", zero_division=0)
-        a = accuracy_score(y_true, y_pred)
+    def m(yt, yp):
+        p,r,f,_ = precision_recall_fscore_support(yt, yp, average="binary", zero_division=0)
         return {"precision":round(float(p),4),"recall":round(float(r),4),
-                "f1_score":round(float(f),4),"accuracy":round(float(a),4)}
+                "f1_score":round(float(f),4),
+                "accuracy":round(float(accuracy_score(yt,yp)),4)}
 
     baseline_m = m(y_true, y_baseline_pred)
     tg_m       = m(y_true, y_tg_pred)
-
-    # Improvement
     improvement = {
-        "precision_delta": round(tg_m["precision"] - baseline_m["precision"], 4),
-        "recall_delta":    round(tg_m["recall"]    - baseline_m["recall"],    4),
-        "f1_delta":        round(tg_m["f1_score"]  - baseline_m["f1_score"],  4),
+        "precision_delta": round(tg_m["precision"]-baseline_m["precision"],4),
+        "recall_delta":    round(tg_m["recall"]   -baseline_m["recall"],   4),
+        "f1_delta":        round(tg_m["f1_score"] -baseline_m["f1_score"], 4),
     }
 
     output = {
-        "module":    "baseline_comparison",
+        "module": "baseline_comparison",
         "timestamp": datetime.now(timezone.utc).isoformat(),
         "methods": {
-            "raw_llm_baseline": {
-                "description": "No validation. Risk = 1 - model_confidence. "
-                               "Threshold = 0.30 (flag if confidence < 0.70).",
-                **baseline_m
-            },
-            "trustguard": {
-                "description": "Full TrustGuard pipeline with content-based "
-                               "validation, edge-case scoring, threshold calibration.",
-                **tg_m
-            }
+            "raw_llm_baseline": {"description":"No validation. Risk=1-confidence.", **baseline_m},
+            "trustguard":       {"description":"Full TrustGuard pipeline.", **tg_m}
         },
         "improvement_over_baseline": improvement,
         "latex_table": _baseline_latex(baseline_m, tg_m),
     }
     with open(WORK_DIR/"week6_baseline_comparison.json","w",encoding="utf-8") as f:
         json.dump(output, f, indent=2)
-
     log.info("Baseline comparison:")
-    log.info(f"  Raw LLM    : P={baseline_m['precision']} R={baseline_m['recall']} "
-             f"F1={baseline_m['f1_score']}")
-    log.info(f"  TrustGuard : P={tg_m['precision']} R={tg_m['recall']} "
-             f"F1={tg_m['f1_score']}")
+    log.info(f"  Raw LLM    : P={baseline_m['precision']} R={baseline_m['recall']} F1={baseline_m['f1_score']}")
+    log.info(f"  TrustGuard : P={tg_m['precision']} R={tg_m['recall']} F1={tg_m['f1_score']}")
     log.info(f"  F1 improvement: +{improvement['f1_delta']}")
     return output
 
@@ -1139,33 +1054,32 @@ def _baseline_latex(bm, tg):
 
 # =============================================================================
 # FINAL REPORT
+# FIX: reads correct keys so dataset counts are not None
 # =============================================================================
 def consolidate_report(step_results: dict) -> dict:
-    decision   = step_results.get("decision")   or {}
-    ensemble   = step_results.get("ensemble")   or {}
-    threshold  = step_results.get("threshold")  or {}
-    edge_case  = step_results.get("edge_case")  or {}
-    disagree   = step_results.get("disagreement") or {}
-    adv        = step_results.get("adversarial") or {}
-    baseline   = step_results.get("baseline")   or {}
-    aug_info   = step_results.get("augmentation") or {}
+    decision  = step_results.get("decision")      or {}
+    ensemble  = step_results.get("ensemble")      or {}
+    threshold = step_results.get("threshold")     or {}
+    disagree  = step_results.get("disagreement")  or {}
+    adv       = step_results.get("adversarial")   or {}
+    baseline  = step_results.get("baseline")      or {}
+    aug_info  = step_results.get("augmentation")  or {}
 
-    dec_sum  = decision.get("summary", {})
-    eval_s   = dec_sum.get("evaluation", {})
-    ens_sum  = ensemble.get("summary",  {})
-    dis_sum  = disagree.get("summary",  {})
-    ec_sum   = edge_case.get("summary", {})
-    thr_p    = threshold.get("primary_thresholds", {})
-    bm       = baseline.get("methods", {})
+    dec_sum = decision.get("summary", {})
+    eval_s  = dec_sum.get("evaluation", {})
+    ens_sum = ensemble.get("summary", {})
+    dis_sum = disagree.get("summary", {})
+    thr_p   = threshold.get("primary_thresholds", {})
+    bm      = baseline.get("methods", {})
 
     return {
         "project":   "TrustGuard - Explainable Hallucination and Risk Detection",
-        "version":   "Week 6 v4 - Publication Ready",
+        "version":   "Week 6 v5 - All Bugs Fixed",
         "timestamp": datetime.now(timezone.utc).isoformat(),
         "dataset": {
-            "original_records": aug_info.get("original_count", 65),
-            "synthetic_records": aug_info.get("synthetic_count", 0),
-            "total_records":    aug_info.get("total_count", 65),
+            "original_records":  aug_info.get("original_count"),
+            "synthetic_records": aug_info.get("synthetic_count"),
+            "total_records":     aug_info.get("total_count"),
         },
         "key_results": {
             "decision_layer": {
@@ -1178,8 +1092,8 @@ def consolidate_report(step_results: dict) -> dict:
                 "reject_count":     dec_sum.get("reject_count"),
             },
             "ensemble_confidence": {
-                "mean":      ens_sum.get("mean_ensemble"),
-                "std":       ens_sum.get("std_ensemble"),
+                "mean": ens_sum.get("mean_ensemble"),
+                "std":  ens_sum.get("std_ensemble"),
             },
             "xai_agreement": {
                 "mean_jaccard":      dis_sum.get("mean_agreement"),
@@ -1192,8 +1106,7 @@ def consolidate_report(step_results: dict) -> dict:
             "baseline_comparison": {
                 "raw_llm_f1":    (bm.get("raw_llm_baseline") or {}).get("f1_score"),
                 "trustguard_f1": (bm.get("trustguard") or {}).get("f1_score"),
-                "improvement":   (baseline.get("improvement_over_baseline") or {})
-                                  .get("f1_delta"),
+                "improvement":   (baseline.get("improvement_over_baseline") or {}).get("f1_delta"),
             },
             "calibrated_thresholds": {
                 "safe_threshold":   thr_p.get("safe_threshold"),
@@ -1201,18 +1114,18 @@ def consolidate_report(step_results: dict) -> dict:
             },
         },
         "output_files": {
-            "augmented_dataset":         "week6_augmented_dataset.json",
-            "validation_results":        "week6_validation_results.json",
-            "edge_case_scores":          "week6_edge_case_scores.json",
-            "benchmark":                 "week6_benchmark_report.json",
-            "xai_report":                "week5_xai_report.json",
-            "xai_disagreement":          "week6_xai_disagreement.json",
-            "ensemble_confidence":       "week6_ensemble_confidence.json",
-            "calibrated_thresholds":     "week6_calibrated_thresholds.json",
-            "decisions":                 "week6_decisions.json",
-            "adversarial_evaluation":    "week6_adversarial_evaluation.json",
-            "baseline_comparison":       "week6_baseline_comparison.json",
-            "plots":                     "week6_plots/",
+            "augmented_dataset":      "week6_augmented_dataset.json",
+            "validation_results":     "week6_validation_results.json",
+            "edge_case_scores":       "week6_edge_case_scores.json",
+            "benchmark":              "week6_benchmark_report.json",
+            "xai_report":             "week5_xai_report.json",
+            "xai_disagreement":       "week6_xai_disagreement.json",
+            "ensemble_confidence":    "week6_ensemble_confidence.json",
+            "calibrated_thresholds":  "week6_calibrated_thresholds.json",
+            "decisions":              "week6_decisions.json",
+            "adversarial_evaluation": "week6_adversarial_evaluation.json",
+            "baseline_comparison":    "week6_baseline_comparison.json",
+            "plots":                  "week6_plots/",
         }
     }
 
@@ -1222,7 +1135,7 @@ def consolidate_report(step_results: dict) -> dict:
 # =============================================================================
 def run_full_pipeline():
     log.info("=" * 60)
-    log.info("TrustGuard Week 6 - Full Pipeline Orchestrator v4")
+    log.info("TrustGuard Week 6 - Full Pipeline Orchestrator v5")
     log.info("=" * 60)
 
     os.chdir(WORK_DIR)
@@ -1249,40 +1162,38 @@ def run_full_pipeline():
     step_results = {}
     failed       = []
 
-    # Internal steps
-    adapted, ok   = run_step(1,  "Week4 Adapter",    adapt_week4_dataset, dataset_path)
+    adapted, ok   = run_step(1, "Week4 Adapter", adapt_week4_dataset, dataset_path)
     if not ok: sys.exit(1)
 
-    augmented, ok = run_step(2,  "Dataset Augmentation (~200 records)",
+    augmented, ok = run_step(2, "Dataset Augmentation (~350 records)",
                               augment_dataset, adapted)
-    if not ok: augmented = adapted  # fallback to original
+    if not ok: augmented = adapted
     step_results["augmentation"] = augmented.get("augmentation", {})
 
-    val_data, ok  = run_step(3,  "Validation (7-category detection)", run_validation, augmented)
+    val_data, ok  = run_step(3, "Validation (7-category detection)", run_validation, augmented)
     if not ok: sys.exit(1)
 
-    edge_data, ok = run_step(4,  "Edge Case Scoring", run_edge_case_scoring_inline, val_data)
+    edge_data, ok = run_step(4, "Edge Case Scoring", run_edge_case_scoring_inline, val_data)
     step_results["edge_case"] = edge_data
     if not ok: failed.append(4)
 
-    benchmark, ok = run_step(5,  "Benchmark Report",  run_benchmark, edge_data or {})
+    benchmark, ok = run_step(5, "Benchmark Report", run_benchmark, edge_data or {})
     if not ok: failed.append(5)
 
-    xai_data, ok  = run_step(6,  "XAI (SHAP + LIME)", run_xai, val_data)
+    xai_data, ok  = run_step(6, "XAI (SHAP + LIME)", run_xai, val_data)
     if not ok: failed.append(6)
 
-    adv_data, ok  = run_step(7,  "Adversarial Evaluation (30 prompts)",
+    adv_data, ok  = run_step(7, "Adversarial Evaluation (15 prompts)",
                               run_adversarial_evaluation, val_data)
     step_results["adversarial"] = adv_data
     if not ok: failed.append(7)
 
-    base_data, ok = run_step(8,  "Baseline Comparison (Raw LLM vs TrustGuard)",
+    base_data, ok = run_step(8, "Baseline Comparison (Raw LLM vs TrustGuard)",
                               run_baseline_comparison, val_data, edge_data or {})
     step_results["baseline"] = base_data
     if not ok: failed.append(8)
 
-    # External module steps
-    r, ok = run_step(9,  "SHAP-LIME Disagreement",
+    r, ok = run_step(9, "SHAP-LIME Disagreement",
                      run_disagreement_analysis,
                      input_path=str(WORK_DIR/"week5_xai_report.json"))
     step_results["disagreement"] = r
@@ -1317,7 +1228,6 @@ def run_full_pipeline():
     with open(REPORT, "w", encoding="utf-8") as f:
         json.dump(final, f, indent=2)
 
-    # Save baseline LaTeX
     if base_data:
         with open(WORK_DIR/"week6_baseline_table.tex","w",encoding="utf-8") as f:
             f.write(base_data.get("latex_table",""))
@@ -1329,23 +1239,21 @@ def run_full_pipeline():
     if failed: log.warning(f"Failed steps: {failed}")
     else:      log.info("All steps passed.")
 
-    kr = final.get("key_results", {})
-    dl = kr.get("decision_layer", {})
+    kr    = final.get("key_results", {})
+    dl    = kr.get("decision_layer", {})
     bline = kr.get("baseline_comparison", {})
     adv_r = kr.get("adversarial", {})
     ds    = final.get("dataset", {})
 
     log.info(f"Dataset        : {ds.get('total_records')} records "
-             f"({ds.get('original_count')} original + {ds.get('synthetic_count')} synthetic)")
+             f"({ds.get('original_records')} original + {ds.get('synthetic_records')} synthetic)")
     log.info(f"Strict  F1     : {dl.get('strict_f1')}")
     log.info(f"Precision      : {dl.get('strict_precision')}")
     log.info(f"Recall         : {dl.get('strict_recall')}")
-    log.info(f"SAFE={dl.get('safe_count')} REVIEW={dl.get('review_count')} "
-             f"REJECT={dl.get('reject_count')}")
+    log.info(f"SAFE={dl.get('safe_count')} REVIEW={dl.get('review_count')} REJECT={dl.get('reject_count')}")
     log.info(f"Adversarial    : {adv_r.get('detection_rate')} detection rate")
     log.info(f"vs Baseline    : TrustGuard F1={bline.get('trustguard_f1')} "
-             f"vs Raw LLM F1={bline.get('raw_llm_f1')} "
-             f"(+{bline.get('improvement')})")
+             f"vs Raw LLM F1={bline.get('raw_llm_f1')} (+{bline.get('improvement')})")
     log.info(f"Report         : {REPORT}")
 
     return final
