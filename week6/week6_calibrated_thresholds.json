@@ -1,6 +1,6 @@
 {
   "module": "threshold_calibration",
-  "timestamp": "2026-06-13T15:29:43.160541+00:00",
+  "timestamp": "2026-06-14T17:18:04.130370+00:00",
   "primary_thresholds": {
     "safe_threshold": 0.3,
     "review_threshold": 0.6,
@@ -9,47 +9,47 @@
   },
   "score_distribution": {
     "min": 0.0,
-    "max": 1.0,
-    "mean": 0.4422,
-    "p30": 0.3944,
-    "p50": 0.4545,
-    "p70": 0.4545
+    "max": 0.8827,
+    "mean": 0.186,
+    "p30": 0.0,
+    "p50": 0.0027,
+    "p70": 0.31
   },
   "method_a_percentile": {
     "method": "percentile_P30P70",
     "safe_threshold": 0.3,
     "review_threshold": 0.6,
-    "precision": 0.5455,
-    "recall": 0.2517,
-    "f1_score": 0.3445,
-    "accuracy": 0.6119,
-    "safe_count": 60,
-    "review_count": 227,
-    "reject_count": 66
+    "precision": 0.9091,
+    "recall": 0.3226,
+    "f1_score": 0.4762,
+    "accuracy": 0.6615,
+    "safe_count": 45,
+    "review_count": 9,
+    "reject_count": 11
   },
   "method_b_f1_optimal": {
     "method": "f1_optimal",
-    "safe_threshold": 0.08,
-    "review_threshold": 0.16,
-    "precision": 0.4735,
-    "recall": 1.0,
-    "f1_score": 0.6427,
-    "accuracy": 0.5496,
-    "safe_count": 21,
-    "review_count": 30,
-    "reject_count": 302,
+    "safe_threshold": 0.025,
+    "review_threshold": 0.05,
+    "precision": 0.913,
+    "recall": 0.6774,
+    "f1_score": 0.7778,
+    "accuracy": 0.8154,
+    "safe_count": 42,
+    "review_count": 0,
+    "reject_count": 23,
     "note": "Collapses REVIEW band on bimodal distributions - not used as primary"
   },
   "method_c_youden_j": {
     "method": "youden_j",
-    "safe_threshold": 0.2275,
-    "review_threshold": 0.4549,
-    "precision": 0.6907,
-    "recall": 0.4685,
-    "f1_score": 0.5583,
-    "accuracy": 0.6997,
-    "safe_count": 60,
-    "review_count": 196,
-    "reject_count": 97
+    "safe_threshold": 0.0014,
+    "review_threshold": 0.0027,
+    "precision": 0.9394,
+    "recall": 1.0,
+    "f1_score": 0.9688,
+    "accuracy": 0.9692,
+    "safe_count": 32,
+    "review_count": 0,
+    "reject_count": 33
   }
 }

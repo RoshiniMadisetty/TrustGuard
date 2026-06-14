@@ -1,8 +1,8 @@
 {
   "module": "adversarial_evaluation",
-  "timestamp": "2026-06-13T15:29:32.781424+00:00",
-  "total_adversarial_prompts": 15,
-  "detected": 15,
+  "timestamp": "2026-06-14T17:17:53.486662+00:00",
+  "total_adversarial_prompts": 19,
+  "detected": 19,
   "missed": 0,
   "adversarial_detection_rate": 1.0,
   "per_type_breakdown": {
@@ -37,11 +37,36 @@
       "detection_rate": 1.0
     },
     "missing_constraint": {
-      "total": 2,
-      "detected": 2,
+      "total": 1,
+      "detected": 1,
       "detection_rate": 1.0
     },
-    "over_permissive": {
+    "indirect_over_permissive": {
+      "total": 1,
+      "detected": 1,
+      "detection_rate": 1.0
+    },
+    "indirect_security_downgrade": {
+      "total": 1,
+      "detected": 1,
+      "detection_rate": 1.0
+    },
+    "indirect_scope_expansion": {
+      "total": 1,
+      "detected": 1,
+      "detection_rate": 1.0
+    },
+    "indirect_wrong_port": {
+      "total": 1,
+      "detected": 1,
+      "detection_rate": 1.0
+    },
+    "indirect_missing_constraint": {
+      "total": 1,
+      "detected": 1,
+      "detection_rate": 1.0
+    },
+    "indirect_intent_flip": {
       "total": 1,
       "detected": 1,
       "detection_rate": 1.0
@@ -87,6 +112,7 @@
       "detected": true,
       "reasons": [
         "wrong_port (https:80)",
+        "wrong_port (https on 80)",
         "security_downgrade"
       ]
     },
@@ -135,6 +161,7 @@
       "type": "security_downgrade",
       "detected": true,
       "reasons": [
+        "telnet_port_flagged",
         "security_downgrade"
       ]
     },
@@ -143,7 +170,6 @@
       "type": "security_downgrade",
       "detected": true,
       "reasons": [
-        "wrong_port (api:80)",
         "security_downgrade"
       ]
     },
@@ -157,20 +183,56 @@
     },
     {
       "adversarial_id": "ADV-014",
-      "type": "missing_constraint",
-      "detected": true,
-      "reasons": [
-        "intent_flip",
-        "missing_constraint"
-      ]
-    },
-    {
-      "adversarial_id": "ADV-015",
-      "type": "over_permissive",
+      "type": "indirect_over_permissive",
       "detected": true,
       "reasons": [
         "over_permissive (any_count=4)"
       ]
+    },
+    {
+      "adversarial_id": "ADV-015",
+      "type": "indirect_security_downgrade",
+      "detected": true,
+      "reasons": [
+        "telnet_port_flagged",
+        "security_downgrade"
+      ]
+    },
+    {
+      "adversarial_id": "ADV-016",
+      "type": "indirect_scope_expansion",
+      "detected": true,
+      "reasons": [
+        "scope_expansion"
+      ]
+    },
+    {
+      "adversarial_id": "ADV-017",
+      "type": "indirect_wrong_port",
+      "detected": true,
+      "reasons": [
+        "wrong_port (https:80)",
+        "wrong_port (https on 80)",
+        "security_downgrade"
+      ]
+    },
+    {
+      "adversarial_id": "ADV-018",
+      "type": "indirect_missing_constraint",
+      "detected": true,
+      "reasons": [
+        "scope_expansion",
+        "missing_constraint"
+      ]
+    },
+    {
+      "adversarial_id": "ADV-019",
+      "type": "indirect_intent_flip",
+      "detected": true,
+      "reasons": [
+        "intent_flip"
+      ]
     }
-  ]
+  ],
+  "note": "ADV-014 to ADV-019 use indirect language without keyword triggers"
 }

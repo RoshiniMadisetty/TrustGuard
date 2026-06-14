@@ -1,38 +1,38 @@
 {
   "project": "TrustGuard - Explainable Hallucination and Risk Detection",
-  "version": "Week 6 v5 - All Bugs Fixed",
-  "timestamp": "2026-06-13T15:29:44.600451+00:00",
+  "version": "Week 6 v6 - All Problems Fixed",
+  "timestamp": "2026-06-14T17:18:05.336136+00:00",
   "dataset": {
     "original_records": 215,
-    "synthetic_records": 138,
-    "total_records": 353
+    "synthetic_records": 0,
+    "total_records": 215
   },
   "key_results": {
     "decision_layer": {
-      "strict_precision": 0.9848,
-      "strict_recall": 0.2218,
-      "strict_f1": 0.3621,
-      "lenient_f1": 0.9693,
-      "safe_count": 60,
-      "review_count": 227,
-      "reject_count": 66
+      "strict_precision": 0.9231,
+      "strict_recall": 0.0663,
+      "strict_f1": 0.1237,
+      "lenient_f1": 0.4174,
+      "safe_count": 166,
+      "review_count": 36,
+      "reject_count": 13
     },
     "ensemble_confidence": {
-      "mean": 0.5842,
-      "std": 0.0881
+      "mean": 0.6404,
+      "std": 0.0653
     },
     "xai_agreement": {
-      "mean_jaccard": 0.2564,
-      "disagreement_rate": 0.7847
+      "mean_jaccard": 0.3148,
+      "disagreement_rate": 0.586
     },
     "adversarial": {
-      "total": 15,
+      "total": 19,
       "detection_rate": 1.0
     },
     "baseline_comparison": {
-      "raw_llm_f1": 0.5628,
-      "trustguard_f1": 0.6021,
-      "improvement": 0.0393
+      "raw_llm_f1": 0.0,
+      "trustguard_f1": 0.7778,
+      "improvement": 0.7778
     },
     "calibrated_thresholds": {
       "safe_threshold": 0.3,
@@ -40,7 +40,6 @@
     }
   },
   "output_files": {
-    "augmented_dataset": "week6_augmented_dataset.json",
     "validation_results": "week6_validation_results.json",
     "edge_case_scores": "week6_edge_case_scores.json",
     "benchmark": "week6_benchmark_report.json",
