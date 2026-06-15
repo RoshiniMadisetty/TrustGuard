@@ -222,8 +222,10 @@ def run_validation(adapted: dict) -> dict:
             violations.append({"category": "intent_flip", "severity": "CRITICAL",
                                 "detail": "Description intent=DENY but action=ALLOW"})
 
+        # 3. wrong_port
         try:
             dp = int(dst_port_raw)
+            port_matched = False
             for svc, info in SERVICE_PORTS.items():
                 if svc in desc_low and dp not in info["ports"]:
                     dist = min(abs(dp - pp) for pp in info["ports"])
@@ -231,10 +233,20 @@ def run_validation(adapted: dict) -> dict:
                     violations.append({"category": "wrong_port",
                                        "severity": "HIGH" if dist > 10 else "MEDIUM",
                                        "detail": f"'{svc}' expects {info['ports']}, got {dp}"})
+                    port_matched = True
                     break
+            # Check if description explicitly mentions a port number different from actual
+            if not port_matched:
+                import re as _re
+                desc_ports = [int(m) for m in _re.findall(r'\bport\s+(\d+)\b', desc_low)]
+                if desc_ports and dp not in desc_ports:
+                    scores["wrong_port"] = 0.55
+                    violations.append({"category": "wrong_port", "severity": "HIGH",
+                                       "detail": f"Description says port {desc_ports}, got {dp}"})
         except (ValueError, TypeError):
             pass
 
+        # 4. wrong_protocol
         for svc, info in SERVICE_PORTS.items():
             if svc in desc_low and info["proto"] != "ANY":
                 if protocol not in (info["proto"], "ANY"):
@@ -242,14 +254,39 @@ def run_validation(adapted: dict) -> dict:
                     violations.append({"category": "wrong_protocol", "severity": "HIGH",
                                        "detail": f"'{svc}' expects {info['proto']}, got {protocol}"})
                 break
+        # ICMP specifically: description mentions ping/icmp but protocol is not ICMP
+        if any(w in desc_low for w in ("icmp", "ping", "ping request")) and protocol not in ("ICMP", "ANY"):
+            scores["wrong_protocol"] = 0.55
+            violations.append({"category": "wrong_protocol", "severity": "HIGH",
+                                "detail": f"ICMP/ping intent but protocol={protocol}"})
+            
 
         constraint_words = {"only","specific","authorised","authorized",
-                            "certain","limited","restricted","dedicated"}
+                            "certain","limited","restricted","dedicated","except"}
         if any(w in desc_low for w in constraint_words) and _is_any(src_ip):
             scores["missing_constraint"] = 0.40
             violations.append({"category": "missing_constraint", "severity": "HIGH",
                                 "detail": "Constrained intent but src_ip=ANY"})
-
+        # DENY rules with any/any when description implies specific scope
+        # DENY rules where src is broad but description implies specific access control
+        if action == "DENY" and _is_any(src_ip):
+            specific_scope_words = {"except","only","specific","internal","external",
+                                    "corporate","cardholder","patient","admin","incident",
+                                    "pci","hipaa","compliance","requirements"}
+            if any(w in desc_low for w in specific_scope_words):
+                scores["missing_constraint"] = 0.40
+                violations.append({"category": "missing_constraint", "severity": "HIGH",
+                                    "detail": "Scoped DENY intent but src=ANY"})
+                violations.append({"category": "missing_constraint", "severity": "HIGH",
+                                    "detail": "Scoped DENY intent but src=ANY dst=ANY"})
+        # scope_expansion: DENY rule that should restrict dst but dst is 0.0.0.0/0
+        if action == "DENY" and _is_any(dst_ip):
+            outbound_restrict_words = {"internet access","outbound","external access",
+                                       "direct access","internet","outside"}
+            if any(w in desc_low for w in outbound_restrict_words) and not _is_any(src_ip):
+                scores["scope_expansion"] = 0.45
+                violations.append({"category": "scope_expansion", "severity": "HIGH",
+                                    "detail": "Outbound restriction but dst=ANY/0.0.0.0/0"})
         if any(w in desc_low for w in INTERNAL_WORDS):
             if _is_any(src_ip) and action == "ALLOW":
                 scores["scope_expansion"] = 0.50

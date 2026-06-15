@@ -392,7 +392,7 @@
         "model": "benchmark_csv",
         "timestamp": ""
       },
-      "detected_category": "none",
+      "detected_category": "missing_constraint",
       "validation": {
         "syntax": {
           "valid": true,
@@ -404,23 +404,34 @@
           "risk": 0.03
         },
         "compliance": {
-          "violations": [],
-          "max_severity": "INFO"
+          "violations": [
+            {
+              "category": "missing_constraint",
+              "severity": "HIGH",
+              "detail": "Scoped DENY intent but src=ANY"
+            },
+            {
+              "category": "missing_constraint",
+              "severity": "HIGH",
+              "detail": "Scoped DENY intent but src=ANY dst=ANY"
+            }
+          ],
+          "max_severity": "HIGH"
         },
         "hallucination": {
-          "detected": false,
-          "category": "none",
-          "risk": 0.0
+          "detected": true,
+          "category": "missing_constraint",
+          "risk": 0.4
         },
         "edge_case": {
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0045
+          "final_risk_score": 0.2445
         }
       },
-      "risk_score": 0.0045,
-      "max_severity": "INFO",
+      "risk_score": 0.2445,
+      "max_severity": "HIGH",
       "confidence": 0.8
     },
     {
@@ -508,7 +519,7 @@
         "model": "benchmark_csv",
         "timestamp": ""
       },
-      "detected_category": "none",
+      "detected_category": "wrong_port",
       "validation": {
         "syntax": {
           "valid": true,
@@ -520,23 +531,29 @@
           "risk": 0.03
         },
         "compliance": {
-          "violations": [],
-          "max_severity": "INFO"
+          "violations": [
+            {
+              "category": "wrong_port",
+              "severity": "HIGH",
+              "detail": "Description says port [445], got 80"
+            }
+          ],
+          "max_severity": "HIGH"
         },
         "hallucination": {
-          "detected": false,
-          "category": "none",
-          "risk": 0.0
+          "detected": true,
+          "category": "wrong_port",
+          "risk": 0.55
         },
         "edge_case": {
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0045
+          "final_risk_score": 0.3345
         }
       },
-      "risk_score": 0.0045,
-      "max_severity": "INFO",
+      "risk_score": 0.3345,
+      "max_severity": "HIGH",
       "confidence": 0.8
     },
     {
@@ -826,7 +843,7 @@
         "model": "benchmark_csv",
         "timestamp": ""
       },
-      "detected_category": "none",
+      "detected_category": "scope_expansion",
       "validation": {
         "syntax": {
           "valid": true,
@@ -838,23 +855,29 @@
           "risk": 0.03
         },
         "compliance": {
-          "violations": [],
-          "max_severity": "INFO"
+          "violations": [
+            {
+              "category": "scope_expansion",
+              "severity": "HIGH",
+              "detail": "Outbound restriction but dst=ANY/0.0.0.0/0"
+            }
+          ],
+          "max_severity": "HIGH"
         },
         "hallucination": {
-          "detected": false,
-          "category": "none",
-          "risk": 0.0
+          "detected": true,
+          "category": "scope_expansion",
+          "risk": 0.45
         },
         "edge_case": {
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0045
+          "final_risk_score": 0.2745
         }
       },
-      "risk_score": 0.0045,
-      "max_severity": "INFO",
+      "risk_score": 0.2745,
+      "max_severity": "HIGH",
       "confidence": 0.8
     },
     {
@@ -942,7 +965,7 @@
         "model": "benchmark_csv",
         "timestamp": ""
       },
-      "detected_category": "none",
+      "detected_category": "wrong_protocol",
       "validation": {
         "syntax": {
           "valid": true,
@@ -954,23 +977,39 @@
           "risk": 0.03
         },
         "compliance": {
-          "violations": [],
-          "max_severity": "INFO"
+          "violations": [
+            {
+              "category": "wrong_protocol",
+              "severity": "HIGH",
+              "detail": "ICMP/ping intent but protocol=TCP"
+            },
+            {
+              "category": "missing_constraint",
+              "severity": "HIGH",
+              "detail": "Scoped DENY intent but src=ANY"
+            },
+            {
+              "category": "missing_constraint",
+              "severity": "HIGH",
+              "detail": "Scoped DENY intent but src=ANY dst=ANY"
+            }
+          ],
+          "max_severity": "HIGH"
         },
         "hallucination": {
-          "detected": false,
-          "category": "none",
-          "risk": 0.0
+          "detected": true,
+          "category": "wrong_protocol",
+          "risk": 0.6
         },
         "edge_case": {
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0045
+          "final_risk_score": 0.3645
         }
       },
-      "risk_score": 0.0045,
-      "max_severity": "INFO",
+      "risk_score": 0.3645,
+      "max_severity": "HIGH",
       "confidence": 0.8
     },
     {
@@ -1296,7 +1335,7 @@
         "model": "benchmark_csv",
         "timestamp": ""
       },
-      "detected_category": "none",
+      "detected_category": "missing_constraint",
       "validation": {
         "syntax": {
           "valid": true,
@@ -1308,23 +1347,39 @@
           "risk": 0.03
         },
         "compliance": {
-          "violations": [],
-          "max_severity": "INFO"
+          "violations": [
+            {
+              "category": "missing_constraint",
+              "severity": "HIGH",
+              "detail": "Constrained intent but src_ip=ANY"
+            },
+            {
+              "category": "missing_constraint",
+              "severity": "HIGH",
+              "detail": "Scoped DENY intent but src=ANY"
+            },
+            {
+              "category": "missing_constraint",
+              "severity": "HIGH",
+              "detail": "Scoped DENY intent but src=ANY dst=ANY"
+            }
+          ],
+          "max_severity": "HIGH"
         },
         "hallucination": {
-          "detected": false,
-          "category": "none",
-          "risk": 0.0
+          "detected": true,
+          "category": "missing_constraint",
+          "risk": 0.4
         },
         "edge_case": {
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0045
+          "final_risk_score": 0.2445
         }
       },
-      "risk_score": 0.0045,
-      "max_severity": "INFO",
+      "risk_score": 0.2445,
+      "max_severity": "HIGH",
       "confidence": 0.8
     },
     {
@@ -2456,7 +2511,7 @@
         "model": "benchmark_csv",
         "timestamp": ""
       },
-      "detected_category": "none",
+      "detected_category": "missing_constraint",
       "validation": {
         "syntax": {
           "valid": true,
@@ -2468,23 +2523,34 @@
           "risk": 0.03
         },
         "compliance": {
-          "violations": [],
-          "max_severity": "INFO"
+          "violations": [
+            {
+              "category": "missing_constraint",
+              "severity": "HIGH",
+              "detail": "Scoped DENY intent but src=ANY"
+            },
+            {
+              "category": "missing_constraint",
+              "severity": "HIGH",
+              "detail": "Scoped DENY intent but src=ANY dst=ANY"
+            }
+          ],
+          "max_severity": "HIGH"
         },
         "hallucination": {
-          "detected": false,
-          "category": "none",
-          "risk": 0.0
+          "detected": true,
+          "category": "missing_constraint",
+          "risk": 0.4
         },
         "edge_case": {
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0045
+          "final_risk_score": 0.2445
         }
       },
-      "risk_score": 0.0045,
-      "max_severity": "INFO",
+      "risk_score": 0.2445,
+      "max_severity": "HIGH",
       "confidence": 0.8
     },
     {
@@ -2514,7 +2580,7 @@
         "model": "benchmark_csv",
         "timestamp": ""
       },
-      "detected_category": "none",
+      "detected_category": "missing_constraint",
       "validation": {
         "syntax": {
           "valid": true,
@@ -2526,23 +2592,34 @@
           "risk": 0.03
         },
         "compliance": {
-          "violations": [],
-          "max_severity": "INFO"
+          "violations": [
+            {
+              "category": "missing_constraint",
+              "severity": "HIGH",
+              "detail": "Scoped DENY intent but src=ANY"
+            },
+            {
+              "category": "missing_constraint",
+              "severity": "HIGH",
+              "detail": "Scoped DENY intent but src=ANY dst=ANY"
+            }
+          ],
+          "max_severity": "HIGH"
         },
         "hallucination": {
-          "detected": false,
-          "category": "none",
-          "risk": 0.0
+          "detected": true,
+          "category": "missing_constraint",
+          "risk": 0.4
         },
         "edge_case": {
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0045
+          "final_risk_score": 0.2445
         }
       },
-      "risk_score": 0.0045,
-      "max_severity": "INFO",
+      "risk_score": 0.2445,
+      "max_severity": "HIGH",
       "confidence": 0.8
     },
     {
@@ -2630,7 +2707,7 @@
         "model": "benchmark_csv",
         "timestamp": ""
       },
-      "detected_category": "none",
+      "detected_category": "missing_constraint",
       "validation": {
         "syntax": {
           "valid": true,
@@ -2642,23 +2719,34 @@
           "risk": 0.014999999999999986
         },
         "compliance": {
-          "violations": [],
-          "max_severity": "INFO"
+          "violations": [
+            {
+              "category": "missing_constraint",
+              "severity": "HIGH",
+              "detail": "Scoped DENY intent but src=ANY"
+            },
+            {
+              "category": "missing_constraint",
+              "severity": "HIGH",
+              "detail": "Scoped DENY intent but src=ANY dst=ANY"
+            }
+          ],
+          "max_severity": "HIGH"
         },
         "hallucination": {
-          "detected": false,
-          "category": "none",
-          "risk": 0.0
+          "detected": true,
+          "category": "missing_constraint",
+          "risk": 0.4
         },
         "edge_case": {
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0022499999999999977
+          "final_risk_score": 0.24225
         }
       },
-      "risk_score": 0.0022499999999999977,
-      "max_severity": "INFO",
+      "risk_score": 0.24225,
+      "max_severity": "HIGH",
       "confidence": 0.9
     },
     {
@@ -3408,7 +3496,7 @@
         "model": "benchmark_csv",
         "timestamp": ""
       },
-      "detected_category": "none",
+      "detected_category": "scope_expansion",
       "validation": {
         "syntax": {
           "valid": true,
@@ -3420,23 +3508,29 @@
           "risk": 0.014999999999999986
         },
         "compliance": {
-          "violations": [],
-          "max_severity": "INFO"
+          "violations": [
+            {
+              "category": "scope_expansion",
+              "severity": "HIGH",
+              "detail": "Outbound restriction but dst=ANY/0.0.0.0/0"
+            }
+          ],
+          "max_severity": "HIGH"
         },
         "hallucination": {
-          "detected": false,
-          "category": "none",
-          "risk": 0.0
+          "detected": true,
+          "category": "scope_expansion",
+          "risk": 0.45
         },
         "edge_case": {
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0022499999999999977
+          "final_risk_score": 0.27225
         }
       },
-      "risk_score": 0.0022499999999999977,
-      "max_severity": "INFO",
+      "risk_score": 0.27225,
+      "max_severity": "HIGH",
       "confidence": 0.9
     },
     {
@@ -3524,7 +3618,7 @@
         "model": "benchmark_csv",
         "timestamp": ""
       },
-      "detected_category": "none",
+      "detected_category": "missing_constraint",
       "validation": {
         "syntax": {
           "valid": true,
@@ -3536,23 +3630,39 @@
           "risk": 0.03
         },
         "compliance": {
-          "violations": [],
-          "max_severity": "INFO"
+          "violations": [
+            {
+              "category": "missing_constraint",
+              "severity": "HIGH",
+              "detail": "Constrained intent but src_ip=ANY"
+            },
+            {
+              "category": "missing_constraint",
+              "severity": "HIGH",
+              "detail": "Scoped DENY intent but src=ANY"
+            },
+            {
+              "category": "missing_constraint",
+              "severity": "HIGH",
+              "detail": "Scoped DENY intent but src=ANY dst=ANY"
+            }
+          ],
+          "max_severity": "HIGH"
         },
         "hallucination": {
-          "detected": false,
-          "category": "none",
-          "risk": 0.0
+          "detected": true,
+          "category": "missing_constraint",
+          "risk": 0.4
         },
         "edge_case": {
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0045
+          "final_risk_score": 0.2445
         }
       },
-      "risk_score": 0.0045,
-      "max_severity": "INFO",
+      "risk_score": 0.2445,
+      "max_severity": "HIGH",
       "confidence": 0.8
     },
     {
@@ -3796,6 +3906,11 @@
               "category": "intent_flip",
               "severity": "CRITICAL",
               "detail": "Description intent=DENY but action=ALLOW"
+            },
+            {
+              "category": "missing_constraint",
+              "severity": "HIGH",
+              "detail": "Constrained intent but src_ip=ANY"
             }
           ],
           "max_severity": "CRITICAL"
@@ -3803,16 +3918,16 @@
         "hallucination": {
           "detected": true,
           "category": "intent_flip",
-          "risk": 0.75
+          "risk": 0.8
         },
         "edge_case": {
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.45112499999999994
+          "final_risk_score": 0.48112499999999997
         }
       },
-      "risk_score": 0.45112499999999994,
+      "risk_score": 0.48112499999999997,
       "max_severity": "CRITICAL",
       "confidence": 0.95
     },
@@ -3907,7 +4022,7 @@
         "model": "benchmark_csv",
         "timestamp": ""
       },
-      "detected_category": "none",
+      "detected_category": "missing_constraint",
       "validation": {
         "syntax": {
           "valid": true,
@@ -3919,23 +4034,39 @@
           "risk": 0.017999999999999988
         },
         "compliance": {
-          "violations": [],
-          "max_severity": "INFO"
+          "violations": [
+            {
+              "category": "missing_constraint",
+              "severity": "HIGH",
+              "detail": "Constrained intent but src_ip=ANY"
+            },
+            {
+              "category": "missing_constraint",
+              "severity": "HIGH",
+              "detail": "Scoped DENY intent but src=ANY"
+            },
+            {
+              "category": "missing_constraint",
+              "severity": "HIGH",
+              "detail": "Scoped DENY intent but src=ANY dst=ANY"
+            }
+          ],
+          "max_severity": "HIGH"
         },
         "hallucination": {
-          "detected": false,
-          "category": "none",
-          "risk": 0.0
+          "detected": true,
+          "category": "missing_constraint",
+          "risk": 0.4
         },
         "edge_case": {
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.002699999999999998
+          "final_risk_score": 0.2427
         }
       },
-      "risk_score": 0.002699999999999998,
-      "max_severity": "INFO",
+      "risk_score": 0.2427,
+      "max_severity": "HIGH",
       "confidence": 0.88
     },
     {
@@ -4229,7 +4360,7 @@
         "model": "benchmark_csv",
         "timestamp": ""
       },
-      "detected_category": "none",
+      "detected_category": "missing_constraint",
       "validation": {
         "syntax": {
           "valid": false,
@@ -4249,23 +4380,29 @@
           "risk": 0.03
         },
         "compliance": {
-          "violations": [],
-          "max_severity": "INFO"
+          "violations": [
+            {
+              "category": "missing_constraint",
+              "severity": "HIGH",
+              "detail": "Constrained intent but src_ip=ANY"
+            }
+          ],
+          "max_severity": "HIGH"
         },
         "hallucination": {
-          "detected": false,
-          "category": "none",
-          "risk": 0.0
+          "detected": true,
+          "category": "missing_constraint",
+          "risk": 0.4
         },
         "edge_case": {
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.2945
         }
       },
-      "risk_score": 0.0545,
-      "max_severity": "INFO",
+      "risk_score": 0.2945,
+      "max_severity": "HIGH",
       "confidence": 0.8
     },
     {
@@ -4979,7 +5116,7 @@
         "model": "benchmark_csv",
         "timestamp": ""
       },
-      "detected_category": "none",
+      "detected_category": "missing_constraint",
       "validation": {
         "syntax": {
           "valid": false,
@@ -4999,23 +5136,29 @@
           "risk": 0.03
         },
         "compliance": {
-          "violations": [],
-          "max_severity": "INFO"
+          "violations": [
+            {
+              "category": "missing_constraint",
+              "severity": "HIGH",
+              "detail": "Constrained intent but src_ip=ANY"
+            }
+          ],
+          "max_severity": "HIGH"
         },
         "hallucination": {
-          "detected": false,
-          "category": "none",
-          "risk": 0.0
+          "detected": true,
+          "category": "missing_constraint",
+          "risk": 0.4
         },
         "edge_case": {
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.2945
         }
       },
-      "risk_score": 0.0545,
-      "max_severity": "INFO",
+      "risk_score": 0.2945,
+      "max_severity": "HIGH",
       "confidence": 0.8
     },
     {
@@ -5406,6 +5549,11 @@
               "category": "wrong_protocol",
               "severity": "HIGH",
               "detail": "'redis' expects TCP, got "
+            },
+            {
+              "category": "missing_constraint",
+              "severity": "HIGH",
+              "detail": "Constrained intent but src_ip=ANY"
             }
           ],
           "max_severity": "HIGH"
@@ -5413,16 +5561,16 @@
         "hallucination": {
           "detected": true,
           "category": "wrong_protocol",
-          "risk": 0.55
+          "risk": 0.6
         },
         "edge_case": {
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.3845
+          "final_risk_score": 0.4145
         }
       },
-      "risk_score": 0.3845,
+      "risk_score": 0.4145,
       "max_severity": "HIGH",
       "confidence": 0.8
     },
@@ -5585,7 +5733,7 @@
         "model": "benchmark_csv",
         "timestamp": ""
       },
-      "detected_category": "none",
+      "detected_category": "missing_constraint",
       "validation": {
         "syntax": {
           "valid": false,
@@ -5605,23 +5753,29 @@
           "risk": 0.03
         },
         "compliance": {
-          "violations": [],
-          "max_severity": "INFO"
+          "violations": [
+            {
+              "category": "missing_constraint",
+              "severity": "HIGH",
+              "detail": "Constrained intent but src_ip=ANY"
+            }
+          ],
+          "max_severity": "HIGH"
         },
         "hallucination": {
-          "detected": false,
-          "category": "none",
-          "risk": 0.0
+          "detected": true,
+          "category": "missing_constraint",
+          "risk": 0.4
         },
         "edge_case": {
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.2945
         }
       },
-      "risk_score": 0.0545,
-      "max_severity": "INFO",
+      "risk_score": 0.2945,
+      "max_severity": "HIGH",
       "confidence": 0.8
     },
     {
@@ -5748,6 +5902,11 @@
               "category": "wrong_protocol",
               "severity": "HIGH",
               "detail": "'ssh' expects TCP, got "
+            },
+            {
+              "category": "missing_constraint",
+              "severity": "HIGH",
+              "detail": "Constrained intent but src_ip=ANY"
             }
           ],
           "max_severity": "HIGH"
@@ -5755,16 +5914,16 @@
         "hallucination": {
           "detected": true,
           "category": "wrong_protocol",
-          "risk": 0.55
+          "risk": 0.6
         },
         "edge_case": {
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.3845
+          "final_risk_score": 0.4145
         }
       },
-      "risk_score": 0.3845,
+      "risk_score": 0.4145,
       "max_severity": "HIGH",
       "confidence": 0.8
     },
@@ -5927,7 +6086,7 @@
         "model": "benchmark_csv",
         "timestamp": ""
       },
-      "detected_category": "none",
+      "detected_category": "missing_constraint",
       "validation": {
         "syntax": {
           "valid": false,
@@ -5947,23 +6106,29 @@
           "risk": 0.03
         },
         "compliance": {
-          "violations": [],
-          "max_severity": "INFO"
+          "violations": [
+            {
+              "category": "missing_constraint",
+              "severity": "HIGH",
+              "detail": "Constrained intent but src_ip=ANY"
+            }
+          ],
+          "max_severity": "HIGH"
         },
         "hallucination": {
-          "detected": false,
-          "category": "none",
-          "risk": 0.0
+          "detected": true,
+          "category": "missing_constraint",
+          "risk": 0.4
         },
         "edge_case": {
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.2945
         }
       },
-      "risk_score": 0.0545,
-      "max_severity": "INFO",
+      "risk_score": 0.2945,
+      "max_severity": "HIGH",
       "confidence": 0.8
     },
     {
@@ -6929,7 +7094,7 @@
         "model": "benchmark_csv",
         "timestamp": ""
       },
-      "detected_category": "none",
+      "detected_category": "missing_constraint",
       "validation": {
         "syntax": {
           "valid": false,
@@ -6949,23 +7114,29 @@
           "risk": 0.03
         },
         "compliance": {
-          "violations": [],
-          "max_severity": "INFO"
+          "violations": [
+            {
+              "category": "missing_constraint",
+              "severity": "HIGH",
+              "detail": "Constrained intent but src_ip=ANY"
+            }
+          ],
+          "max_severity": "HIGH"
         },
         "hallucination": {
-          "detected": false,
-          "category": "none",
-          "risk": 0.0
+          "detected": true,
+          "category": "missing_constraint",
+          "risk": 0.4
         },
         "edge_case": {
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.2945
         }
       },
-      "risk_score": 0.0545,
-      "max_severity": "INFO",
+      "risk_score": 0.2945,
+      "max_severity": "HIGH",
       "confidence": 0.8
     },
     {
@@ -7600,7 +7771,7 @@
         "model": "benchmark_csv",
         "timestamp": ""
       },
-      "detected_category": "none",
+      "detected_category": "missing_constraint",
       "validation": {
         "syntax": {
           "valid": false,
@@ -7620,23 +7791,29 @@
           "risk": 0.03
         },
         "compliance": {
-          "violations": [],
-          "max_severity": "INFO"
+          "violations": [
+            {
+              "category": "missing_constraint",
+              "severity": "HIGH",
+              "detail": "Constrained intent but src_ip=ANY"
+            }
+          ],
+          "max_severity": "HIGH"
         },
         "hallucination": {
-          "detected": false,
-          "category": "none",
-          "risk": 0.0
+          "detected": true,
+          "category": "missing_constraint",
+          "risk": 0.4
         },
         "edge_case": {
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.2945
         }
       },
-      "risk_score": 0.0545,
-      "max_severity": "INFO",
+      "risk_score": 0.2945,
+      "max_severity": "HIGH",
       "confidence": 0.8
     },
     {
@@ -7942,7 +8119,7 @@
         "model": "benchmark_csv",
         "timestamp": ""
       },
-      "detected_category": "none",
+      "detected_category": "missing_constraint",
       "validation": {
         "syntax": {
           "valid": false,
@@ -7962,23 +8139,29 @@
           "risk": 0.03
         },
         "compliance": {
-          "violations": [],
-          "max_severity": "INFO"
+          "violations": [
+            {
+              "category": "missing_constraint",
+              "severity": "HIGH",
+              "detail": "Constrained intent but src_ip=ANY"
+            }
+          ],
+          "max_severity": "HIGH"
         },
         "hallucination": {
-          "detected": false,
-          "category": "none",
-          "risk": 0.0
+          "detected": true,
+          "category": "missing_constraint",
+          "risk": 0.4
         },
         "edge_case": {
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.2945
         }
       },
-      "risk_score": 0.0545,
-      "max_severity": "INFO",
+      "risk_score": 0.2945,
+      "max_severity": "HIGH",
       "confidence": 0.8
     },
     {
@@ -8315,6 +8498,11 @@
               "category": "wrong_protocol",
               "severity": "HIGH",
               "detail": "'ldap' expects TCP, got "
+            },
+            {
+              "category": "missing_constraint",
+              "severity": "HIGH",
+              "detail": "Constrained intent but src_ip=ANY"
             }
           ],
           "max_severity": "HIGH"
@@ -8322,16 +8510,16 @@
         "hallucination": {
           "detected": true,
           "category": "wrong_protocol",
-          "risk": 0.55
+          "risk": 0.6
         },
         "edge_case": {
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.3845
+          "final_risk_score": 0.4145
         }
       },
-      "risk_score": 0.3845,
+      "risk_score": 0.4145,
       "max_severity": "HIGH",
       "confidence": 0.8
     },
@@ -8428,7 +8616,7 @@
         "model": "benchmark_csv",
         "timestamp": ""
       },
-      "detected_category": "none",
+      "detected_category": "missing_constraint",
       "validation": {
         "syntax": {
           "valid": false,
@@ -8448,23 +8636,29 @@
           "risk": 0.03
         },
         "compliance": {
-          "violations": [],
-          "max_severity": "INFO"
+          "violations": [
+            {
+              "category": "missing_constraint",
+              "severity": "HIGH",
+              "detail": "Constrained intent but src_ip=ANY"
+            }
+          ],
+          "max_severity": "HIGH"
         },
         "hallucination": {
-          "detected": false,
-          "category": "none",
-          "risk": 0.0
+          "detected": true,
+          "category": "missing_constraint",
+          "risk": 0.4
         },
         "edge_case": {
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.2945
         }
       },
-      "risk_score": 0.0545,
-      "max_severity": "INFO",
+      "risk_score": 0.2945,
+      "max_severity": "HIGH",
       "confidence": 0.8
     },
     {
@@ -10239,7 +10433,7 @@
         "model": "benchmark_csv",
         "timestamp": ""
       },
-      "detected_category": "none",
+      "detected_category": "missing_constraint",
       "validation": {
         "syntax": {
           "valid": false,
@@ -10259,23 +10453,29 @@
           "risk": 0.03
         },
         "compliance": {
-          "violations": [],
-          "max_severity": "INFO"
+          "violations": [
+            {
+              "category": "missing_constraint",
+              "severity": "HIGH",
+              "detail": "Constrained intent but src_ip=ANY"
+            }
+          ],
+          "max_severity": "HIGH"
         },
         "hallucination": {
-          "detected": false,
-          "category": "none",
-          "risk": 0.0
+          "detected": true,
+          "category": "missing_constraint",
+          "risk": 0.4
         },
         "edge_case": {
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.2945
         }
       },
-      "risk_score": 0.0545,
-      "max_severity": "INFO",
+      "risk_score": 0.2945,
+      "max_severity": "HIGH",
       "confidence": 0.8
     },
     {
@@ -11115,7 +11315,7 @@
         "model": "benchmark_csv",
         "timestamp": ""
       },
-      "detected_category": "none",
+      "detected_category": "missing_constraint",
       "validation": {
         "syntax": {
           "valid": false,
@@ -11135,23 +11335,29 @@
           "risk": 0.03
         },
         "compliance": {
-          "violations": [],
-          "max_severity": "INFO"
+          "violations": [
+            {
+              "category": "missing_constraint",
+              "severity": "HIGH",
+              "detail": "Constrained intent but src_ip=ANY"
+            }
+          ],
+          "max_severity": "HIGH"
         },
         "hallucination": {
-          "detected": false,
-          "category": "none",
-          "risk": 0.0
+          "detected": true,
+          "category": "missing_constraint",
+          "risk": 0.4
         },
         "edge_case": {
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.2945
         }
       },
-      "risk_score": 0.0545,
-      "max_severity": "INFO",
+      "risk_score": 0.2945,
+      "max_severity": "HIGH",
       "confidence": 0.8
     },
     {
@@ -11841,7 +12047,7 @@
         "model": "benchmark_csv",
         "timestamp": ""
       },
-      "detected_category": "none",
+      "detected_category": "missing_constraint",
       "validation": {
         "syntax": {
           "valid": false,
@@ -11861,23 +12067,29 @@
           "risk": 0.03
         },
         "compliance": {
-          "violations": [],
-          "max_severity": "INFO"
+          "violations": [
+            {
+              "category": "missing_constraint",
+              "severity": "HIGH",
+              "detail": "Constrained intent but src_ip=ANY"
+            }
+          ],
+          "max_severity": "HIGH"
         },
         "hallucination": {
-          "detected": false,
-          "category": "none",
-          "risk": 0.0
+          "detected": true,
+          "category": "missing_constraint",
+          "risk": 0.4
         },
         "edge_case": {
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.2945
         }
       },
-      "risk_score": 0.0545,
-      "max_severity": "INFO",
+      "risk_score": 0.2945,
+      "max_severity": "HIGH",
       "confidence": 0.8
     },
     {
@@ -11979,7 +12191,7 @@
         "model": "benchmark_csv",
         "timestamp": ""
       },
-      "detected_category": "none",
+      "detected_category": "missing_constraint",
       "validation": {
         "syntax": {
           "valid": false,
@@ -11999,23 +12211,29 @@
           "risk": 0.03
         },
         "compliance": {
-          "violations": [],
-          "max_severity": "INFO"
+          "violations": [
+            {
+              "category": "missing_constraint",
+              "severity": "HIGH",
+              "detail": "Constrained intent but src_ip=ANY"
+            }
+          ],
+          "max_severity": "HIGH"
         },
         "hallucination": {
-          "detected": false,
-          "category": "none",
-          "risk": 0.0
+          "detected": true,
+          "category": "missing_constraint",
+          "risk": 0.4
         },
         "edge_case": {
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.2945
         }
       },
-      "risk_score": 0.0545,
-      "max_severity": "INFO",
+      "risk_score": 0.2945,
+      "max_severity": "HIGH",
       "confidence": 0.8
     },
     {
@@ -12532,6 +12750,11 @@
               "category": "wrong_protocol",
               "severity": "HIGH",
               "detail": "'http' expects TCP, got "
+            },
+            {
+              "category": "missing_constraint",
+              "severity": "HIGH",
+              "detail": "Constrained intent but src_ip=ANY"
             }
           ],
           "max_severity": "HIGH"
@@ -12539,16 +12762,16 @@
         "hallucination": {
           "detected": true,
           "category": "wrong_protocol",
-          "risk": 0.55
+          "risk": 0.6
         },
         "edge_case": {
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.3845
+          "final_risk_score": 0.4145
         }
       },
-      "risk_score": 0.3845,
+      "risk_score": 0.4145,
       "max_severity": "HIGH",
       "confidence": 0.8
     },
@@ -12921,7 +13144,7 @@
         "model": "benchmark_csv",
         "timestamp": ""
       },
-      "detected_category": "none",
+      "detected_category": "missing_constraint",
       "validation": {
         "syntax": {
           "valid": false,
@@ -12941,23 +13164,29 @@
           "risk": 0.03
         },
         "compliance": {
-          "violations": [],
-          "max_severity": "INFO"
+          "violations": [
+            {
+              "category": "missing_constraint",
+              "severity": "HIGH",
+              "detail": "Constrained intent but src_ip=ANY"
+            }
+          ],
+          "max_severity": "HIGH"
         },
         "hallucination": {
-          "detected": false,
-          "category": "none",
-          "risk": 0.0
+          "detected": true,
+          "category": "missing_constraint",
+          "risk": 0.4
         },
         "edge_case": {
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.2945
         }
       },
-      "risk_score": 0.0545,
-      "max_severity": "INFO",
+      "risk_score": 0.2945,
+      "max_severity": "HIGH",
       "confidence": 0.8
     },
     {
@@ -13851,7 +14080,7 @@
         "model": "benchmark_csv",
         "timestamp": ""
       },
-      "detected_category": "none",
+      "detected_category": "missing_constraint",
       "validation": {
         "syntax": {
           "valid": false,
@@ -13871,23 +14100,29 @@
           "risk": 0.03
         },
         "compliance": {
-          "violations": [],
-          "max_severity": "INFO"
+          "violations": [
+            {
+              "category": "missing_constraint",
+              "severity": "HIGH",
+              "detail": "Constrained intent but src_ip=ANY"
+            }
+          ],
+          "max_severity": "HIGH"
         },
         "hallucination": {
-          "detected": false,
-          "category": "none",
-          "risk": 0.0
+          "detected": true,
+          "category": "missing_constraint",
+          "risk": 0.4
         },
         "edge_case": {
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.2945
         }
       },
-      "risk_score": 0.0545,
-      "max_severity": "INFO",
+      "risk_score": 0.2945,
+      "max_severity": "HIGH",
       "confidence": 0.8
     },
     {

@@ -157,14 +157,15 @@ def extract_xai_agreement(record_id: str, xai_report: dict,
 # -- Ensemble Calculator -------------------------------------------------------
 def compute_ensemble_confidence(model_conf: float,
                                  validator_score: float,
-                                 xai_agreement: float) -> dict:
-    """
-    Compute weighted ensemble confidence and flag low-confidence records.
-    """
+                                 xai_agreement: float,
+                                 risk_score: float = 0.0) -> dict:
+    # risk_score inverted: high risk = low confidence
+    risk_signal = 1.0 - float(np.clip(risk_score, 0.0, 1.0))
     ensemble = (
-        W_MODEL_CONFIDENCE * model_conf +
-        W_VALIDATOR_SCORE  * validator_score +
-        W_XAI_AGREEMENT    * xai_agreement
+        0.35 * model_conf +
+        0.25 * validator_score +
+        0.20 * xai_agreement +
+        0.20 * risk_signal
     )
     ensemble = round(float(np.clip(ensemble, 0.0, 1.0)), 4)
 
@@ -183,9 +184,10 @@ def compute_ensemble_confidence(model_conf: float,
         "validator_score":    round(validator_score,  4),
         "xai_agreement":      round(xai_agreement,    4),
         "weighted_components": {
-            "model_contribution":     round(W_MODEL_CONFIDENCE * model_conf,     4),
-            "validator_contribution": round(W_VALIDATOR_SCORE  * validator_score, 4),
-            "xai_contribution":       round(W_XAI_AGREEMENT    * xai_agreement,   4),
+            "model_contribution":     round(0.35 * model_conf,      4),
+            "validator_contribution": round(0.25 * validator_score,  4),
+            "xai_contribution":       round(0.20 * xai_agreement,    4),
+            "risk_contribution":      round(0.20 * risk_signal,      4),
         },
         "ensemble_confidence": ensemble,
         "confidence_tier":    tier,
@@ -218,7 +220,15 @@ def run_ensemble_pipeline(llm_path:  str = INPUT_LLM_FILE,
         val_score     = extract_validator_score(val)
         xai_agreement = extract_xai_agreement(rid, xai_data)
 
-        conf_result = compute_ensemble_confidence(model_conf, val_score, xai_agreement)
+        # Use adjusted_risk_score to spread ensemble values across records
+        # Records with identical model_conf/val_score/xai_agreement get differentiated
+        risk_score = float(np.clip(
+            rec.get("adjusted_risk_score") or
+            rec.get("risk_score") or
+            (val.get("validation") or {}).get("risk_aggregator", {}).get("final_risk_score") or
+            0.0, 0.0, 1.0))
+
+        conf_result = compute_ensemble_confidence(model_conf, val_score, xai_agreement, risk_score)
         conf_result["record_id"]       = rid
         conf_result["ground_truth"]    = rec.get("ground_truth_label", "unknown")
         conf_result["schema_valid"]    = rec.get("schema_valid", False)

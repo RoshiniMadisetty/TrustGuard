@@ -16,27 +16,27 @@
   },
   "shap": {
     "global_feature_importance": {
-      "syntax_valid": 0.25152297554885017,
-      "confidence": 0.08319686291745432,
-      "semantic_score": 0.06930038611396279,
-      "compliance_severity": 5.249555635150745e-19,
-      "hallucination_risk": 4.650723039882588e-19,
-      "src_is_any": 2.143190340959718e-20,
-      "dst_is_any": 0.0,
+      "syntax_valid": 0.23132827813393236,
+      "semantic_score": 0.05743912773899037,
+      "confidence": 0.0529497719254283,
+      "hallucination_risk": 0.04013090396260999,
+      "compliance_severity": 0.020912920294484223,
+      "dst_is_any": 0.0016060980146628933,
+      "src_is_any": 0.00035269369138510147,
       "edge_case_count": 0.0
     },
-    "expected_value": 0.14418604651162803,
+    "expected_value": 0.14418604651162792,
     "per_record_examples": [
       {
         "record_id": "W1-001",
         "shap_values": {
-          "confidence": 0.20821193248094236,
-          "src_is_any": 0.0,
-          "dst_is_any": 0.0,
-          "syntax_valid": 0.5030447748990232,
-          "semantic_score": 0.14416737580466274,
-          "compliance_severity": 2.6020852139652106e-18,
-          "hallucination_risk": 1.3010426069826053e-18,
+          "confidence": 0.11306736181271722,
+          "src_is_any": 0.0016691986933084506,
+          "dst_is_any": -0.0029760654716333617,
+          "syntax_valid": 0.5370489836662767,
+          "semantic_score": 0.12877882360727766,
+          "compliance_severity": 0.02324154386535326,
+          "hallucination_risk": 0.053955862894072955,
           "edge_case_count": 0.0
         },
         "risk_score": 0.3345
@@ -44,13 +44,13 @@
       {
         "record_id": "W1-002",
         "shap_values": {
-          "confidence": 0.14442883259471853,
-          "src_is_any": 2.168404344971009e-19,
-          "dst_is_any": 0.0,
-          "syntax_valid": 0.49858749138489533,
-          "semantic_score": 0.21240775920501515,
-          "compliance_severity": 4.336808689942018e-19,
-          "hallucination_risk": 1.8973538018496328e-19,
+          "confidence": 0.13149487958914718,
+          "src_is_any": 0.0005725185484793839,
+          "dst_is_any": -0.003314299754876569,
+          "syntax_valid": 0.3923112713029567,
+          "semantic_score": 0.10684260905158041,
+          "compliance_severity": 0.06541874168416181,
+          "hallucination_risk": 0.1616909715144403,
           "edge_case_count": 0.0
         },
         "risk_score": 0.45112499999999994
@@ -58,13 +58,13 @@
       {
         "record_id": "W1-003",
         "shap_values": {
-          "confidence": -0.16115824103218468,
-          "src_is_any": 0.0,
-          "dst_is_any": 0.0,
-          "syntax_valid": 0.17159327856917828,
-          "semantic_score": -0.1545553993778819,
-          "compliance_severity": -3.2526065174565133e-19,
-          "hallucination_risk": -1.0842021724855044e-19,
+          "confidence": -0.07199982949469678,
+          "src_is_any": -1.1674512126817174e-05,
+          "dst_is_any": 0.003405269718981203,
+          "syntax_valid": 0.13574237527875713,
+          "semantic_score": -0.06402827667126545,
+          "compliance_severity": -0.05136507826820112,
+          "hallucination_risk": -0.09586051531035537,
           "edge_case_count": 0.0
         },
         "risk_score": 0.0022499999999999977
@@ -72,13 +72,13 @@
       {
         "record_id": "W1-004",
         "shap_values": {
-          "confidence": -0.16115824103218468,
-          "src_is_any": 8.131516293641283e-20,
-          "dst_is_any": 0.0,
-          "syntax_valid": 0.17159327856917828,
-          "semantic_score": -0.1545553993778819,
-          "compliance_severity": -3.2526065174565133e-19,
-          "hallucination_risk": -1.0842021724855044e-19,
+          "confidence": -0.07303063236259678,
+          "src_is_any": 1.775653995501632e-05,
+          "dst_is_any": -0.001976236514622408,
+          "syntax_valid": 0.13312647694220922,
+          "semantic_score": -0.0664786817686283,
+          "compliance_severity": -0.043989465775044784,
+          "hallucination_risk": -0.09178694632017886,
           "edge_case_count": 0.0
         },
         "risk_score": 0.0022499999999999977
@@ -86,13 +86,13 @@
       {
         "record_id": "W1-005",
         "shap_values": {
-          "confidence": -0.16115824103218468,
-          "src_is_any": 0.0,
-          "dst_is_any": 0.0,
-          "syntax_valid": 0.17159327856917828,
-          "semantic_score": -0.1545553993778819,
-          "compliance_severity": -3.2526065174565133e-19,
-          "hallucination_risk": -1.0842021724855044e-19,
+          "confidence": -0.07199982949469678,
+          "src_is_any": -1.1674512126817174e-05,
+          "dst_is_any": 0.003405269718981203,
+          "syntax_valid": 0.13574237527875713,
+          "semantic_score": -0.06402827667126545,
+          "compliance_severity": -0.05136507826820112,
+          "hallucination_risk": -0.09586051531035537,
           "edge_case_count": 0.0
         },
         "risk_score": 0.0022499999999999977
@@ -100,13 +100,13 @@
       {
         "record_id": "W1-006",
         "shap_values": {
-          "confidence": -0.16115824103218468,
-          "src_is_any": 0.0,
-          "dst_is_any": 0.0,
-          "syntax_valid": 0.17159327856917828,
-          "semantic_score": -0.1545553993778819,
-          "compliance_severity": -3.2526065174565133e-19,
-          "hallucination_risk": -1.0842021724855044e-19,
+          "confidence": -0.07199982949469678,
+          "src_is_any": -1.1674512126817174e-05,
+          "dst_is_any": 0.003405269718981203,
+          "syntax_valid": 0.13574237527875713,
+          "semantic_score": -0.06402827667126545,
+          "compliance_severity": -0.05136507826820112,
+          "hallucination_risk": -0.09586051531035537,
           "edge_case_count": 0.0
         },
         "risk_score": 0.0022499999999999977
@@ -114,27 +114,27 @@
       {
         "record_id": "W1-007",
         "shap_values": {
-          "confidence": 0.20821193248094236,
-          "src_is_any": 0.0,
-          "dst_is_any": 0.0,
-          "syntax_valid": 0.5030447748990232,
-          "semantic_score": 0.14416737580466274,
-          "compliance_severity": -2.6020852139652106e-18,
-          "hallucination_risk": -1.734723475976807e-18,
+          "confidence": 0.13863978582173495,
+          "src_is_any": -0.00017750815233069753,
+          "dst_is_any": -0.0023264743177449664,
+          "syntax_valid": 0.5208943494748702,
+          "semantic_score": 0.15122908001634416,
+          "compliance_severity": 0.016451900297189733,
+          "hallucination_risk": 0.022354065861487766,
           "edge_case_count": 0.0
         },
-        "risk_score": 0.0045
+        "risk_score": 0.2445
       },
       {
         "record_id": "W1-008",
         "shap_values": {
-          "confidence": -0.16115824103218468,
-          "src_is_any": 0.0,
-          "dst_is_any": 0.0,
-          "syntax_valid": 0.17159327856917828,
-          "semantic_score": -0.1545553993778819,
-          "compliance_severity": -3.2526065174565133e-19,
-          "hallucination_risk": -1.0842021724855044e-19,
+          "confidence": -0.07199982949469678,
+          "src_is_any": -1.1674512126817174e-05,
+          "dst_is_any": 0.003405269718981203,
+          "syntax_valid": 0.13574237527875713,
+          "semantic_score": -0.06402827667126545,
+          "compliance_severity": -0.05136507826820112,
+          "hallucination_risk": -0.09586051531035537,
           "edge_case_count": 0.0
         },
         "risk_score": 0.0022499999999999977
@@ -142,27 +142,27 @@
       {
         "record_id": "W1-009",
         "shap_values": {
-          "confidence": 0.20821193248094236,
-          "src_is_any": 0.0,
-          "dst_is_any": 0.0,
-          "syntax_valid": 0.5030447748990232,
-          "semantic_score": 0.14416737580466274,
-          "compliance_severity": -2.6020852139652106e-18,
-          "hallucination_risk": -1.734723475976807e-18,
+          "confidence": 0.11306736181271722,
+          "src_is_any": 0.0016691986933084506,
+          "dst_is_any": -0.0029760654716333617,
+          "syntax_valid": 0.5370489836662767,
+          "semantic_score": 0.12877882360727766,
+          "compliance_severity": 0.02324154386535326,
+          "hallucination_risk": 0.053955862894072955,
           "edge_case_count": 0.0
         },
-        "risk_score": 0.0045
+        "risk_score": 0.3345
       },
       {
         "record_id": "W1-010",
         "shap_values": {
-          "confidence": -0.16115824103218468,
-          "src_is_any": 0.0,
-          "dst_is_any": 0.0,
-          "syntax_valid": 0.17159327856917828,
-          "semantic_score": -0.1545553993778819,
-          "compliance_severity": -3.2526065174565133e-19,
-          "hallucination_risk": -1.0842021724855044e-19,
+          "confidence": -0.07199982949469678,
+          "src_is_any": -1.1674512126817174e-05,
+          "dst_is_any": 0.003405269718981203,
+          "syntax_valid": 0.13574237527875713,
+          "semantic_score": -0.06402827667126545,
+          "compliance_severity": -0.05136507826820112,
+          "hallucination_risk": -0.09586051531035537,
           "edge_case_count": 0.0
         },
         "risk_score": 0.0022499999999999977
@@ -175,70 +175,70 @@
       "risk_score": 0.3345,
       "ground_truth": "hallucinated",
       "lime_weights": {
-        "0.00 < syntax_valid <= 1.00": 0.856191116441036,
-        "confidence <= 0.80": 0.11140479093039277,
-        "semantic_score <= 0.80": 0.07844407765011743,
-        "hallucination_risk > 0.00": -0.012864187025381956,
-        "compliance_severity > 0.00": 0.0036162269092745573,
+        "0.00 < syntax_valid <= 1.00": 0.8340927910326191,
+        "semantic_score <= 0.80": 0.08636881439123324,
+        "confidence <= 0.80": 0.06979485344182733,
+        "hallucination_risk > 0.40": -0.008709522736413317,
+        "0.00 < compliance_severity <= 3.00": 0.004544845493964705,
         "src_is_any <= 1.00": 0.0
       },
-      "prediction": 0.9996101296962558
+      "prediction": 0.9989717555790015
     },
     "high_risk_2": {
       "record_id": "W1-002",
       "risk_score": 0.45112499999999994,
       "ground_truth": "dangerous",
       "lime_weights": {
-        "0.00 < syntax_valid <= 1.00": 0.8093254545130328,
-        "confidence > 0.80": -0.12299588092791863,
-        "semantic_score > 0.80": -0.08496373343556485,
-        "hallucination_risk > 0.00": 0.010851251838002191,
-        "compliance_severity > 0.00": -0.0039097306051875235,
+        "0.00 < syntax_valid <= 1.00": 0.7803114991958578,
+        "semantic_score > 0.80": -0.09719647264692209,
+        "confidence > 0.80": -0.08217610773629862,
+        "hallucination_risk > 0.40": 0.02274724383707716,
+        "compliance_severity > 3.00": 0.017255145330452717,
         "src_is_any <= 1.00": 0.0
       },
-      "prediction": 0.9996101296962558
+      "prediction": 0.9992027384475173
     },
     "mid_risk": {
       "record_id": "W4-108",
       "risk_score": 0.0545,
       "ground_truth": "",
       "lime_weights": {
-        "syntax_valid <= 0.00": -0.8634731566603058,
-        "confidence <= 0.80": 0.08486640701317802,
-        "semantic_score <= 0.80": 0.05311839501993415,
-        "hallucination_risk <= 0.00": 0.02088489242191101,
-        "compliance_severity <= 0.00": 0.007219311168385228,
+        "syntax_valid <= 0.00": -0.8187594091100198,
+        "semantic_score <= 0.80": 0.07955390296596936,
+        "confidence <= 0.80": 0.06321110694457063,
+        "compliance_severity <= 0.00": -0.02274427718466927,
+        "hallucination_risk <= 0.00": -0.015754647229610036,
         "src_is_any <= 1.00": 0.0
       },
-      "prediction": 6.568467073950459e-05
+      "prediction": 6.83172527209371e-05
     },
     "low_risk_1": {
       "record_id": "W5-225",
       "risk_score": 0.0545,
       "ground_truth": "",
       "lime_weights": {
-        "syntax_valid <= 0.00": -0.8539039243410271,
-        "confidence <= 0.80": 0.09957264829963737,
-        "semantic_score <= 0.80": 0.07447719664202013,
-        "hallucination_risk <= 0.00": 0.013287590151357732,
-        "compliance_severity <= 0.00": 0.006053815416784439,
+        "syntax_valid <= 0.00": -0.8266365883974574,
+        "confidence <= 0.80": 0.07330778597620109,
+        "semantic_score <= 0.80": 0.06448066425431301,
+        "compliance_severity <= 0.00": -0.014890339166353473,
+        "hallucination_risk <= 0.00": -0.007903968802062046,
         "src_is_any <= 1.00": 0.0
       },
-      "prediction": 6.568467073950459e-05
+      "prediction": 6.83172527209371e-05
     },
     "low_risk_2": {
       "record_id": "W5-224",
       "risk_score": 0.0545,
       "ground_truth": "",
       "lime_weights": {
-        "syntax_valid <= 0.00": -0.866688291548713,
-        "confidence <= 0.80": 0.10131747224547012,
-        "semantic_score <= 0.80": 0.06116710788594097,
-        "hallucination_risk <= 0.00": -0.012519414370108875,
-        "compliance_severity <= 0.00": -0.0012789356612913467,
+        "syntax_valid <= 0.00": -0.7969321873395747,
+        "semantic_score <= 0.80": 0.08344061464235843,
+        "confidence <= 0.80": 0.06211657067055825,
+        "hallucination_risk <= 0.00": -0.014574200512381863,
+        "compliance_severity <= 0.00": 0.0044911857086480725,
         "src_is_any <= 1.00": 0.0
       },
-      "prediction": 6.568467073950459e-05
+      "prediction": 6.83172527209371e-05
     }
   },
   "hallucination_category_breakdown": {}

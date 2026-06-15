@@ -1,7 +1,7 @@
 {
   "project": "TrustGuard - Explainable Hallucination and Risk Detection",
   "version": "Week 6 v6 - All Problems Fixed",
-  "timestamp": "2026-06-14T17:18:05.336136+00:00",
+  "timestamp": "2026-06-15T04:16:52.767278+00:00",
   "dataset": {
     "original_records": 215,
     "synthetic_records": 0,
@@ -9,21 +9,21 @@
   },
   "key_results": {
     "decision_layer": {
-      "strict_precision": 0.9231,
-      "strict_recall": 0.0663,
-      "strict_f1": 0.1237,
-      "lenient_f1": 0.4174,
-      "safe_count": 166,
-      "review_count": 36,
-      "reject_count": 13
+      "strict_precision": 0.9412,
+      "strict_recall": 0.0884,
+      "strict_f1": 0.1616,
+      "lenient_f1": 0.5203,
+      "safe_count": 150,
+      "review_count": 48,
+      "reject_count": 17
     },
     "ensemble_confidence": {
-      "mean": 0.6404,
-      "std": 0.0653
+      "mean": 0.6626,
+      "std": 0.0929
     },
     "xai_agreement": {
-      "mean_jaccard": 0.3148,
-      "disagreement_rate": 0.586
+      "mean_jaccard": 0.3334,
+      "disagreement_rate": 0.5488
     },
     "adversarial": {
       "total": 19,
@@ -31,8 +31,8 @@
     },
     "baseline_comparison": {
       "raw_llm_f1": 0.0,
-      "trustguard_f1": 0.7778,
-      "improvement": 0.7778
+      "trustguard_f1": 0.9231,
+      "improvement": 0.9231
     },
     "calibrated_thresholds": {
       "safe_threshold": 0.3,

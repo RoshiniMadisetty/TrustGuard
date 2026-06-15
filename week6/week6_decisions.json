@@ -1,44 +1,44 @@
 {
   "summary": {
     "module": "decision_layer",
-    "timestamp": "2026-06-14T17:18:05.323149Z",
+    "timestamp": "2026-06-15T04:16:52.753242Z",
     "thresholds_used": {
       "safe": 0.3,
       "review": 0.6
     },
     "total_records": 215,
-    "safe_count": 166,
-    "review_count": 36,
-    "reject_count": 13,
+    "safe_count": 150,
+    "review_count": 48,
+    "reject_count": 17,
     "override_count": 11,
     "evaluation": {
-      "true_positives": 12,
+      "true_positives": 16,
       "false_positives": 1,
       "true_negatives": 33,
-      "false_negatives": 169,
-      "precision": 0.9231,
-      "recall": 0.0663,
-      "f1_score": 0.1237,
-      "accuracy": 0.2093,
+      "false_negatives": 165,
+      "precision": 0.9412,
+      "recall": 0.0884,
+      "f1_score": 0.1616,
+      "accuracy": 0.2279,
       "strict": {
-        "true_positives": 12,
+        "true_positives": 16,
         "false_positives": 1,
         "true_negatives": 33,
-        "false_negatives": 169,
-        "precision": 0.9231,
-        "recall": 0.0663,
-        "f1_score": 0.1237,
-        "accuracy": 0.2093
+        "false_negatives": 165,
+        "precision": 0.9412,
+        "recall": 0.0884,
+        "f1_score": 0.1616,
+        "accuracy": 0.2279
       },
       "lenient": {
-        "true_positives": 48,
+        "true_positives": 64,
         "false_positives": 1,
         "true_negatives": 33,
-        "false_negatives": 133,
-        "precision": 0.9796,
-        "recall": 0.2652,
-        "f1_score": 0.4174,
-        "accuracy": 0.3767
+        "false_negatives": 117,
+        "precision": 0.9846,
+        "recall": 0.3536,
+        "f1_score": 0.5203,
+        "accuracy": 0.4512
       }
     }
   },
@@ -51,7 +51,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.3345,
-        "ensemble_confidence": 0.5712,
+        "ensemble_confidence": 0.6104,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -66,7 +66,7 @@
       "override_applied": true,
       "signals": {
         "adjusted_risk_score": 0.8511,
-        "ensemble_confidence": 0.6034,
+        "ensemble_confidence": 0.5365,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": true,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -83,10 +83,10 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.0,
-        "ensemble_confidence": 0.7484,
+        "ensemble_confidence": 0.8262,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
-        "confidence_tier": "MODERATE_CONFIDENCE",
+        "confidence_tier": "HIGH_CONFIDENCE",
         "triggered_rules": [
           "EC-03"
         ]
@@ -100,10 +100,10 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.0,
-        "ensemble_confidence": 0.7484,
+        "ensemble_confidence": 0.8262,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
-        "confidence_tier": "MODERATE_CONFIDENCE",
+        "confidence_tier": "HIGH_CONFIDENCE",
         "triggered_rules": [
           "EC-03"
         ]
@@ -117,10 +117,10 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.0,
-        "ensemble_confidence": 0.7484,
+        "ensemble_confidence": 0.8262,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
-        "confidence_tier": "MODERATE_CONFIDENCE",
+        "confidence_tier": "HIGH_CONFIDENCE",
         "triggered_rules": [
           "EC-03"
         ]
@@ -134,10 +134,10 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.0,
-        "ensemble_confidence": 0.7484,
+        "ensemble_confidence": 0.8262,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
-        "confidence_tier": "MODERATE_CONFIDENCE",
+        "confidence_tier": "HIGH_CONFIDENCE",
         "triggered_rules": [
           "EC-03"
         ]
@@ -147,11 +147,11 @@
       "record_id": "W1-007",
       "ground_truth": "hallucinated",
       "decision": "SAFE",
-      "decision_reason": "Risk score 0.004 below SAFE threshold (0.300).",
+      "decision_reason": "Risk score 0.244 below SAFE threshold (0.300).",
       "override_applied": false,
       "signals": {
-        "adjusted_risk_score": 0.0045,
-        "ensemble_confidence": 0.7024,
+        "adjusted_risk_score": 0.2445,
+        "ensemble_confidence": 0.6334,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -166,10 +166,10 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.0,
-        "ensemble_confidence": 0.7484,
+        "ensemble_confidence": 0.8262,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
-        "confidence_tier": "MODERATE_CONFIDENCE",
+        "confidence_tier": "HIGH_CONFIDENCE",
         "triggered_rules": [
           "EC-03"
         ]
@@ -178,12 +178,12 @@
     {
       "record_id": "W1-009",
       "ground_truth": "hallucinated",
-      "decision": "SAFE",
-      "decision_reason": "Risk score 0.004 below SAFE threshold (0.300).",
+      "decision": "REVIEW",
+      "decision_reason": "Risk score 0.335 in REVIEW band [0.300, 0.600).",
       "override_applied": false,
       "signals": {
-        "adjusted_risk_score": 0.0045,
-        "ensemble_confidence": 0.7024,
+        "adjusted_risk_score": 0.3345,
+        "ensemble_confidence": 0.6104,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -198,10 +198,10 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.0,
-        "ensemble_confidence": 0.7484,
+        "ensemble_confidence": 0.8262,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
-        "confidence_tier": "MODERATE_CONFIDENCE",
+        "confidence_tier": "HIGH_CONFIDENCE",
         "triggered_rules": [
           "EC-03"
         ]
@@ -215,7 +215,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.3345,
-        "ensemble_confidence": 0.5712,
+        "ensemble_confidence": 0.6104,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -230,10 +230,10 @@
       "override_applied": true,
       "signals": {
         "adjusted_risk_score": 0.8827,
-        "ensemble_confidence": 0.5562,
+        "ensemble_confidence": 0.4896,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": true,
-        "confidence_tier": "MODERATE_CONFIDENCE",
+        "confidence_tier": "LOW_CONFIDENCE",
         "triggered_rules": [
           "EC-06"
         ]
@@ -247,7 +247,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.3345,
-        "ensemble_confidence": 0.5712,
+        "ensemble_confidence": 0.6104,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -258,11 +258,11 @@
       "record_id": "W1-014",
       "ground_truth": "hallucinated",
       "decision": "SAFE",
-      "decision_reason": "Risk score 0.004 below SAFE threshold (0.300).",
+      "decision_reason": "Risk score 0.275 below SAFE threshold (0.300).",
       "override_applied": false,
       "signals": {
-        "adjusted_risk_score": 0.0045,
-        "ensemble_confidence": 0.7024,
+        "adjusted_risk_score": 0.2745,
+        "ensemble_confidence": 0.6312,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -277,10 +277,10 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.0,
-        "ensemble_confidence": 0.7484,
+        "ensemble_confidence": 0.8262,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
-        "confidence_tier": "MODERATE_CONFIDENCE",
+        "confidence_tier": "HIGH_CONFIDENCE",
         "triggered_rules": [
           "EC-03"
         ]
@@ -289,12 +289,12 @@
     {
       "record_id": "W1-016",
       "ground_truth": "hallucinated",
-      "decision": "SAFE",
-      "decision_reason": "Risk score 0.004 below SAFE threshold (0.300).",
+      "decision": "REVIEW",
+      "decision_reason": "Risk score 0.364 in REVIEW band [0.300, 0.600).",
       "override_applied": false,
       "signals": {
-        "adjusted_risk_score": 0.0045,
-        "ensemble_confidence": 0.7024,
+        "adjusted_risk_score": 0.3645,
+        "ensemble_confidence": 0.5794,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -309,10 +309,10 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.0,
-        "ensemble_confidence": 0.7484,
+        "ensemble_confidence": 0.8262,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
-        "confidence_tier": "MODERATE_CONFIDENCE",
+        "confidence_tier": "HIGH_CONFIDENCE",
         "triggered_rules": [
           "EC-03"
         ]
@@ -326,10 +326,10 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.0,
-        "ensemble_confidence": 0.7484,
+        "ensemble_confidence": 0.8262,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
-        "confidence_tier": "MODERATE_CONFIDENCE",
+        "confidence_tier": "HIGH_CONFIDENCE",
         "triggered_rules": [
           "EC-03"
         ]
@@ -343,10 +343,10 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.0045,
-        "ensemble_confidence": 0.7024,
+        "ensemble_confidence": 0.7858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
-        "confidence_tier": "MODERATE_CONFIDENCE",
+        "confidence_tier": "HIGH_CONFIDENCE",
         "triggered_rules": []
       }
     },
@@ -358,7 +358,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.4211,
-        "ensemble_confidence": 0.6184,
+        "ensemble_confidence": 0.635,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -373,10 +373,10 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.0,
-        "ensemble_confidence": 0.7484,
+        "ensemble_confidence": 0.8262,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
-        "confidence_tier": "MODERATE_CONFIDENCE",
+        "confidence_tier": "HIGH_CONFIDENCE",
         "triggered_rules": [
           "EC-03"
         ]
@@ -386,11 +386,11 @@
       "record_id": "W2-022",
       "ground_truth": "hallucinated",
       "decision": "SAFE",
-      "decision_reason": "Risk score 0.004 below SAFE threshold (0.300).",
+      "decision_reason": "Risk score 0.244 below SAFE threshold (0.300).",
       "override_applied": false,
       "signals": {
-        "adjusted_risk_score": 0.0045,
-        "ensemble_confidence": 0.7024,
+        "adjusted_risk_score": 0.2445,
+        "ensemble_confidence": 0.6209,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -405,10 +405,10 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.0,
-        "ensemble_confidence": 0.7484,
+        "ensemble_confidence": 0.8262,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
-        "confidence_tier": "MODERATE_CONFIDENCE",
+        "confidence_tier": "HIGH_CONFIDENCE",
         "triggered_rules": [
           "EC-03"
         ]
@@ -422,7 +422,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.4527,
-        "ensemble_confidence": 0.5712,
+        "ensemble_confidence": 0.5881,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -437,10 +437,10 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.0,
-        "ensemble_confidence": 0.7484,
+        "ensemble_confidence": 0.8262,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
-        "confidence_tier": "MODERATE_CONFIDENCE",
+        "confidence_tier": "HIGH_CONFIDENCE",
         "triggered_rules": [
           "EC-03"
         ]
@@ -454,10 +454,10 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.0,
-        "ensemble_confidence": 0.7484,
+        "ensemble_confidence": 0.8262,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
-        "confidence_tier": "MODERATE_CONFIDENCE",
+        "confidence_tier": "HIGH_CONFIDENCE",
         "triggered_rules": [
           "EC-03"
         ]
@@ -471,10 +471,10 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.0,
-        "ensemble_confidence": 0.7484,
+        "ensemble_confidence": 0.8262,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
-        "confidence_tier": "MODERATE_CONFIDENCE",
+        "confidence_tier": "HIGH_CONFIDENCE",
         "triggered_rules": [
           "EC-03"
         ]
@@ -488,10 +488,10 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.0,
-        "ensemble_confidence": 0.7484,
+        "ensemble_confidence": 0.8262,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
-        "confidence_tier": "MODERATE_CONFIDENCE",
+        "confidence_tier": "HIGH_CONFIDENCE",
         "triggered_rules": [
           "EC-03"
         ]
@@ -505,10 +505,10 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.0,
-        "ensemble_confidence": 0.7484,
+        "ensemble_confidence": 0.8262,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
-        "confidence_tier": "MODERATE_CONFIDENCE",
+        "confidence_tier": "HIGH_CONFIDENCE",
         "triggered_rules": [
           "EC-03"
         ]
@@ -522,10 +522,10 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.0,
-        "ensemble_confidence": 0.7484,
+        "ensemble_confidence": 0.8262,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
-        "confidence_tier": "MODERATE_CONFIDENCE",
+        "confidence_tier": "HIGH_CONFIDENCE",
         "triggered_rules": [
           "EC-03"
         ]
@@ -539,7 +539,7 @@
       "override_applied": true,
       "signals": {
         "adjusted_risk_score": 0.7011,
-        "ensemble_confidence": 0.6184,
+        "ensemble_confidence": 0.579,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": true,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -556,10 +556,10 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.0,
-        "ensemble_confidence": 0.7484,
+        "ensemble_confidence": 0.8262,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
-        "confidence_tier": "MODERATE_CONFIDENCE",
+        "confidence_tier": "HIGH_CONFIDENCE",
         "triggered_rules": [
           "EC-03"
         ]
@@ -573,10 +573,10 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.0,
-        "ensemble_confidence": 0.7484,
+        "ensemble_confidence": 0.8262,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
-        "confidence_tier": "MODERATE_CONFIDENCE",
+        "confidence_tier": "HIGH_CONFIDENCE",
         "triggered_rules": [
           "EC-03"
         ]
@@ -590,7 +590,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2111,
-        "ensemble_confidence": 0.6717,
+        "ensemble_confidence": 0.7213,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -605,10 +605,10 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.0,
-        "ensemble_confidence": 0.7484,
+        "ensemble_confidence": 0.8262,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
-        "confidence_tier": "MODERATE_CONFIDENCE",
+        "confidence_tier": "HIGH_CONFIDENCE",
         "triggered_rules": [
           "EC-03"
         ]
@@ -622,7 +622,7 @@
       "override_applied": true,
       "signals": {
         "adjusted_risk_score": 0.7011,
-        "ensemble_confidence": 0.6184,
+        "ensemble_confidence": 0.579,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": true,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -639,7 +639,7 @@
       "override_applied": true,
       "signals": {
         "adjusted_risk_score": 0.7311,
-        "ensemble_confidence": 0.6034,
+        "ensemble_confidence": 0.5605,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": true,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -656,7 +656,7 @@
       "override_applied": true,
       "signals": {
         "adjusted_risk_score": 0.7011,
-        "ensemble_confidence": 0.6184,
+        "ensemble_confidence": 0.579,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": true,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -673,7 +673,7 @@
       "override_applied": true,
       "signals": {
         "adjusted_risk_score": 0.7011,
-        "ensemble_confidence": 0.6184,
+        "ensemble_confidence": 0.579,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": true,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -690,7 +690,7 @@
       "override_applied": true,
       "signals": {
         "adjusted_risk_score": 0.7011,
-        "ensemble_confidence": 0.6184,
+        "ensemble_confidence": 0.579,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": true,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -703,11 +703,11 @@
       "record_id": "W2-041",
       "ground_truth": "hallucinated",
       "decision": "SAFE",
-      "decision_reason": "Risk score 0.004 below SAFE threshold (0.300).",
+      "decision_reason": "Risk score 0.244 below SAFE threshold (0.300).",
       "override_applied": false,
       "signals": {
-        "adjusted_risk_score": 0.0045,
-        "ensemble_confidence": 0.7024,
+        "adjusted_risk_score": 0.2445,
+        "ensemble_confidence": 0.6334,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -718,11 +718,11 @@
       "record_id": "W2-042",
       "ground_truth": "hallucinated",
       "decision": "SAFE",
-      "decision_reason": "Risk score 0.004 below SAFE threshold (0.300).",
+      "decision_reason": "Risk score 0.244 below SAFE threshold (0.300).",
       "override_applied": false,
       "signals": {
-        "adjusted_risk_score": 0.0045,
-        "ensemble_confidence": 0.7024,
+        "adjusted_risk_score": 0.2445,
+        "ensemble_confidence": 0.6334,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -737,10 +737,10 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.0,
-        "ensemble_confidence": 0.7484,
+        "ensemble_confidence": 0.8262,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
-        "confidence_tier": "MODERATE_CONFIDENCE",
+        "confidence_tier": "HIGH_CONFIDENCE",
         "triggered_rules": [
           "EC-03"
         ]
@@ -750,17 +750,15 @@
       "record_id": "W2-044",
       "ground_truth": "correct",
       "decision": "SAFE",
-      "decision_reason": "Risk score 0.000 below SAFE threshold (0.300).",
+      "decision_reason": "Risk score 0.242 below SAFE threshold (0.300).",
       "override_applied": false,
       "signals": {
-        "adjusted_risk_score": 0.0,
-        "ensemble_confidence": 0.7484,
+        "adjusted_risk_score": 0.2422,
+        "ensemble_confidence": 0.6739,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
-        "triggered_rules": [
-          "EC-03"
-        ]
+        "triggered_rules": []
       }
     },
     {
@@ -771,7 +769,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.4227,
-        "ensemble_confidence": 0.5862,
+        "ensemble_confidence": 0.6066,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -786,10 +784,10 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.0,
-        "ensemble_confidence": 0.7484,
+        "ensemble_confidence": 0.8262,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
-        "confidence_tier": "MODERATE_CONFIDENCE",
+        "confidence_tier": "HIGH_CONFIDENCE",
         "triggered_rules": [
           "EC-03"
         ]
@@ -803,7 +801,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.4227,
-        "ensemble_confidence": 0.5862,
+        "ensemble_confidence": 0.6066,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -818,10 +816,10 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.0,
-        "ensemble_confidence": 0.7484,
+        "ensemble_confidence": 0.8262,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
-        "confidence_tier": "MODERATE_CONFIDENCE",
+        "confidence_tier": "HIGH_CONFIDENCE",
         "triggered_rules": [
           "EC-03"
         ]
@@ -835,7 +833,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.3345,
-        "ensemble_confidence": 0.5712,
+        "ensemble_confidence": 0.6104,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -850,10 +848,10 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.0,
-        "ensemble_confidence": 0.7484,
+        "ensemble_confidence": 0.8262,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
-        "confidence_tier": "MODERATE_CONFIDENCE",
+        "confidence_tier": "HIGH_CONFIDENCE",
         "triggered_rules": [
           "EC-03"
         ]
@@ -867,10 +865,10 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.0,
-        "ensemble_confidence": 0.7484,
+        "ensemble_confidence": 0.8262,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
-        "confidence_tier": "MODERATE_CONFIDENCE",
+        "confidence_tier": "HIGH_CONFIDENCE",
         "triggered_rules": [
           "EC-03"
         ]
@@ -884,10 +882,10 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.0,
-        "ensemble_confidence": 0.7484,
+        "ensemble_confidence": 0.8262,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
-        "confidence_tier": "MODERATE_CONFIDENCE",
+        "confidence_tier": "HIGH_CONFIDENCE",
         "triggered_rules": [
           "EC-03"
         ]
@@ -901,10 +899,10 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.0,
-        "ensemble_confidence": 0.7484,
+        "ensemble_confidence": 0.8262,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
-        "confidence_tier": "MODERATE_CONFIDENCE",
+        "confidence_tier": "HIGH_CONFIDENCE",
         "triggered_rules": [
           "EC-03"
         ]
@@ -918,7 +916,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2122,
-        "ensemble_confidence": 0.6487,
+        "ensemble_confidence": 0.7011,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -933,10 +931,10 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.0,
-        "ensemble_confidence": 0.7484,
+        "ensemble_confidence": 0.8262,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
-        "confidence_tier": "MODERATE_CONFIDENCE",
+        "confidence_tier": "HIGH_CONFIDENCE",
         "triggered_rules": [
           "EC-03"
         ]
@@ -950,10 +948,10 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.0,
-        "ensemble_confidence": 0.7484,
+        "ensemble_confidence": 0.8262,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
-        "confidence_tier": "MODERATE_CONFIDENCE",
+        "confidence_tier": "HIGH_CONFIDENCE",
         "triggered_rules": [
           "EC-03"
         ]
@@ -963,17 +961,15 @@
       "record_id": "W2-057",
       "ground_truth": "correct",
       "decision": "SAFE",
-      "decision_reason": "Risk score 0.000 below SAFE threshold (0.300).",
+      "decision_reason": "Risk score 0.272 below SAFE threshold (0.300).",
       "override_applied": false,
       "signals": {
-        "adjusted_risk_score": 0.0,
-        "ensemble_confidence": 0.7484,
+        "adjusted_risk_score": 0.2722,
+        "ensemble_confidence": 0.6716,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
-        "triggered_rules": [
-          "EC-03"
-        ]
+        "triggered_rules": []
       }
     },
     {
@@ -984,10 +980,10 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.0,
-        "ensemble_confidence": 0.7484,
+        "ensemble_confidence": 0.8262,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
-        "confidence_tier": "MODERATE_CONFIDENCE",
+        "confidence_tier": "HIGH_CONFIDENCE",
         "triggered_rules": [
           "EC-03"
         ]
@@ -997,11 +993,11 @@
       "record_id": "W2-059",
       "ground_truth": "hallucinated",
       "decision": "SAFE",
-      "decision_reason": "Risk score 0.004 below SAFE threshold (0.300).",
+      "decision_reason": "Risk score 0.244 below SAFE threshold (0.300).",
       "override_applied": false,
       "signals": {
-        "adjusted_risk_score": 0.0045,
-        "ensemble_confidence": 0.7024,
+        "adjusted_risk_score": 0.2445,
+        "ensemble_confidence": 0.6209,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -1016,7 +1012,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.3345,
-        "ensemble_confidence": 0.5712,
+        "ensemble_confidence": 0.6104,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -1031,7 +1027,7 @@
       "override_applied": true,
       "signals": {
         "adjusted_risk_score": 0.6145,
-        "ensemble_confidence": 0.6027,
+        "ensemble_confidence": 0.5807,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": true,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -1048,10 +1044,10 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.1811,
-        "ensemble_confidence": 0.7039,
+        "ensemble_confidence": 0.7542,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
-        "confidence_tier": "MODERATE_CONFIDENCE",
+        "confidence_tier": "HIGH_CONFIDENCE",
         "triggered_rules": []
       }
     },
@@ -1062,8 +1058,8 @@
       "decision_reason": "Critical edge case rule triggered (e.g., ALLOW src=ANY dst=ANY or invalid port). Automatic REJECT regardless of risk score.",
       "override_applied": true,
       "signals": {
-        "adjusted_risk_score": 0.8511,
-        "ensemble_confidence": 0.5884,
+        "adjusted_risk_score": 0.8811,
+        "ensemble_confidence": 0.518,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": true,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -1080,7 +1076,7 @@
       "override_applied": true,
       "signals": {
         "adjusted_risk_score": 0.6122,
-        "ensemble_confidence": 0.6487,
+        "ensemble_confidence": 0.6211,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": true,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -1093,11 +1089,11 @@
       "record_id": "W2-065",
       "ground_truth": "dangerous",
       "decision": "SAFE",
-      "decision_reason": "Risk score 0.003 below SAFE threshold (0.300).",
+      "decision_reason": "Risk score 0.243 below SAFE threshold (0.300).",
       "override_applied": false,
       "signals": {
-        "adjusted_risk_score": 0.0027,
-        "ensemble_confidence": 0.7392,
+        "adjusted_risk_score": 0.2427,
+        "ensemble_confidence": 0.6533,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -1112,7 +1108,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -1129,7 +1125,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -1146,7 +1142,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -1163,7 +1159,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -1175,12 +1171,12 @@
     {
       "record_id": "W3-070",
       "ground_truth": "",
-      "decision": "SAFE",
-      "decision_reason": "Risk score 0.255 below SAFE threshold (0.300).",
+      "decision": "REVIEW",
+      "decision_reason": "Risk score 0.494 in REVIEW band [0.300, 0.600).",
       "override_applied": false,
       "signals": {
-        "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "adjusted_risk_score": 0.4945,
+        "ensemble_confidence": 0.5459,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -1197,7 +1193,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -1214,7 +1210,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -1231,7 +1227,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.5845,
-        "ensemble_confidence": 0.5112,
+        "ensemble_confidence": 0.5104,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -1248,7 +1244,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -1265,7 +1261,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.4945,
-        "ensemble_confidence": 0.5322,
+        "ensemble_confidence": 0.5459,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -1282,7 +1278,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -1299,7 +1295,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -1316,7 +1312,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -1333,7 +1329,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.4945,
-        "ensemble_confidence": 0.5322,
+        "ensemble_confidence": 0.5459,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -1350,7 +1346,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.5845,
-        "ensemble_confidence": 0.5112,
+        "ensemble_confidence": 0.5104,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -1362,12 +1358,12 @@
     {
       "record_id": "W3-081",
       "ground_truth": "",
-      "decision": "SAFE",
-      "decision_reason": "Risk score 0.255 below SAFE threshold (0.300).",
+      "decision": "REVIEW",
+      "decision_reason": "Risk score 0.494 in REVIEW band [0.300, 0.600).",
       "override_applied": false,
       "signals": {
-        "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "adjusted_risk_score": 0.4945,
+        "ensemble_confidence": 0.5459,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -1384,7 +1380,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -1401,7 +1397,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -1418,7 +1414,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -1435,7 +1431,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -1452,7 +1448,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.5845,
-        "ensemble_confidence": 0.5112,
+        "ensemble_confidence": 0.5104,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -1464,15 +1460,15 @@
     {
       "record_id": "W3-087",
       "ground_truth": "",
-      "decision": "REVIEW",
-      "decision_reason": "Risk score 0.585 in REVIEW band [0.300, 0.600).",
+      "decision": "REJECT",
+      "decision_reason": "Risk score 0.615 exceeds REJECT threshold (0.600).",
       "override_applied": false,
       "signals": {
-        "adjusted_risk_score": 0.5845,
-        "ensemble_confidence": 0.5112,
+        "adjusted_risk_score": 0.6145,
+        "ensemble_confidence": 0.4919,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
-        "confidence_tier": "MODERATE_CONFIDENCE",
+        "confidence_tier": "LOW_CONFIDENCE",
         "triggered_rules": [
           "EC-08"
         ]
@@ -1486,7 +1482,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -1503,7 +1499,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -1515,12 +1511,12 @@
     {
       "record_id": "W3-090",
       "ground_truth": "",
-      "decision": "SAFE",
-      "decision_reason": "Risk score 0.255 below SAFE threshold (0.300).",
+      "decision": "REVIEW",
+      "decision_reason": "Risk score 0.494 in REVIEW band [0.300, 0.600).",
       "override_applied": false,
       "signals": {
-        "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "adjusted_risk_score": 0.4945,
+        "ensemble_confidence": 0.5459,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -1537,7 +1533,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.5845,
-        "ensemble_confidence": 0.5112,
+        "ensemble_confidence": 0.5104,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -1549,15 +1545,15 @@
     {
       "record_id": "W3-092",
       "ground_truth": "",
-      "decision": "REVIEW",
-      "decision_reason": "Risk score 0.585 in REVIEW band [0.300, 0.600).",
+      "decision": "REJECT",
+      "decision_reason": "Risk score 0.615 exceeds REJECT threshold (0.600).",
       "override_applied": false,
       "signals": {
-        "adjusted_risk_score": 0.5845,
-        "ensemble_confidence": 0.5112,
+        "adjusted_risk_score": 0.6145,
+        "ensemble_confidence": 0.4919,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
-        "confidence_tier": "MODERATE_CONFIDENCE",
+        "confidence_tier": "LOW_CONFIDENCE",
         "triggered_rules": [
           "EC-08"
         ]
@@ -1571,7 +1567,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -1588,7 +1584,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -1600,12 +1596,12 @@
     {
       "record_id": "W3-095",
       "ground_truth": "",
-      "decision": "SAFE",
-      "decision_reason": "Risk score 0.255 below SAFE threshold (0.300).",
+      "decision": "REVIEW",
+      "decision_reason": "Risk score 0.494 in REVIEW band [0.300, 0.600).",
       "override_applied": false,
       "signals": {
-        "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "adjusted_risk_score": 0.4945,
+        "ensemble_confidence": 0.5459,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -1622,7 +1618,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -1639,7 +1635,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.4945,
-        "ensemble_confidence": 0.5322,
+        "ensemble_confidence": 0.5459,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -1656,7 +1652,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -1673,7 +1669,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -1690,7 +1686,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -1707,7 +1703,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -1724,7 +1720,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.5845,
-        "ensemble_confidence": 0.5112,
+        "ensemble_confidence": 0.5104,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -1741,7 +1737,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -1758,7 +1754,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -1775,7 +1771,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -1792,7 +1788,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -1809,7 +1805,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -1826,7 +1822,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -1843,7 +1839,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -1855,12 +1851,12 @@
     {
       "record_id": "W4-110",
       "ground_truth": "",
-      "decision": "SAFE",
-      "decision_reason": "Risk score 0.255 below SAFE threshold (0.300).",
+      "decision": "REVIEW",
+      "decision_reason": "Risk score 0.494 in REVIEW band [0.300, 0.600).",
       "override_applied": false,
       "signals": {
-        "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "adjusted_risk_score": 0.4945,
+        "ensemble_confidence": 0.5459,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -1877,7 +1873,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -1894,7 +1890,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -1911,7 +1907,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -1928,7 +1924,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -1945,7 +1941,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -1962,7 +1958,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -1979,7 +1975,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.6145,
-        "ensemble_confidence": 0.4962,
+        "ensemble_confidence": 0.4919,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "LOW_CONFIDENCE",
@@ -1996,7 +1992,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -2013,7 +2009,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -2025,12 +2021,12 @@
     {
       "record_id": "W4-120",
       "ground_truth": "",
-      "decision": "SAFE",
-      "decision_reason": "Risk score 0.255 below SAFE threshold (0.300).",
+      "decision": "REVIEW",
+      "decision_reason": "Risk score 0.494 in REVIEW band [0.300, 0.600).",
       "override_applied": false,
       "signals": {
-        "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "adjusted_risk_score": 0.4945,
+        "ensemble_confidence": 0.5459,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -2047,7 +2043,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -2064,7 +2060,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -2081,7 +2077,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.5845,
-        "ensemble_confidence": 0.5112,
+        "ensemble_confidence": 0.5104,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -2098,7 +2094,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.5845,
-        "ensemble_confidence": 0.5112,
+        "ensemble_confidence": 0.5104,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -2110,12 +2106,12 @@
     {
       "record_id": "W4-125",
       "ground_truth": "",
-      "decision": "SAFE",
-      "decision_reason": "Risk score 0.255 below SAFE threshold (0.300).",
+      "decision": "REVIEW",
+      "decision_reason": "Risk score 0.494 in REVIEW band [0.300, 0.600).",
       "override_applied": false,
       "signals": {
-        "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "adjusted_risk_score": 0.4945,
+        "ensemble_confidence": 0.5459,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -2132,7 +2128,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.5845,
-        "ensemble_confidence": 0.5112,
+        "ensemble_confidence": 0.5104,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -2149,7 +2145,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.5845,
-        "ensemble_confidence": 0.5112,
+        "ensemble_confidence": 0.5104,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -2166,7 +2162,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.5845,
-        "ensemble_confidence": 0.5112,
+        "ensemble_confidence": 0.5104,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -2183,7 +2179,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -2195,15 +2191,15 @@
     {
       "record_id": "W4-130",
       "ground_truth": "",
-      "decision": "REVIEW",
-      "decision_reason": "Risk score 0.585 in REVIEW band [0.300, 0.600).",
+      "decision": "REJECT",
+      "decision_reason": "Risk score 0.615 exceeds REJECT threshold (0.600).",
       "override_applied": false,
       "signals": {
-        "adjusted_risk_score": 0.5845,
-        "ensemble_confidence": 0.5112,
+        "adjusted_risk_score": 0.6145,
+        "ensemble_confidence": 0.4919,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
-        "confidence_tier": "MODERATE_CONFIDENCE",
+        "confidence_tier": "LOW_CONFIDENCE",
         "triggered_rules": [
           "EC-08"
         ]
@@ -2217,7 +2213,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -2229,12 +2225,12 @@
     {
       "record_id": "W4-132",
       "ground_truth": "",
-      "decision": "SAFE",
-      "decision_reason": "Risk score 0.255 below SAFE threshold (0.300).",
+      "decision": "REVIEW",
+      "decision_reason": "Risk score 0.494 in REVIEW band [0.300, 0.600).",
       "override_applied": false,
       "signals": {
-        "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "adjusted_risk_score": 0.4945,
+        "ensemble_confidence": 0.5459,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -2251,7 +2247,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -2268,7 +2264,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -2285,7 +2281,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -2302,7 +2298,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -2319,7 +2315,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -2336,7 +2332,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -2353,7 +2349,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -2370,7 +2366,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -2387,7 +2383,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -2404,7 +2400,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -2421,7 +2417,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -2438,7 +2434,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -2455,7 +2451,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -2472,7 +2468,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -2489,7 +2485,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -2506,7 +2502,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -2523,7 +2519,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -2540,7 +2536,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.6145,
-        "ensemble_confidence": 0.4962,
+        "ensemble_confidence": 0.4919,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "LOW_CONFIDENCE",
@@ -2557,7 +2553,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -2574,7 +2570,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -2591,7 +2587,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -2608,7 +2604,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -2625,7 +2621,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.4945,
-        "ensemble_confidence": 0.5322,
+        "ensemble_confidence": 0.5459,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -2642,7 +2638,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.4945,
-        "ensemble_confidence": 0.5322,
+        "ensemble_confidence": 0.5459,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -2659,7 +2655,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -2676,7 +2672,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.5845,
-        "ensemble_confidence": 0.5112,
+        "ensemble_confidence": 0.5104,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -2688,12 +2684,12 @@
     {
       "record_id": "W5-169",
       "ground_truth": "",
-      "decision": "SAFE",
-      "decision_reason": "Risk score 0.255 below SAFE threshold (0.300).",
+      "decision": "REVIEW",
+      "decision_reason": "Risk score 0.494 in REVIEW band [0.300, 0.600).",
       "override_applied": false,
       "signals": {
-        "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "adjusted_risk_score": 0.4945,
+        "ensemble_confidence": 0.5459,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -2710,7 +2706,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -2727,7 +2723,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.4945,
-        "ensemble_confidence": 0.5322,
+        "ensemble_confidence": 0.5459,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -2744,7 +2740,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -2761,7 +2757,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -2778,7 +2774,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.5845,
-        "ensemble_confidence": 0.5112,
+        "ensemble_confidence": 0.5104,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -2795,7 +2791,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -2812,7 +2808,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -2829,7 +2825,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -2846,7 +2842,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.5845,
-        "ensemble_confidence": 0.5112,
+        "ensemble_confidence": 0.5104,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -2863,7 +2859,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -2880,7 +2876,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -2897,7 +2893,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -2909,12 +2905,12 @@
     {
       "record_id": "W5-182",
       "ground_truth": "",
-      "decision": "SAFE",
-      "decision_reason": "Risk score 0.255 below SAFE threshold (0.300).",
+      "decision": "REVIEW",
+      "decision_reason": "Risk score 0.494 in REVIEW band [0.300, 0.600).",
       "override_applied": false,
       "signals": {
-        "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "adjusted_risk_score": 0.4945,
+        "ensemble_confidence": 0.5459,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -2931,7 +2927,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -2948,7 +2944,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -2965,7 +2961,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -2982,7 +2978,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -2999,7 +2995,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -3016,7 +3012,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -3033,7 +3029,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -3050,7 +3046,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -3067,7 +3063,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -3084,7 +3080,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -3096,12 +3092,12 @@
     {
       "record_id": "W5-193",
       "ground_truth": "",
-      "decision": "SAFE",
-      "decision_reason": "Risk score 0.255 below SAFE threshold (0.300).",
+      "decision": "REVIEW",
+      "decision_reason": "Risk score 0.494 in REVIEW band [0.300, 0.600).",
       "override_applied": false,
       "signals": {
-        "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "adjusted_risk_score": 0.4945,
+        "ensemble_confidence": 0.5459,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -3118,7 +3114,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.4945,
-        "ensemble_confidence": 0.5322,
+        "ensemble_confidence": 0.5459,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -3130,12 +3126,12 @@
     {
       "record_id": "W5-195",
       "ground_truth": "",
-      "decision": "SAFE",
-      "decision_reason": "Risk score 0.255 below SAFE threshold (0.300).",
+      "decision": "REVIEW",
+      "decision_reason": "Risk score 0.494 in REVIEW band [0.300, 0.600).",
       "override_applied": false,
       "signals": {
-        "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "adjusted_risk_score": 0.4945,
+        "ensemble_confidence": 0.5459,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -3152,7 +3148,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -3169,7 +3165,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -3186,7 +3182,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -3203,7 +3199,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -3220,7 +3216,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -3237,7 +3233,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -3254,7 +3250,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -3266,15 +3262,15 @@
     {
       "record_id": "W5-203",
       "ground_truth": "",
-      "decision": "REVIEW",
-      "decision_reason": "Risk score 0.585 in REVIEW band [0.300, 0.600).",
+      "decision": "REJECT",
+      "decision_reason": "Risk score 0.615 exceeds REJECT threshold (0.600).",
       "override_applied": false,
       "signals": {
-        "adjusted_risk_score": 0.5845,
-        "ensemble_confidence": 0.5112,
+        "adjusted_risk_score": 0.6145,
+        "ensemble_confidence": 0.4919,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
-        "confidence_tier": "MODERATE_CONFIDENCE",
+        "confidence_tier": "LOW_CONFIDENCE",
         "triggered_rules": [
           "EC-08"
         ]
@@ -3288,7 +3284,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.4945,
-        "ensemble_confidence": 0.5322,
+        "ensemble_confidence": 0.5459,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -3305,7 +3301,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -3322,7 +3318,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.4945,
-        "ensemble_confidence": 0.5322,
+        "ensemble_confidence": 0.5459,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -3339,7 +3335,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -3356,7 +3352,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -3368,12 +3364,12 @@
     {
       "record_id": "W5-209",
       "ground_truth": "",
-      "decision": "SAFE",
-      "decision_reason": "Risk score 0.255 below SAFE threshold (0.300).",
+      "decision": "REVIEW",
+      "decision_reason": "Risk score 0.494 in REVIEW band [0.300, 0.600).",
       "override_applied": false,
       "signals": {
-        "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "adjusted_risk_score": 0.4945,
+        "ensemble_confidence": 0.5459,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -3390,7 +3386,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -3407,7 +3403,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -3424,7 +3420,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.4945,
-        "ensemble_confidence": 0.5322,
+        "ensemble_confidence": 0.5459,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -3441,7 +3437,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -3458,7 +3454,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -3475,7 +3471,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -3492,7 +3488,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -3509,7 +3505,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -3526,7 +3522,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -3543,7 +3539,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -3560,7 +3556,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -3577,7 +3573,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -3594,7 +3590,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -3606,12 +3602,12 @@
     {
       "record_id": "W5-223",
       "ground_truth": "",
-      "decision": "SAFE",
-      "decision_reason": "Risk score 0.255 below SAFE threshold (0.300).",
+      "decision": "REVIEW",
+      "decision_reason": "Risk score 0.494 in REVIEW band [0.300, 0.600).",
       "override_applied": false,
       "signals": {
-        "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "adjusted_risk_score": 0.4945,
+        "ensemble_confidence": 0.5459,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -3628,7 +3624,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",
@@ -3645,7 +3641,7 @@
       "override_applied": false,
       "signals": {
         "adjusted_risk_score": 0.2545,
-        "ensemble_confidence": 0.6424,
+        "ensemble_confidence": 0.6858,
         "xai_agreement_status": "PARTIAL_AGREEMENT",
         "has_critical_rule": false,
         "confidence_tier": "MODERATE_CONFIDENCE",

@@ -1,43 +1,43 @@
 {
   "module": "decision_layer",
-  "timestamp": "2026-06-14T17:18:05.323149Z",
+  "timestamp": "2026-06-15T04:16:52.753242Z",
   "thresholds_used": {
     "safe": 0.3,
     "review": 0.6
   },
   "total_records": 215,
-  "safe_count": 166,
-  "review_count": 36,
-  "reject_count": 13,
+  "safe_count": 150,
+  "review_count": 48,
+  "reject_count": 17,
   "override_count": 11,
   "evaluation": {
-    "true_positives": 12,
+    "true_positives": 16,
     "false_positives": 1,
     "true_negatives": 33,
-    "false_negatives": 169,
-    "precision": 0.9231,
-    "recall": 0.0663,
-    "f1_score": 0.1237,
-    "accuracy": 0.2093,
+    "false_negatives": 165,
+    "precision": 0.9412,
+    "recall": 0.0884,
+    "f1_score": 0.1616,
+    "accuracy": 0.2279,
     "strict": {
-      "true_positives": 12,
+      "true_positives": 16,
       "false_positives": 1,
       "true_negatives": 33,
-      "false_negatives": 169,
-      "precision": 0.9231,
-      "recall": 0.0663,
-      "f1_score": 0.1237,
-      "accuracy": 0.2093
+      "false_negatives": 165,
+      "precision": 0.9412,
+      "recall": 0.0884,
+      "f1_score": 0.1616,
+      "accuracy": 0.2279
     },
     "lenient": {
-      "true_positives": 48,
+      "true_positives": 64,
       "false_positives": 1,
       "true_negatives": 33,
-      "false_negatives": 133,
-      "precision": 0.9796,
-      "recall": 0.2652,
-      "f1_score": 0.4174,
-      "accuracy": 0.3767
+      "false_negatives": 117,
+      "precision": 0.9846,
+      "recall": 0.3536,
+      "f1_score": 0.5203,
+      "accuracy": 0.4512
     }
   }
 }

@@ -1,6 +1,6 @@
 {
   "benchmark_run": {
-    "timestamp": "2026-06-14T17:17:52.252514+00:00",
+    "timestamp": "2026-06-15T04:16:39.995762+00:00",
     "total_records": 215,
     "labelled_records": 65,
     "unlabelled_excluded": 150,
@@ -9,12 +9,12 @@
     "score_type": "adjusted_risk_score"
   },
   "binary_classification": {
-    "precision": 0.913,
-    "recall": 0.6774,
-    "f1_score": 0.7778,
-    "accuracy": 0.8154,
-    "auc_roc": 0.9687,
-    "auc_pr": 0.9567
+    "precision": 0.8824,
+    "recall": 0.9677,
+    "f1_score": 0.9231,
+    "accuracy": 0.9231,
+    "auc_roc": 0.9658,
+    "auc_pr": 0.9537
   },
   "records": [
     {
@@ -63,7 +63,7 @@
       "record_id": "W1-007",
       "is_hallucinated": 1,
       "has_label": true,
-      "risk_score": 0.0045,
+      "risk_score": 0.2445,
       "hallucination_type": "missing_constraint"
     },
     {
@@ -77,7 +77,7 @@
       "record_id": "W1-009",
       "is_hallucinated": 1,
       "has_label": true,
-      "risk_score": 0.0045,
+      "risk_score": 0.3345,
       "hallucination_type": "wrong_port"
     },
     {
@@ -112,7 +112,7 @@
       "record_id": "W1-014",
       "is_hallucinated": 1,
       "has_label": true,
-      "risk_score": 0.0045,
+      "risk_score": 0.2745,
       "hallucination_type": "scope_expansion"
     },
     {
@@ -126,7 +126,7 @@
       "record_id": "W1-016",
       "is_hallucinated": 1,
       "has_label": true,
-      "risk_score": 0.0045,
+      "risk_score": 0.3645,
       "hallucination_type": "wrong_protocol"
     },
     {
@@ -168,7 +168,7 @@
       "record_id": "W2-022",
       "is_hallucinated": 1,
       "has_label": true,
-      "risk_score": 0.0045,
+      "risk_score": 0.2445,
       "hallucination_type": "missing_constraint"
     },
     {
@@ -301,14 +301,14 @@
       "record_id": "W2-041",
       "is_hallucinated": 1,
       "has_label": true,
-      "risk_score": 0.0045,
+      "risk_score": 0.2445,
       "hallucination_type": "missing_constraint"
     },
     {
       "record_id": "W2-042",
       "is_hallucinated": 1,
       "has_label": true,
-      "risk_score": 0.0045,
+      "risk_score": 0.2445,
       "hallucination_type": "missing_constraint"
     },
     {
@@ -322,7 +322,7 @@
       "record_id": "W2-044",
       "is_hallucinated": 0,
       "has_label": true,
-      "risk_score": 0.0,
+      "risk_score": 0.2422,
       "hallucination_type": "none"
     },
     {
@@ -413,7 +413,7 @@
       "record_id": "W2-057",
       "is_hallucinated": 0,
       "has_label": true,
-      "risk_score": 0.0,
+      "risk_score": 0.2722,
       "hallucination_type": "none"
     },
     {
@@ -427,7 +427,7 @@
       "record_id": "W2-059",
       "is_hallucinated": 1,
       "has_label": true,
-      "risk_score": 0.0045,
+      "risk_score": 0.2445,
       "hallucination_type": "scope_expansion"
     },
     {
@@ -455,7 +455,7 @@
       "record_id": "W2-063",
       "is_hallucinated": 1,
       "has_label": true,
-      "risk_score": 0.8511,
+      "risk_score": 0.8811,
       "hallucination_type": "over_permissive"
     },
     {
@@ -469,7 +469,7 @@
       "record_id": "W2-065",
       "is_hallucinated": 1,
       "has_label": true,
-      "risk_score": 0.0027,
+      "risk_score": 0.2427,
       "hallucination_type": "intent_flip"
     }
   ]
