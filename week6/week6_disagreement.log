@@ -26,3 +26,22 @@
 2026-06-12 23:38:24,166 [INFO] Saved: week6_plots\xai_agreement_distribution.png
 2026-06-12 23:38:24,177 [INFO] Output: week6_xai_disagreement.json
 2026-06-12 23:38:24,178 [INFO] ============================================================
+2026-06-15 17:41:13,177 [INFO] ============================================================
+2026-06-15 17:41:13,178 [INFO] TrustGuard Week 6 | Module 1 | SHAP-LIME Disagreement
+2026-06-15 17:41:13,178 [INFO] ============================================================
+2026-06-15 17:41:13,220 [INFO] SHAP per-record examples: 10 records with individual SHAP values
+2026-06-15 17:41:13,220 [INFO] Global SHAP top-5: ['syntax_valid', 'compliance_severity', 'confidence', 'semantic_score', 'protocol_enc']
+2026-06-15 17:41:13,221 [INFO] Real LIME samples in xai_report: 5 records
+2026-06-15 17:41:13,222 [INFO] Processing 215 ensemble records
+2026-06-15 17:41:13,241 [INFO] LIME source: 5 real, 210 simulated | SHAP: 10 per-record, 205 global fallback
+2026-06-15 17:41:13,242 [INFO] Processed 215 records
+2026-06-15 17:41:13,243 [INFO] Mean agreement    : 0.5036
+2026-06-15 17:41:13,243 [INFO] Std agreement     : 0.1532
+2026-06-15 17:41:13,243 [INFO] Strong agreement  : 85 (39.5%)
+2026-06-15 17:41:13,244 [INFO] Partial agreement : 104 (48.4%)
+2026-06-15 17:41:13,244 [INFO] Disagreement      : 26 (12.1%)
+2026-06-15 17:41:13,795 [INFO] Saved: week6_plots\shap_lime_agreement.png
+2026-06-15 17:41:14,043 [INFO] Saved: week6_plots\xai_agreement_by_label.png
+2026-06-15 17:41:14,200 [INFO] Saved: week6_plots\xai_agreement_distribution.png
+2026-06-15 17:41:14,215 [INFO] Output: week6_xai_disagreement.json
+2026-06-15 17:41:14,215 [INFO] ============================================================

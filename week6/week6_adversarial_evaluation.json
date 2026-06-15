@@ -1,6 +1,6 @@
 {
   "module": "adversarial_evaluation",
-  "timestamp": "2026-06-15T04:16:41.713341+00:00",
+  "timestamp": "2026-06-15T12:11:45.460699+00:00",
   "total_adversarial_prompts": 19,
   "detected": 19,
   "missed": 0,

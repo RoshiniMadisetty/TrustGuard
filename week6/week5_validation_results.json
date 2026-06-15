@@ -409,11 +409,6 @@
               "category": "missing_constraint",
               "severity": "HIGH",
               "detail": "Scoped DENY intent but src=ANY"
-            },
-            {
-              "category": "missing_constraint",
-              "severity": "HIGH",
-              "detail": "Scoped DENY intent but src=ANY dst=ANY"
             }
           ],
           "max_severity": "HIGH"
@@ -987,11 +982,6 @@
               "category": "missing_constraint",
               "severity": "HIGH",
               "detail": "Scoped DENY intent but src=ANY"
-            },
-            {
-              "category": "missing_constraint",
-              "severity": "HIGH",
-              "detail": "Scoped DENY intent but src=ANY dst=ANY"
             }
           ],
           "max_severity": "HIGH"
@@ -1357,11 +1347,6 @@
               "category": "missing_constraint",
               "severity": "HIGH",
               "detail": "Scoped DENY intent but src=ANY"
-            },
-            {
-              "category": "missing_constraint",
-              "severity": "HIGH",
-              "detail": "Scoped DENY intent but src=ANY dst=ANY"
             }
           ],
           "max_severity": "HIGH"
@@ -2528,11 +2513,6 @@
               "category": "missing_constraint",
               "severity": "HIGH",
               "detail": "Scoped DENY intent but src=ANY"
-            },
-            {
-              "category": "missing_constraint",
-              "severity": "HIGH",
-              "detail": "Scoped DENY intent but src=ANY dst=ANY"
             }
           ],
           "max_severity": "HIGH"
@@ -2597,11 +2577,6 @@
               "category": "missing_constraint",
               "severity": "HIGH",
               "detail": "Scoped DENY intent but src=ANY"
-            },
-            {
-              "category": "missing_constraint",
-              "severity": "HIGH",
-              "detail": "Scoped DENY intent but src=ANY dst=ANY"
             }
           ],
           "max_severity": "HIGH"
@@ -2724,11 +2699,6 @@
               "category": "missing_constraint",
               "severity": "HIGH",
               "detail": "Scoped DENY intent but src=ANY"
-            },
-            {
-              "category": "missing_constraint",
-              "severity": "HIGH",
-              "detail": "Scoped DENY intent but src=ANY dst=ANY"
             }
           ],
           "max_severity": "HIGH"
@@ -3640,11 +3610,6 @@
               "category": "missing_constraint",
               "severity": "HIGH",
               "detail": "Scoped DENY intent but src=ANY"
-            },
-            {
-              "category": "missing_constraint",
-              "severity": "HIGH",
-              "detail": "Scoped DENY intent but src=ANY dst=ANY"
             }
           ],
           "max_severity": "HIGH"
@@ -4044,11 +4009,6 @@
               "category": "missing_constraint",
               "severity": "HIGH",
               "detail": "Scoped DENY intent but src=ANY"
-            },
-            {
-              "category": "missing_constraint",
-              "severity": "HIGH",
-              "detail": "Scoped DENY intent but src=ANY dst=ANY"
             }
           ],
           "max_severity": "HIGH"
@@ -4088,7 +4048,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow the Kubernetes API server to communicate with worker nodes on port 6443.",
-        "confidence": 0.8
+        "confidence": 0.801
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -4112,8 +4072,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.801,
+          "risk": 0.029849999999999988
         },
         "compliance": {
           "violations": [],
@@ -4128,12 +4088,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.0544775
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.0544775,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.801
     },
     {
       "record_id": "W3-067",
@@ -4154,7 +4114,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Deny all traffic from the public internet to the etcd cluster on port 2379.",
-        "confidence": 0.8
+        "confidence": 0.798
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -4178,8 +4138,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.798,
+          "risk": 0.030299999999999994
         },
         "compliance": {
           "violations": [],
@@ -4194,12 +4154,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.054545
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.054545,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.798
     },
     {
       "record_id": "W3-068",
@@ -4220,7 +4180,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow Prometheus to scrape metrics from all services on port 9090.",
-        "confidence": 0.8
+        "confidence": 0.8200000000000001
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -4244,8 +4204,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.8200000000000001,
+          "risk": 0.026999999999999996
         },
         "compliance": {
           "violations": [],
@@ -4260,12 +4220,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.05405
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.05405,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.8200000000000001
     },
     {
       "record_id": "W3-069",
@@ -4286,7 +4246,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Permit the container registry to push images to the deployment server over port 5000.",
-        "confidence": 0.8
+        "confidence": 0.809
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -4310,8 +4270,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.809,
+          "risk": 0.028649999999999995
         },
         "compliance": {
           "violations": [],
@@ -4326,12 +4286,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.0542975
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.0542975,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.809
     },
     {
       "record_id": "W3-070",
@@ -4352,7 +4312,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Block all outbound traffic from the CI/CD runner except to GitHub on port 443.",
-        "confidence": 0.8
+        "confidence": 0.787
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -4376,8 +4336,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.787,
+          "risk": 0.03194999999999999
         },
         "compliance": {
           "violations": [
@@ -4398,12 +4358,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.2945
+          "final_risk_score": 0.29479249999999996
         }
       },
-      "risk_score": 0.2945,
+      "risk_score": 0.29479249999999996,
       "max_severity": "HIGH",
-      "confidence": 0.8
+      "confidence": 0.787
     },
     {
       "record_id": "W3-071",
@@ -4424,7 +4384,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow Grafana to query the Prometheus server on port 9090.",
-        "confidence": 0.8
+        "confidence": 0.8170000000000001
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -4448,8 +4408,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.8170000000000001,
+          "risk": 0.02744999999999999
         },
         "compliance": {
           "violations": [],
@@ -4464,12 +4424,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.0541175
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.0541175,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.8170000000000001
     },
     {
       "record_id": "W3-072",
@@ -4490,7 +4450,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Deny direct access to the Kubernetes dashboard from outside the management VLAN.",
-        "confidence": 0.8
+        "confidence": 0.795
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -4514,8 +4474,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.795,
+          "risk": 0.03075
         },
         "compliance": {
           "violations": [],
@@ -4530,12 +4490,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.0546125
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.0546125,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.795
     },
     {
       "record_id": "W3-073",
@@ -4556,7 +4516,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow the ingress controller to forward HTTP traffic to backend pods on port 8080.",
-        "confidence": 0.8
+        "confidence": 0.788
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -4580,8 +4540,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.788,
+          "risk": 0.031799999999999995
         },
         "compliance": {
           "violations": [
@@ -4602,12 +4562,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.3845
+          "final_risk_score": 0.38477
         }
       },
-      "risk_score": 0.3845,
+      "risk_score": 0.38477,
       "max_severity": "HIGH",
-      "confidence": 0.8
+      "confidence": 0.788
     },
     {
       "record_id": "W3-074",
@@ -4628,7 +4588,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Permit the secrets manager to communicate with application pods on port 8200.",
-        "confidence": 0.8
+        "confidence": 0.791
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -4652,8 +4612,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.791,
+          "risk": 0.03134999999999999
         },
         "compliance": {
           "violations": [],
@@ -4668,12 +4628,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.0547025
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.0547025,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.791
     },
     {
       "record_id": "W3-075",
@@ -4694,7 +4654,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Block all traffic to the message broker except from authorised microservices.",
-        "confidence": 0.8
+        "confidence": 0.812
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -4718,8 +4678,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.812,
+          "risk": 0.02819999999999999
         },
         "compliance": {
           "violations": [
@@ -4740,12 +4700,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.2945
+          "final_risk_score": 0.29423
         }
       },
-      "risk_score": 0.2945,
+      "risk_score": 0.29423,
       "max_severity": "HIGH",
-      "confidence": 0.8
+      "confidence": 0.812
     },
     {
       "record_id": "W3-076",
@@ -4766,7 +4726,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow the log aggregator to receive logs from all pods on port 5044.",
-        "confidence": 0.8
+        "confidence": 0.796
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -4790,8 +4750,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.796,
+          "risk": 0.03059999999999999
         },
         "compliance": {
           "violations": [],
@@ -4806,12 +4766,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.05459
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.05459,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.796
     },
     {
       "record_id": "W3-077",
@@ -4832,7 +4792,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Permit the artifact repository to serve packages to build agents on port 8081.",
-        "confidence": 0.8
+        "confidence": 0.782
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -4856,8 +4816,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.782,
+          "risk": 0.03269999999999999
         },
         "compliance": {
           "violations": [],
@@ -4872,12 +4832,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.054905
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.054905,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.782
     },
     {
       "record_id": "W3-078",
@@ -4898,7 +4858,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Deny all traffic from the staging environment to the production database.",
-        "confidence": 0.8
+        "confidence": 0.805
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -4922,8 +4882,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.805,
+          "risk": 0.029249999999999998
         },
         "compliance": {
           "violations": [],
@@ -4938,12 +4898,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.054387500000000005
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.054387500000000005,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.805
     },
     {
       "record_id": "W3-079",
@@ -4964,7 +4924,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow the health check endpoint to be reachable from the load balancer only.",
-        "confidence": 0.8
+        "confidence": 0.794
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -4988,8 +4948,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.794,
+          "risk": 0.030899999999999997
         },
         "compliance": {
           "violations": [
@@ -5010,12 +4970,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.2945
+          "final_risk_score": 0.294635
         }
       },
-      "risk_score": 0.2945,
+      "risk_score": 0.294635,
       "max_severity": "HIGH",
-      "confidence": 0.8
+      "confidence": 0.794
     },
     {
       "record_id": "W3-080",
@@ -5036,7 +4996,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Permit outbound HTTPS traffic from application pods to external payment APIs.",
-        "confidence": 0.8
+        "confidence": 0.79
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -5060,8 +5020,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.79,
+          "risk": 0.0315
         },
         "compliance": {
           "violations": [
@@ -5082,12 +5042,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.3845
+          "final_risk_score": 0.384725
         }
       },
-      "risk_score": 0.3845,
+      "risk_score": 0.384725,
       "max_severity": "HIGH",
-      "confidence": 0.8
+      "confidence": 0.79
     },
     {
       "record_id": "W3-081",
@@ -5108,7 +5068,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Block all inter-pod traffic except on explicitly whitelisted ports.",
-        "confidence": 0.8
+        "confidence": 0.8200000000000001
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -5132,8 +5092,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.8200000000000001,
+          "risk": 0.026999999999999996
         },
         "compliance": {
           "violations": [
@@ -5154,12 +5114,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.2945
+          "final_risk_score": 0.29405
         }
       },
-      "risk_score": 0.2945,
+      "risk_score": 0.29405,
       "max_severity": "HIGH",
-      "confidence": 0.8
+      "confidence": 0.8200000000000001
     },
     {
       "record_id": "W3-082",
@@ -5180,7 +5140,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow the backup agent to transfer snapshots to cloud storage over port 443.",
-        "confidence": 0.8
+        "confidence": 0.812
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -5204,8 +5164,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.812,
+          "risk": 0.02819999999999999
         },
         "compliance": {
           "violations": [],
@@ -5220,12 +5180,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.05423
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.05423,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.812
     },
     {
       "record_id": "W3-083",
@@ -5246,7 +5206,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Deny all traffic from developer laptops to the production Kubernetes namespace.",
-        "confidence": 0.8
+        "confidence": 0.8180000000000001
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -5270,8 +5230,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.8180000000000001,
+          "risk": 0.02729999999999999
         },
         "compliance": {
           "violations": [],
@@ -5286,12 +5246,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.054095000000000004
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.054095000000000004,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.8180000000000001
     },
     {
       "record_id": "W3-084",
@@ -5312,7 +5272,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow the service mesh sidecar to communicate with the control plane on port 15010.",
-        "confidence": 0.8
+        "confidence": 0.812
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -5336,8 +5296,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.812,
+          "risk": 0.02819999999999999
         },
         "compliance": {
           "violations": [],
@@ -5352,12 +5312,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.05423
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.05423,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.812
     },
     {
       "record_id": "W3-085",
@@ -5378,7 +5338,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Permit the autoscaler to query the metrics server on port 443.",
-        "confidence": 0.8
+        "confidence": 0.811
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -5402,8 +5362,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.811,
+          "risk": 0.028349999999999986
         },
         "compliance": {
           "violations": [],
@@ -5418,12 +5378,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.0542525
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.0542525,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.811
     },
     {
       "record_id": "W3-086",
@@ -5444,7 +5404,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow the container registry to pull base images over HTTPS.",
-        "confidence": 0.8
+        "confidence": 0.788
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -5468,8 +5428,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.788,
+          "risk": 0.031799999999999995
         },
         "compliance": {
           "violations": [
@@ -5490,12 +5450,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.3845
+          "final_risk_score": 0.38477
         }
       },
-      "risk_score": 0.3845,
+      "risk_score": 0.38477,
       "max_severity": "HIGH",
-      "confidence": 0.8
+      "confidence": 0.788
     },
     {
       "record_id": "W3-087",
@@ -5516,7 +5476,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Block all traffic to the Redis cache except from the application tier.",
-        "confidence": 0.8
+        "confidence": 0.791
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -5540,8 +5500,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.791,
+          "risk": 0.03134999999999999
         },
         "compliance": {
           "violations": [
@@ -5567,12 +5527,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.4145
+          "final_risk_score": 0.4147025
         }
       },
-      "risk_score": 0.4145,
+      "risk_score": 0.4147025,
       "max_severity": "HIGH",
-      "confidence": 0.8
+      "confidence": 0.791
     },
     {
       "record_id": "W3-088",
@@ -5593,7 +5553,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow the Kafka consumer to receive messages from the broker on port 9092.",
-        "confidence": 0.8
+        "confidence": 0.799
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -5617,8 +5577,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.799,
+          "risk": 0.030149999999999996
         },
         "compliance": {
           "violations": [],
@@ -5633,12 +5593,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.0545225
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.0545225,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.799
     },
     {
       "record_id": "W3-089",
@@ -5659,7 +5619,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Permit the API gateway to route requests to the authentication service.",
-        "confidence": 0.8
+        "confidence": 0.8170000000000001
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -5683,8 +5643,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.8170000000000001,
+          "risk": 0.02744999999999999
         },
         "compliance": {
           "violations": [],
@@ -5699,12 +5659,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.0541175
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.0541175,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.8170000000000001
     },
     {
       "record_id": "W3-090",
@@ -5725,7 +5685,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Deny all outbound traffic from the database pod except to the backup service.",
-        "confidence": 0.8
+        "confidence": 0.811
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -5749,8 +5709,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.811,
+          "risk": 0.028349999999999986
         },
         "compliance": {
           "violations": [
@@ -5771,12 +5731,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.2945
+          "final_risk_score": 0.2942525
         }
       },
-      "risk_score": 0.2945,
+      "risk_score": 0.2942525,
       "max_severity": "HIGH",
-      "confidence": 0.8
+      "confidence": 0.811
     },
     {
       "record_id": "W3-091",
@@ -5797,7 +5757,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow the monitoring agent to push alerts to PagerDuty over HTTPS.",
-        "confidence": 0.8
+        "confidence": 0.781
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -5821,8 +5781,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.781,
+          "risk": 0.03284999999999999
         },
         "compliance": {
           "violations": [
@@ -5843,12 +5803,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.3845
+          "final_risk_score": 0.3849275
         }
       },
-      "risk_score": 0.3845,
+      "risk_score": 0.3849275,
       "max_severity": "HIGH",
-      "confidence": 0.8
+      "confidence": 0.781
     },
     {
       "record_id": "W3-092",
@@ -5869,7 +5829,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Block all SSH access to production nodes except from the bastion host.",
-        "confidence": 0.8
+        "confidence": 0.8160000000000001
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -5893,8 +5853,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.8160000000000001,
+          "risk": 0.027599999999999986
         },
         "compliance": {
           "violations": [
@@ -5920,12 +5880,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.4145
+          "final_risk_score": 0.41413999999999995
         }
       },
-      "risk_score": 0.4145,
+      "risk_score": 0.41413999999999995,
       "max_severity": "HIGH",
-      "confidence": 0.8
+      "confidence": 0.8160000000000001
     },
     {
       "record_id": "W3-093",
@@ -5946,7 +5906,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow the feature flag service to be queried by all application services.",
-        "confidence": 0.8
+        "confidence": 0.784
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -5970,8 +5930,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.784,
+          "risk": 0.0324
         },
         "compliance": {
           "violations": [],
@@ -5986,12 +5946,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.054860000000000006
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.054860000000000006,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.784
     },
     {
       "record_id": "W3-094",
@@ -6012,7 +5972,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Permit the CDN edge nodes to pull content from the origin server.",
-        "confidence": 0.8
+        "confidence": 0.789
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -6036,8 +5996,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.789,
+          "risk": 0.03165
         },
         "compliance": {
           "violations": [],
@@ -6052,12 +6012,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.054747500000000004
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.054747500000000004,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.789
     },
     {
       "record_id": "W3-095",
@@ -6078,7 +6038,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Deny all traffic to the configuration service except from internal services.",
-        "confidence": 0.8
+        "confidence": 0.793
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -6102,8 +6062,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.793,
+          "risk": 0.031049999999999994
         },
         "compliance": {
           "violations": [
@@ -6124,12 +6084,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.2945
+          "final_risk_score": 0.29465749999999996
         }
       },
-      "risk_score": 0.2945,
+      "risk_score": 0.29465749999999996,
       "max_severity": "HIGH",
-      "confidence": 0.8
+      "confidence": 0.793
     },
     {
       "record_id": "W3-096",
@@ -6150,7 +6110,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow all traffic within the production namespace for inter-service communication.",
-        "confidence": 0.8
+        "confidence": 0.805
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -6174,8 +6134,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.805,
+          "risk": 0.029249999999999998
         },
         "compliance": {
           "violations": [],
@@ -6190,12 +6150,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.054387500000000005
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.054387500000000005,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.805
     },
     {
       "record_id": "W3-097",
@@ -6216,7 +6176,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Permit unrestricted access between microservices for debugging purposes.",
-        "confidence": 0.8
+        "confidence": 0.786
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -6240,8 +6200,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.786,
+          "risk": 0.03209999999999999
         },
         "compliance": {
           "violations": [
@@ -6262,12 +6222,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.2945
+          "final_risk_score": 0.294815
         }
       },
-      "risk_score": 0.2945,
+      "risk_score": 0.294815,
       "max_severity": "HIGH",
-      "confidence": 0.8
+      "confidence": 0.786
     },
     {
       "record_id": "W3-098",
@@ -6288,7 +6248,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Block all external traffic to the admin API.",
-        "confidence": 0.8
+        "confidence": 0.805
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -6312,8 +6272,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.805,
+          "risk": 0.029249999999999998
         },
         "compliance": {
           "violations": [],
@@ -6328,12 +6288,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.054387500000000005
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.054387500000000005,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.805
     },
     {
       "record_id": "W3-099",
@@ -6354,7 +6314,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow the developer environment full access to all internal APIs.",
-        "confidence": 0.8
+        "confidence": 0.801
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -6378,8 +6338,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.801,
+          "risk": 0.029849999999999988
         },
         "compliance": {
           "violations": [],
@@ -6394,12 +6354,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.0544775
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.0544775,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.801
     },
     {
       "record_id": "W3-100",
@@ -6420,7 +6380,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Deny access to the secrets vault from all external sources.",
-        "confidence": 0.8
+        "confidence": 0.791
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -6444,8 +6404,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.791,
+          "risk": 0.03134999999999999
         },
         "compliance": {
           "violations": [],
@@ -6460,12 +6420,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.0547025
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.0547025,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.791
     },
     {
       "record_id": "W3-101",
@@ -6486,7 +6446,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow all outbound connections from the worker nodes.",
-        "confidence": 0.8
+        "confidence": 0.799
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -6510,8 +6470,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.799,
+          "risk": 0.030149999999999996
         },
         "compliance": {
           "violations": [],
@@ -6526,12 +6486,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.0545225
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.0545225,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.799
     },
     {
       "record_id": "W3-102",
@@ -6552,7 +6512,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Permit the entire engineering team to SSH into production servers.",
-        "confidence": 0.8
+        "confidence": 0.812
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -6576,8 +6536,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.812,
+          "risk": 0.02819999999999999
         },
         "compliance": {
           "violations": [
@@ -6598,12 +6558,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.3845
+          "final_risk_score": 0.38423
         }
       },
-      "risk_score": 0.3845,
+      "risk_score": 0.38423,
       "max_severity": "HIGH",
-      "confidence": 0.8
+      "confidence": 0.812
     },
     {
       "record_id": "W3-103",
@@ -6624,7 +6584,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Block all connections to the legacy service.",
-        "confidence": 0.8
+        "confidence": 0.784
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -6648,8 +6608,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.784,
+          "risk": 0.0324
         },
         "compliance": {
           "violations": [],
@@ -6664,12 +6624,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.054860000000000006
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.054860000000000006,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.784
     },
     {
       "record_id": "W3-104",
@@ -6690,7 +6650,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow the QA environment to replicate the production database.",
-        "confidence": 0.8
+        "confidence": 0.781
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -6714,8 +6674,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.781,
+          "risk": 0.03284999999999999
         },
         "compliance": {
           "violations": [],
@@ -6730,12 +6690,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.054927500000000004
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.054927500000000004,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.781
     },
     {
       "record_id": "W3-105",
@@ -6756,7 +6716,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Deny all traffic from the DMZ to core banking services.",
-        "confidence": 0.8
+        "confidence": 0.783
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -6780,8 +6740,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.783,
+          "risk": 0.032549999999999996
         },
         "compliance": {
           "violations": [],
@@ -6796,12 +6756,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.0548825
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.0548825,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.783
     },
     {
       "record_id": "W4-106",
@@ -6822,7 +6782,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow the domain controller to replicate Active Directory data to secondary DCs on port 389.",
-        "confidence": 0.8
+        "confidence": 0.803
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -6846,8 +6806,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.803,
+          "risk": 0.029549999999999993
         },
         "compliance": {
           "violations": [],
@@ -6862,12 +6822,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.0544325
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.0544325,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.803
     },
     {
       "record_id": "W4-107",
@@ -6888,7 +6848,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Deny all traffic from personal devices to the corporate financial systems.",
-        "confidence": 0.8
+        "confidence": 0.799
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -6912,8 +6872,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.799,
+          "risk": 0.030149999999999996
         },
         "compliance": {
           "violations": [],
@@ -6928,12 +6888,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.0545225
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.0545225,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.799
     },
     {
       "record_id": "W4-108",
@@ -6954,7 +6914,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow the print server to receive jobs from workstations on port 9100.",
-        "confidence": 0.8
+        "confidence": 0.812
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -6978,8 +6938,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.812,
+          "risk": 0.02819999999999999
         },
         "compliance": {
           "violations": [],
@@ -6994,12 +6954,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.05423
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.05423,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.812
     },
     {
       "record_id": "W4-109",
@@ -7020,7 +6980,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Permit the backup server to access all file servers on port 445 for nightly backups.",
-        "confidence": 0.8
+        "confidence": 0.8180000000000001
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -7044,8 +7004,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.8180000000000001,
+          "risk": 0.02729999999999999
         },
         "compliance": {
           "violations": [],
@@ -7060,12 +7020,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.054095000000000004
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.054095000000000004,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.8180000000000001
     },
     {
       "record_id": "W4-110",
@@ -7086,7 +7046,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Block all outbound traffic from kiosk terminals except to the kiosk management server.",
-        "confidence": 0.8
+        "confidence": 0.808
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -7110,8 +7070,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.808,
+          "risk": 0.028799999999999992
         },
         "compliance": {
           "violations": [
@@ -7132,12 +7092,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.2945
+          "final_risk_score": 0.29431999999999997
         }
       },
-      "risk_score": 0.2945,
+      "risk_score": 0.29431999999999997,
       "max_severity": "HIGH",
-      "confidence": 0.8
+      "confidence": 0.808
     },
     {
       "record_id": "W4-111",
@@ -7158,7 +7118,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow the patch management server to push updates to all endpoints on port 8530.",
-        "confidence": 0.8
+        "confidence": 0.8160000000000001
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -7182,8 +7142,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.8160000000000001,
+          "risk": 0.027599999999999986
         },
         "compliance": {
           "violations": [],
@@ -7198,12 +7158,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.05414
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.05414,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.8160000000000001
     },
     {
       "record_id": "W4-112",
@@ -7224,7 +7184,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Deny all traffic from contractor VLANs to internal source code repositories.",
-        "confidence": 0.8
+        "confidence": 0.804
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -7248,8 +7208,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.804,
+          "risk": 0.029399999999999996
         },
         "compliance": {
           "violations": [],
@@ -7264,12 +7224,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.05441
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.05441,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.804
     },
     {
       "record_id": "W4-113",
@@ -7290,7 +7250,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow the email gateway to relay messages to the internal mail server on port 25.",
-        "confidence": 0.8
+        "confidence": 0.81
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -7314,8 +7274,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.81,
+          "risk": 0.028499999999999998
         },
         "compliance": {
           "violations": [],
@@ -7330,12 +7290,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.054275000000000004
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.054275000000000004,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.81
     },
     {
       "record_id": "W4-114",
@@ -7356,7 +7316,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Permit the RADIUS server to authenticate VPN users on port 1812.",
-        "confidence": 0.8
+        "confidence": 0.791
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -7380,8 +7340,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.791,
+          "risk": 0.03134999999999999
         },
         "compliance": {
           "violations": [],
@@ -7396,12 +7356,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.0547025
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.0547025,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.791
     },
     {
       "record_id": "W4-115",
@@ -7422,7 +7382,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Block all traffic from unregistered MAC addresses to the corporate wireless network.",
-        "confidence": 0.8
+        "confidence": 0.8160000000000001
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -7446,8 +7406,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.8160000000000001,
+          "risk": 0.027599999999999986
         },
         "compliance": {
           "violations": [],
@@ -7462,12 +7422,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.05414
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.05414,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.8160000000000001
     },
     {
       "record_id": "W4-116",
@@ -7488,7 +7448,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow the certificate authority to issue certificates to internal servers on port 8443.",
-        "confidence": 0.8
+        "confidence": 0.8200000000000001
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -7512,8 +7472,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.8200000000000001,
+          "risk": 0.026999999999999996
         },
         "compliance": {
           "violations": [],
@@ -7528,12 +7488,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.05405
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.05405,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.8200000000000001
     },
     {
       "record_id": "W4-117",
@@ -7554,7 +7514,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Deny all outbound SMTP traffic except from the authorised mail relay.",
-        "confidence": 0.8
+        "confidence": 0.782
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -7578,8 +7538,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.782,
+          "risk": 0.03269999999999999
         },
         "compliance": {
           "violations": [
@@ -7605,12 +7565,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.4145
+          "final_risk_score": 0.41490499999999997
         }
       },
-      "risk_score": 0.4145,
+      "risk_score": 0.41490499999999997,
       "max_severity": "HIGH",
-      "confidence": 0.8
+      "confidence": 0.782
     },
     {
       "record_id": "W4-118",
@@ -7631,7 +7591,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow the vulnerability scanner to probe all hosts in the 10.0.0.0/8 range.",
-        "confidence": 0.8
+        "confidence": 0.804
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -7655,8 +7615,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.804,
+          "risk": 0.029399999999999996
         },
         "compliance": {
           "violations": [],
@@ -7671,12 +7631,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.05441
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.05441,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.804
     },
     {
       "record_id": "W4-119",
@@ -7697,7 +7657,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Permit the DLP appliance to inspect all outbound email traffic on port 25.",
-        "confidence": 0.8
+        "confidence": 0.784
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -7721,8 +7681,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.784,
+          "risk": 0.0324
         },
         "compliance": {
           "violations": [],
@@ -7737,12 +7697,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.054860000000000006
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.054860000000000006,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.784
     },
     {
       "record_id": "W4-120",
@@ -7763,7 +7723,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Block all inbound traffic on port 3389 except from the jump server subnet.",
-        "confidence": 0.8
+        "confidence": 0.803
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -7787,8 +7747,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.803,
+          "risk": 0.029549999999999993
         },
         "compliance": {
           "violations": [
@@ -7809,12 +7769,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.2945
+          "final_risk_score": 0.2944325
         }
       },
-      "risk_score": 0.2945,
+      "risk_score": 0.2944325,
       "max_severity": "HIGH",
-      "confidence": 0.8
+      "confidence": 0.803
     },
     {
       "record_id": "W4-121",
@@ -7835,7 +7795,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow the HR application to query the employee directory on port 389.",
-        "confidence": 0.8
+        "confidence": 0.807
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -7859,8 +7819,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.807,
+          "risk": 0.02894999999999999
         },
         "compliance": {
           "violations": [],
@@ -7875,12 +7835,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.0543425
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.0543425,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.807
     },
     {
       "record_id": "W4-122",
@@ -7901,7 +7861,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Deny all traffic between the guest network and the corporate wired network.",
-        "confidence": 0.8
+        "confidence": 0.788
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -7925,8 +7885,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.788,
+          "risk": 0.031799999999999995
         },
         "compliance": {
           "violations": [],
@@ -7941,12 +7901,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.05477
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.05477,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.788
     },
     {
       "record_id": "W4-123",
@@ -7967,7 +7927,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow the ticketing system to send notifications via SMTP on port 587.",
-        "confidence": 0.8
+        "confidence": 0.812
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -7991,8 +7951,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.812,
+          "risk": 0.02819999999999999
         },
         "compliance": {
           "violations": [
@@ -8013,12 +7973,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.3845
+          "final_risk_score": 0.38423
         }
       },
-      "risk_score": 0.3845,
+      "risk_score": 0.38423,
       "max_severity": "HIGH",
-      "confidence": 0.8
+      "confidence": 0.812
     },
     {
       "record_id": "W4-124",
@@ -8039,7 +7999,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Permit the network management system to poll all routers via SNMP on port 161.",
-        "confidence": 0.8
+        "confidence": 0.792
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -8063,8 +8023,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.792,
+          "risk": 0.03119999999999999
         },
         "compliance": {
           "violations": [
@@ -8085,12 +8045,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.3845
+          "final_risk_score": 0.38468
         }
       },
-      "risk_score": 0.3845,
+      "risk_score": 0.38468,
       "max_severity": "HIGH",
-      "confidence": 0.8
+      "confidence": 0.792
     },
     {
       "record_id": "W4-125",
@@ -8111,7 +8071,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Block all traffic to the payroll database except from the payroll application server.",
-        "confidence": 0.8
+        "confidence": 0.799
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -8135,8 +8095,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.799,
+          "risk": 0.030149999999999996
         },
         "compliance": {
           "violations": [
@@ -8157,12 +8117,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.2945
+          "final_risk_score": 0.29452249999999996
         }
       },
-      "risk_score": 0.2945,
+      "risk_score": 0.29452249999999996,
       "max_severity": "HIGH",
-      "confidence": 0.8
+      "confidence": 0.799
     },
     {
       "record_id": "W4-126",
@@ -8183,7 +8143,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow the domain controller to serve DNS queries to internal clients.",
-        "confidence": 0.8
+        "confidence": 0.782
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -8207,8 +8167,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.782,
+          "risk": 0.03269999999999999
         },
         "compliance": {
           "violations": [
@@ -8229,12 +8189,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.3845
+          "final_risk_score": 0.384905
         }
       },
-      "risk_score": 0.3845,
+      "risk_score": 0.384905,
       "max_severity": "HIGH",
-      "confidence": 0.8
+      "confidence": 0.782
     },
     {
       "record_id": "W4-127",
@@ -8255,7 +8215,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Block all FTP uploads to the file transfer server from external partners.",
-        "confidence": 0.8
+        "confidence": 0.8180000000000001
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -8279,8 +8239,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.8180000000000001,
+          "risk": 0.02729999999999999
         },
         "compliance": {
           "violations": [
@@ -8301,12 +8261,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.3845
+          "final_risk_score": 0.384095
         }
       },
-      "risk_score": 0.3845,
+      "risk_score": 0.384095,
       "max_severity": "HIGH",
-      "confidence": 0.8
+      "confidence": 0.8180000000000001
     },
     {
       "record_id": "W4-128",
@@ -8327,7 +8287,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow the monitoring system to receive SNMP traps from network devices.",
-        "confidence": 0.8
+        "confidence": 0.786
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -8351,8 +8311,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.786,
+          "risk": 0.03209999999999999
         },
         "compliance": {
           "violations": [
@@ -8373,12 +8333,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.3845
+          "final_risk_score": 0.384815
         }
       },
-      "risk_score": 0.3845,
+      "risk_score": 0.384815,
       "max_severity": "HIGH",
-      "confidence": 0.8
+      "confidence": 0.786
     },
     {
       "record_id": "W4-129",
@@ -8399,7 +8359,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Permit the time synchronisation service to update all servers.",
-        "confidence": 0.8
+        "confidence": 0.783
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -8423,8 +8383,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.783,
+          "risk": 0.032549999999999996
         },
         "compliance": {
           "violations": [],
@@ -8439,12 +8399,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.0548825
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.0548825,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.783
     },
     {
       "record_id": "W4-130",
@@ -8465,7 +8425,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Deny all inbound traffic to the LDAP server except from the application tier.",
-        "confidence": 0.8
+        "confidence": 0.786
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -8489,8 +8449,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.786,
+          "risk": 0.03209999999999999
         },
         "compliance": {
           "violations": [
@@ -8516,12 +8476,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.4145
+          "final_risk_score": 0.414815
         }
       },
-      "risk_score": 0.4145,
+      "risk_score": 0.414815,
       "max_severity": "HIGH",
-      "confidence": 0.8
+      "confidence": 0.786
     },
     {
       "record_id": "W4-131",
@@ -8542,7 +8502,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow the security information and event management system to collect syslogs.",
-        "confidence": 0.8
+        "confidence": 0.803
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -8566,8 +8526,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.803,
+          "risk": 0.029549999999999993
         },
         "compliance": {
           "violations": [],
@@ -8582,12 +8542,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.0544325
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.0544325,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.803
     },
     {
       "record_id": "W4-132",
@@ -8608,7 +8568,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Block all access to the privileged access workstations except for security team.",
-        "confidence": 0.8
+        "confidence": 0.8170000000000001
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -8632,8 +8592,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.8170000000000001,
+          "risk": 0.02744999999999999
         },
         "compliance": {
           "violations": [
@@ -8654,12 +8614,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.2945
+          "final_risk_score": 0.2941175
         }
       },
-      "risk_score": 0.2945,
+      "risk_score": 0.2941175,
       "max_severity": "HIGH",
-      "confidence": 0.8
+      "confidence": 0.8170000000000001
     },
     {
       "record_id": "W4-133",
@@ -8680,7 +8640,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow the network printer to receive print jobs from the office VLAN.",
-        "confidence": 0.8
+        "confidence": 0.799
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -8704,8 +8664,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.799,
+          "risk": 0.030149999999999996
         },
         "compliance": {
           "violations": [],
@@ -8720,12 +8680,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.0545225
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.0545225,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.799
     },
     {
       "record_id": "W4-134",
@@ -8746,7 +8706,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Permit the storage area network to replicate data to the disaster recovery site.",
-        "confidence": 0.8
+        "confidence": 0.8200000000000001
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -8770,8 +8730,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.8200000000000001,
+          "risk": 0.026999999999999996
         },
         "compliance": {
           "violations": [],
@@ -8786,12 +8746,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.05405
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.05405,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.8200000000000001
     },
     {
       "record_id": "W4-135",
@@ -8812,7 +8772,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Deny all traffic from the partner extranet to internal financial applications.",
-        "confidence": 0.8
+        "confidence": 0.811
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -8836,8 +8796,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.811,
+          "risk": 0.028349999999999986
         },
         "compliance": {
           "violations": [],
@@ -8852,12 +8812,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.0542525
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.0542525,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.811
     },
     {
       "record_id": "W4-136",
@@ -8878,7 +8838,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow all internal users to access the admin console for convenience.",
-        "confidence": 0.8
+        "confidence": 0.8190000000000001
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -8902,8 +8862,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.8190000000000001,
+          "risk": 0.027149999999999994
         },
         "compliance": {
           "violations": [],
@@ -8918,12 +8878,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.0540725
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.0540725,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.8190000000000001
     },
     {
       "record_id": "W4-137",
@@ -8944,7 +8904,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Permit all traffic between the head office and branch offices.",
-        "confidence": 0.8
+        "confidence": 0.803
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -8968,8 +8928,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.803,
+          "risk": 0.029549999999999993
         },
         "compliance": {
           "violations": [],
@@ -8984,12 +8944,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.0544325
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.0544325,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.803
     },
     {
       "record_id": "W4-138",
@@ -9010,7 +8970,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Block all external access to the internal wiki.",
-        "confidence": 0.8
+        "confidence": 0.806
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -9034,8 +8994,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.806,
+          "risk": 0.029099999999999987
         },
         "compliance": {
           "violations": [],
@@ -9050,12 +9010,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.054365000000000004
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.054365000000000004,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.806
     },
     {
       "record_id": "W4-139",
@@ -9076,7 +9036,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow the on-call engineer to access all systems remotely.",
-        "confidence": 0.8
+        "confidence": 0.809
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -9100,8 +9060,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.809,
+          "risk": 0.028649999999999995
         },
         "compliance": {
           "violations": [],
@@ -9116,12 +9076,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.0542975
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.0542975,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.809
     },
     {
       "record_id": "W4-140",
@@ -9142,7 +9102,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Deny all traffic from the old data centre.",
-        "confidence": 0.8
+        "confidence": 0.786
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -9166,8 +9126,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.786,
+          "risk": 0.03209999999999999
         },
         "compliance": {
           "violations": [],
@@ -9182,12 +9142,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.054815
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.054815,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.786
     },
     {
       "record_id": "W4-141",
@@ -9208,7 +9168,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow the service account to connect to any database in the environment.",
-        "confidence": 0.8
+        "confidence": 0.795
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -9232,8 +9192,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.795,
+          "risk": 0.03075
         },
         "compliance": {
           "violations": [],
@@ -9248,12 +9208,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.0546125
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.0546125,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.795
     },
     {
       "record_id": "W4-142",
@@ -9274,7 +9234,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Permit all traffic on the management VLAN for operational purposes.",
-        "confidence": 0.8
+        "confidence": 0.793
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -9298,8 +9258,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.793,
+          "risk": 0.031049999999999994
         },
         "compliance": {
           "violations": [],
@@ -9314,12 +9274,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.054657500000000005
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.054657500000000005,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.793
     },
     {
       "record_id": "W4-143",
@@ -9340,7 +9300,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Block all outbound traffic from the POS terminals.",
-        "confidence": 0.8
+        "confidence": 0.8150000000000001
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -9364,8 +9324,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.8150000000000001,
+          "risk": 0.027749999999999997
         },
         "compliance": {
           "violations": [],
@@ -9380,12 +9340,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.0541625
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.0541625,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.8150000000000001
     },
     {
       "record_id": "W4-144",
@@ -9406,7 +9366,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow the legacy application to communicate with any internal service it needs.",
-        "confidence": 0.8
+        "confidence": 0.803
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -9430,8 +9390,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.803,
+          "risk": 0.029549999999999993
         },
         "compliance": {
           "violations": [],
@@ -9446,12 +9406,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.0544325
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.0544325,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.803
     },
     {
       "record_id": "W4-145",
@@ -9472,7 +9432,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Deny all traffic from the third-party audit firm to production systems.",
-        "confidence": 0.8
+        "confidence": 0.791
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -9496,8 +9456,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.791,
+          "risk": 0.03134999999999999
         },
         "compliance": {
           "violations": [],
@@ -9512,12 +9472,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.0547025
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.0547025,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.791
     },
     {
       "record_id": "W4-146",
@@ -9538,7 +9498,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow encrypted communication between the application servers and the HSM on port 1792.",
-        "confidence": 0.8
+        "confidence": 0.8200000000000001
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -9562,8 +9522,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.8200000000000001,
+          "risk": 0.026999999999999996
         },
         "compliance": {
           "violations": [],
@@ -9578,12 +9538,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.05405
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.05405,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.8200000000000001
     },
     {
       "record_id": "W4-147",
@@ -9604,7 +9564,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Deny all traffic from IoT sensors to the corporate IT network.",
-        "confidence": 0.8
+        "confidence": 0.807
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -9628,8 +9588,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.807,
+          "risk": 0.02894999999999999
         },
         "compliance": {
           "violations": [],
@@ -9644,12 +9604,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.0543425
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.0543425,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.807
     },
     {
       "record_id": "W4-148",
@@ -9670,7 +9630,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow the SIEM to forward alerts to the SOC workstations on port 514.",
-        "confidence": 0.8
+        "confidence": 0.8160000000000001
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -9694,8 +9654,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.8160000000000001,
+          "risk": 0.027599999999999986
         },
         "compliance": {
           "violations": [],
@@ -9710,12 +9670,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.05414
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.05414,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.8160000000000001
     },
     {
       "record_id": "W4-149",
@@ -9736,7 +9696,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Permit the load balancer health checks to reach all backend servers on port 80.",
-        "confidence": 0.8
+        "confidence": 0.808
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -9760,8 +9720,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.808,
+          "risk": 0.028799999999999992
         },
         "compliance": {
           "violations": [],
@@ -9776,12 +9736,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.05432
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.05432,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.808
     },
     {
       "record_id": "W4-150",
@@ -9802,7 +9762,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Block all outbound DNS queries except to the authorised corporate DNS servers.",
-        "confidence": 0.8
+        "confidence": 0.812
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -9826,8 +9786,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.812,
+          "risk": 0.02819999999999999
         },
         "compliance": {
           "violations": [
@@ -9853,12 +9813,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.4145
+          "final_risk_score": 0.41423
         }
       },
-      "risk_score": 0.4145,
+      "risk_score": 0.41423,
       "max_severity": "HIGH",
-      "confidence": 0.8
+      "confidence": 0.812
     },
     {
       "record_id": "W4-151",
@@ -9879,7 +9839,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow the intrusion detection system to mirror traffic from the core switch.",
-        "confidence": 0.8
+        "confidence": 0.812
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -9903,8 +9863,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.812,
+          "risk": 0.02819999999999999
         },
         "compliance": {
           "violations": [],
@@ -9919,12 +9879,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.05423
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.05423,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.812
     },
     {
       "record_id": "W4-152",
@@ -9945,7 +9905,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Deny all traffic from the supply chain partner network to internal HR systems.",
-        "confidence": 0.8
+        "confidence": 0.79
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -9969,8 +9929,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.79,
+          "risk": 0.0315
         },
         "compliance": {
           "violations": [],
@@ -9985,12 +9945,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.054725
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.054725,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.79
     },
     {
       "record_id": "W4-153",
@@ -10011,7 +9971,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow the multi-factor authentication service to be reachable from all internal hosts.",
-        "confidence": 0.8
+        "confidence": 0.811
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -10035,8 +9995,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.811,
+          "risk": 0.028349999999999986
         },
         "compliance": {
           "violations": [],
@@ -10051,12 +10011,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.0542525
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.0542525,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.811
     },
     {
       "record_id": "W4-154",
@@ -10077,7 +10037,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Permit the cloud proxy to forward web requests from internal users on port 8080.",
-        "confidence": 0.8
+        "confidence": 0.793
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -10101,8 +10061,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.793,
+          "risk": 0.031049999999999994
         },
         "compliance": {
           "violations": [],
@@ -10117,12 +10077,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.054657500000000005
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.054657500000000005,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.793
     },
     {
       "record_id": "W4-155",
@@ -10143,7 +10103,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Block all access to the internal PKI server except from authorised administrators.",
-        "confidence": 0.8
+        "confidence": 0.783
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -10167,8 +10127,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.783,
+          "risk": 0.032549999999999996
         },
         "compliance": {
           "violations": [
@@ -10189,12 +10149,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.2945
+          "final_risk_score": 0.2948825
         }
       },
-      "risk_score": 0.2945,
+      "risk_score": 0.2948825,
       "max_severity": "HIGH",
-      "confidence": 0.8
+      "confidence": 0.783
     },
     {
       "record_id": "W5-166",
@@ -10215,7 +10175,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow access to the CRM system only after successful MFA verification.",
-        "confidence": 0.8
+        "confidence": 0.801
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -10239,8 +10199,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.801,
+          "risk": 0.029849999999999988
         },
         "compliance": {
           "violations": [
@@ -10261,12 +10221,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.2945
+          "final_risk_score": 0.2944775
         }
       },
-      "risk_score": 0.2945,
+      "risk_score": 0.2944775,
       "max_severity": "HIGH",
-      "confidence": 0.8
+      "confidence": 0.801
     },
     {
       "record_id": "W5-167",
@@ -10287,7 +10247,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Deny all lateral movement between endpoints in the user VLAN.",
-        "confidence": 0.8
+        "confidence": 0.786
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -10311,8 +10271,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.786,
+          "risk": 0.03209999999999999
         },
         "compliance": {
           "violations": [],
@@ -10327,12 +10287,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.054815
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.054815,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.786
     },
     {
       "record_id": "W5-168",
@@ -10353,7 +10313,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Permit the privileged access management tool to broker SSH sessions to servers.",
-        "confidence": 0.8
+        "confidence": 0.809
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -10377,8 +10337,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.809,
+          "risk": 0.028649999999999995
         },
         "compliance": {
           "violations": [
@@ -10399,12 +10359,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.3845
+          "final_risk_score": 0.3842975
         }
       },
-      "risk_score": 0.3845,
+      "risk_score": 0.3842975,
       "max_severity": "HIGH",
-      "confidence": 0.8
+      "confidence": 0.809
     },
     {
       "record_id": "W5-169",
@@ -10425,7 +10385,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Block all access to financial APIs except from approved application identities.",
-        "confidence": 0.8
+        "confidence": 0.8170000000000001
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -10449,8 +10409,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.8170000000000001,
+          "risk": 0.02744999999999999
         },
         "compliance": {
           "violations": [
@@ -10471,12 +10431,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.2945
+          "final_risk_score": 0.2941175
         }
       },
-      "risk_score": 0.2945,
+      "risk_score": 0.2941175,
       "max_severity": "HIGH",
-      "confidence": 0.8
+      "confidence": 0.8170000000000001
     },
     {
       "record_id": "W5-170",
@@ -10497,7 +10457,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow the identity provider to communicate with all services on port 443.",
-        "confidence": 0.8
+        "confidence": 0.81
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -10521,8 +10481,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.81,
+          "risk": 0.028499999999999998
         },
         "compliance": {
           "violations": [],
@@ -10537,12 +10497,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.054275000000000004
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.054275000000000004,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.81
     },
     {
       "record_id": "W5-171",
@@ -10563,7 +10523,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Deny all access to the executive file share except from authorised named users.",
-        "confidence": 0.8
+        "confidence": 0.793
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -10587,8 +10547,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.793,
+          "risk": 0.031049999999999994
         },
         "compliance": {
           "violations": [
@@ -10609,12 +10569,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.2945
+          "final_risk_score": 0.29465749999999996
         }
       },
-      "risk_score": 0.2945,
+      "risk_score": 0.29465749999999996,
       "max_severity": "HIGH",
-      "confidence": 0.8
+      "confidence": 0.793
     },
     {
       "record_id": "W5-172",
@@ -10635,7 +10595,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Permit the network access control system to quarantine non-compliant endpoints.",
-        "confidence": 0.8
+        "confidence": 0.782
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -10659,8 +10619,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.782,
+          "risk": 0.03269999999999999
         },
         "compliance": {
           "violations": [],
@@ -10675,12 +10635,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.054905
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.054905,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.782
     },
     {
       "record_id": "W5-173",
@@ -10701,7 +10661,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Block all outbound connections from servers to social media IP ranges.",
-        "confidence": 0.8
+        "confidence": 0.8140000000000001
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -10725,8 +10685,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.8140000000000001,
+          "risk": 0.027899999999999994
         },
         "compliance": {
           "violations": [],
@@ -10741,12 +10701,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.054185000000000004
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.054185000000000004,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.8140000000000001
     },
     {
       "record_id": "W5-174",
@@ -10767,7 +10727,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow the data loss prevention agent to scan all outbound HTTP and HTTPS traffic.",
-        "confidence": 0.8
+        "confidence": 0.798
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -10791,8 +10751,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.798,
+          "risk": 0.030299999999999994
         },
         "compliance": {
           "violations": [
@@ -10813,12 +10773,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.3845
+          "final_risk_score": 0.384545
         }
       },
-      "risk_score": 0.3845,
+      "risk_score": 0.384545,
       "max_severity": "HIGH",
-      "confidence": 0.8
+      "confidence": 0.798
     },
     {
       "record_id": "W5-175",
@@ -10839,7 +10799,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Deny all traffic to internal APIs from devices without a valid client certificate.",
-        "confidence": 0.8
+        "confidence": 0.789
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -10863,8 +10823,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.789,
+          "risk": 0.03165
         },
         "compliance": {
           "violations": [],
@@ -10879,12 +10839,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.054747500000000004
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.054747500000000004,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.789
     },
     {
       "record_id": "W5-176",
@@ -10905,7 +10865,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Quarantine the suspected ransomware host by blocking all its inbound and outbound traffic.",
-        "confidence": 0.8
+        "confidence": 0.797
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -10929,8 +10889,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.797,
+          "risk": 0.03044999999999999
         },
         "compliance": {
           "violations": [],
@@ -10945,12 +10905,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.054567500000000005
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.054567500000000005,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.797
     },
     {
       "record_id": "W5-177",
@@ -10971,7 +10931,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow the digital forensics workstation to image the compromised server over port 22.",
-        "confidence": 0.8
+        "confidence": 0.8180000000000001
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -10995,8 +10955,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.8180000000000001,
+          "risk": 0.02729999999999999
         },
         "compliance": {
           "violations": [],
@@ -11011,12 +10971,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.054095000000000004
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.054095000000000004,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.8180000000000001
     },
     {
       "record_id": "W5-178",
@@ -11175,7 +11135,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Deny all traffic from the infected VLAN to the rest of the network immediately.",
-        "confidence": 0.8
+        "confidence": 0.787
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -11199,8 +11159,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.787,
+          "risk": 0.03194999999999999
         },
         "compliance": {
           "violations": [],
@@ -11215,12 +11175,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.0547925
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.0547925,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.787
     },
     {
       "record_id": "W5-181",
@@ -11241,7 +11201,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow the incident response team VPN to access all internal systems during containment.",
-        "confidence": 0.8
+        "confidence": 0.803
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -11265,8 +11225,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.803,
+          "risk": 0.029549999999999993
         },
         "compliance": {
           "violations": [],
@@ -11281,12 +11241,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.0544325
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.0544325,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.803
     },
     {
       "record_id": "W5-182",
@@ -11307,7 +11267,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Block all outbound traffic from the compromised web server except to the log aggregator.",
-        "confidence": 0.8
+        "confidence": 0.787
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -11331,8 +11291,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.787,
+          "risk": 0.03194999999999999
         },
         "compliance": {
           "violations": [
@@ -11353,12 +11313,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.2945
+          "final_risk_score": 0.29479249999999996
         }
       },
-      "risk_score": 0.2945,
+      "risk_score": 0.29479249999999996,
       "max_severity": "HIGH",
-      "confidence": 0.8
+      "confidence": 0.787
     },
     {
       "record_id": "W5-183",
@@ -11379,7 +11339,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Permit the honeypot to receive inbound connections from any external source.",
-        "confidence": 0.8
+        "confidence": 0.8160000000000001
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -11403,8 +11363,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.8160000000000001,
+          "risk": 0.027599999999999986
         },
         "compliance": {
           "violations": [],
@@ -11419,12 +11379,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.05414
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.05414,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.8160000000000001
     },
     {
       "record_id": "W5-184",
@@ -11445,7 +11405,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Deny all traffic from the attacker-controlled IP range identified in the threat feed.",
-        "confidence": 0.8
+        "confidence": 0.8180000000000001
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -11469,8 +11429,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.8180000000000001,
+          "risk": 0.02729999999999999
         },
         "compliance": {
           "violations": [],
@@ -11485,12 +11445,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.054095000000000004
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.054095000000000004,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.8180000000000001
     },
     {
       "record_id": "W5-185",
@@ -11511,7 +11471,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow the EDR platform to push containment policies to all endpoints.",
-        "confidence": 0.8
+        "confidence": 0.793
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -11535,8 +11495,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.793,
+          "risk": 0.031049999999999994
         },
         "compliance": {
           "violations": [],
@@ -11551,12 +11511,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.054657500000000005
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.054657500000000005,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.793
     },
     {
       "record_id": "W5-186",
@@ -11577,7 +11537,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Restrict all access to the cardholder data environment to explicitly whitelisted hosts.",
-        "confidence": 0.8
+        "confidence": 0.795
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -11601,8 +11561,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.795,
+          "risk": 0.03075
         },
         "compliance": {
           "violations": [],
@@ -11617,12 +11577,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.0546125
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.0546125,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.795
     },
     {
       "record_id": "W5-187",
@@ -11643,7 +11603,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Deny all traffic between the payment processing VLAN and the general corporate network.",
-        "confidence": 0.8
+        "confidence": 0.785
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -11667,8 +11627,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.785,
+          "risk": 0.03225
         },
         "compliance": {
           "violations": [],
@@ -11683,12 +11643,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.054837500000000004
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.054837500000000004,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.785
     },
     {
       "record_id": "W5-188",
@@ -11709,7 +11669,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow the PCI compliance scanner to audit all systems in the cardholder data environment.",
-        "confidence": 0.8
+        "confidence": 0.796
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -11733,8 +11693,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.796,
+          "risk": 0.03059999999999999
         },
         "compliance": {
           "violations": [],
@@ -11749,12 +11709,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.05459
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.05459,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.796
     },
     {
       "record_id": "W5-189",
@@ -11775,7 +11735,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Block all unencrypted traffic to systems storing protected health information.",
-        "confidence": 0.8
+        "confidence": 0.8170000000000001
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -11799,8 +11759,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.8170000000000001,
+          "risk": 0.02744999999999999
         },
         "compliance": {
           "violations": [],
@@ -11815,12 +11775,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.0541175
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.0541175,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.8170000000000001
     },
     {
       "record_id": "W5-190",
@@ -11841,7 +11801,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Permit the HIPAA audit logging service to collect access logs from all relevant systems.",
-        "confidence": 0.8
+        "confidence": 0.81
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -11865,8 +11825,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.81,
+          "risk": 0.028499999999999998
         },
         "compliance": {
           "violations": [],
@@ -11881,12 +11841,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.054275000000000004
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.054275000000000004,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.81
     },
     {
       "record_id": "W5-191",
@@ -11907,7 +11867,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Deny all direct internet access from systems processing electronic health records.",
-        "confidence": 0.8
+        "confidence": 0.811
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -11931,8 +11891,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.811,
+          "risk": 0.028349999999999986
         },
         "compliance": {
           "violations": [],
@@ -11947,12 +11907,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.0542525
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.0542525,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.811
     },
     {
       "record_id": "W5-192",
@@ -11973,7 +11933,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow the SOC 2 audit tool to read configuration data from all infrastructure components.",
-        "confidence": 0.8
+        "confidence": 0.785
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -11997,8 +11957,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.785,
+          "risk": 0.03225
         },
         "compliance": {
           "violations": [],
@@ -12013,12 +11973,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.054837500000000004
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.054837500000000004,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.785
     },
     {
       "record_id": "W5-193",
@@ -12039,7 +11999,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Block all access to employee personal data except from the HR application.",
-        "confidence": 0.8
+        "confidence": 0.811
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -12063,8 +12023,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.811,
+          "risk": 0.028349999999999986
         },
         "compliance": {
           "violations": [
@@ -12085,12 +12045,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.2945
+          "final_risk_score": 0.2942525
         }
       },
-      "risk_score": 0.2945,
+      "risk_score": 0.2942525,
       "max_severity": "HIGH",
-      "confidence": 0.8
+      "confidence": 0.811
     },
     {
       "record_id": "W5-194",
@@ -12111,7 +12071,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Permit encrypted replication of patient records to the disaster recovery site only.",
-        "confidence": 0.8
+        "confidence": 0.81
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -12135,8 +12095,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.81,
+          "risk": 0.028499999999999998
         },
         "compliance": {
           "violations": [
@@ -12157,12 +12117,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.2945
+          "final_risk_score": 0.29427499999999995
         }
       },
-      "risk_score": 0.2945,
+      "risk_score": 0.29427499999999995,
       "max_severity": "HIGH",
-      "confidence": 0.8
+      "confidence": 0.81
     },
     {
       "record_id": "W5-195",
@@ -12183,7 +12143,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Deny all access to the compliance reporting database except from the audit team.",
-        "confidence": 0.8
+        "confidence": 0.787
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -12207,8 +12167,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.787,
+          "risk": 0.03194999999999999
         },
         "compliance": {
           "violations": [
@@ -12229,12 +12189,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.2945
+          "final_risk_score": 0.29479249999999996
         }
       },
-      "risk_score": 0.2945,
+      "risk_score": 0.29479249999999996,
       "max_severity": "HIGH",
-      "confidence": 0.8
+      "confidence": 0.787
     },
     {
       "record_id": "W5-196",
@@ -12255,7 +12215,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow remote workers to access the virtual desktop infrastructure over port 443.",
-        "confidence": 0.8
+        "confidence": 0.81
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -12279,8 +12239,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.81,
+          "risk": 0.028499999999999998
         },
         "compliance": {
           "violations": [],
@@ -12295,12 +12255,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.054275000000000004
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.054275000000000004,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.81
     },
     {
       "record_id": "W5-197",
@@ -12321,7 +12281,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Deny all split-tunnel VPN traffic from reaching the corporate core network.",
-        "confidence": 0.8
+        "confidence": 0.8130000000000001
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -12345,8 +12305,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.8130000000000001,
+          "risk": 0.02804999999999999
         },
         "compliance": {
           "violations": [],
@@ -12361,12 +12321,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.0542075
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.0542075,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.8130000000000001
     },
     {
       "record_id": "W5-198",
@@ -12387,7 +12347,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Permit the mobile device management server to push policies to all registered devices.",
-        "confidence": 0.8
+        "confidence": 0.78
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -12411,8 +12371,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.78,
+          "risk": 0.033
         },
         "compliance": {
           "violations": [],
@@ -12427,12 +12387,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.054950000000000006
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.054950000000000006,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.78
     },
     {
       "record_id": "W5-199",
@@ -12453,7 +12413,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Block all access to internal tools from devices that are not enrolled in MDM.",
-        "confidence": 0.8
+        "confidence": 0.789
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -12477,8 +12437,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.789,
+          "risk": 0.03165
         },
         "compliance": {
           "violations": [],
@@ -12493,12 +12453,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.054747500000000004
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.054747500000000004,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.789
     },
     {
       "record_id": "W5-200",
@@ -12519,7 +12479,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow the edge computing nodes to synchronise with the central management platform.",
-        "confidence": 0.8
+        "confidence": 0.793
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -12543,8 +12503,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.793,
+          "risk": 0.031049999999999994
         },
         "compliance": {
           "violations": [],
@@ -12559,12 +12519,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.054657500000000005
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.054657500000000005,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.793
     },
     {
       "record_id": "W5-201",
@@ -12585,7 +12545,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Deny all traffic from personal mobile devices to the production API gateway.",
-        "confidence": 0.8
+        "confidence": 0.8170000000000001
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -12609,8 +12569,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.8170000000000001,
+          "risk": 0.02744999999999999
         },
         "compliance": {
           "violations": [],
@@ -12625,12 +12585,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.0541175
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.0541175,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.8170000000000001
     },
     {
       "record_id": "W5-202",
@@ -12651,7 +12611,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Permit the SD-WAN controller to manage branch office routers on port 443.",
-        "confidence": 0.8
+        "confidence": 0.8160000000000001
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -12675,8 +12635,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.8160000000000001,
+          "risk": 0.027599999999999986
         },
         "compliance": {
           "violations": [],
@@ -12691,12 +12651,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.05414
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.05414,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.8160000000000001
     },
     {
       "record_id": "W5-203",
@@ -12717,7 +12677,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Block all outbound traffic from branch offices except HTTPS and DNS.",
-        "confidence": 0.8
+        "confidence": 0.8130000000000001
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -12741,8 +12701,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.8130000000000001,
+          "risk": 0.02804999999999999
         },
         "compliance": {
           "violations": [
@@ -12768,12 +12728,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.4145
+          "final_risk_score": 0.41420749999999995
         }
       },
-      "risk_score": 0.4145,
+      "risk_score": 0.41420749999999995,
       "max_severity": "HIGH",
-      "confidence": 0.8
+      "confidence": 0.8130000000000001
     },
     {
       "record_id": "W5-204",
@@ -12794,7 +12754,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow the thin client VDI sessions to access only the designated application servers.",
-        "confidence": 0.8
+        "confidence": 0.805
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -12818,8 +12778,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.805,
+          "risk": 0.029249999999999998
         },
         "compliance": {
           "violations": [
@@ -12840,12 +12800,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.2945
+          "final_risk_score": 0.29438749999999997
         }
       },
-      "risk_score": 0.2945,
+      "risk_score": 0.29438749999999997,
       "max_severity": "HIGH",
-      "confidence": 0.8
+      "confidence": 0.805
     },
     {
       "record_id": "W5-205",
@@ -12866,7 +12826,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Deny all peer-to-peer file sharing traffic across the corporate WAN.",
-        "confidence": 0.8
+        "confidence": 0.781
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -12890,8 +12850,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.781,
+          "risk": 0.03284999999999999
         },
         "compliance": {
           "violations": [],
@@ -12906,12 +12866,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.054927500000000004
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.054927500000000004,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.781
     },
     {
       "record_id": "W5-206",
@@ -12932,7 +12892,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow the SCADA system to poll field devices on port 502 within the OT network only.",
-        "confidence": 0.8
+        "confidence": 0.784
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -12956,8 +12916,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.784,
+          "risk": 0.0324
         },
         "compliance": {
           "violations": [
@@ -12978,12 +12938,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.2945
+          "final_risk_score": 0.29485999999999996
         }
       },
-      "risk_score": 0.2945,
+      "risk_score": 0.29485999999999996,
       "max_severity": "HIGH",
-      "confidence": 0.8
+      "confidence": 0.784
     },
     {
       "record_id": "W5-207",
@@ -13004,7 +12964,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Deny all traffic from the IT network to the operational technology network.",
-        "confidence": 0.8
+        "confidence": 0.786
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -13028,8 +12988,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.786,
+          "risk": 0.03209999999999999
         },
         "compliance": {
           "violations": [],
@@ -13044,12 +13004,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.054815
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.054815,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.786
     },
     {
       "record_id": "W5-208",
@@ -13070,7 +13030,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Permit the medical imaging system to send studies to the PACS server on port 11112.",
-        "confidence": 0.8
+        "confidence": 0.8130000000000001
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -13094,8 +13054,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.8130000000000001,
+          "risk": 0.02804999999999999
         },
         "compliance": {
           "violations": [],
@@ -13110,12 +13070,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.0542075
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.0542075,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.8130000000000001
     },
     {
       "record_id": "W5-209",
@@ -13136,7 +13096,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Block all remote access to industrial control systems except through the secure jump host.",
-        "confidence": 0.8
+        "confidence": 0.786
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -13160,8 +13120,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.786,
+          "risk": 0.03209999999999999
         },
         "compliance": {
           "violations": [
@@ -13182,12 +13142,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.2945
+          "final_risk_score": 0.294815
         }
       },
-      "risk_score": 0.2945,
+      "risk_score": 0.294815,
       "max_severity": "HIGH",
-      "confidence": 0.8
+      "confidence": 0.786
     },
     {
       "record_id": "W5-210",
@@ -13208,7 +13168,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow the trading platform to connect to market data feeds on port 8888.",
-        "confidence": 0.8
+        "confidence": 0.807
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -13232,8 +13192,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.807,
+          "risk": 0.02894999999999999
         },
         "compliance": {
           "violations": [],
@@ -13248,12 +13208,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.0543425
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.0543425,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.807
     },
     {
       "record_id": "W5-211",
@@ -13274,7 +13234,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Deny all traffic from the trading systems to general corporate applications.",
-        "confidence": 0.8
+        "confidence": 0.8170000000000001
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -13298,8 +13258,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.8170000000000001,
+          "risk": 0.02744999999999999
         },
         "compliance": {
           "violations": [],
@@ -13314,12 +13274,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.0541175
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.0541175,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.8170000000000001
     },
     {
       "record_id": "W5-212",
@@ -13340,7 +13300,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Permit the ATM network to communicate with the banking backend only on port 8583.",
-        "confidence": 0.8
+        "confidence": 0.787
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -13364,8 +13324,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.787,
+          "risk": 0.03194999999999999
         },
         "compliance": {
           "violations": [
@@ -13386,12 +13346,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.2945
+          "final_risk_score": 0.29479249999999996
         }
       },
-      "risk_score": 0.2945,
+      "risk_score": 0.29479249999999996,
       "max_severity": "HIGH",
-      "confidence": 0.8
+      "confidence": 0.787
     },
     {
       "record_id": "W5-213",
@@ -13412,7 +13372,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Block all inbound connections to the power management system from outside the OT VLAN.",
-        "confidence": 0.8
+        "confidence": 0.798
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -13436,8 +13396,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.798,
+          "risk": 0.030299999999999994
         },
         "compliance": {
           "violations": [],
@@ -13452,12 +13412,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.054545
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.054545,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.798
     },
     {
       "record_id": "W5-214",
@@ -13478,7 +13438,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow the passenger information system to receive schedule updates from the central server.",
-        "confidence": 0.8
+        "confidence": 0.791
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -13502,8 +13462,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.791,
+          "risk": 0.03134999999999999
         },
         "compliance": {
           "violations": [],
@@ -13518,12 +13478,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.0547025
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.0547025,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.791
     },
     {
       "record_id": "W5-215",
@@ -13544,7 +13504,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Deny all internet access from systems connected to physical security infrastructure.",
-        "confidence": 0.8
+        "confidence": 0.8180000000000001
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -13568,8 +13528,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.8180000000000001,
+          "risk": 0.02729999999999999
         },
         "compliance": {
           "violations": [],
@@ -13584,12 +13544,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.054095000000000004
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.054095000000000004,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.8180000000000001
     },
     {
       "record_id": "W5-216",
@@ -13610,7 +13570,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow replication traffic between the primary data centre and the DR site on port 8415.",
-        "confidence": 0.8
+        "confidence": 0.781
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -13634,8 +13594,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.781,
+          "risk": 0.03284999999999999
         },
         "compliance": {
           "violations": [],
@@ -13650,12 +13610,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.054927500000000004
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.054927500000000004,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.781
     },
     {
       "record_id": "W5-217",
@@ -13676,7 +13636,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Permit the backup orchestration service to manage all backup jobs across the environment.",
-        "confidence": 0.8
+        "confidence": 0.794
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -13700,8 +13660,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.794,
+          "risk": 0.030899999999999997
         },
         "compliance": {
           "violations": [],
@@ -13716,12 +13676,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.054635
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.054635,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.794
     },
     {
       "record_id": "W5-218",
@@ -13742,7 +13702,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Deny all production workloads from running in the DR environment during normal operations.",
-        "confidence": 0.8
+        "confidence": 0.792
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -13766,8 +13726,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.792,
+          "risk": 0.03119999999999999
         },
         "compliance": {
           "violations": [],
@@ -13782,12 +13742,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.05468
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.05468,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.792
     },
     {
       "record_id": "W5-219",
@@ -13808,7 +13768,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow the business continuity management system to test failover connectivity.",
-        "confidence": 0.8
+        "confidence": 0.798
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -13832,8 +13792,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.798,
+          "risk": 0.030299999999999994
         },
         "compliance": {
           "violations": [],
@@ -13848,12 +13808,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.054545
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.054545,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.798
     },
     {
       "record_id": "W5-220",
@@ -13874,7 +13834,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Block all non-essential services during a declared disaster recovery event.",
-        "confidence": 0.8
+        "confidence": 0.81
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -13898,8 +13858,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.81,
+          "risk": 0.028499999999999998
         },
         "compliance": {
           "violations": [],
@@ -13914,12 +13874,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.054275000000000004
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.054275000000000004,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.81
     },
     {
       "record_id": "W5-221",
@@ -13940,7 +13900,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Permit the out-of-band management network to access all infrastructure regardless of state.",
-        "confidence": 0.8
+        "confidence": 0.783
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -13964,8 +13924,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.783,
+          "risk": 0.032549999999999996
         },
         "compliance": {
           "violations": [],
@@ -13980,12 +13940,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.0548825
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.0548825,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.783
     },
     {
       "record_id": "W5-222",
@@ -14006,7 +13966,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow the automated failover system to redirect traffic to the secondary site.",
-        "confidence": 0.8
+        "confidence": 0.8140000000000001
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -14030,8 +13990,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.8140000000000001,
+          "risk": 0.027899999999999994
         },
         "compliance": {
           "violations": [],
@@ -14046,12 +14006,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.054185000000000004
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.054185000000000004,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.8140000000000001
     },
     {
       "record_id": "W5-223",
@@ -14072,7 +14032,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Deny all write access to the DR database replica except from the replication agent.",
-        "confidence": 0.8
+        "confidence": 0.803
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -14096,8 +14056,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.803,
+          "risk": 0.029549999999999993
         },
         "compliance": {
           "violations": [
@@ -14118,12 +14078,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.2945
+          "final_risk_score": 0.2944325
         }
       },
-      "risk_score": 0.2945,
+      "risk_score": 0.2944325,
       "max_severity": "HIGH",
-      "confidence": 0.8
+      "confidence": 0.803
     },
     {
       "record_id": "W5-224",
@@ -14144,7 +14104,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Permit emergency administrative access to all systems from the NOC during a P1 incident.",
-        "confidence": 0.8
+        "confidence": 0.781
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -14168,8 +14128,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.781,
+          "risk": 0.03284999999999999
         },
         "compliance": {
           "violations": [],
@@ -14184,12 +14144,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.054927500000000004
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.054927500000000004,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.781
     },
     {
       "record_id": "W5-225",
@@ -14210,7 +14170,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Block all development and test workloads from consuming DR site bandwidth.",
-        "confidence": 0.8
+        "confidence": 0.798
       },
       "schema_valid": false,
       "raw_llm_output": "",
@@ -14234,8 +14194,8 @@
           "risk": 0.2
         },
         "semantic": {
-          "similarity_score": 0.8,
-          "risk": 0.03
+          "similarity_score": 0.798,
+          "risk": 0.030299999999999994
         },
         "compliance": {
           "violations": [],
@@ -14250,12 +14210,12 @@
           "triggered_cases": []
         },
         "risk_aggregator": {
-          "final_risk_score": 0.0545
+          "final_risk_score": 0.054545
         }
       },
-      "risk_score": 0.0545,
+      "risk_score": 0.054545,
       "max_severity": "INFO",
-      "confidence": 0.8
+      "confidence": 0.798
     }
   ]
 }

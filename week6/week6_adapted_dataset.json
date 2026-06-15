@@ -1,6 +1,6 @@
 {
   "pipeline_run": {
-    "timestamp": "2026-06-15T04:16:39.795204+00:00",
+    "timestamp": "2026-06-15T12:11:38.508551+00:00",
     "source_file": "C:\\Users\\Roshini\\Downloads\\firewall_validator\\firewall_validator\\week4_final_dataset.json",
     "total_records": 215
   },
@@ -1844,7 +1844,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow the Kubernetes API server to communicate with worker nodes on port 6443.",
-        "confidence": 0.8
+        "confidence": 0.801
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -1872,7 +1872,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Deny all traffic from the public internet to the etcd cluster on port 2379.",
-        "confidence": 0.8
+        "confidence": 0.798
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -1900,7 +1900,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow Prometheus to scrape metrics from all services on port 9090.",
-        "confidence": 0.8
+        "confidence": 0.8200000000000001
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -1928,7 +1928,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Permit the container registry to push images to the deployment server over port 5000.",
-        "confidence": 0.8
+        "confidence": 0.809
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -1956,7 +1956,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Block all outbound traffic from the CI/CD runner except to GitHub on port 443.",
-        "confidence": 0.8
+        "confidence": 0.787
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -1984,7 +1984,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow Grafana to query the Prometheus server on port 9090.",
-        "confidence": 0.8
+        "confidence": 0.8170000000000001
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -2012,7 +2012,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Deny direct access to the Kubernetes dashboard from outside the management VLAN.",
-        "confidence": 0.8
+        "confidence": 0.795
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -2040,7 +2040,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow the ingress controller to forward HTTP traffic to backend pods on port 8080.",
-        "confidence": 0.8
+        "confidence": 0.788
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -2068,7 +2068,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Permit the secrets manager to communicate with application pods on port 8200.",
-        "confidence": 0.8
+        "confidence": 0.791
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -2096,7 +2096,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Block all traffic to the message broker except from authorised microservices.",
-        "confidence": 0.8
+        "confidence": 0.812
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -2124,7 +2124,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow the log aggregator to receive logs from all pods on port 5044.",
-        "confidence": 0.8
+        "confidence": 0.796
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -2152,7 +2152,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Permit the artifact repository to serve packages to build agents on port 8081.",
-        "confidence": 0.8
+        "confidence": 0.782
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -2180,7 +2180,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Deny all traffic from the staging environment to the production database.",
-        "confidence": 0.8
+        "confidence": 0.805
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -2208,7 +2208,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow the health check endpoint to be reachable from the load balancer only.",
-        "confidence": 0.8
+        "confidence": 0.794
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -2236,7 +2236,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Permit outbound HTTPS traffic from application pods to external payment APIs.",
-        "confidence": 0.8
+        "confidence": 0.79
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -2264,7 +2264,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Block all inter-pod traffic except on explicitly whitelisted ports.",
-        "confidence": 0.8
+        "confidence": 0.8200000000000001
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -2292,7 +2292,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow the backup agent to transfer snapshots to cloud storage over port 443.",
-        "confidence": 0.8
+        "confidence": 0.812
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -2320,7 +2320,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Deny all traffic from developer laptops to the production Kubernetes namespace.",
-        "confidence": 0.8
+        "confidence": 0.8180000000000001
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -2348,7 +2348,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow the service mesh sidecar to communicate with the control plane on port 15010.",
-        "confidence": 0.8
+        "confidence": 0.812
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -2376,7 +2376,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Permit the autoscaler to query the metrics server on port 443.",
-        "confidence": 0.8
+        "confidence": 0.811
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -2404,7 +2404,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow the container registry to pull base images over HTTPS.",
-        "confidence": 0.8
+        "confidence": 0.788
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -2432,7 +2432,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Block all traffic to the Redis cache except from the application tier.",
-        "confidence": 0.8
+        "confidence": 0.791
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -2460,7 +2460,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow the Kafka consumer to receive messages from the broker on port 9092.",
-        "confidence": 0.8
+        "confidence": 0.799
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -2488,7 +2488,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Permit the API gateway to route requests to the authentication service.",
-        "confidence": 0.8
+        "confidence": 0.8170000000000001
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -2516,7 +2516,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Deny all outbound traffic from the database pod except to the backup service.",
-        "confidence": 0.8
+        "confidence": 0.811
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -2544,7 +2544,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow the monitoring agent to push alerts to PagerDuty over HTTPS.",
-        "confidence": 0.8
+        "confidence": 0.781
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -2572,7 +2572,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Block all SSH access to production nodes except from the bastion host.",
-        "confidence": 0.8
+        "confidence": 0.8160000000000001
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -2600,7 +2600,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow the feature flag service to be queried by all application services.",
-        "confidence": 0.8
+        "confidence": 0.784
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -2628,7 +2628,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Permit the CDN edge nodes to pull content from the origin server.",
-        "confidence": 0.8
+        "confidence": 0.789
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -2656,7 +2656,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Deny all traffic to the configuration service except from internal services.",
-        "confidence": 0.8
+        "confidence": 0.793
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -2684,7 +2684,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow all traffic within the production namespace for inter-service communication.",
-        "confidence": 0.8
+        "confidence": 0.805
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -2712,7 +2712,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Permit unrestricted access between microservices for debugging purposes.",
-        "confidence": 0.8
+        "confidence": 0.786
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -2740,7 +2740,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Block all external traffic to the admin API.",
-        "confidence": 0.8
+        "confidence": 0.805
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -2768,7 +2768,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow the developer environment full access to all internal APIs.",
-        "confidence": 0.8
+        "confidence": 0.801
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -2796,7 +2796,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Deny access to the secrets vault from all external sources.",
-        "confidence": 0.8
+        "confidence": 0.791
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -2824,7 +2824,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow all outbound connections from the worker nodes.",
-        "confidence": 0.8
+        "confidence": 0.799
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -2852,7 +2852,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Permit the entire engineering team to SSH into production servers.",
-        "confidence": 0.8
+        "confidence": 0.812
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -2880,7 +2880,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Block all connections to the legacy service.",
-        "confidence": 0.8
+        "confidence": 0.784
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -2908,7 +2908,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow the QA environment to replicate the production database.",
-        "confidence": 0.8
+        "confidence": 0.781
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -2936,7 +2936,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Deny all traffic from the DMZ to core banking services.",
-        "confidence": 0.8
+        "confidence": 0.783
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -2964,7 +2964,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow the domain controller to replicate Active Directory data to secondary DCs on port 389.",
-        "confidence": 0.8
+        "confidence": 0.803
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -2992,7 +2992,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Deny all traffic from personal devices to the corporate financial systems.",
-        "confidence": 0.8
+        "confidence": 0.799
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -3020,7 +3020,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow the print server to receive jobs from workstations on port 9100.",
-        "confidence": 0.8
+        "confidence": 0.812
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -3048,7 +3048,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Permit the backup server to access all file servers on port 445 for nightly backups.",
-        "confidence": 0.8
+        "confidence": 0.8180000000000001
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -3076,7 +3076,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Block all outbound traffic from kiosk terminals except to the kiosk management server.",
-        "confidence": 0.8
+        "confidence": 0.808
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -3104,7 +3104,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow the patch management server to push updates to all endpoints on port 8530.",
-        "confidence": 0.8
+        "confidence": 0.8160000000000001
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -3132,7 +3132,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Deny all traffic from contractor VLANs to internal source code repositories.",
-        "confidence": 0.8
+        "confidence": 0.804
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -3160,7 +3160,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow the email gateway to relay messages to the internal mail server on port 25.",
-        "confidence": 0.8
+        "confidence": 0.81
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -3188,7 +3188,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Permit the RADIUS server to authenticate VPN users on port 1812.",
-        "confidence": 0.8
+        "confidence": 0.791
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -3216,7 +3216,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Block all traffic from unregistered MAC addresses to the corporate wireless network.",
-        "confidence": 0.8
+        "confidence": 0.8160000000000001
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -3244,7 +3244,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow the certificate authority to issue certificates to internal servers on port 8443.",
-        "confidence": 0.8
+        "confidence": 0.8200000000000001
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -3272,7 +3272,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Deny all outbound SMTP traffic except from the authorised mail relay.",
-        "confidence": 0.8
+        "confidence": 0.782
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -3300,7 +3300,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow the vulnerability scanner to probe all hosts in the 10.0.0.0/8 range.",
-        "confidence": 0.8
+        "confidence": 0.804
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -3328,7 +3328,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Permit the DLP appliance to inspect all outbound email traffic on port 25.",
-        "confidence": 0.8
+        "confidence": 0.784
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -3356,7 +3356,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Block all inbound traffic on port 3389 except from the jump server subnet.",
-        "confidence": 0.8
+        "confidence": 0.803
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -3384,7 +3384,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow the HR application to query the employee directory on port 389.",
-        "confidence": 0.8
+        "confidence": 0.807
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -3412,7 +3412,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Deny all traffic between the guest network and the corporate wired network.",
-        "confidence": 0.8
+        "confidence": 0.788
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -3440,7 +3440,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow the ticketing system to send notifications via SMTP on port 587.",
-        "confidence": 0.8
+        "confidence": 0.812
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -3468,7 +3468,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Permit the network management system to poll all routers via SNMP on port 161.",
-        "confidence": 0.8
+        "confidence": 0.792
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -3496,7 +3496,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Block all traffic to the payroll database except from the payroll application server.",
-        "confidence": 0.8
+        "confidence": 0.799
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -3524,7 +3524,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow the domain controller to serve DNS queries to internal clients.",
-        "confidence": 0.8
+        "confidence": 0.782
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -3552,7 +3552,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Block all FTP uploads to the file transfer server from external partners.",
-        "confidence": 0.8
+        "confidence": 0.8180000000000001
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -3580,7 +3580,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow the monitoring system to receive SNMP traps from network devices.",
-        "confidence": 0.8
+        "confidence": 0.786
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -3608,7 +3608,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Permit the time synchronisation service to update all servers.",
-        "confidence": 0.8
+        "confidence": 0.783
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -3636,7 +3636,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Deny all inbound traffic to the LDAP server except from the application tier.",
-        "confidence": 0.8
+        "confidence": 0.786
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -3664,7 +3664,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow the security information and event management system to collect syslogs.",
-        "confidence": 0.8
+        "confidence": 0.803
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -3692,7 +3692,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Block all access to the privileged access workstations except for security team.",
-        "confidence": 0.8
+        "confidence": 0.8170000000000001
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -3720,7 +3720,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow the network printer to receive print jobs from the office VLAN.",
-        "confidence": 0.8
+        "confidence": 0.799
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -3748,7 +3748,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Permit the storage area network to replicate data to the disaster recovery site.",
-        "confidence": 0.8
+        "confidence": 0.8200000000000001
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -3776,7 +3776,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Deny all traffic from the partner extranet to internal financial applications.",
-        "confidence": 0.8
+        "confidence": 0.811
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -3804,7 +3804,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow all internal users to access the admin console for convenience.",
-        "confidence": 0.8
+        "confidence": 0.8190000000000001
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -3832,7 +3832,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Permit all traffic between the head office and branch offices.",
-        "confidence": 0.8
+        "confidence": 0.803
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -3860,7 +3860,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Block all external access to the internal wiki.",
-        "confidence": 0.8
+        "confidence": 0.806
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -3888,7 +3888,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow the on-call engineer to access all systems remotely.",
-        "confidence": 0.8
+        "confidence": 0.809
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -3916,7 +3916,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Deny all traffic from the old data centre.",
-        "confidence": 0.8
+        "confidence": 0.786
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -3944,7 +3944,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow the service account to connect to any database in the environment.",
-        "confidence": 0.8
+        "confidence": 0.795
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -3972,7 +3972,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Permit all traffic on the management VLAN for operational purposes.",
-        "confidence": 0.8
+        "confidence": 0.793
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -4000,7 +4000,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Block all outbound traffic from the POS terminals.",
-        "confidence": 0.8
+        "confidence": 0.8150000000000001
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -4028,7 +4028,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow the legacy application to communicate with any internal service it needs.",
-        "confidence": 0.8
+        "confidence": 0.803
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -4056,7 +4056,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Deny all traffic from the third-party audit firm to production systems.",
-        "confidence": 0.8
+        "confidence": 0.791
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -4084,7 +4084,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow encrypted communication between the application servers and the HSM on port 1792.",
-        "confidence": 0.8
+        "confidence": 0.8200000000000001
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -4112,7 +4112,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Deny all traffic from IoT sensors to the corporate IT network.",
-        "confidence": 0.8
+        "confidence": 0.807
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -4140,7 +4140,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow the SIEM to forward alerts to the SOC workstations on port 514.",
-        "confidence": 0.8
+        "confidence": 0.8160000000000001
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -4168,7 +4168,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Permit the load balancer health checks to reach all backend servers on port 80.",
-        "confidence": 0.8
+        "confidence": 0.808
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -4196,7 +4196,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Block all outbound DNS queries except to the authorised corporate DNS servers.",
-        "confidence": 0.8
+        "confidence": 0.812
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -4224,7 +4224,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow the intrusion detection system to mirror traffic from the core switch.",
-        "confidence": 0.8
+        "confidence": 0.812
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -4252,7 +4252,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Deny all traffic from the supply chain partner network to internal HR systems.",
-        "confidence": 0.8
+        "confidence": 0.79
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -4280,7 +4280,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow the multi-factor authentication service to be reachable from all internal hosts.",
-        "confidence": 0.8
+        "confidence": 0.811
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -4308,7 +4308,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Permit the cloud proxy to forward web requests from internal users on port 8080.",
-        "confidence": 0.8
+        "confidence": 0.793
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -4336,7 +4336,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Block all access to the internal PKI server except from authorised administrators.",
-        "confidence": 0.8
+        "confidence": 0.783
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -4364,7 +4364,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow access to the CRM system only after successful MFA verification.",
-        "confidence": 0.8
+        "confidence": 0.801
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -4392,7 +4392,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Deny all lateral movement between endpoints in the user VLAN.",
-        "confidence": 0.8
+        "confidence": 0.786
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -4420,7 +4420,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Permit the privileged access management tool to broker SSH sessions to servers.",
-        "confidence": 0.8
+        "confidence": 0.809
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -4448,7 +4448,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Block all access to financial APIs except from approved application identities.",
-        "confidence": 0.8
+        "confidence": 0.8170000000000001
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -4476,7 +4476,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow the identity provider to communicate with all services on port 443.",
-        "confidence": 0.8
+        "confidence": 0.81
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -4504,7 +4504,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Deny all access to the executive file share except from authorised named users.",
-        "confidence": 0.8
+        "confidence": 0.793
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -4532,7 +4532,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Permit the network access control system to quarantine non-compliant endpoints.",
-        "confidence": 0.8
+        "confidence": 0.782
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -4560,7 +4560,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Block all outbound connections from servers to social media IP ranges.",
-        "confidence": 0.8
+        "confidence": 0.8140000000000001
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -4588,7 +4588,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow the data loss prevention agent to scan all outbound HTTP and HTTPS traffic.",
-        "confidence": 0.8
+        "confidence": 0.798
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -4616,7 +4616,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Deny all traffic to internal APIs from devices without a valid client certificate.",
-        "confidence": 0.8
+        "confidence": 0.789
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -4644,7 +4644,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Quarantine the suspected ransomware host by blocking all its inbound and outbound traffic.",
-        "confidence": 0.8
+        "confidence": 0.797
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -4672,7 +4672,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow the digital forensics workstation to image the compromised server over port 22.",
-        "confidence": 0.8
+        "confidence": 0.8180000000000001
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -4756,7 +4756,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Deny all traffic from the infected VLAN to the rest of the network immediately.",
-        "confidence": 0.8
+        "confidence": 0.787
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -4784,7 +4784,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow the incident response team VPN to access all internal systems during containment.",
-        "confidence": 0.8
+        "confidence": 0.803
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -4812,7 +4812,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Block all outbound traffic from the compromised web server except to the log aggregator.",
-        "confidence": 0.8
+        "confidence": 0.787
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -4840,7 +4840,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Permit the honeypot to receive inbound connections from any external source.",
-        "confidence": 0.8
+        "confidence": 0.8160000000000001
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -4868,7 +4868,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Deny all traffic from the attacker-controlled IP range identified in the threat feed.",
-        "confidence": 0.8
+        "confidence": 0.8180000000000001
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -4896,7 +4896,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow the EDR platform to push containment policies to all endpoints.",
-        "confidence": 0.8
+        "confidence": 0.793
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -4924,7 +4924,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Restrict all access to the cardholder data environment to explicitly whitelisted hosts.",
-        "confidence": 0.8
+        "confidence": 0.795
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -4952,7 +4952,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Deny all traffic between the payment processing VLAN and the general corporate network.",
-        "confidence": 0.8
+        "confidence": 0.785
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -4980,7 +4980,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow the PCI compliance scanner to audit all systems in the cardholder data environment.",
-        "confidence": 0.8
+        "confidence": 0.796
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -5008,7 +5008,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Block all unencrypted traffic to systems storing protected health information.",
-        "confidence": 0.8
+        "confidence": 0.8170000000000001
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -5036,7 +5036,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Permit the HIPAA audit logging service to collect access logs from all relevant systems.",
-        "confidence": 0.8
+        "confidence": 0.81
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -5064,7 +5064,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Deny all direct internet access from systems processing electronic health records.",
-        "confidence": 0.8
+        "confidence": 0.811
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -5092,7 +5092,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow the SOC 2 audit tool to read configuration data from all infrastructure components.",
-        "confidence": 0.8
+        "confidence": 0.785
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -5120,7 +5120,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Block all access to employee personal data except from the HR application.",
-        "confidence": 0.8
+        "confidence": 0.811
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -5148,7 +5148,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Permit encrypted replication of patient records to the disaster recovery site only.",
-        "confidence": 0.8
+        "confidence": 0.81
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -5176,7 +5176,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Deny all access to the compliance reporting database except from the audit team.",
-        "confidence": 0.8
+        "confidence": 0.787
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -5204,7 +5204,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow remote workers to access the virtual desktop infrastructure over port 443.",
-        "confidence": 0.8
+        "confidence": 0.81
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -5232,7 +5232,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Deny all split-tunnel VPN traffic from reaching the corporate core network.",
-        "confidence": 0.8
+        "confidence": 0.8130000000000001
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -5260,7 +5260,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Permit the mobile device management server to push policies to all registered devices.",
-        "confidence": 0.8
+        "confidence": 0.78
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -5288,7 +5288,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Block all access to internal tools from devices that are not enrolled in MDM.",
-        "confidence": 0.8
+        "confidence": 0.789
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -5316,7 +5316,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow the edge computing nodes to synchronise with the central management platform.",
-        "confidence": 0.8
+        "confidence": 0.793
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -5344,7 +5344,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Deny all traffic from personal mobile devices to the production API gateway.",
-        "confidence": 0.8
+        "confidence": 0.8170000000000001
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -5372,7 +5372,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Permit the SD-WAN controller to manage branch office routers on port 443.",
-        "confidence": 0.8
+        "confidence": 0.8160000000000001
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -5400,7 +5400,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Block all outbound traffic from branch offices except HTTPS and DNS.",
-        "confidence": 0.8
+        "confidence": 0.8130000000000001
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -5428,7 +5428,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow the thin client VDI sessions to access only the designated application servers.",
-        "confidence": 0.8
+        "confidence": 0.805
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -5456,7 +5456,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Deny all peer-to-peer file sharing traffic across the corporate WAN.",
-        "confidence": 0.8
+        "confidence": 0.781
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -5484,7 +5484,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow the SCADA system to poll field devices on port 502 within the OT network only.",
-        "confidence": 0.8
+        "confidence": 0.784
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -5512,7 +5512,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Deny all traffic from the IT network to the operational technology network.",
-        "confidence": 0.8
+        "confidence": 0.786
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -5540,7 +5540,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Permit the medical imaging system to send studies to the PACS server on port 11112.",
-        "confidence": 0.8
+        "confidence": 0.8130000000000001
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -5568,7 +5568,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Block all remote access to industrial control systems except through the secure jump host.",
-        "confidence": 0.8
+        "confidence": 0.786
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -5596,7 +5596,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow the trading platform to connect to market data feeds on port 8888.",
-        "confidence": 0.8
+        "confidence": 0.807
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -5624,7 +5624,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Deny all traffic from the trading systems to general corporate applications.",
-        "confidence": 0.8
+        "confidence": 0.8170000000000001
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -5652,7 +5652,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Permit the ATM network to communicate with the banking backend only on port 8583.",
-        "confidence": 0.8
+        "confidence": 0.787
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -5680,7 +5680,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Block all inbound connections to the power management system from outside the OT VLAN.",
-        "confidence": 0.8
+        "confidence": 0.798
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -5708,7 +5708,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow the passenger information system to receive schedule updates from the central server.",
-        "confidence": 0.8
+        "confidence": 0.791
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -5736,7 +5736,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Deny all internet access from systems connected to physical security infrastructure.",
-        "confidence": 0.8
+        "confidence": 0.8180000000000001
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -5764,7 +5764,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow replication traffic between the primary data centre and the DR site on port 8415.",
-        "confidence": 0.8
+        "confidence": 0.781
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -5792,7 +5792,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Permit the backup orchestration service to manage all backup jobs across the environment.",
-        "confidence": 0.8
+        "confidence": 0.794
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -5820,7 +5820,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Deny all production workloads from running in the DR environment during normal operations.",
-        "confidence": 0.8
+        "confidence": 0.792
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -5848,7 +5848,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow the business continuity management system to test failover connectivity.",
-        "confidence": 0.8
+        "confidence": 0.798
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -5876,7 +5876,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Block all non-essential services during a declared disaster recovery event.",
-        "confidence": 0.8
+        "confidence": 0.81
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -5904,7 +5904,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Permit the out-of-band management network to access all infrastructure regardless of state.",
-        "confidence": 0.8
+        "confidence": 0.783
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -5932,7 +5932,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Allow the automated failover system to redirect traffic to the secondary site.",
-        "confidence": 0.8
+        "confidence": 0.8140000000000001
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -5960,7 +5960,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Deny all write access to the DR database replica except from the replication agent.",
-        "confidence": 0.8
+        "confidence": 0.803
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -5988,7 +5988,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Permit emergency administrative access to all systems from the NOC during a P1 incident.",
-        "confidence": 0.8
+        "confidence": 0.781
       },
       "schema_valid": true,
       "raw_llm_output": "",
@@ -6016,7 +6016,7 @@
         "direction": "",
         "priority": 100,
         "reasoning": "[WEEK4_RULE] Block all development and test workloads from consuming DR site bandwidth.",
-        "confidence": 0.8
+        "confidence": 0.798
       },
       "schema_valid": true,
       "raw_llm_output": "",
