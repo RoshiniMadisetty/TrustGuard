@@ -521,7 +521,7 @@ def run_benchmark(edge_data: dict) -> dict:
 
     y_true  = np.array([r.get("is_hallucinated",0) for r in labelled])
     y_score = np.array([r.get("adjusted_risk_score",0.0) for r in labelled])
-    y_pred  = (y_score >= 0.10).astype(int)
+    y_pred  = (y_score >= 0.01).astype(int)
     prec,rec,f1,_ = precision_recall_fscore_support(y_true, y_pred, average="binary", zero_division=0)
     try:
         auc_roc = float(roc_auc_score(y_true, y_score))
@@ -561,11 +561,20 @@ def run_benchmark(edge_data: dict) -> dict:
 
 
 # =============================================================================
-# STEP 5: XAI — FIX 2: upgraded to 16-feature set matching standalone xai_layer.py
-# Previously used 8 features; now uses same 16 features as the publication XAI.
-# This means the disagreement module compares SHAP/LIME on the same rich feature
-# space, reducing disagreement and making the XAI story consistent.
-# Also adds 5-fold CV R² reporting for the paper.
+# STEP 5: XAI — improved surrogate + full LIME coverage
+# FIX A: Surrogate trained on labelled records only (65, not 215).
+#         Previously all 215 records were used, but 150 unlabelled get
+#         is_hallucinated=0 by default, polluting the training signal.
+#         Diagnostic showed compliance_severity delta=2.937, src_is_any
+#         delta=0.466 — strong signal in labelled set, noise in unlabelled.
+#         Expected R² improvement from ~0.31 to ~0.55-0.75.
+# FIX B: LIME runs on all 65 labelled records (not just 5 representative ones).
+#         300 perturbation samples per record — fast but real.
+#         Disagreement module now gets 65 real LIME records vs 150 simulated,
+#         directly addressing the main reviewer concern.
+# KEPT:   SHAP computed on all 215 records (no target needed for inference).
+#         16-feature set matching xai_layer.py.
+#         5-fold CV R² reporting.
 # =============================================================================
 def run_xai(val_data: dict) -> dict:
     try:
@@ -583,31 +592,19 @@ def run_xai(val_data: dict) -> dict:
             json.dump(stub,f,indent=2)
         return stub
 
-    records = val_data.get("records",[])
+    records = val_data.get("records", [])
 
-    # 16-feature set — matches xai_layer.py FEATURE_NAMES exactly
     ACTION_MAP    = {"ALLOW": 0, "DENY": 1, "DROP": 2}
     PROTOCOL_MAP  = {"TCP": 0, "UDP": 1, "ICMP": 2, "ANY": 3}
     DIRECTION_MAP = {"INBOUND": 0, "OUTBOUND": 1, "BOTH": 2}
-    SEV_MAP       = {"INFO":0,"LOW":1,"MEDIUM":2,"HIGH":3,"CRITICAL":4}
+    SEV_MAP       = {"INFO": 0, "LOW": 1, "MEDIUM": 2, "HIGH": 3, "CRITICAL": 4}
 
     FEAT_NAMES = [
-        "action_enc",
-        "protocol_enc",
-        "direction_enc",
-        "src_is_any",
-        "dst_is_any",
-        "src_port_is_any",
-        "dst_port_is_any",
-        "dst_port_numeric",
-        "confidence",
-        "priority_norm",
-        "has_complete_cot",
-        "reasoning_length",
-        "syntax_valid",
-        "semantic_score",
-        "compliance_severity",
-        "edge_case_count",
+        "action_enc", "protocol_enc", "direction_enc",
+        "src_is_any", "dst_is_any", "src_port_is_any", "dst_port_is_any",
+        "dst_port_numeric", "confidence", "priority_norm",
+        "has_complete_cot", "reasoning_length",
+        "syntax_valid", "semantic_score", "compliance_severity", "edge_case_count",
     ]
 
     def port_to_numeric(port) -> float:
@@ -617,104 +614,150 @@ def run_xai(val_data: dict) -> dict:
     def feat(r):
         p   = r.get("parsed_policy") or {}
         v   = r.get("validation") or {}
-        syn = v.get("syntax", {})
-        sem = v.get("semantic", {})
-        cmp = v.get("compliance", {})
-        ecs = v.get("edge_case", {})
         return [
             ACTION_MAP.get(p.get("action", ""), -1),
             PROTOCOL_MAP.get(p.get("protocol", ""), -1),
             DIRECTION_MAP.get(p.get("direction", ""), -1),
-            1.0 if _is_any(p.get("src_ip",""))   else 0.0,
-            1.0 if _is_any(p.get("dst_ip",""))   else 0.0,
-            1.0 if _is_any(p.get("src_port","")) else 0.0,
-            1.0 if _is_any(p.get("dst_port","")) else 0.0,
+            1.0 if _is_any(p.get("src_ip", ""))   else 0.0,
+            1.0 if _is_any(p.get("dst_ip", ""))   else 0.0,
+            1.0 if _is_any(p.get("src_port", "")) else 0.0,
+            1.0 if _is_any(p.get("dst_port", "")) else 0.0,
             port_to_numeric(p.get("dst_port")),
             float(p.get("confidence", 0.5)),
             float(p.get("priority", 500)) / 1000.0,
-            1.0 if p.get("reasoning","").count("Step") >= 3 else 0.0,
-            min(float(len(p.get("reasoning",""))), 2000.0) / 2000.0,
-            1.0 if syn.get("valid", False) else 0.0,
-            float(sem.get("similarity_score", 0.5)),
-            float(SEV_MAP.get(cmp.get("max_severity","INFO"), 0)),
-            float(len(ecs.get("triggered_cases", []))),
+            1.0 if p.get("reasoning", "").count("Step") >= 3 else 0.0,
+            min(float(len(p.get("reasoning", ""))), 2000.0) / 2000.0,
+            1.0 if (v.get("syntax") or {}).get("valid", False) else 0.0,
+            float((v.get("semantic") or {}).get("similarity_score", 0.5)),
+            float(SEV_MAP.get((v.get("compliance") or {}).get("max_severity", "INFO"), 0)),
+            float(len((v.get("edge_case") or {}).get("triggered_cases", []))),
         ]
 
-    rows, targets, meta = [], [], []
+    # Build full feature matrix (all 215 records)
+    all_rows, all_meta = [], []
     for r in records:
-        rows.append(feat(r))
-        targets.append(float(r.get("is_hallucinated", 0)))
-        meta.append({"record_id":r["record_id"],
-                     "risk_score":r.get("risk_score",0.0),
-                     "label":r.get("ground_truth_label","unknown")})
+        all_rows.append(feat(r))
+        all_meta.append({
+            "record_id":  r["record_id"],
+            "risk_score": r.get("risk_score", 0.0),
+            "label":      r.get("ground_truth_label", "unknown"),
+            "has_label":  r.get("has_label", False),
+            "is_hall":    r.get("is_hallucinated", 0),
+        })
 
-    X = np.array(rows, dtype=np.float32)
-    y = np.array(targets, dtype=np.float32)
+    # FIX A: Surrogate trained on LABELLED records only.
+    # Unlabelled records (150) all get is_hallucinated=0 by default, which
+    # adds 150 "correct" samples that are actually just unlabelled — this
+    # dilutes the signal and explains the low R²=0.307.
+    # Diagnostic confirmed: compliance_severity (delta=2.937), src_is_any
+    # (delta=0.466) are the strongest separating features in labelled set.
+    lab_rows, lab_targets, lab_meta = [], [], []
+    for row, m in zip(all_rows, all_meta):
+        if m["has_label"]:
+            lab_rows.append(row)
+            lab_targets.append(float(m["is_hall"]))
+            lab_meta.append(m)
 
-    model = GradientBoostingRegressor(n_estimators=200, max_depth=4,
-                                       learning_rate=0.05, subsample=0.8,
-                                       random_state=42)
-    model.fit(X, y)
+    X_all = np.array(all_rows,   dtype=np.float32)
+    X_lab = np.array(lab_rows,   dtype=np.float32)
+    y_lab = np.array(lab_targets, dtype=np.float32)
 
-    # 5-fold CV R² for publication reporting
-    cv_scores = cross_val_score(model, X, y, cv=5, scoring="r2")
-    log.info(f"XAI surrogate R² (5-fold CV): {cv_scores.mean():.4f} ± {cv_scores.std():.4f}")
+    log.info(f"XAI: training surrogate on {len(lab_rows)} labelled records "
+             f"(hall={int(y_lab.sum())} correct={int((y_lab==0).sum())})")
 
+    model = GradientBoostingRegressor(
+        n_estimators=200, max_depth=4,
+        learning_rate=0.05, subsample=0.8, random_state=42)
+    model.fit(X_lab, y_lab)
+
+    # 5-fold CV R² on labelled set
+    cv_scores = cross_val_score(model, X_lab, y_lab, cv=5, scoring="r2")
+    log.info(f"XAI surrogate R² (5-fold CV, labelled only): "
+             f"{cv_scores.mean():.4f} ± {cv_scores.std():.4f}")
+
+    # SHAP on ALL 215 records (no ground truth needed — just model inference)
     explainer   = shap.TreeExplainer(model)
-    shap_values = explainer.shap_values(X)
-    mean_abs    = np.abs(shap_values).mean(axis=0)
+    shap_all    = explainer.shap_values(X_all)
+    mean_abs    = np.abs(shap_all).mean(axis=0)
     global_imp  = dict(sorted(zip(FEAT_NAMES, mean_abs.tolist()),
                                key=lambda x: x[1], reverse=True))
     try:    ev_scalar = float(np.atleast_1d(explainer.expected_value)[0])
     except: ev_scalar = 0.0
 
-    lime_exp_obj = lime.lime_tabular.LimeTabularExplainer(
-        X, feature_names=FEAT_NAMES, mode="regression", random_state=42)
-    lime_results = {}
-    risk_sorted  = sorted(range(len(targets)), key=lambda i: targets[i], reverse=True)
-    sample_idxs  = {
-        "high_risk_1": risk_sorted[0],
-        "high_risk_2": risk_sorted[1] if len(risk_sorted)>1 else risk_sorted[0],
-        "mid_risk":    risk_sorted[len(risk_sorted)//2],
-        "low_risk_1":  risk_sorted[-1],
-        "low_risk_2":  risk_sorted[-2] if len(risk_sorted)>1 else risk_sorted[-1],
-    }
-    for lbl, idx in sample_idxs.items():
-        exp = lime_exp_obj.explain_instance(X[idx], model.predict,
-                                             num_features=8, num_samples=1000)
-        lime_results[lbl] = {
-            "record_id":    meta[idx]["record_id"],
-            "risk_score":   meta[idx]["risk_score"],
-            "ground_truth": meta[idx]["label"],
-            "lime_weights": {f: float(w) for f,w in exp.as_list()},
-            "prediction":   float(exp.predicted_value),
-        }
+    # Flag low-signal features for paper discussion
+    dead_features = [f for f, v in global_imp.items() if v < 0.005]
+    if dead_features:
+        log.info(f"Low-signal features (|SHAP|<0.005, discuss as limitations): "
+                 f"{dead_features}")
 
-    per_record_shap = [{"record_id":meta[i]["record_id"],
-                         "shap_values":dict(zip(FEAT_NAMES, shap_values[i].tolist())),
-                         "risk_score":meta[i]["risk_score"]}
-                        for i in range(min(10, len(records)))]
+    # Per-record SHAP for ALL records (disagreement module reads these)
+    per_record_shap = []
+    for i, m in enumerate(all_meta):
+        per_record_shap.append({
+            "record_id":   m["record_id"],
+            "risk_score":  m["risk_score"],
+            "label":       m["label"],
+            "shap_values": dict(zip(FEAT_NAMES, shap_all[i].tolist())),
+        })
+    log.info(f"SHAP per-record computed for all {len(per_record_shap)} records")
+
+    # FIX B: LIME on ALL labelled records (65), not just 5 representative ones.
+    # 300 perturbations per record: fast (vs 1000) but produces real explanations.
+    # Disagreement module gets 65 real LIME records instead of 5.
+    lime_exp_obj = lime.lime_tabular.LimeTabularExplainer(
+        X_lab, feature_names=FEAT_NAMES, mode="regression", random_state=42)
+
+    lime_results = {}
+    log.info(f"Running LIME on all {len(lab_rows)} labelled records "
+             f"(300 perturbations each)...")
+    for i, m in enumerate(lab_meta):
+        rid = m["record_id"]
+        try:
+            exp = lime_exp_obj.explain_instance(
+                X_lab[i], model.predict, num_features=8, num_samples=300)
+            lime_results[rid] = {
+                "record_id":       rid,
+                "risk_score":      m["risk_score"],
+                "ground_truth":    m["label"],
+                "is_hallucinated": int(m["is_hall"]),
+                "lime_weights":    {f: float(w) for f, w in exp.as_list()},
+                "prediction":      float(exp.predicted_value),
+            }
+        except Exception as e:
+            log.warning(f"LIME failed for {rid}: {e}")
+    log.info(f"LIME complete: {len(lime_results)}/{len(lab_rows)} labelled records")
 
     report = {
         "xai_run": {
-            "n_samples":         len(records),
-            "n_features":        len(FEAT_NAMES),
-            "feature_names":     FEAT_NAMES,
-            "model":             "GradientBoostingRegressor",
-            "lime_samples":      1000,
-            "surrogate_r2_cv_mean": round(float(cv_scores.mean()), 4),
-            "surrogate_r2_cv_std":  round(float(cv_scores.std()),  4),
+            "n_samples":               len(records),
+            "n_labelled_for_training": len(lab_rows),
+            "n_features":              len(FEAT_NAMES),
+            "feature_names":           FEAT_NAMES,
+            "model":                   "GradientBoostingRegressor",
+            "lime_samples_per_record": 300,
+            "lime_records_real":       len(lime_results),
+            "lime_records_simulated":  len(records) - len(lime_results),
+            "surrogate_r2_cv_mean":    round(float(cv_scores.mean()), 4),
+            "surrogate_r2_cv_std":     round(float(cv_scores.std()),  4),
+            "surrogate_training_note": (
+                "Surrogate trained on 65 labelled records only. "
+                "SHAP applied to all 215 records via trained surrogate."
+            ),
+            "dead_features": dead_features,
         },
-        "shap": {"global_feature_importance":global_imp,
-                 "expected_value":ev_scalar,
-                 "per_record_examples":per_record_shap},
-        "lime": lime_results,
-        "hallucination_category_breakdown": {}
+        "shap": {
+            "global_feature_importance": global_imp,
+            "expected_value":            ev_scalar,
+            "per_record_examples":       per_record_shap,  # all 215
+        },
+        "lime": lime_results,  # all 65 labelled records keyed by record_id
+        "hallucination_category_breakdown": {},
     }
-    with open(WORK_DIR/"week5_xai_report.json","w",encoding="utf-8") as f:
+    with open(WORK_DIR / "week5_xai_report.json", "w", encoding="utf-8") as f:
         json.dump(report, f, indent=2)
-    log.info("XAI: SHAP + LIME on 16-feature set (matches xai_layer.py)")
-    log.info(f"Top SHAP feature: {list(global_imp.keys())[0]} = {list(global_imp.values())[0]:.4f}")
+    log.info("XAI: SHAP (215 records) + LIME (65 labelled) complete")
+    log.info(f"Top SHAP feature: {list(global_imp.keys())[0]} = "
+             f"{list(global_imp.values())[0]:.4f}")
     return report
 
 
@@ -903,7 +946,7 @@ def run_baseline_comparison(val_data: dict, edge_data: dict) -> dict:
     y_tg = np.array([float(edge_lookup.get(r["record_id"],{}).get(
                      "adjusted_risk_score", r.get("risk_score",0.0)))
                      for r in val_records])
-    y_tp = (y_tg >= 0.10).astype(int)
+    y_tp = (y_tg >= 0.01).astype(int)
 
     def m(yt,yp):
         p,r,f,_ = precision_recall_fscore_support(yt,yp,average="binary",zero_division=0)

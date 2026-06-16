@@ -1,43 +1,43 @@
 {
   "module": "decision_layer",
-  "timestamp": "2026-06-15T12:11:57.287190Z",
+  "timestamp": "2026-06-16T04:23:25.748317Z",
   "thresholds_used": {
-    "safe": 0.3,
-    "review": 0.6
+    "safe": 0.01,
+    "review": 0.42174
   },
   "total_records": 215,
-  "safe_count": 150,
-  "review_count": 48,
-  "reject_count": 17,
+  "safe_count": 31,
+  "review_count": 127,
+  "reject_count": 57,
   "override_count": 11,
   "evaluation": {
-    "true_positives": 16,
+    "true_positives": 56,
     "false_positives": 1,
     "true_negatives": 33,
-    "false_negatives": 165,
-    "precision": 0.9412,
-    "recall": 0.0884,
-    "f1_score": 0.1616,
-    "accuracy": 0.2279,
+    "false_negatives": 125,
+    "precision": 0.9825,
+    "recall": 0.3094,
+    "f1_score": 0.4706,
+    "accuracy": 0.414,
     "strict": {
-      "true_positives": 16,
+      "true_positives": 56,
       "false_positives": 1,
       "true_negatives": 33,
-      "false_negatives": 165,
-      "precision": 0.9412,
-      "recall": 0.0884,
-      "f1_score": 0.1616,
-      "accuracy": 0.2279
+      "false_negatives": 125,
+      "precision": 0.9825,
+      "recall": 0.3094,
+      "f1_score": 0.4706,
+      "accuracy": 0.414
     },
     "lenient": {
-      "true_positives": 64,
-      "false_positives": 1,
-      "true_negatives": 33,
-      "false_negatives": 117,
-      "precision": 0.9846,
-      "recall": 0.3536,
-      "f1_score": 0.5203,
-      "accuracy": 0.4512
+      "true_positives": 180,
+      "false_positives": 4,
+      "true_negatives": 30,
+      "false_negatives": 1,
+      "precision": 0.9783,
+      "recall": 0.9945,
+      "f1_score": 0.9863,
+      "accuracy": 0.9767
     }
   }
 }

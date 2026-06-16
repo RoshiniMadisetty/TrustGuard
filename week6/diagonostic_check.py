@@ -1,108 +1,133 @@
 """
-TrustGuard - XAI Disagreement Diagnostic
-Run this from your week6 folder:
-    python diagnose_xai.py
-
-It reads week5_xai_report.json and week6_xai_disagreement.json
-and tells us exactly WHY disagreement is 87.9%.
+TrustGuard - Diagnostic: XAI Surrogate + LIME Coverage
+Run from week6 folder: python diagnose_xai2.py
 """
-
 import json
+import numpy as np
 from pathlib import Path
 
 WORK_DIR = Path(__file__).resolve().parent
 
 print("=" * 60)
-print("TrustGuard XAI Disagreement Diagnostic")
+print("Diagnostic: Surrogate Quality + LIME Coverage")
 print("=" * 60)
 
-# ── 1. Read the XAI report ────────────────────────────────────────
-xai_path = WORK_DIR / "week5_xai_report.json"
-if not xai_path.exists():
-    print(f"ERROR: {xai_path} not found")
-    exit(1)
-
-with open(xai_path) as f:
-    xai = json.load(f)
-
-print("\n[1] XAI Report Summary")
+# 1. XAI report
+xai = json.load(open(WORK_DIR / "week5_xai_report.json"))
 run = xai.get("xai_run", {})
-print(f"    n_samples       : {run.get('n_samples')}")
-print(f"    n_features      : {run.get('n_features')}")
-print(f"    feature_names   : {run.get('feature_names')}")
-print(f"    surrogate R²    : {run.get('surrogate_r2_cv_mean')} ± {run.get('surrogate_r2_cv_std')}")
-print(f"    lime_samples    : {run.get('lime_samples')}")
+print(f"\n[1] Surrogate")
+print(f"    n_samples      : {run.get('n_samples')}")
+print(f"    feature_names  : {run.get('feature_names')}")
+print(f"    R² mean        : {run.get('surrogate_r2_cv_mean')}")
+print(f"    R² std         : {run.get('surrogate_r2_cv_std')}")
 
-shap_imp = xai.get("shap", {}).get("global_feature_importance", {})
-print(f"\n[2] Top 5 SHAP features:")
-for i, (k, v) in enumerate(list(shap_imp.items())[:5]):
-    print(f"    {i+1}. {k}: {v:.4f}")
-
-lime_data = xai.get("lime", {})
-print(f"\n[3] LIME samples present: {list(lime_data.keys())}")
-for k, v in lime_data.items():
-    weights = v.get("lime_weights", {})
-    top_lime = sorted(weights.items(), key=lambda x: abs(x[1]), reverse=True)[:3]
-    print(f"    {k}: top features = {[f[0] for f in top_lime]}")
-
-# ── 2. Read disagreement report ───────────────────────────────────
-dis_path = WORK_DIR / "week6_xai_disagreement.json"
-if not dis_path.exists():
-    print(f"\nERROR: {dis_path} not found - run the pipeline first")
-    exit(1)
-
-with open(dis_path) as f:
-    dis = json.load(f)
-
-print("\n[4] Disagreement Report Summary")
-summary = dis.get("summary", {})
-print(f"    n_records        : {summary.get('n_records', summary.get('total_records'))}")
-print(f"    mean_agreement   : {summary.get('mean_agreement')}")
-print(f"    std_agreement    : {summary.get('std_agreement')}")
-print(f"    strong_agreement : {summary.get('strong_agreement_count')} ({summary.get('strong_agreement_pct')}%)")
-print(f"    partial_agreement: {summary.get('partial_agreement_count')} ({summary.get('partial_agreement_pct')}%)")
-print(f"    disagreement     : {summary.get('disagreement_count')} ({summary.get('disagreement_pct')}%)")
-
-# ── 3. Look at what the disagreement module actually compares ─────
-print("\n[5] Sample disagreement records (first 5):")
-records = dis.get("records", [])[:5]
-for r in records:
-    print(f"    record_id={r.get('record_id')} "
-          f"agreement={r.get('agreement_score', r.get('jaccard_similarity', '?')):.3f} "
-          f"shap_top={r.get('shap_top_features', r.get('top_shap_features', '?'))[:2] if isinstance(r.get('shap_top_features', r.get('top_shap_features')), list) else '?'} "
-          f"lime_top={r.get('lime_top_features', r.get('top_lime_features', '?'))[:2] if isinstance(r.get('lime_top_features', r.get('top_lime_features')), list) else '?'}")
-
-# Print the raw keys so we know the exact field names
-if records:
-    print(f"\n[6] Raw keys in disagreement record: {list(records[0].keys())}")
-    print(f"    Full first record: ")
-    for k, v in records[0].items():
-        print(f"      {k}: {v}")
-
-# ── 4. Check what the disagreement MODULE actually reads ──────────
-print("\n[7] What shap_lime_disagreement module reads from week5_xai_report.json:")
-# The module reads SHAP and LIME feature attributions per record
-# Let's check if per_record_examples exist
 per_rec = xai.get("shap", {}).get("per_record_examples", [])
-print(f"    per_record_examples count: {len(per_rec)}")
-if per_rec:
-    print(f"    First record shap_values keys: {list(per_rec[0].get('shap_values', {}).keys())[:5]}")
+print(f"\n[2] SHAP per-record examples: {len(per_rec)}")
 
-# LIME per-record
-print(f"    LIME records: {list(lime_data.keys())}")
+lime = xai.get("lime", {})
+print(f"\n[3] LIME samples: {len(lime)} ({list(lime.keys())})")
+for k, v in lime.items():
+    print(f"    {k}: record_id={v.get('record_id')} "
+          f"n_weights={len(v.get('lime_weights', {}))}")
 
-print("\n[8] KEY QUESTION - feature name overlap between SHAP and LIME:")
-shap_features = set(shap_imp.keys())
-lime_features = set()
-for sample in lime_data.values():
-    lime_features.update(sample.get("lime_weights", {}).keys())
+# 2. Validation results — labelled vs unlabelled
+val = json.load(open(WORK_DIR / "week6_validation_results.json"))
+records = val.get("records", [])
+labelled   = [r for r in records if r.get("has_label")]
+unlabelled = [r for r in records if not r.get("has_label")]
+hall = [r for r in labelled if r.get("is_hallucinated") == 1]
+corr = [r for r in labelled if r.get("is_hallucinated") == 0]
+print(f"\n[4] Dataset split")
+print(f"    total      : {len(records)}")
+print(f"    labelled   : {len(labelled)} (hall={len(hall)}, correct={len(corr)})")
+print(f"    unlabelled : {len(unlabelled)}")
 
-print(f"    SHAP features : {sorted(shap_features)[:8]}")
-print(f"    LIME features : {sorted(lime_features)[:8]}")
-print(f"    Overlap       : {shap_features & lime_features}")
-print(f"    SHAP only     : {shap_features - lime_features}")
-print(f"    LIME only     : {lime_features - shap_features}")
+# 3. Risk score distribution for labelled records
+hall_scores = [r.get("risk_score", 0) for r in hall]
+corr_scores = [r.get("risk_score", 0) for r in corr]
+print(f"\n[5] Risk score distribution (labelled)")
+print(f"    hallucinated: mean={np.mean(hall_scores):.3f} "
+      f"std={np.std(hall_scores):.3f} "
+      f"min={np.min(hall_scores):.3f} max={np.max(hall_scores):.3f}")
+print(f"    correct:      mean={np.mean(corr_scores):.3f} "
+      f"std={np.std(corr_scores):.3f} "
+      f"min={np.min(corr_scores):.3f} max={np.max(corr_scores):.3f}")
+
+# 4. Feature separability check
+print(f"\n[6] Feature separability (mean values hallucinated vs correct)")
+print(f"    {'Feature':<25} {'Hall mean':>10} {'Corr mean':>10} {'Delta':>8}")
+feat_names = run.get("feature_names", [])
+# We need to reconstruct features — check if edge case scores exist
+try:
+    edge = json.load(open(WORK_DIR / "week6_edge_case_scores.json"))
+    edge_rec = edge.get("records", [])
+    edge_map = {r["record_id"]: r for r in edge_rec}
+    
+    ACTION_MAP    = {"ALLOW": 0, "DENY": 1, "DROP": 2}
+    PROTOCOL_MAP  = {"TCP": 0, "UDP": 1, "ICMP": 2, "ANY": 3}
+    DIRECTION_MAP = {"INBOUND": 0, "OUTBOUND": 1, "BOTH": 2}
+    SEV_MAP       = {"INFO":0,"LOW":1,"MEDIUM":2,"HIGH":3,"CRITICAL":4}
+    
+    def is_any(v):
+        return str(v).strip().upper() in ("ANY", "0.0.0.0/0", "ANY/ANY", "*", "")
+    
+    def extract(r):
+        p = r.get("parsed_policy") or {}
+        v = r.get("validation") or {}
+        try: dst_port = float(p.get("dst_port", -1))
+        except: dst_port = -1.0
+        return [
+            ACTION_MAP.get(p.get("action",""), -1),
+            PROTOCOL_MAP.get(p.get("protocol",""), -1),
+            DIRECTION_MAP.get(p.get("direction",""), -1),
+            1.0 if is_any(p.get("src_ip","")) else 0.0,
+            1.0 if is_any(p.get("dst_ip","")) else 0.0,
+            1.0 if is_any(p.get("src_port","")) else 0.0,
+            1.0 if is_any(p.get("dst_port","")) else 0.0,
+            dst_port,
+            float(p.get("confidence", 0.5)),
+            float(p.get("priority", 500)) / 1000.0,
+            1.0 if p.get("reasoning","").count("Step") >= 3 else 0.0,
+            min(float(len(p.get("reasoning",""))), 2000.0) / 2000.0,
+            1.0 if (v.get("syntax") or {}).get("valid", False) else 0.0,
+            float((v.get("semantic") or {}).get("similarity_score", 0.5)),
+            float(SEV_MAP.get((v.get("compliance") or {}).get("max_severity","INFO"), 0)),
+            float(len((v.get("edge_case") or {}).get("triggered_cases", []))),
+        ]
+    
+    hall_feats = np.array([extract(r) for r in hall])
+    corr_feats = np.array([extract(r) for r in corr])
+    
+    names = ["action_enc","protocol_enc","direction_enc","src_is_any","dst_is_any",
+             "src_port_is_any","dst_port_is_any","dst_port_numeric","confidence",
+             "priority_norm","has_complete_cot","reasoning_length","syntax_valid",
+             "semantic_score","compliance_severity","edge_case_count"]
+    
+    for i, name in enumerate(names):
+        hm = np.mean(hall_feats[:, i])
+        cm = np.mean(corr_feats[:, i])
+        print(f"    {name:<25} {hm:>10.3f} {cm:>10.3f} {hm-cm:>8.3f}")
+except Exception as e:
+    print(f"    (skipped: {e})")
+
+# 5. Benchmark report
+bm = json.load(open(WORK_DIR / "week6_benchmark_report.json"))
+bc = bm.get("binary_classification", {})
+print(f"\n[7] Benchmark (detector, threshold=0.10)")
+print(f"    F1={bc.get('f1_score')} P={bc.get('precision')} "
+      f"R={bc.get('recall')} AUC={bc.get('auc_roc')}")
+
+# 6. Threshold calibration
+try:
+    thr = json.load(open(WORK_DIR / "week6_calibrated_thresholds.json"))
+    print(f"\n[8] Threshold calibration (external module)")
+    pt = thr.get("primary_thresholds", {})
+    print(f"    safe={pt.get('safe_threshold')} review={pt.get('review_threshold')}")
+    ev = thr.get("evaluation", {})
+    print(f"    F1={ev.get('f1_score')} P={ev.get('precision')} R={ev.get('recall')}")
+except Exception as e:
+    print(f"\n[8] Threshold calibration: {e}")
 
 print("\n" + "=" * 60)
-print("Diagnostic complete.")
+print("Diagnostic complete. Paste output back for analysis.")
 print("=" * 60)
