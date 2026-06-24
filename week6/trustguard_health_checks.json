@@ -1,0 +1,52 @@
+{
+  "timestamp": "2026-06-24T12:38:08.342119",
+  "summary": {
+    "pass": 0,
+    "warn": 1,
+    "fail": 6
+  },
+  "checks": [
+    {
+      "check": "F1 Score",
+      "status": "FAIL",
+      "value": 0,
+      "threshold": 0.85
+    },
+    {
+      "check": "AUC-ROC",
+      "status": "FAIL",
+      "value": 0,
+      "threshold": 0.9
+    },
+    {
+      "check": "Recall",
+      "status": "FAIL",
+      "value": 0,
+      "threshold": 0.9
+    },
+    {
+      "check": "Adversarial Rate",
+      "status": "FAIL",
+      "value": 0,
+      "threshold": 1.0
+    },
+    {
+      "check": "Mean SHAP-LIME Agreement",
+      "status": "FAIL",
+      "value": 0,
+      "threshold": "\u22650.50"
+    },
+    {
+      "check": "High Confidence Records",
+      "status": "WARN",
+      "value": 0,
+      "threshold": 20
+    },
+    {
+      "check": "Mean Ensemble Confidence",
+      "status": "FAIL",
+      "value": 0,
+      "threshold": "\u22650.65"
+    }
+  ]
+}
