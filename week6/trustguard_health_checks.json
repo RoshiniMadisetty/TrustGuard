@@ -1,52 +1,120 @@
 {
-  "timestamp": "2026-06-24T12:38:08.342119",
+  "timestamp": "2026-06-24T14:07:06.317109",
   "summary": {
-    "pass": 0,
+    "pass": 9,
     "warn": 1,
-    "fail": 6
+    "fail": 0
   },
   "checks": [
     {
       "check": "F1 Score",
-      "status": "FAIL",
-      "value": 0,
+      "status": "PASS",
+      "value": 0.9231,
       "threshold": 0.85
     },
     {
       "check": "AUC-ROC",
-      "status": "FAIL",
-      "value": 0,
+      "status": "PASS",
+      "value": 0.9658,
       "threshold": 0.9
     },
     {
       "check": "Recall",
-      "status": "FAIL",
-      "value": 0,
+      "status": "PASS",
+      "value": 0.9677,
       "threshold": 0.9
     },
     {
       "check": "Adversarial Rate",
-      "status": "FAIL",
-      "value": 0,
+      "status": "PASS",
+      "value": 1.0,
       "threshold": 1.0
     },
     {
+      "check": "Strict F1 (REJECT-only)",
+      "status": "WARN",
+      "value": 0.4706,
+      "threshold": 0.6
+    },
+    {
+      "check": "Class Balance (hall ratio)",
+      "status": "PASS",
+      "value": 0.477,
+      "threshold": "0.25\u20130.75"
+    },
+    {
+      "check": "XAI Disagreement %",
+      "status": "PASS",
+      "value": "6.98%",
+      "threshold": "\u226415.0%"
+    },
+    {
       "check": "Mean SHAP-LIME Agreement",
-      "status": "FAIL",
-      "value": 0,
+      "status": "PASS",
+      "value": 0.534,
       "threshold": "\u22650.50"
     },
     {
       "check": "High Confidence Records",
-      "status": "WARN",
-      "value": 0,
+      "status": "PASS",
+      "value": 33,
       "threshold": 20
     },
     {
       "check": "Mean Ensemble Confidence",
-      "status": "FAIL",
-      "value": 0,
+      "status": "PASS",
+      "value": 0.7034,
       "threshold": "\u22650.65"
     }
-  ]
+  ],
+  "metrics": {
+    "f1": 0.9231,
+    "auc": 0.9658,
+    "recall": 0.9677,
+    "precision": 0.8824,
+    "auc_pr": 0.9537,
+    "f1_crosscheck": 0.9231,
+    "baseline_llm_f1": 0.0,
+    "baseline_improvement": 0.9231,
+    "strict_f1": 0.4706,
+    "lenient_f1": 0.9863,
+    "adversarial_rate": 1.0,
+    "adversarial_total": 19,
+    "total_records": 215,
+    "labelled": 65,
+    "unlabelled": 0,
+    "hallucinated": 31,
+    "correct": 34,
+    "safe_count": 31,
+    "review_count": 127,
+    "reject_count": 57,
+    "overrides": 11,
+    "thresh_safe": 0.01,
+    "thresh_review": 0.42174,
+    "thresh_reject": "N/A",
+    "xai_mean_agreement": 0.534,
+    "xai_disagreement_count": 15,
+    "xai_total": 215,
+    "xai_disagreement_pct": 6.98,
+    "xai_strong_agree": 98,
+    "xai_strong_agree_pct": 45.58,
+    "xai_partial_agree": 102,
+    "xai_partial_agree_pct": 47.44,
+    "surrogate_r2": null,
+    "surrogate_r2_std": null,
+    "top_shap_feature": "confidence",
+    "top_shap_value": null,
+    "mean_ensemble_conf": 0.7034,
+    "high_conf_count": 33,
+    "moderate_conf_count": 182,
+    "low_conf_count": 0,
+    "category_counts": {
+      "wrong_port": 8,
+      "over_permissive": 11,
+      "missing_constraint": 4,
+      "intent_flip": 5,
+      "scope_expansion": 2,
+      "wrong_protocol": 1
+    }
+  }
 }
