@@ -1,0 +1,48 @@
+{
+  "f1": {
+    "mean": 0.9207,
+    "std": 0.035,
+    "ci_95_lo": 0.8444,
+    "ci_95_hi": 0.9851,
+    "n_valid_runs": 500,
+    "report_string": "0.9207 \u00b1 0.0350 [95% CI: 0.8444\u20130.9851]"
+  },
+  "precision": {
+    "mean": 0.8805,
+    "std": 0.0542,
+    "ci_95_lo": 0.7647,
+    "ci_95_hi": 0.9733,
+    "n_valid_runs": 500,
+    "report_string": "0.8805 \u00b1 0.0542 [95% CI: 0.7647\u20130.9733]"
+  },
+  "recall": {
+    "mean": 0.967,
+    "std": 0.033,
+    "ci_95_lo": 0.8908,
+    "ci_95_hi": 1.0,
+    "n_valid_runs": 500,
+    "report_string": "0.9670 \u00b1 0.0330 [95% CI: 0.8908\u20131.0000]"
+  },
+  "auc_roc": {
+    "mean": 0.968,
+    "std": 0.0219,
+    "ci_95_lo": 0.9163,
+    "ci_95_hi": 0.999,
+    "n_valid_runs": 500,
+    "report_string": "0.9680 \u00b1 0.0219 [95% CI: 0.9163\u20130.9990]"
+  },
+  "auc_pr": {
+    "mean": 0.9567,
+    "std": 0.0331,
+    "ci_95_lo": 0.8757,
+    "ci_95_hi": 0.999,
+    "n_valid_runs": 500,
+    "report_string": "0.9567 \u00b1 0.0331 [95% CI: 0.8757\u20130.9990]"
+  },
+  "config": {
+    "n_bootstrap_runs": 500,
+    "threshold": 0.01,
+    "n_records": 65,
+    "seed": 42
+  }
+}

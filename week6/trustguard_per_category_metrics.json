@@ -1,0 +1,111 @@
+{
+  "overall": {
+    "category": "OVERALL",
+    "n_samples": 65,
+    "n_positive": 31,
+    "n_negative": 34,
+    "tp": 30,
+    "fp": 4,
+    "fn": 1,
+    "tn": 30,
+    "precision": 0.8824,
+    "recall": 0.9677,
+    "f1": 0.9231,
+    "support": 31,
+    "note": "threshold=0.01"
+  },
+  "per_category": {
+    "over_permissive": {
+      "category": "over_permissive",
+      "n_samples": 11,
+      "n_correct": 34,
+      "tp": 11,
+      "fp": 4,
+      "fn": 0,
+      "tn": 30,
+      "precision": 0.7333,
+      "recall": 1.0,
+      "f1": 0.8462,
+      "support": 11,
+      "coverage_note": "\u2705 Sufficient samples"
+    },
+    "wrong_port": {
+      "category": "wrong_port",
+      "n_samples": 8,
+      "n_correct": 34,
+      "tp": 7,
+      "fp": 4,
+      "fn": 1,
+      "tn": 30,
+      "precision": 0.6364,
+      "recall": 0.875,
+      "f1": 0.7368,
+      "support": 8,
+      "coverage_note": "\u2705 Sufficient samples"
+    },
+    "intent_flip": {
+      "category": "intent_flip",
+      "n_samples": 5,
+      "n_correct": 34,
+      "tp": 5,
+      "fp": 4,
+      "fn": 0,
+      "tn": 30,
+      "precision": 0.5556,
+      "recall": 1.0,
+      "f1": 0.7143,
+      "support": 5,
+      "coverage_note": "\u26a0\ufe0f Moderate sample count"
+    },
+    "missing_constraint": {
+      "category": "missing_constraint",
+      "n_samples": 4,
+      "n_correct": 34,
+      "tp": 4,
+      "fp": 4,
+      "fn": 0,
+      "tn": 30,
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6667,
+      "support": 4,
+      "coverage_note": "\u26a0\ufe0f Moderate sample count"
+    },
+    "scope_expansion": {
+      "category": "scope_expansion",
+      "n_samples": 2,
+      "n_correct": 34,
+      "tp": 2,
+      "fp": 4,
+      "fn": 0,
+      "tn": 30,
+      "precision": 0.3333,
+      "recall": 1.0,
+      "f1": 0.5,
+      "support": 2,
+      "coverage_note": "\u26a0\ufe0f Only 1\u20133 samples \u2014 interpret with caution"
+    },
+    "wrong_protocol": {
+      "category": "wrong_protocol",
+      "n_samples": 1,
+      "n_correct": 34,
+      "tp": 1,
+      "fp": 4,
+      "fn": 0,
+      "tn": 30,
+      "precision": 0.2,
+      "recall": 1.0,
+      "f1": 0.3333,
+      "support": 1,
+      "coverage_note": "\u26a0\ufe0f Only 1\u20133 samples \u2014 interpret with caution"
+    },
+    "security_downgrade": {
+      "category": "security_downgrade",
+      "n_samples": 0,
+      "precision": null,
+      "recall": null,
+      "f1": null,
+      "note": "NO SAMPLES \u2014 needs data expansion"
+    }
+  }
+}

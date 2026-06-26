@@ -1,0 +1,170 @@
+2026-06-26 12:30:36,522 [INFO] ============================================================
+2026-06-26 12:30:36,522 [INFO] TrustGuard Week 6 - Full Pipeline Orchestrator v10
+2026-06-26 12:30:36,523 [INFO] File    : C:\Users\Roshini\Downloads\firewall_validator\firewall_validator\week6\orchestrator.py
+2026-06-26 12:30:36,523 [INFO] Log     : C:\Users\Roshini\Downloads\firewall_validator\firewall_validator\week6\week6_run_20260626_123036.log
+2026-06-26 12:30:36,524 [INFO] Summary : C:\Users\Roshini\Downloads\firewall_validator\firewall_validator\week6\week6_summary_20260626_123036.txt
+2026-06-26 12:30:36,546 [INFO] ============================================================
+2026-06-26 12:30:36,547 [INFO] Dataset: C:\Users\Roshini\Downloads\firewall_validator\firewall_validator\week4_final_dataset.json
+2026-06-26 12:30:43,064 [INFO] 
+2026-06-26 12:30:43,065 [INFO] ============================================================
+2026-06-26 12:30:43,067 [INFO] STEP 1: Week4 Adapter
+2026-06-26 12:30:43,068 [INFO] ============================================================
+2026-06-26 12:30:43,070 [INFO] Loading: C:\Users\Roshini\Downloads\firewall_validator\firewall_validator\week4_final_dataset.json
+2026-06-26 12:30:43,104 [INFO] Adapted 215 records (65 labelled, 150 unlabelled)
+2026-06-26 12:30:43,165 [INFO] Adapted 215 records -> C:\Users\Roshini\Downloads\firewall_validator\firewall_validator\week6\week6_adapted_dataset.json
+2026-06-26 12:30:43,166 [INFO] [OK] Step 1 complete in 0.1s
+2026-06-26 12:30:43,169 [INFO] 
+2026-06-26 12:30:43,171 [INFO] ============================================================
+2026-06-26 12:30:43,174 [INFO] STEP 2: Dataset (augmentation disabled)
+2026-06-26 12:30:43,177 [INFO] ============================================================
+2026-06-26 12:30:43,183 [INFO] Augmentation disabled. 215 real records | correct=184 hallucinated=31
+2026-06-26 12:30:43,244 [INFO] [OK] Step 2 complete in 0.1s
+2026-06-26 12:30:43,246 [INFO] 
+2026-06-26 12:30:43,249 [INFO] ============================================================
+2026-06-26 12:30:43,252 [INFO] STEP 3: Validation (7-category)
+2026-06-26 12:30:43,255 [INFO] ============================================================
+2026-06-26 12:30:43,309 [INFO] Validated 215 records | 65 labelled (correct=34 hall=31) | detected=30/31 (96.8% recall)
+2026-06-26 12:30:43,311 [INFO] Category detections: {'wrong_port': 7, 'intent_flip': 7, 'missing_constraint': 31, 'scope_expansion': 2, 'wrong_protocol': 20, 'over_permissive': 10}
+2026-06-26 12:30:43,696 [INFO] [OK] Step 3 complete in 0.4s
+2026-06-26 12:30:43,697 [INFO] 
+2026-06-26 12:30:43,697 [INFO] ============================================================
+2026-06-26 12:30:43,697 [INFO] STEP 4: Edge Case Scoring
+2026-06-26 12:30:43,698 [INFO] ============================================================
+2026-06-26 12:30:43,809 [INFO] Edge case: 191/215 adjusted | 0.145 -> 0.304
+2026-06-26 12:30:43,809 [INFO] [OK] Step 4 complete in 0.1s
+2026-06-26 12:30:43,809 [INFO] 
+2026-06-26 12:30:43,810 [INFO] ============================================================
+2026-06-26 12:30:43,810 [INFO] STEP 5: Benchmark (labelled only)
+2026-06-26 12:30:43,810 [INFO] ============================================================
+2026-06-26 12:30:43,810 [INFO] Benchmark on 65 labelled records (150 unlabelled excluded)
+2026-06-26 12:30:43,823 [INFO] Benchmark: F1=0.9231 AUC=0.9658 Recall=0.9677
+2026-06-26 12:30:43,823 [INFO] [OK] Step 5 complete in 0.0s
+2026-06-26 12:30:43,823 [INFO] 
+2026-06-26 12:30:43,823 [INFO] ============================================================
+2026-06-26 12:30:43,823 [INFO] STEP 6: XAI (SHAP+LIME 16-feature)
+2026-06-26 12:30:43,824 [INFO] ============================================================
+2026-06-26 12:30:45,008 [INFO] XAI: training surrogate on 65 labelled records (hall=31 correct=34)
+2026-06-26 12:30:47,302 [INFO] XAI surrogate R² (5-fold CV, labelled only): 0.7800 ± 0.2604
+2026-06-26 12:30:47,521 [INFO] Low-signal features (|SHAP|<0.005, discuss as limitations): ['dst_is_any', 'action_enc', 'dst_port_numeric', 'protocol_enc', 'direction_enc', 'src_is_any', 'dst_port_is_any', 'src_port_is_any', 'priority_norm', 'has_complete_cot', 'syntax_valid', 'edge_case_count']
+2026-06-26 12:30:47,524 [INFO] SHAP per-record computed for all 215 records
+2026-06-26 12:30:47,561 [INFO] Running LIME on all 65 labelled records (300 perturbations each)...
+2026-06-26 12:30:50,854 [INFO] LIME complete: 65/65 labelled records
+2026-06-26 12:30:50,874 [INFO] XAI: SHAP (215 records) + LIME (65 labelled) complete
+2026-06-26 12:30:50,875 [INFO] Top SHAP feature: confidence = 0.2701
+2026-06-26 12:30:50,875 [INFO] [OK] Step 6 complete in 7.1s
+2026-06-26 12:30:50,876 [INFO] 
+2026-06-26 12:30:50,876 [INFO] ============================================================
+2026-06-26 12:30:50,877 [INFO] STEP 7: Adversarial (19 prompts)
+2026-06-26 12:30:50,877 [INFO] ============================================================
+2026-06-26 12:30:50,879 [INFO] Adversarial: 19/19 detected (100.0%)
+2026-06-26 12:30:50,879 [INFO]   ambiguous_intent: 2/2 (100%)
+2026-06-26 12:30:50,879 [INFO]   intent_contradiction: 2/2 (100%)
+2026-06-26 12:30:50,880 [INFO]   wrong_port: 2/2 (100%)
+2026-06-26 12:30:50,880 [INFO]   wrong_protocol: 2/2 (100%)
+2026-06-26 12:30:50,880 [INFO]   scope_expansion: 2/2 (100%)
+2026-06-26 12:30:50,881 [INFO]   security_downgrade: 2/2 (100%)
+2026-06-26 12:30:50,881 [INFO]   missing_constraint: 1/1 (100%)
+2026-06-26 12:30:50,882 [INFO]   indirect_over_permissive: 1/1 (100%)
+2026-06-26 12:30:50,882 [INFO]   indirect_security_downgrade: 1/1 (100%)
+2026-06-26 12:30:50,882 [INFO]   indirect_scope_expansion: 1/1 (100%)
+2026-06-26 12:30:50,883 [INFO]   indirect_wrong_port: 1/1 (100%)
+2026-06-26 12:30:50,883 [INFO]   indirect_missing_constraint: 1/1 (100%)
+2026-06-26 12:30:50,884 [INFO]   indirect_intent_flip: 1/1 (100%)
+2026-06-26 12:30:50,884 [INFO] [OK] Step 7 complete in 0.0s
+2026-06-26 12:30:50,884 [INFO] 
+2026-06-26 12:30:50,885 [INFO] ============================================================
+2026-06-26 12:30:50,885 [INFO] STEP 8: Baseline Comparison
+2026-06-26 12:30:50,885 [INFO] ============================================================
+2026-06-26 12:30:50,896 [INFO] Baseline: Raw LLM F1=0.0 TrustGuard F1=0.9231 +0.9231
+2026-06-26 12:30:50,896 [INFO] [OK] Step 8 complete in 0.0s
+2026-06-26 12:30:51,160 [INFO] Optimal thresholds: F1-opt=0.05 (F1=0.9231) | Youden-J=0.004 (TPR=1.0000 FPR=0.1176)
+2026-06-26 12:30:51,160 [INFO] 
+2026-06-26 12:30:51,160 [INFO] ============================================================
+2026-06-26 12:30:51,161 [INFO] STEP 9: SHAP-LIME Disagreement
+2026-06-26 12:30:51,161 [INFO] ============================================================
+2026-06-26 12:30:52,424 [INFO] [OK] Step 9 complete in 1.3s
+2026-06-26 12:30:52,424 [INFO] 
+2026-06-26 12:30:52,425 [INFO] ============================================================
+2026-06-26 12:30:52,425 [INFO] STEP 10: Ensemble Confidence
+2026-06-26 12:30:52,425 [INFO] ============================================================
+2026-06-26 12:31:00,805 [INFO] [OK] Step 10 complete in 8.4s
+2026-06-26 12:31:00,805 [INFO] 
+2026-06-26 12:31:00,805 [INFO] ============================================================
+2026-06-26 12:31:00,806 [INFO] STEP 11: Threshold Calibration
+2026-06-26 12:31:00,806 [INFO] ============================================================
+2026-06-26 12:31:02,234 [INFO] [OK] Step 11 complete in 1.4s
+2026-06-26 12:31:02,234 [INFO] 
+2026-06-26 12:31:02,235 [INFO] ============================================================
+2026-06-26 12:31:02,235 [INFO] STEP 12: Decision Layer
+2026-06-26 12:31:02,235 [INFO] ============================================================
+2026-06-26 12:31:03,983 [INFO] [OK] Step 12 complete in 1.7s
+2026-06-26 12:31:03,984 [INFO] 
+2026-06-26 12:31:03,984 [INFO] ============================================================
+2026-06-26 12:31:03,984 [INFO] STEP 13: Final Report
+2026-06-26 12:31:03,985 [INFO] ============================================================
+2026-06-26 12:31:03,986 [INFO] 
+2026-06-26 12:31:03,987 [INFO] ============================================================
+2026-06-26 12:31:03,987 [INFO] WEEK 6 PIPELINE COMPLETE
+2026-06-26 12:31:03,987 [INFO] ============================================================
+2026-06-26 12:31:03,987 [INFO] All steps passed.
+2026-06-26 12:31:04,029 [INFO] 
+============================================================
+TRUSTGUARD WEEK 6 — PIPELINE SUMMARY
+Run at  : 2026-06-26 12:31:04
+Version : Week 6 v10
+============================================================
+
+── DATASET ──────────────────────────────────────────────
+  Total records    : 215
+  Original         : 215
+  Synthetic        : 0
+  Labelled (eval)  : 65
+  Hallucinated     : 31
+  Correct          : 34
+
+── CORE METRICS (labelled set only) ─────────────────────
+  F1 Score         : 0.9231
+  Precision        : 0.8824
+  Recall           : 0.9677
+  AUC-ROC          : 0.9658
+  AUC-PR           : 0.9537
+
+── DECISION LAYER ───────────────────────────────────────
+  SAFE             : 31
+  REVIEW           : 127
+  REJECT           : 57
+  Strict F1        : 0.4706  (REJECT-only)
+  Lenient F1       : 0.9863  (REVIEW+REJECT)
+
+── OPTIMAL THRESHOLDS ───────────────────────────────────
+  F1-optimal  t=0.05 → F1=0.9231 P=0.8824 R=0.9677
+  Youden-J    t=0.004  → TPR=1.0 FPR=0.1176
+
+── XAI ──────────────────────────────────────────────────
+  Mean Agreement   : 0.5177
+  Strong agreement : 92 records
+  Disagreement     : 21 records
+
+── ENSEMBLE CONFIDENCE ──────────────────────────────────
+  Mean confidence  : 0.7002
+  High conf        : 33
+  Moderate conf    : 182
+
+── ADVERSARIAL ──────────────────────────────────────────
+  Detection rate   : 1.0 (19 prompts)
+
+── BASELINE ─────────────────────────────────────────────
+  Raw LLM F1       : 0.0
+  TrustGuard F1    : 0.9231
+  Improvement      : +0.9231
+
+── OUTPUT FILES ─────────────────────────────────────────
+  Full log         : week6_run_20260626_123036.log
+  This summary     : week6_summary_20260626_123036.txt
+  Final report     : week6_final_report.json
+  Benchmark        : week6_benchmark_report.json
+  Decisions        : week6_decisions.json
+  XAI report       : week5_xai_report.json
+============================================================
+2026-06-26 12:31:04,030 [INFO] Summary written : C:\Users\Roshini\Downloads\firewall_validator\firewall_validator\week6\week6_summary_20260626_123036.txt
+2026-06-26 12:31:04,030 [INFO] Full log written: C:\Users\Roshini\Downloads\firewall_validator\firewall_validator\week6\week6_run_20260626_123036.log

@@ -1,0 +1,58 @@
+============================================================
+TRUSTGUARD WEEK 6 — PIPELINE SUMMARY
+Run at  : 2026-06-26 12:31:04
+Version : Week 6 v10
+============================================================
+
+── DATASET ──────────────────────────────────────────────
+  Total records    : 215
+  Original         : 215
+  Synthetic        : 0
+  Labelled (eval)  : 65
+  Hallucinated     : 31
+  Correct          : 34
+
+── CORE METRICS (labelled set only) ─────────────────────
+  F1 Score         : 0.9231
+  Precision        : 0.8824
+  Recall           : 0.9677
+  AUC-ROC          : 0.9658
+  AUC-PR           : 0.9537
+
+── DECISION LAYER ───────────────────────────────────────
+  SAFE             : 31
+  REVIEW           : 127
+  REJECT           : 57
+  Strict F1        : 0.4706  (REJECT-only)
+  Lenient F1       : 0.9863  (REVIEW+REJECT)
+
+── OPTIMAL THRESHOLDS ───────────────────────────────────
+  F1-optimal  t=0.05 → F1=0.9231 P=0.8824 R=0.9677
+  Youden-J    t=0.004  → TPR=1.0 FPR=0.1176
+
+── XAI ──────────────────────────────────────────────────
+  Mean Agreement   : 0.5177
+  Strong agreement : 92 records
+  Disagreement     : 21 records
+
+── ENSEMBLE CONFIDENCE ──────────────────────────────────
+  Mean confidence  : 0.7002
+  High conf        : 33
+  Moderate conf    : 182
+
+── ADVERSARIAL ──────────────────────────────────────────
+  Detection rate   : 1.0 (19 prompts)
+
+── BASELINE ─────────────────────────────────────────────
+  Raw LLM F1       : 0.0
+  TrustGuard F1    : 0.9231
+  Improvement      : +0.9231
+
+── OUTPUT FILES ─────────────────────────────────────────
+  Full log         : week6_run_20260626_123036.log
+  This summary     : week6_summary_20260626_123036.txt
+  Final report     : week6_final_report.json
+  Benchmark        : week6_benchmark_report.json
+  Decisions        : week6_decisions.json
+  XAI report       : week5_xai_report.json
+============================================================

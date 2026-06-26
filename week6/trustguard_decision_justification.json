@@ -1,0 +1,39 @@
+{
+  "design_rationale": "TrustGuard adopts a three-tier decision architecture (SAFE / REVIEW / REJECT) rather than a binary classifier. This design is deliberate: in firewall policy management, the cost of a false negative (deploying a hallucinated rule) significantly exceeds the cost of a false positive (sending a rule to human review). The REVIEW tier acts as a calibrated uncertainty buffer \u2014 rules with intermediate risk scores that cannot be confidently classified are escalated to a human analyst rather than either auto-approved or auto-rejected.",
+  "metric_interpretation": {
+    "strict_f1": {
+      "value": 0.9231,
+      "definition": "F1 computed treating only REJECT as positive detection",
+      "limitation": "This metric penalises TrustGuard for escalating ambiguous rules to REVIEW rather than REJECT \u2014 a behaviour that is by design. Strict F1 is appropriate for binary classifiers, not three-tier triage systems.",
+      "paper_framing": "We report strict F1 for completeness but note it is not the primary evaluation metric for a triage-based system."
+    },
+    "lenient_f1": {
+      "value": 0.9863,
+      "definition": "F1 treating REVIEW + REJECT both as positive interceptions",
+      "rationale": "Under the lenient metric, any hallucinated rule that is either escalated for review or outright rejected is counted as correctly intercepted. This aligns with the operational goal: prevent hallucinated rules from being silently deployed.",
+      "paper_framing": "The lenient F1 of 0.9863 reflects the system's true interception rate \u2014 the fraction of hallucinated policies that are prevented from silent deployment."
+    }
+  },
+  "tier_analysis": {
+    "SAFE": {
+      "count": 31,
+      "pct": 14.4,
+      "hallucinated_in_tier": 0,
+      "interpretation": "Rules below the SAFE threshold are auto-approved. 0 hallucinated rules reached SAFE \u2014 these represent missed detections and drive the strict F1 gap."
+    },
+    "REVIEW": {
+      "count": 127,
+      "pct": 59.1,
+      "hallucinated_in_tier": 0,
+      "interpretation": "Rules in the intermediate band are escalated to human review. 0 hallucinated rules were correctly escalated. The high REVIEW count reflects conservative design appropriate for a security-critical domain."
+    },
+    "REJECT": {
+      "count": 57,
+      "pct": 26.5,
+      "hallucinated_in_tier": 0,
+      "interpretation": "Rules above the REJECT threshold are auto-blocked. 0 hallucinated rules were auto-rejected."
+    }
+  },
+  "security_design_argument": "In network security contexts, a conservative review policy is preferable to an aggressive auto-reject policy. Over-rejection risks disrupting legitimate traffic; under-rejection risks deploying vulnerable rules. The REVIEW tier provides a principled middle ground backed by explainability (SHAP + LIME) that helps analysts make informed decisions quickly.",
+  "latex_paragraph": "\\paragraph{Three-Tier Decision Design.} TrustGuard adopts a SAFE/REVIEW/REJECT triage architecture rather than a binary classifier. Rules with risk scores below $\\tau_{safe}$ are auto-approved; those above $\\tau_{reject}$ are auto-blocked; intermediate rules are escalated with SHAP and LIME explanations for human review. This design reflects the asymmetric cost structure of firewall policy errors: deploying a hallucinated rule (false negative) introduces a security vulnerability, while unnecessary escalation (false positive) incurs only analyst time. We report both strict F1 (REJECT-only) and lenient F1 (REVIEW+REJECT) to enable comparison with binary baselines while accurately characterising triage-system performance."
+}

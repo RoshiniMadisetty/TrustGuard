@@ -1,0 +1,183 @@
+{
+  "ranked_features": [
+    {
+      "rank": 1,
+      "feature": "confidence",
+      "shap": 0.270146
+    },
+    {
+      "rank": 2,
+      "feature": "semantic_score",
+      "shap": 0.225922
+    },
+    {
+      "rank": 3,
+      "feature": "compliance_severity",
+      "shap": 0.204426
+    },
+    {
+      "rank": 4,
+      "feature": "reasoning_length",
+      "shap": 0.006308
+    },
+    {
+      "rank": 5,
+      "feature": "dst_is_any",
+      "shap": 0.004935
+    },
+    {
+      "rank": 6,
+      "feature": "action_enc",
+      "shap": 0.001242
+    },
+    {
+      "rank": 7,
+      "feature": "dst_port_numeric",
+      "shap": 0.001061
+    },
+    {
+      "rank": 8,
+      "feature": "protocol_enc",
+      "shap": 0.00051
+    },
+    {
+      "rank": 9,
+      "feature": "direction_enc",
+      "shap": 0.000498
+    },
+    {
+      "rank": 10,
+      "feature": "src_is_any",
+      "shap": 0.000351
+    },
+    {
+      "rank": 11,
+      "feature": "dst_port_is_any",
+      "shap": 6.5e-05
+    },
+    {
+      "rank": 12,
+      "feature": "src_port_is_any",
+      "shap": 0.0
+    },
+    {
+      "rank": 13,
+      "feature": "priority_norm",
+      "shap": 0.0
+    },
+    {
+      "rank": 14,
+      "feature": "has_complete_cot",
+      "shap": 0.0
+    },
+    {
+      "rank": 15,
+      "feature": "syntax_valid",
+      "shap": 0.0
+    },
+    {
+      "rank": 16,
+      "feature": "edge_case_count",
+      "shap": 0.0
+    }
+  ],
+  "feature_groups": {
+    "LLM Quality Signals": {
+      "features": [
+        "confidence",
+        "semantic_score",
+        "reasoning_length",
+        "has_complete_cot"
+      ],
+      "individual_values": {
+        "confidence": 0.270146,
+        "semantic_score": 0.225922,
+        "reasoning_length": 0.006308,
+        "has_complete_cot": 0.0
+      },
+      "group_total_shap": 0.502376,
+      "group_mean_shap": 0.125594,
+      "dominant_feature": "confidence",
+      "description": "Signals derived directly from LLM output quality. 'confidence' (top SHAP feature) reflects the LLM's own self-assessment, which TrustGuard uses as a prior on rule correctness before structural checks."
+    },
+    "Policy Structural Integrity": {
+      "features": [
+        "compliance_severity",
+        "syntax_valid",
+        "edge_case_count"
+      ],
+      "individual_values": {
+        "compliance_severity": 0.204426,
+        "syntax_valid": 0.0,
+        "edge_case_count": 0.0
+      },
+      "group_total_shap": 0.204426,
+      "group_mean_shap": 0.068142,
+      "dominant_feature": "compliance_severity",
+      "description": "Rule-level structural signals. 'compliance_severity' captures the most severe violation detected by the 7-category validator, making it the primary structural discriminator."
+    },
+    "Scope & Permissiveness": {
+      "features": [
+        "src_is_any",
+        "dst_is_any",
+        "src_port_is_any",
+        "dst_port_is_any",
+        "dst_port_numeric"
+      ],
+      "individual_values": {
+        "src_is_any": 0.000351,
+        "dst_is_any": 0.004935,
+        "src_port_is_any": 0.0,
+        "dst_port_is_any": 6.5e-05,
+        "dst_port_numeric": 0.001061
+      },
+      "group_total_shap": 0.006412,
+      "group_mean_shap": 0.001282,
+      "dominant_feature": "dst_is_any",
+      "description": "Encodes how broadly or narrowly a rule is scoped. Low individual SHAP values here reflect that scope signals are already captured upstream by the compliance_severity feature \u2014 they are not absent from the model, but redundant given it."
+    },
+    "Protocol & Direction": {
+      "features": [
+        "action_enc",
+        "protocol_enc",
+        "direction_enc",
+        "priority_norm"
+      ],
+      "individual_values": {
+        "action_enc": 0.001242,
+        "protocol_enc": 0.00051,
+        "direction_enc": 0.000498,
+        "priority_norm": 0.0
+      },
+      "group_total_shap": 0.00225,
+      "group_mean_shap": 0.000563,
+      "dominant_feature": "action_enc",
+      "description": "Categorical policy metadata. Low SHAP values indicate these fields are consistent across the dataset and do not serve as strong discriminators at this scale. Expected to become more informative with a larger, more diverse dataset."
+    }
+  },
+  "key_finding": {
+    "top_4_features": [
+      "confidence",
+      "semantic_score",
+      "compliance_severity",
+      "reasoning_length"
+    ],
+    "top_4_shap_share": 98.8,
+    "bottom_12_features": [
+      "dst_is_any",
+      "action_enc",
+      "dst_port_numeric",
+      "protocol_enc",
+      "direction_enc",
+      "src_is_any",
+      "dst_port_is_any",
+      "src_port_is_any",
+      "priority_norm",
+      "has_complete_cot",
+      "syntax_valid",
+      "edge_case_count"
+    ],
+    "bottom_12_shap_share": 1.2,
+    "paper_narrative": "Feature importance analysis reveals that 4 of 16 features account for 98.8% of total SHAP importance: confidence, semantic_score, compliance_severity, reasoning_length. This concentration indicates that TrustGuard's detection is driven primarily by LLM output quality signals and structural compliance severity, rather than low-level network parameters. The 12 remaining features contribute 1.2% of importance collectively, suggesting they encode redundant or dataset-scale-limited signal. We retain all 16 features in the surrogate model to avoid information loss but recommend future work to evaluate a pruned 4-feature variant on a larger dataset."
+  }
+}
