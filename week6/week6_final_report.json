@@ -1,7 +1,7 @@
 {
   "project": "TrustGuard - Explainable Hallucination and Risk Detection",
-  "version": "Week 6 v9",
-  "timestamp": "2026-06-24T08:40:22.068756+00:00",
+  "version": "Week 6 v10",
+  "timestamp": "2026-06-26T06:38:43.238493+00:00",
   "dataset": {
     "original_records": 215,
     "synthetic_records": 0,
@@ -18,12 +18,12 @@
       "reject_count": 57
     },
     "ensemble_confidence": {
-      "mean": 0.6997,
+      "mean": 0.7052,
       "std": 0.0931
     },
     "xai_agreement": {
-      "mean_jaccard": 0.5152,
-      "disagreement_rate": 0.107
+      "mean_jaccard": 0.5428,
+      "disagreement_rate": 0.0698
     },
     "adversarial": {
       "total": 19,

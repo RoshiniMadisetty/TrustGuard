@@ -27,7 +27,7 @@
     "lime_records_simulated": 150,
     "surrogate_r2_cv_mean": 0.78,
     "surrogate_r2_cv_std": 0.2604,
-    "surrogate_training_note": "Surrogate trained on 65 labelled records only. SHAP applied to all 215 records via trained surrogate.",
+    "surrogate_training_note": "Surrogate trained on 65 labelled records only. SHAP applied to all records via trained surrogate.",
     "dead_features": [
       "dst_is_any",
       "action_enc",

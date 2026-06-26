@@ -1,6 +1,6 @@
 {
   "module": "adversarial_evaluation",
-  "timestamp": "2026-06-24T08:40:11.194249+00:00",
+  "timestamp": "2026-06-26T06:38:31.799411+00:00",
   "total_adversarial_prompts": 19,
   "detected": 19,
   "missed": 0,
@@ -233,6 +233,5 @@
         "intent_flip"
       ]
     }
-  ],
-  "note": "ADV-014 to ADV-019 use indirect language without keyword triggers"
+  ]
 }
