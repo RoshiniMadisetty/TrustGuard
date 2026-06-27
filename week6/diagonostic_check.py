@@ -7,3 +7,5 @@ for r in decisions[:3]:
     print(r.keys())
     print('  label-related:', {k:v for k,v in r.items() if any(x in k.lower() for x in ['hall','label','ground','correct'])})
     print()
+    #diagonostic check
+    
